@@ -3,6 +3,8 @@ extends CharacterBody2D
 var count :=0.0
 var toDisplay="right"
 
+var interacting=null
+
 func _process(delta: float) -> void:
 	#if(Input.is_action_just_pressed("Interact")):
 	count+=delta
@@ -24,3 +26,6 @@ func _process(delta: float) -> void:
 	elif(velocity==Vector2.ZERO):
 		for child in $Body.get_children():
 			child.frame=0
+	if(Input.is_action_just_pressed("Interact") and interacting!=null):
+		interacting.interact()
+		interacting=null

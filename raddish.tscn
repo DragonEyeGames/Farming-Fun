@@ -1,23 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://cp2dwgarjtbf4"]
+[gd_scene load_steps=9 format=3 uid="uid://bhuhjmt48tro"]
 
-[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://Farm/Plants.png" id="1_1sbab"]
-[ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://plant.gd" id="2_l7vel"]
+[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://Farm/Plants.png" id="1_sd1cv"]
+[ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://plant.gd" id="2_428b1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
-atlas = ExtResource("1_1sbab")
-region = Rect2(48, 84, 16, 28)
+atlas = ExtResource("1_sd1cv")
+region = Rect2(112, 84, 16, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
-atlas = ExtResource("1_1sbab")
-region = Rect2(0, 84, 16, 28)
+atlas = ExtResource("1_sd1cv")
+region = Rect2(64, 84, 16, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
-atlas = ExtResource("1_1sbab")
-region = Rect2(32, 84, 16, 28)
+atlas = ExtResource("1_sd1cv")
+region = Rect2(96, 84, 16, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
-atlas = ExtResource("1_1sbab")
-region = Rect2(16, 84, 16, 28)
+atlas = ExtResource("1_sd1cv")
+region = Rect2(80, 84, 16, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
 animations = [{
@@ -54,15 +54,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l7vel"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_428b1"]
+radius = 7.0
 height = 20.0
 
-[node name="Carrot" type="AnimatedSprite2D"]
+[node name="Raddish" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
-script = ExtResource("2_l7vel")
-animations = Array[String](["planted", "stage1", "stage1", "ready"])
+script = ExtResource("2_428b1")
+animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready"])
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -70,7 +70,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_l7vel")
+shape = SubResource("CapsuleShape2D_428b1")
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

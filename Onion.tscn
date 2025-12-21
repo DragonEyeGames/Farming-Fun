@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://cuegbiplk4swv"]
+
+[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://Farm/Plants.png" id="1_cy7s4"]
+[ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://plant.gd" id="2_aq00n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf3a2"]
+atlas = ExtResource("1_cy7s4")
+region = Rect2(176, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaklg"]
+atlas = ExtResource("1_cy7s4")
+region = Rect2(128, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy3go"]
+atlas = ExtResource("1_cy7s4")
+region = Rect2(160, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bst2"]
+atlas = ExtResource("1_cy7s4")
+region = Rect2(144, 84, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdb40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf3a2")
+}],
+"loop": false,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaklg")
+}],
+"loop": false,
+"name": &"planted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uy3go")
+}],
+"loop": false,
+"name": &"ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bst2")
+}],
+"loop": false,
+"name": &"stage1",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq00n"]
+radius = 7.0
+height = 20.0
+
+[node name="Onion" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_gdb40")
+animation = &"ready"
+script = ExtResource("2_aq00n")
+animations = Array[String](["planted", "planted", "stage1", "stage1", "ready"])
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_aq00n")
+
+[connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

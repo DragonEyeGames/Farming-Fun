@@ -1,12 +1,16 @@
-[gd_scene load_steps=66 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=65 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://player.tscn" id="1_r0du0"]
 [ext_resource type="Texture2D" uid="uid://bn3uc8ut65wkg" path="res://Farm/Houses.png" id="3_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://c6v8ykbvmqg00" path="res://Farm/Cow_animation.png" id="4_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://bwdda4bv560ba" path="res://Farm/Sails_animation.png" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://d58ag617vlg1" path="res://Farm/Doors_windows_fire.png" id="6_lgr22"]
-[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://Farm/Plants.png" id="7_lgr22"]
+[ext_resource type="Script" uid="uid://dtfvf2q4wew6f" path="res://farm.gd" id="7_20pc6"]
+[ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://carrot.tscn" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://tilemap.tscn" id="8_trn2v"]
+[ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://raddish.tscn" id="8_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Onion.tscn" id="9_20pc6"]
+[ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://potato.tscn" id="10_wkp8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fos0i"]
 atlas = ExtResource("4_cm0pq")
@@ -417,57 +421,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
-atlas = ExtResource("7_lgr22")
-region = Rect2(48, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
-atlas = ExtResource("7_lgr22")
-region = Rect2(0, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
-atlas = ExtResource("7_lgr22")
-region = Rect2(32, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
-atlas = ExtResource("7_lgr22")
-region = Rect2(16, 84, 16, 28)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5tfui")
-}],
-"loop": false,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a34eg")
-}],
-"loop": false,
-"name": &"planted",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_via5u")
-}],
-"loop": false,
-"name": &"ready",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ac6pf")
-}],
-"loop": false,
-"name": &"stage1",
-"speed": 5.0
-}]
-
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 
@@ -496,8 +449,10 @@ autoplay = "idleLeft"
 frame_progress = 0.3012298
 
 [node name="Player" parent="YSort" instance=ExtResource("1_r0du0")]
+collision_layer = 2
 
 [node name="Windmill" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(0, -123)
 texture = ExtResource("3_cm0pq")
 region_enabled = true
@@ -507,7 +462,8 @@ region_rect = Rect2(83, 158, 66, 130)
 z_index = 1
 position = Vector2(-4, -23)
 sprite_frames = SubResource("SpriteFrames_5tfui")
-frame_progress = 0.09145733
+autoplay = "default"
+frame_progress = 0.9627515
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Windmill"]
 position = Vector2(-4, 49)
@@ -535,10 +491,131 @@ tile_map_data = PackedByteArray("AAD///3/AAASAAgAAAAAAP3/AAATAAgAAAD9//3/AAASAAg
 
 [node name="Farm" type="Node2D" parent="."]
 position = Vector2(-102, 24)
+script = ExtResource("7_20pc6")
 
 [node name="Ground" parent="Farm" instance=ExtResource("8_trn2v")]
 tile_map_data = PackedByteArray("AAD/////AAAJAA4AAAD//wAAAAAJAA8AAAAAAP//AAAKAA4AAAAAAAAAAAAKAA8AAAABAP//AAAJAA4AAAABAAAAAAAJAA8AAAACAP//AAAKAA4AAAACAAAAAAAKAA8AAAABAAEAAAAJAA4AAAABAAIAAAAJAA8AAAACAAEAAAAKAA4AAAACAAIAAAAKAA8AAAD//wEAAAAJAA4AAAD//wIAAAAJAA8AAAAAAAEAAAAKAA4AAAAAAAIAAAAKAA8AAAD9/wEAAAAJAA4AAAD9/wIAAAAJAA8AAAD+/wEAAAAKAA4AAAD+/wIAAAAKAA8AAAD7/wEAAAAJAA4AAAD7/wIAAAAJAA8AAAD8/wEAAAAKAA4AAAD8/wIAAAAKAA8AAAD7////AAAJAA4AAAD7/wAAAAAJAA8AAAD8////AAAKAA4AAAD8/wAAAAAKAA8AAAD9////AAAJAA4AAAD9/wAAAAAJAA8AAAD+////AAAKAA4AAAD+/wAAAAAKAA8AAAADAP//AAAJAA4AAAADAAAAAAAJAA8AAAAEAP//AAAKAA4AAAAEAAAAAAAKAA8AAAADAAEAAAAJAA4AAAADAAIAAAAJAA8AAAAEAAEAAAAKAA4AAAAEAAIAAAAKAA8AAAABAAMAAAAJAA4AAAABAAQAAAAJAA8AAAACAAMAAAAKAA4AAAACAAQAAAAKAA8AAAD//wMAAAAJAA4AAAD//wQAAAAJAA8AAAAAAAMAAAAKAA4AAAAAAAQAAAAKAA8AAAD9/wMAAAAJAA4AAAD9/wQAAAAJAA8AAAD+/wMAAAAKAA4AAAD+/wQAAAAKAA8AAAD7/wMAAAAJAA4AAAD7/wQAAAAJAA8AAAD8/wMAAAAKAA4AAAD8/wQAAAAKAA8AAAADAAMAAAAJAA4AAAADAAQAAAAJAA8AAAAEAAMAAAAKAA4AAAAEAAQAAAAKAA8AAAD8//7/AAAKAA0AAAD9//7/AAAJAA0AAAD+//7/AAAKAA0AAAD///7/AAAJAA0AAAAAAP7/AAAKAA0AAAABAP7/AAAJAA0AAAACAP7/AAAKAA0AAAADAP7/AAAJAA0AAAAFAP7/AAALAA0AAAD6//7/AAAIAA0AAAD7//7/AAAJAA0AAAAEAP7/AAAKAA0AAAAFAP//AAALAA4AAAAFAAAAAAALAA8AAAAFAAEAAAALAA4AAAAFAAIAAAALAA8AAAAFAAMAAAALAA4AAAAFAAQAAAALAA8AAAAFAAUAAAALABAAAAADAAUAAAAJABAAAAAEAAUAAAAKABAAAAABAAUAAAAJABAAAAACAAUAAAAKABAAAAD//wUAAAAJABAAAAAAAAUAAAAKABAAAAD9/wUAAAAJABAAAAD+/wUAAAAKABAAAAD7/wUAAAAJABAAAAD8/wUAAAAKABAAAAD6/wUAAAAIABAAAAD6/wMAAAAIAA4AAAD6/wQAAAAIAA8AAAD6/wEAAAAIAA4AAAD6/wIAAAAIAA8AAAD6////AAAIAA4AAAD6/wAAAAAIAA8AAAA=")
 
-[node name="Carrot" type="AnimatedSprite2D" parent="Farm"]
-sprite_frames = SubResource("SpriteFrames_ek63v")
-animation = &"empty"
+[node name="Plants" type="Node2D" parent="Farm"]
+z_index = -1
+
+[node name="Carrot" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(79, -21)
+animation = &"ready"
+
+[node name="Carrot2" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(60, -22)
+animation = &"ready"
+
+[node name="Carrot3" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(40, -22)
+animation = &"ready"
+
+[node name="Carrot4" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(20, -23)
+animation = &"ready"
+
+[node name="Carrot5" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(3, -23)
+animation = &"ready"
+
+[node name="Carrot6" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(-15, -24)
+animation = &"ready"
+
+[node name="Carrot7" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(-32, -25)
+animation = &"ready"
+
+[node name="Carrot8" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(-51, -24)
+animation = &"ready"
+
+[node name="Carrot9" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(-67, -26)
+animation = &"ready"
+
+[node name="Carrot10" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+position = Vector2(-84, -26)
+animation = &"ready"
+
+[node name="Raddish" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(-85, -7)
+
+[node name="Raddish2" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(-64, -7)
+
+[node name="Raddish3" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(-43, -7)
+
+[node name="Raddish4" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(-22, -7)
+
+[node name="Raddish5" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(0, -6)
+
+[node name="Raddish6" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(23, -6)
+
+[node name="Raddish7" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(48, -6)
+
+[node name="Raddish8" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(70, -6)
+
+[node name="Raddish9" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+position = Vector2(88, -7)
+
+[node name="Onion" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(-86, 9)
+
+[node name="Onion2" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(-63, 9)
+
+[node name="Onion3" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(-41, 9)
+
+[node name="Onion4" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(-21, 8)
+
+[node name="Onion5" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(0, 8)
+
+[node name="Onion6" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(22, 9)
+
+[node name="Onion7" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(46, 10)
+
+[node name="Onion8" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(72, 11)
+
+[node name="Onion9" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+position = Vector2(87, 11)
+
+[node name="Potato" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(-84, 26)
+
+[node name="Potato2" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(-61, 26)
+
+[node name="Potato3" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(-41, 26)
+
+[node name="Potato4" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(-19, 27)
+
+[node name="Potato5" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(2, 27)
+
+[node name="Potato6" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(24, 26)
+
+[node name="Potato7" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(47, 25)
+
+[node name="Potato8" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(70, 26)
+
+[node name="Potato9" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+position = Vector2(88, 25)
