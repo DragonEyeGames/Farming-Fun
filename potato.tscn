@@ -58,7 +58,7 @@ animations = [{
 radius = 8.0
 height = 22.0
 
-[node name="Potato" type="AnimatedSprite2D"]
+[node name="Potato" type="AnimatedSprite2D" groups=["Crop", "Save"]]
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
 script = ExtResource("2_rx63k")
