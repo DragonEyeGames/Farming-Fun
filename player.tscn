@@ -233,7 +233,7 @@ animations = [{
 radius = 5.0
 height = 10.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Sort"]]
 script = ExtResource("1_sweqy")
 
 [node name="Body" type="Node2D" parent="."]

@@ -25,6 +25,14 @@ window/size/mode=3
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+Sort=""
+Save=""
+Animal=""
+Crop=""
+Door=""
+
 [input]
 
 Interact={

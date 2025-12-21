@@ -6,7 +6,9 @@ var picked:=false
 var playerEntered:=false
 
 func _ready() -> void:
-	animation=animations[0]
+	animation=animations[state]
+	await get_tree().process_frame
+	animation=animations[state]
 
 func tick() -> void:
 	if(picked):
