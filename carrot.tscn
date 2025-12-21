@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp2dwgarjtbf4"]
+
+[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://Farm/Plants.png" id="1_1sbab"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
+atlas = ExtResource("1_1sbab")
+region = Rect2(48, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
+atlas = ExtResource("1_1sbab")
+region = Rect2(0, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
+atlas = ExtResource("1_1sbab")
+region = Rect2(32, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
+atlas = ExtResource("1_1sbab")
+region = Rect2(16, 84, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tfui")
+}],
+"loop": false,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a34eg")
+}],
+"loop": false,
+"name": &"planted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_via5u")
+}],
+"loop": false,
+"name": &"ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac6pf")
+}],
+"loop": false,
+"name": &"stage1",
+"speed": 5.0
+}]
+
+[node name="Carrot" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ek63v")
+animation = &"empty"
