@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=65 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://player.tscn" id="1_r0du0"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://l1rcl6hrb0c" path="res://Farm/water_detilazation.png" id="14_c2ibq"]
 [ext_resource type="Script" uid="uid://ciqkcyg0dub76" path="res://night.gd" id="15_j4qnp"]
 [ext_resource type="Script" uid="uid://dlg03ri1phcbk" path="res://signal_bus.gd" id="16_fpfj3"]
+[ext_resource type="Script" uid="uid://4xpjxlcj1qlc" path="res://hud.gd" id="19_5tuhn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1tbi"]
 atlas = ExtResource("5_3dxm6")
@@ -374,9 +375,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("sky")]
 texture_filter = 1
 script = ExtResource("1_kjvhd")
+sky = NodePath("Night")
 
 [node name="Dirt" parent="." instance=ExtResource("8_trn2v")]
 z_index = -2
@@ -616,9 +618,31 @@ frame_progress = 0.15717971
 [node name="Night" type="CanvasModulate" parent="." node_paths=PackedStringArray("SignalBus")]
 script = ExtResource("15_j4qnp")
 SignalBus = NodePath("../SignalBus")
+time = 0.3
 
 [node name="SignalBus" type="Node2D" parent="."]
 script = ExtResource("16_fpfj3")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("19_5tuhn")
+
+[node name="TimeHolder" type="ColorRect" parent="HUD"]
+offset_left = 1390.0
+offset_top = 53.0
+offset_right = 1840.0
+offset_bottom = 181.0
+color = Color(0.6063704, 0.48450226, 0.35283723, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HUD/TimeHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "Time: 0:00"
+vertical_alignment = 1
 
 [connection signal="animation_finished" from="Windmill/Door" to="Windmill" method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_entered"]

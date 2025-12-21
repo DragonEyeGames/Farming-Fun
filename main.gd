@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var sky: Node2D
+
 func _ready() -> void:
 	if ResourceLoader.exists("user://farm_data.tres"):
 		var data = ResourceLoader.load("user://farm_data.tres") as FarmData
@@ -12,6 +14,9 @@ func _ready() -> void:
 			var newCrop=crop.instantiate()
 			$Farm/Plants.add_child(newCrop)
 			newCrop.state=data.cropStates[data.crops.find(crop)]
+	if ResourceLoader.exists("user://world_data.tres"):
+		var data = ResourceLoader.load("user://world_data.tres") as WorldData
+		sky.time = data.time
 	for door in get_tree().get_nodes_in_group("Door"):
 		door.mainScene=self
 	for object in get_tree().get_nodes_in_group("Sort"):
@@ -29,5 +34,7 @@ func transport(file: String):
 			cropScene.pack(saveable)
 			save.crops.append(cropScene)
 			save.cropStates.append(saveable.state)
+	var world = WorldData.new()
+	world.time = sky.time
 	ResourceSaver.save(save, "user://farm_data.tres")
 	get_tree().change_scene_to_file(file)
