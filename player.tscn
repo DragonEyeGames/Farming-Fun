@@ -329,17 +329,18 @@ height = 10.0
 script = ExtResource("1_sweqy")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
 animation = &"picked-walk-up"
 frame = 2
 frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -6)
 zoom = Vector2(5.475, 5.475)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 6)
 shape = SubResource("CapsuleShape2D_3dxm6")
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

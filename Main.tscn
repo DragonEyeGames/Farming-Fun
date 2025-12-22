@@ -389,13 +389,14 @@ tile_map_data = PackedByteArray("AAAGAAYAAAABAAUAAAAFAAYAAAABAAUAAAAFAAUAAAABAAU
 tile_map_data = PackedByteArray("AAAHAPj/AQANAAYAAAAGAPj/AQAMAAYAAAD4/wMAAQADAAMAAAD4/wIAAQADAAIAAAD3/wIAAQACAAIAAAD3/wMAAQACAAMAAAD4//v/AQAJAAMAAAD3//v/AQAIAAMAAAD3//r/AQAIAAIAAAD4//r/AQAJAAIAAAABAPv/AQAHAAgAAAAGAP7/AQACAAIAAAAGAP//AQACAAMAAAAHAP//AQADAAMAAAAHAP7/AQADAAIAAAA=")
 
 [node name="YSort" type="Node2D" parent="."]
+z_index = 1
 y_sort_enabled = true
 
 [node name="Windmill" type="Sprite2D" parent="." groups=["Door"]]
 self_modulate = Color(1, 1, 1, 0)
 z_index = -1
 position = Vector2(0, -129)
-scale = Vector2(1.185, 1.185)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_cm0pq")
 region_enabled = true
 region_rect = Rect2(83, 158, 66, 130)
@@ -474,118 +475,118 @@ tile_map_data = PackedByteArray("AAD/////AAAJAA4AAAD//wAAAAAJAA8AAAAAAP//AAAKAA4
 z_index = -1
 
 [node name="Carrot" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(79, -21)
+position = Vector2(59, -25)
 
 [node name="Carrot2" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(60, -22)
+position = Vector2(40, -26)
 
 [node name="Carrot3" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(40, -22)
+position = Vector2(20, -26)
 
 [node name="Carrot4" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(20, -23)
+position = Vector2(0, -27)
 
 [node name="Carrot5" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(3, -23)
+position = Vector2(-17, -27)
 
 [node name="Carrot6" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-15, -24)
+position = Vector2(-35, -28)
 
 [node name="Carrot7" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-32, -25)
+position = Vector2(-52, -29)
 
 [node name="Carrot8" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-51, -24)
+position = Vector2(-71, -28)
 
 [node name="Carrot9" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-67, -26)
+position = Vector2(-87, -30)
 
 [node name="Carrot10" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-84, -26)
+position = Vector2(-104, -30)
 
 [node name="Raddish" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(-85, -7)
+position = Vector2(-86, 3)
 
 [node name="Raddish2" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(-64, -7)
+position = Vector2(-65, 3)
 
 [node name="Raddish3" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(-43, -7)
+position = Vector2(-44, 3)
 
 [node name="Raddish4" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(-22, -7)
+position = Vector2(-23, 3)
 
 [node name="Raddish5" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(0, -6)
+position = Vector2(-1, 4)
 
 [node name="Raddish6" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(23, -6)
+position = Vector2(22, 4)
 
 [node name="Raddish7" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(48, -6)
+position = Vector2(47, 4)
 
 [node name="Raddish8" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(70, -6)
+position = Vector2(69, 4)
 
 [node name="Raddish9" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
-position = Vector2(88, -7)
+position = Vector2(87, 3)
 
 [node name="Onion" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(-86, 9)
+position = Vector2(-86, 21)
 
 [node name="Onion2" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(-63, 9)
+position = Vector2(-63, 21)
 
 [node name="Onion3" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(-41, 9)
+position = Vector2(-41, 21)
 
 [node name="Onion4" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(-21, 8)
+position = Vector2(-21, 20)
 
 [node name="Onion5" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(0, 8)
+position = Vector2(0, 20)
 
 [node name="Onion6" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(22, 9)
+position = Vector2(22, 21)
 
 [node name="Onion7" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(46, 10)
+position = Vector2(46, 22)
 
 [node name="Onion8" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(72, 11)
+position = Vector2(72, 23)
 
 [node name="Onion9" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
-position = Vector2(87, 11)
+position = Vector2(87, 23)
 
 [node name="Potato" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(-84, 26)
+position = Vector2(-85, 40)
 
 [node name="Potato2" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(-61, 26)
+position = Vector2(-62, 40)
 
 [node name="Potato3" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(-41, 26)
+position = Vector2(-42, 40)
 
 [node name="Potato4" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(-19, 27)
+position = Vector2(-20, 41)
 
 [node name="Potato5" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(2, 27)
+position = Vector2(1, 41)
 
 [node name="Potato6" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(24, 26)
+position = Vector2(23, 40)
 
 [node name="Potato7" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(47, 25)
+position = Vector2(46, 39)
 
 [node name="Potato8" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(70, 26)
+position = Vector2(69, 40)
 
 [node name="Potato9" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
-position = Vector2(88, 25)
+position = Vector2(87, 39)
 
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
-position = Vector2(-2, -29)
+position = Vector2(-2, -53)
 collision_layer = 2
 
 [node name="Pond" type="Node2D" parent="."]

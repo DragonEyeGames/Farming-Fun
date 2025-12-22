@@ -5,6 +5,7 @@ var direction="down"
 var canMove:=true
 var interacting:=[]
 var sprite: AnimatedSprite2D
+var pickedUp:=false
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -29,7 +30,10 @@ func _process(_delta: float) -> void:
 		state="walk"
 	else:
 		state="idle"
+		
 	var animation = state + "-" + direction
+	if(pickedUp):
+		animation = "picked-" + animation
 	if(sprite.animation!=animation):
 		sprite.play(animation)
 	if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):

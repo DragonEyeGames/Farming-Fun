@@ -1,22 +1,27 @@
-[gd_scene load_steps=4 format=4 uid="uid://dqk8jjdqhhr8t"]
+[gd_scene load_steps=5 format=4 uid="uid://dqk8jjdqhhr8t"]
 
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://tilemap.tscn" id="1_0jr3m"]
+[ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://house.gd" id="1_rcfog"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://Farm/House_interior.png" id="2_aeunn"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://player.tscn" id="3_qiw6i"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Interior" type="Node2D"]
+script = ExtResource("1_rcfog")
 
 [node name="HouseInterior" type="Sprite2D" parent="."]
 rotation = 1.5707964
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_aeunn")
 region_enabled = true
 region_rect = Rect2(0, 12, 48, 62)
 
 [node name="Walls" parent="." instance=ExtResource("1_0jr3m")]
+scale = Vector2(1.2, 1.2)
 tile_map_data = PackedByteArray("AAAFAPn/BQAEAAAAAAAFAPr/BQAEAAEAAAAFAPv/BQAEAAIAAAAEAPn/BQABAAUAAAAEAPr/BQABAAYAAAAEAPv/BQABAAcAAAADAPn/BQABAAUAAAADAPr/BQABAAYAAAADAPv/BQABAAcAAAACAPn/BQABAAUAAAACAPr/BQABAAYAAAACAPv/BQABAAcAAAABAPn/BQABAAUAAAABAPr/BQABAAYAAAABAPv/BQABAAcAAAAAAPn/BQABAAUAAAAAAPr/BQABAAYAAAAAAPv/BQABAAcAAAD///n/BQABAAUAAAD///r/BQABAAYAAAD///v/BQABAAcAAAD+//n/BQABAAUAAAD+//r/BQABAAYAAAD+//v/BQABAAcAAAD9//n/BQABAAUAAAD9//r/BQABAAYAAAD9//v/BQABAAcAAAD8//n/BQABAAUAAAD8//r/BQABAAYAAAD8//v/BQABAAcAAAD7//n/BQABAAUAAAD7//r/BQABAAYAAAD7//v/BQABAAcAAAD6//n/BQADAAAAAAD6//r/BQADAAEAAAD6//v/BQADAAIAAAD6//z/BQACAAEAAAD6//3/BQACAAEAAAD6//7/BQACAAEAAAD6////BQACAAEAAAD6/wAABQACAAEAAAD6/wEABQACAAEAAAD6/wIABQACAAEAAAD6/wMABQACAAEAAAAFAPz/BQAAAAEAAAAFAP3/BQAAAAEAAAAFAP7/BQAAAAEAAAAFAP//BQAAAAEAAAAFAAAABQAAAAEAAAAFAAEABQAAAAEAAAAFAAQABQAAAAEAAAAFAAMABQAAAAEAAAAFAAIABQAAAAEAAAD6/wQABQACAAEAAAA=")
 
 [node name="Walls2" parent="." instance=ExtResource("1_0jr3m")]
 z_index = 1
+scale = Vector2(1.2, 1.2)
 tile_map_data = PackedByteArray("AAD6/wUABQABAAUAAAD6/wYABQABAAYAAAD6/wcABQABAAcAAAD7/wUABQABAAUAAAD7/wYABQABAAYAAAD7/wcABQABAAcAAAD8/wUABQABAAUAAAD8/wYABQABAAYAAAD8/wcABQABAAcAAAD9/wUABQABAAUAAAD9/wYABQABAAYAAAD9/wcABQABAAcAAAD+/wUABQABAAUAAAD+/wYABQABAAYAAAD+/wcABQABAAcAAAD//wUABQABAAUAAAD//wYABQAAABAAAAD//wcABQAAABEAAAAAAAUABQABAAUAAAAAAAYABQABABAAAAAAAAcABQABABEAAAABAAUABQABAAUAAAABAAYABQABAAYAAAABAAcABQABAAcAAAACAAUABQABAAUAAAACAAYABQABAAYAAAACAAcABQABAAcAAAADAAUABQABAAUAAAADAAYABQABAAYAAAADAAcABQABAAcAAAAEAAUABQABAAUAAAAEAAYABQABAAYAAAAEAAcABQABAAcAAAAFAAUABQABAAUAAAAFAAYABQABAAYAAAAFAAcABQABAAcAAAA=")
 
 [node name="Control" type="Control" parent="."]
@@ -24,10 +29,11 @@ z_index = -1
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = -94.0
-offset_top = -66.0
-offset_right = 93.0
-offset_bottom = 126.0
+offset_left = -113.0
+offset_top = -80.0
+offset_right = 74.0
+offset_bottom = 112.0
+scale = Vector2(1.2, 1.2)
 
 [node name="Floor" parent="Control" instance=ExtResource("1_0jr3m")]
 position = Vector2(94, 66)
@@ -35,16 +41,27 @@ tile_map_data = PackedByteArray("AAAAAP//BQAFAAEAAAD/////BQAFAAQAAAD//wAABQAGAAQ
 
 [node name="HouseInterior2" type="Sprite2D" parent="."]
 position = Vector2(-59, -74)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_aeunn")
 region_enabled = true
 region_rect = Rect2(50, 12, 44, 46)
 
 [node name="HouseInterior3" type="Sprite2D" parent="."]
 position = Vector2(64, -77)
+scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_aeunn")
 region_enabled = true
 region_rect = Rect2(50, 12, 44, 46)
 
 [node name="Player" parent="." instance=ExtResource("3_qiw6i")]
-position = Vector2(-1, 111)
+position = Vector2(-1, 141)
 collision_layer = 2
+
+[node name="Door" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door"]
+polygon = PackedVector2Array(-10, 149, -8, 151, 7, 151, 10, 149, 10, 153, -10, 153)
+
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

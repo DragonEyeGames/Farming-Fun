@@ -12,11 +12,14 @@ func _ready() -> void:
 			add_child(newAnimal)
 		for crop in data.crops:
 			var newCrop=crop.instantiate()
-			$Farm/Plants.add_child(newCrop)
+			$YSort.add_child(newCrop)
 			newCrop.state=data.cropStates[data.crops.find(crop)]
 	if ResourceLoader.exists("user://world_data.tres"):
 		var data = ResourceLoader.load("user://world_data.tres") as WorldData
 		sky.time = data.time
+	if ResourceLoader.exists("user://player_data.tres"):
+		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
+		GameManager.playerInventory = data.inventory
 	for door in get_tree().get_nodes_in_group("Door"):
 		door.mainScene=self
 	for object in get_tree().get_nodes_in_group("Sort"):
@@ -36,6 +39,9 @@ func transport(file: String):
 			save.cropStates.append(saveable.state)
 	var world = WorldData.new()
 	world.time = sky.time
+	var player = PlayerData.new()
+	player.inventory=GameManager.playerInventory
 	ResourceSaver.save(save, "user://farm_data.tres")
 	ResourceSaver.save(world, "user://world_data.tres")
+	ResourceSaver.save(player, "user://player_data.tres")
 	get_tree().change_scene_to_file(file)

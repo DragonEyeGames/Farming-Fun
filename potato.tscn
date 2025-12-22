@@ -59,14 +59,16 @@ radius = 8.0
 height = 22.0
 
 [node name="Potato" type="AnimatedSprite2D" groups=["Crop", "Save"]]
+position = Vector2(-1, 5)
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
+offset = Vector2(1, -5)
 script = ExtResource("2_rx63k")
 animations = ["planted", "planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"]
 type = 3
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
+position = Vector2(2, -5)
 collision_layer = 0
 collision_mask = 2
 

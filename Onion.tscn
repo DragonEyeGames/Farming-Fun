@@ -59,14 +59,16 @@ radius = 7.0
 height = 20.0
 
 [node name="Onion" type="AnimatedSprite2D" groups=["Crop", "Save"]]
+position = Vector2(0, 7)
 sprite_frames = SubResource("SpriteFrames_gdb40")
 animation = &"ready"
+offset = Vector2(0, -7)
 script = ExtResource("2_aq00n")
 animations = Array[String](["planted", "planted", "stage1", "stage1", "ready", "empty"])
 type = 2
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
+position = Vector2(0, -7)
 collision_layer = 0
 collision_mask = 2
 

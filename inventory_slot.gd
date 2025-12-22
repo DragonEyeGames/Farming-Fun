@@ -7,6 +7,7 @@ func _ready() -> void:
 	$RichTextLabel.text=str(index+1)
 
 func _process(_delta: float) -> void:
+	$InventoryOutline.visible=GameManager.playerSelected==index
 	var keys := GameManager.playerInventory.keys()
 
 	if index < keys.size():
@@ -18,3 +19,5 @@ func _process(_delta: float) -> void:
 			$Value.text = str(count)
 	else:
 		$Value.text=""
+		
+		

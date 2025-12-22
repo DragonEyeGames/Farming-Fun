@@ -8,7 +8,6 @@ var animationsBackup
 @export var type: GameManager.inventoryItem
 
 func _ready() -> void:
-	state+=4
 	animation=animations[state]
 	await get_tree().process_frame
 	if(state>len(animations)-1):
@@ -37,4 +36,4 @@ func interact():
 	animation="empty"
 	state=len(animations)-1
 	GameManager.addItem(type, 1)
-	print(type)
+	z_index-=1

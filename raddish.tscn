@@ -59,14 +59,16 @@ radius = 7.0
 height = 20.0
 
 [node name="Raddish" type="AnimatedSprite2D" groups=["Crop", "Save"]]
+position = Vector2(0, 5)
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
+offset = Vector2(0, -5)
 script = ExtResource("2_428b1")
 animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"])
 type = 1
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
+position = Vector2(0, -4)
 collision_layer = 0
 collision_mask = 2
 
