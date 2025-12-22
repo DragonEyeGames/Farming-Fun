@@ -37,4 +37,5 @@ func transport(file: String):
 	var world = WorldData.new()
 	world.time = sky.time
 	ResourceSaver.save(save, "user://farm_data.tres")
+	ResourceSaver.save(world, "user://world_data.tres")
 	get_tree().change_scene_to_file(file)

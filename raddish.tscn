@@ -62,7 +62,7 @@ height = 20.0
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
 script = ExtResource("2_428b1")
-animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready"])
+animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"])
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
