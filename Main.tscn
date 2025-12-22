@@ -1,9 +1,10 @@
-[gd_scene load_steps=65 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=66 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://player.tscn" id="1_r0du0"]
 [ext_resource type="Texture2D" uid="uid://bn3uc8ut65wkg" path="res://Farm/Houses.png" id="3_cm0pq"]
 [ext_resource type="Script" uid="uid://dbnmpxhoao62m" path="res://windmill.gd" id="4_sc1dx"]
+[ext_resource type="Texture2D" uid="uid://bjf1amxodyibo" path="res://Windmill.png" id="5_2gh4u"]
 [ext_resource type="Texture2D" uid="uid://bwdda4bv560ba" path="res://Farm/Sails_animation.png" id="5_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://d58ag617vlg1" path="res://Farm/Doors_windows_fire.png" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://dw20lindfs40d" path="res://cow.tscn" id="6_sc1dx"]
@@ -391,6 +392,7 @@ tile_map_data = PackedByteArray("AAAHAPj/AQANAAYAAAAGAPj/AQAMAAYAAAD4/wMAAQADAAM
 y_sort_enabled = true
 
 [node name="Windmill" type="Sprite2D" parent="." groups=["Door"]]
+self_modulate = Color(1, 1, 1, 0)
 z_index = -1
 position = Vector2(0, -129)
 scale = Vector2(1.185, 1.185)
@@ -398,6 +400,12 @@ texture = ExtResource("3_cm0pq")
 region_enabled = true
 region_rect = Rect2(83, 158, 66, 130)
 script = ExtResource("4_sc1dx")
+
+[node name="Windmill2" type="Sprite2D" parent="Windmill"]
+texture_filter = 2
+position = Vector2(-0.84388185, 0.8438797)
+scale = Vector2(0.24472573, 0.24472573)
+texture = ExtResource("5_2gh4u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Windmill"]
 z_index = 1
@@ -407,6 +415,7 @@ autoplay = "default"
 frame_progress = 0.9627515
 
 [node name="Door" type="AnimatedSprite2D" parent="Windmill"]
+z_index = -1
 position = Vector2(-4, 49)
 sprite_frames = SubResource("SpriteFrames_a34eg")
 animation = &"close"

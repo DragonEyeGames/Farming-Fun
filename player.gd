@@ -1,31 +1,47 @@
 extends CharacterBody2D
 
 var count :=0.0
-var toDisplay="right"
+var state="idle"
+var direction="down"
 
 var interacting:=[]
+var sprite: AnimatedSprite2D
+
+func _ready() -> void:
+	sprite = $Sprite
 
 func _process(delta: float) -> void:
 	#if(Input.is_action_just_pressed("Interact")):
 	count+=delta
-	velocity = Input.get_vector("Left", "Right", "Up", "Down")*80
+	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
 	move_and_slide()
 	if(velocity.x<0):
-		$Body.scale.x=-1
+		direction="side"
+		sprite.flip_h=true
 	elif(velocity.x>0):
-		$Body.scale.x=1
-		
-	if(count>.14 and not velocity==Vector2.ZERO):
-		count=0
-		for child in $Body.get_children():
-			child.animation=toDisplay
-			if(child.frame>=5):
-				child.frame=0
-			else:
-				child.frame+=1
-	elif(velocity==Vector2.ZERO):
-		for child in $Body.get_children():
-			child.frame=0
+		sprite.flip_h=false
+		direction="side"
+	elif(velocity.y>0):
+		direction="down"
+	elif(velocity.y<0):
+		direction="up"
+	if(velocity!=Vector2.ZERO):
+		state="walk"
+	else:
+		state="idle"
+	var animation = state + "-" + direction
+	if(sprite.animation!=animation):
+		sprite.play(animation)
 	if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
 		interacting[0].interact()
 		interacting.remove_at(0)
+	print(direction)
+
+
+func _on_sprite_animation_finished() -> void:
+	if(sprite.animation=="walk-up"):
+		sprite.flip_h=!sprite.flip_h
+		sprite.play("walk-up")
+	if(sprite.animation=="walk-down"):
+		sprite.flip_h=!sprite.flip_h
+		sprite.play("walk-down")
