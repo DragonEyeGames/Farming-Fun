@@ -63,6 +63,7 @@ sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
 script = ExtResource("2_rx63k")
 animations = ["planted", "planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"]
+type = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false

@@ -63,6 +63,7 @@ sprite_frames = SubResource("SpriteFrames_gdb40")
 animation = &"ready"
 script = ExtResource("2_aq00n")
 animations = Array[String](["planted", "planted", "stage1", "stage1", "ready", "empty"])
+type = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false

@@ -1,18 +1,18 @@
 extends CharacterBody2D
 
-var count :=0.0
 var state="idle"
 var direction="down"
-
+var canMove:=true
 var interacting:=[]
 var sprite: AnimatedSprite2D
 
 func _ready() -> void:
 	sprite = $Sprite
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	if(not canMove):
+		return
 	#if(Input.is_action_just_pressed("Interact")):
-	count+=delta
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
 	move_and_slide()
 	if(velocity.x<0):
@@ -35,7 +35,8 @@ func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
 		interacting[0].interact()
 		interacting.remove_at(0)
-	print(direction)
+		canMove=false
+		sprite.play("pickup-" + direction)
 
 
 func _on_sprite_animation_finished() -> void:
@@ -45,3 +46,11 @@ func _on_sprite_animation_finished() -> void:
 	if(sprite.animation=="walk-down"):
 		sprite.flip_h=!sprite.flip_h
 		sprite.play("walk-down")
+	if(sprite.animation=="picked-walk-down"):
+		sprite.flip_h=!sprite.flip_h
+		sprite.play("picked-walk-down")
+	if(sprite.animation=="picked-walk-up"):
+		sprite.flip_h=!sprite.flip_h
+		sprite.play("picked-walk-up")
+	if("pickup" in sprite.animation):
+		canMove=true

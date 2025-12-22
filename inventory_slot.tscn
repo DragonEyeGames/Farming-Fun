@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq70mbcajtim3"]
+
+[ext_resource type="Script" uid="uid://ddvujhxbwqcdw" path="res://inventory_slot.gd" id="1_bfyh4"]
+[ext_resource type="Texture2D" uid="uid://clj3gx2smjlx8" path="res://assets/inventory/Inventory-outline.png" id="1_f5bh6"]
+[ext_resource type="Texture2D" uid="uid://ck4sicl5umf0n" path="res://assets/inventory/Inventory.png" id="2_bfyh4"]
+[ext_resource type="Texture2D" uid="uid://j2psfkrea7j6" path="res://Farm/Barn_interior.png" id="4_75pi0"]
+
+[node name="InventorySlot" type="Control"]
+custom_minimum_size = Vector2(97, 99)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bfyh4")
+
+[node name="InventoryOutline" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(49, 49)
+texture = ExtResource("1_f5bh6")
+
+[node name="Inventory" type="Sprite2D" parent="."]
+position = Vector2(49, 49)
+texture = ExtResource("2_bfyh4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 92.0
+offset_bottom = 94.0
+color = Color(0, 0, 0, 0.34901962)
+
+[node name="Carrot" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(55.999996, 49.000004)
+scale = Vector2(4.86, 4.86)
+texture = ExtResource("4_75pi0")
+region_enabled = true
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 0.4862745, 0.6901961, 1)
+position = Vector2(51, 52)
+scale = Vector2(4.86, 4.86)
+texture = ExtResource("4_75pi0")
+region_enabled = true
+region_rect = Rect2(194, 290, 12, 12)
+
+[node name="Onion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(46.000004, 59.000004)
+scale = Vector2(7.695, 7.695)
+texture = ExtResource("4_75pi0")
+region_enabled = true
+region_rect = Rect2(114, 260, 10, 12)
+
+[node name="Potato" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(48, 48)
+scale = Vector2(7.125, 7.125)
+texture = ExtResource("4_75pi0")
+region_enabled = true
+region_rect = Rect2(210, 290, 12, 12)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 71.0
+offset_right = 94.0
+offset_bottom = 95.0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 71.0
+offset_right = 25.0
+offset_bottom = 95.0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
