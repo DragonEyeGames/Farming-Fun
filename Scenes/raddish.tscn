@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhuhjmt48tro"]
+
+[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://assets/Farm/Plants.png" id="1_sd1cv"]
+[ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_428b1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
+atlas = ExtResource("1_sd1cv")
+region = Rect2(112, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
+atlas = ExtResource("1_sd1cv")
+region = Rect2(64, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
+atlas = ExtResource("1_sd1cv")
+region = Rect2(96, 84, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
+atlas = ExtResource("1_sd1cv")
+region = Rect2(80, 84, 16, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tfui")
+}],
+"loop": false,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a34eg")
+}],
+"loop": false,
+"name": &"planted",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_via5u")
+}],
+"loop": false,
+"name": &"ready",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac6pf")
+}],
+"loop": false,
+"name": &"stage1",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_428b1"]
+radius = 7.0
+height = 20.0
+
+[node name="Raddish" type="AnimatedSprite2D" groups=["Crop", "Save"]]
+position = Vector2(0, 5)
+sprite_frames = SubResource("SpriteFrames_ek63v")
+animation = &"ready"
+offset = Vector2(0, -5)
+script = ExtResource("2_428b1")
+animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"])
+type = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -4)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_428b1")
+
+[connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_player_exited"]
