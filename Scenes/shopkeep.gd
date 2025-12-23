@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 
 var playerEntered:=false
+var shopVisible:=false
 
 func _ready() -> void:
 	randomEvents()
@@ -17,6 +18,12 @@ func _process(_delta: float) -> void:
 		GameManager.player.canMove=false
 		GameManager.player.sprite.play("idle-up")
 		$"../HUD".visible=true
+		shopVisible=true
+	if(shopVisible and Input.is_action_just_pressed("Escape")):
+		shopVisible=false
+		$"../HUD".visible=false
+		GameManager.hud.visible=true
+		GameManager.player.canMove=true
 
 func _on_animation_finished() -> void:
 	play("idle")

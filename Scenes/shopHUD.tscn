@@ -1,0 +1,225 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx1ywkbf2hdqx"]
+
+[ext_resource type="Script" uid="uid://bpos8g004ccg7" path="res://Scenes/shop_hud.gd" id="1_7b6gg"]
+[ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="1_ai82c"]
+[ext_resource type="PackedScene" uid="uid://hubi2ixxr7k2" path="res://Scenes/item.tscn" id="2_7b6gg"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_7b6gg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -555.5
+offset_top = -298.0
+offset_right = 555.5
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.6156863, 0.37254903, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -559.0
+offset_top = -302.0
+offset_right = 560.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+z_index = 1
+offset_left = 405.0
+offset_top = 725.0
+offset_right = 1516.0
+offset_bottom = 837.0
+alignment = 1
+
+[node name="InventorySlot" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 0
+selectable = false
+
+[node name="InventorySlot2" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+selectable = false
+
+[node name="InventorySlot3" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 2
+selectable = false
+
+[node name="InventorySlot4" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 3
+selectable = false
+
+[node name="InventorySlot5" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 4
+selectable = false
+
+[node name="InventorySlot6" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 5
+selectable = false
+
+[node name="InventorySlot7" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 6
+selectable = false
+
+[node name="InventorySlot8" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 7
+selectable = false
+
+[node name="InventorySlot9" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 8
+selectable = false
+
+[node name="InventorySlot10" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
+layout_mode = 2
+index = 9
+selectable = false
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.0
+offset_top = 79.0
+offset_right = -206.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+mouse_filter = 2
+color = Color(0.7210815, 0.5746666, 0.42706376, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+text = "Pip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect3"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -42.5
+offset_right = 153.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 454.0
+offset_top = 320.0
+offset_right = 701.0
+offset_bottom = 598.0
+mouse_filter = 2
+color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect5"]
+layout_mode = 0
+offset_left = 247.90906
+offset_right = 526.81824
+offset_bottom = 226.28201
+rotation = 1.5707964
+theme_override_font_sizes/normal_font_size = 144
+text = ":)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 730.0
+offset_top = 320.0
+offset_right = 1528.0
+offset_bottom = 735.0
+scale = Vector2(0.92, 0.92)
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(765, 0)
+layout_mode = 2
+
+[node name="Item" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
+layout_mode = 2
+
+[node name="Item2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
+layout_mode = 2
+item = 6
+cost = 20
+
+[node name="Item3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
+layout_mode = 2
+item = 5
+cost = 35
+
+[node name="Item4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
+layout_mode = 2
+item = 7
+cost = 40
+
+[node name="Money Holder" type="ColorRect" parent="."]
+offset_left = 1291.0
+offset_top = 247.0
+offset_right = 1510.0
+offset_bottom = 308.0
+color = Color(0.72156864, 0.5764706, 0.42745098, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Money Holder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = -64.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 44
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Money Holder"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 13.0
+offset_right = 203.0
+offset_bottom = 53.0
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Item" to="." method="_on_item_pressed" binds= [0]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Item2" to="." method="_on_item_pressed" binds= [1]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Item3" to="." method="_on_item_pressed" binds= [2]]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Item4" to="." method="_on_item_pressed" binds= [3]]

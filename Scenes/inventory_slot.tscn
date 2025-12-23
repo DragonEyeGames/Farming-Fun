@@ -29,40 +29,17 @@ offset_right = 92.0
 offset_bottom = 94.0
 color = Color(0, 0, 0, 0.34901962)
 
-[node name="Carrot" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(55.999996, 49.000004)
-scale = Vector2(4.86, 4.86)
-texture = ExtResource("4_x3kwo")
-region_enabled = true
-region_rect = Rect2(160, 304, 16, 16)
-
-[node name="Raddish" type="Sprite2D" parent="."]
-visible = false
-self_modulate = Color(1, 0.4862745, 0.6901961, 1)
-position = Vector2(51, 52)
-scale = Vector2(4.86, 4.86)
-texture = ExtResource("4_x3kwo")
-region_enabled = true
-region_rect = Rect2(194, 290, 12, 12)
-
-[node name="Onion" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(46.000004, 59.000004)
-scale = Vector2(7.695, 7.695)
-texture = ExtResource("4_x3kwo")
-region_enabled = true
-region_rect = Rect2(114, 260, 10, 12)
-
-[node name="Potato" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(48, 48)
-scale = Vector2(7.125, 7.125)
-texture = ExtResource("4_x3kwo")
-region_enabled = true
-region_rect = Rect2(210, 290, 12, 12)
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 26.0
+offset_bottom = 31.0
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 68.0
@@ -72,12 +49,37 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Value" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 68.0
-offset_right = 26.0
-offset_bottom = 92.0
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Carrot" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(55.999996, 49.000004)
+scale = Vector2(4.86, 4.86)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish" type="Sprite2D" parent="Items"]
+visible = false
+self_modulate = Color(1, 0.4862745, 0.6901961, 1)
+position = Vector2(51, 52)
+scale = Vector2(4.86, 4.86)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(194, 290, 12, 12)
+
+[node name="Onion" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(46.000004, 59.000004)
+scale = Vector2(7.695, 7.695)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(114, 260, 10, 12)
+
+[node name="Potato" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(48, 48)
+scale = Vector2(7.125, 7.125)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(210, 290, 12, 12)

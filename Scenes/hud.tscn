@@ -11,18 +11,70 @@ offset_left = 1390.0
 offset_top = 53.0
 offset_right = 1840.0
 offset_bottom = 181.0
-color = Color(0.6063704, 0.48450226, 0.35283723, 1)
+color = Color(0.6156863, 0.37254903, 0.14117648, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TimeHolder"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 60
 text = "Time: 0:00"
 vertical_alignment = 1
+
+[node name="TimeHolder2" type="ColorRect" parent="TimeHolder"]
+z_index = -1
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 454.0
+offset_bottom = 132.0
+color = Color(0, 0, 0, 1)
+
+[node name="Money Holder" type="ColorRect" parent="."]
+offset_left = 1618.0
+offset_top = 208.0
+offset_right = 1837.0
+offset_bottom = 269.0
+color = Color(0.6156863, 0.37254903, 0.14117648, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Money Holder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = -64.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 44
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimeHolder2" type="ColorRect" parent="Money Holder"]
+z_index = -1
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 224.0
+offset_bottom = 65.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Money Holder"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 13.0
+offset_right = 203.0
+offset_bottom = 53.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 offset_left = 1.0
@@ -67,7 +119,7 @@ offset_left = 451.0
 offset_top = 861.0
 offset_right = 1469.0
 offset_bottom = 970.0
-color = Color(0.6152663, 0.37409964, 0.13962057, 1)
+color = Color(0.6156863, 0.37254903, 0.14117648, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 z_index = -3

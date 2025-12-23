@@ -5,6 +5,8 @@ var time:= 0.0
 var hud
 var player
 
+var playerMoney:=100
+
 enum inventoryItem {
 	Carrot,
 	Raddish,

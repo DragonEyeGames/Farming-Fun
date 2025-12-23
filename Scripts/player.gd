@@ -16,7 +16,6 @@ func _process(_delta: float) -> void:
 		return
 	#if(Input.is_action_just_pressed("Interact")):
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
-	move_and_slide()
 	if(velocity.x<0):
 		direction="side"
 		sprite.flip_h=true
@@ -27,6 +26,7 @@ func _process(_delta: float) -> void:
 		direction="down"
 	elif(velocity.y<0):
 		direction="up"
+	move_and_slide()
 	if(velocity!=Vector2.ZERO):
 		state="walk"
 	else:
