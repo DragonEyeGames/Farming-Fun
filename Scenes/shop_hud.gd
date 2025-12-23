@@ -6,5 +6,5 @@ func _process(_delta: float) -> void:
 
 func _on_item_pressed(id) -> void:
 	var caller = $ScrollContainer/VBoxContainer.get_child(id)
-	GameManager.playerMoney-=caller.money
+	GameManager.playerMoney-=caller.cost
 	GameManager.addItem(caller.item, 1)

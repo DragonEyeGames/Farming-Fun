@@ -34,3 +34,9 @@ func _process(_delta: float) -> void:
 				playerSelected=i
 			else:
 				playerSelected=null
+	#The code below prints the name of the currently selected item in the inventoryqawd
+	#if(playerSelected!=null):
+		#var keys := playerInventory.keys()
+		#if playerSelected < keys.size():
+			#var selectedItem = keys[playerSelected]
+			#print(inventoryItem.keys()[selectedItem])

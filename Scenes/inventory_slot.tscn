@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dq70mbcajtim3"]
+[gd_scene load_steps=6 format=3 uid="uid://dq70mbcajtim3"]
 
 [ext_resource type="Script" uid="uid://ddvujhxbwqcdw" path="res://Scripts/inventory_slot.gd" id="1_6h8ck"]
 [ext_resource type="Texture2D" uid="uid://clj3gx2smjlx8" path="res://assets/inventory/Inventory-outline.png" id="2_ewbek"]
 [ext_resource type="Texture2D" uid="uid://ck4sicl5umf0n" path="res://assets/inventory/Inventory.png" id="3_yqceb"]
 [ext_resource type="Texture2D" uid="uid://j2psfkrea7j6" path="res://assets/Farm/Barn_interior.png" id="4_x3kwo"]
+[ext_resource type="Texture2D" uid="uid://f5ymkdhlr0wk" path="res://assets/Bag.png" id="5_ewbek"]
 
 [node name="InventorySlot" type="Control"]
 custom_minimum_size = Vector2(97, 99)
@@ -80,6 +81,59 @@ region_rect = Rect2(114, 260, 10, 12)
 visible = false
 position = Vector2(48, 48)
 scale = Vector2(7.125, 7.125)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(210, 290, 12, 12)
+
+[node name="Carrot_Seeds" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(48, 44)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("5_ewbek")
+
+[node name="Carrot2" type="Sprite2D" parent="Items/Carrot_Seeds"]
+position = Vector2(26.66668, 173.33331)
+scale = Vector2(30.305, 30.305)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish_Seeds" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(48, 44)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("5_ewbek")
+
+[node name="Raddish2" type="Sprite2D" parent="Items/Raddish_Seeds"]
+self_modulate = Color(1, 0.4862745, 0.6901961, 1)
+position = Vector2(26.666668, 173.33334)
+scale = Vector2(35.88, 35.88)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(194, 290, 12, 12)
+
+[node name="Onion_Seeds" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(48, 44)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("5_ewbek")
+
+[node name="Onion2" type="Sprite2D" parent="Items/Onion_Seeds"]
+position = Vector2(-13.3333435, 240)
+scale = Vector2(43.56, 43.56)
+texture = ExtResource("4_x3kwo")
+region_enabled = true
+region_rect = Rect2(114, 260, 10, 12)
+
+[node name="Potato_Seeds" type="Sprite2D" parent="Items"]
+visible = false
+position = Vector2(48, 44)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("5_ewbek")
+
+[node name="Potato2" type="Sprite2D" parent="Items/Potato_Seeds"]
+position = Vector2(13.333332, 199.99997)
+scale = Vector2(44.91, 44.91)
 texture = ExtResource("4_x3kwo")
 region_enabled = true
 region_rect = Rect2(210, 290, 12, 12)
