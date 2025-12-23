@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://hubi2ixxr7k2"]
+
+[ext_resource type="Script" uid="uid://dduwraqaxa3w" path="res://Scenes/shopItem.gd" id="1_ys0gr"]
+
+[node name="Item" type="Control"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ys0gr")
+item = 4
+cost = 25
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 748.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.72156864, 0.5764706, 0.42745098, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 95.0
+offset_bottom = 94.0
+
+[node name="Item" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 7.0
+offset_right = 496.0
+offset_bottom = 95.0
+theme_override_font_sizes/normal_font_size = 52
+text = "Carrot Seeds"
+vertical_alignment = 1
+
+[node name="Cost" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 9.0
+offset_right = 668.0
+offset_bottom = 92.0
+theme_override_font_sizes/normal_font_size = 52
+text = "25"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 26.0
+offset_right = 730.0
+offset_bottom = 75.0

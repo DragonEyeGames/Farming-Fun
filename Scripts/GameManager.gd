@@ -10,6 +10,10 @@ enum inventoryItem {
 	Raddish,
 	Onion,
 	Potato,
+	Carrot_Seeds,
+	Raddish_Seeds,
+	Onion_Seeds,
+	Potato_Seeds
 }
 
 var playerInventory: Dictionary[inventoryItem, int] = {}

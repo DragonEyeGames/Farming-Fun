@@ -16,6 +16,7 @@ func _process(_delta: float) -> void:
 		GameManager.hud.visible=false
 		GameManager.player.canMove=false
 		GameManager.player.sprite.play("idle-up")
+		$"../HUD".visible=true
 
 func _on_animation_finished() -> void:
 	play("idle")

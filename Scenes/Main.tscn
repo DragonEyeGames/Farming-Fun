@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=73 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://r1k5u4fnpsmj" path="res://Characters/Shopkeep.png" id="23_3tgeq"]
 [ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scenes/shopkeep.gd" id="24_c4ay3"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="25_c4ay3"]
+[ext_resource type="PackedScene" uid="uid://hubi2ixxr7k2" path="res://Scenes/item.tscn" id="26_5jffn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_im7ls"]
 atlas = ExtResource("6_lgr22")
@@ -775,7 +776,97 @@ index = 8
 
 [node name="InventorySlot10" parent="Shop/HUD/HBoxContainer" instance=ExtResource("25_c4ay3")]
 layout_mode = 2
-index = 10
+index = 9
+
+[node name="ColorRect3" type="ColorRect" parent="Shop/HUD"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -501.0
+offset_top = 47.0
+offset_right = -203.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.82, 0.82)
+color = Color(0.7210815, 0.5746666, 0.42706376, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Shop/HUD/ColorRect3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 56
+text = "Pip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="Shop/HUD/ColorRect3"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -42.5
+offset_right = 153.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Shop/HUD"]
+offset_left = 457.0
+offset_top = 288.0
+offset_right = 704.0
+offset_bottom = 566.0
+color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Shop/HUD/ColorRect5"]
+layout_mode = 0
+offset_left = 247.90906
+offset_right = 526.81824
+offset_bottom = 226.28201
+rotation = 1.5707964
+theme_override_font_sizes/normal_font_size = 144
+text = ":)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Shop/HUD"]
+offset_left = 716.0
+offset_top = 277.0
+offset_right = 1500.0
+offset_bottom = 692.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Shop/HUD/ScrollContainer"]
+custom_minimum_size = Vector2(765, 0)
+layout_mode = 2
+
+[node name="Item" parent="Shop/HUD/ScrollContainer/VBoxContainer" instance=ExtResource("26_5jffn")]
+layout_mode = 2
+
+[node name="Item2" parent="Shop/HUD/ScrollContainer/VBoxContainer" instance=ExtResource("26_5jffn")]
+layout_mode = 2
+item = 6
+cost = 20
+
+[node name="Item3" parent="Shop/HUD/ScrollContainer/VBoxContainer" instance=ExtResource("26_5jffn")]
+layout_mode = 2
+item = 5
+cost = 35
+
+[node name="Item4" parent="Shop/HUD/ScrollContainer/VBoxContainer" instance=ExtResource("26_5jffn")]
+layout_mode = 2
+item = 7
+cost = 40
 
 [connection signal="animation_finished" from="Windmill/Door" to="Windmill" method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_entered"]
