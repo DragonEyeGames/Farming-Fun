@@ -419,44 +419,43 @@ tile_map_data = PackedByteArray("AAAHAPj/AQANAAYAAAAGAPj/AQAMAAYAAAD4/wMAAQADAAM
 z_index = 1
 y_sort_enabled = true
 
-[node name="Windmill" type="Sprite2D" parent="." groups=["Door"]]
-self_modulate = Color(1, 1, 1, 0)
-z_index = -1
-texture_filter = 1
-position = Vector2(0, -129)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("3_cm0pq")
-region_enabled = true
-region_rect = Rect2(83, 158, 66, 130)
+[node name="Windmill2" type="Sprite2D" parent="." groups=["Door", "Sort"]]
+texture_filter = 2
+position = Vector2(0, -74)
+scale = Vector2(0.2936709, 0.2936709)
+texture = ExtResource("5_2gh4u")
+offset = Vector2(-0.55385864, -186.34927)
 script = ExtResource("4_sc1dx")
 
-[node name="Windmill2" type="Sprite2D" parent="Windmill"]
-texture_filter = 2
-position = Vector2(-0.84388185, 0.8438797)
-scale = Vector2(0.24472573, 0.24472573)
-texture = ExtResource("5_2gh4u")
-
-[node name="Door" type="AnimatedSprite2D" parent="Windmill"]
+[node name="Door" type="AnimatedSprite2D" parent="Windmill2"]
 z_index = -1
-position = Vector2(-4, 49)
+texture_filter = 1
+position = Vector2(-13.450406, 10.4266815)
+scale = Vector2(4.086207, 4.086207)
 sprite_frames = SubResource("SpriteFrames_a34eg")
 animation = &"close"
 frame = 3
 frame_progress = 1.0
 
-[node name="Area2D" type="Area2D" parent="Windmill/Door"]
+[node name="Area2D" type="Area2D" parent="Windmill2/Door"]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill/Door/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill2/Door/Area2D"]
 position = Vector2(3.1561182, 1.6329093)
 shape = SubResource("CapsuleShape2D_kjvhd")
 
-[node name="Turbine" type="Sprite2D" parent="Windmill"]
-position = Vector2(-0.8333333, -20.000002)
-scale = Vector2(0.245, 0.245)
+[node name="Turbine" type="Sprite2D" parent="Windmill2"]
+z_index = 2
+position = Vector2(-0.51075166, -271.5216)
+scale = Vector2(1.0011208, 1.0011208)
 texture = ExtResource("7_2gh4u")
 script = ExtResource("8_devvj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Windmill2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Windmill2/StaticBody2D"]
+polygon = PackedVector2Array(125.99138, -10.215515, 61.293102, 57.88794, 40.86207, 54.482758, 40.86207, 30.64656, -30.646551, 30.64656, -37.456894, 54.482758, -64.69827, 54.482758, -122.586205, -6.8103333, -115.77586, -34.051727, 119.18103, -37.45688)
 
 [node name="CowPen" type="Node2D" parent="."]
 position = Vector2(117, 4)
@@ -613,7 +612,7 @@ position = Vector2(69, 40)
 position = Vector2(87, 39)
 
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
-position = Vector2(357, -39)
+position = Vector2(1, -49)
 collision_layer = 2
 
 [node name="Pond" type="Node2D" parent="."]
@@ -701,9 +700,9 @@ shape = SubResource("RectangleShape2D_3tgeq")
 [node name="HUD" parent="Shop" instance=ExtResource("25_c4ay3")]
 visible = false
 
-[connection signal="animation_finished" from="Windmill/Door" to="Windmill" method="_on_door_animation_finished"]
-[connection signal="body_entered" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="Windmill2/Door" to="Windmill2" method="_on_door_animation_finished"]
+[connection signal="body_entered" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]
 [connection signal="animation_finished" from="Shop/Shopkeep" to="Shop/Shopkeep" method="_on_animation_finished"]
 [connection signal="body_entered" from="Shop/Shopkeep/Area2D" to="Shop/Shopkeep" method="_on_area_2d_body_entered"]

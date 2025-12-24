@@ -5,13 +5,21 @@ var direction="down"
 var canMove:=true
 var interacting:=[]
 var sprite: AnimatedSprite2D
+var effects
 var pickedUp:=false
 
 func _ready() -> void:
 	sprite = $Sprite
+	effects=$Effects
 	GameManager.player=self
 
 func _process(_delta: float) -> void:
+	if(GameManager.plantable!=null):
+		var cell := GameManager.plantable.local_to_map(
+		GameManager.plantable.to_local(global_position)
+		)
+		var tile := GameManager.plantable.get_cell_source_id(cell)
+		#print(tile)
 	if(not canMove):
 		return
 	#if(Input.is_action_just_pressed("Interact")):
@@ -42,6 +50,15 @@ func _process(_delta: float) -> void:
 		interacting.remove_at(0)
 		canMove=false
 		sprite.play("pickup-" + direction)
+	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null):
+		if("seeds" in str(GameManager.selectedItem).to_lower()):
+			canMove=false
+			sprite.play("plant-" + direction)
+			effects.get_node(direction).play("plant-" + direction)
+			if(sprite.flip_h):
+				effects.scale.x=-1
+			else:
+				effects.scale.x=1
 
 
 func _on_sprite_animation_finished() -> void:
@@ -59,3 +76,17 @@ func _on_sprite_animation_finished() -> void:
 		sprite.play("picked-walk-up")
 	if("pickup" in sprite.animation):
 		canMove=true
+	if("plant" in sprite.animation):
+		canMove=true
+
+
+func _on_down_animation_finished() -> void:
+	$Effects/down.play("reset")
+
+
+func _on_up_animation_finished() -> void:
+	$Effects/up.play("reset")
+
+
+func _on_side_animation_finished() -> void:
+	$Effects/side.play("reset")

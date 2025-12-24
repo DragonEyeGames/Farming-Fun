@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=55 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://difasmduk376r" path="res://Characters/Main.png" id="2_onrkg"]
@@ -440,14 +440,6 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("3_6t5aa")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(160, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
 atlas = ExtResource("3_6t5aa")
 region = Rect2(32, 64, 32, 32)
@@ -460,14 +452,6 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("3_6t5aa")
 region = Rect2(96, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(160, 64, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
 atlas = ExtResource("3_6t5aa")
 region = Rect2(32, 32, 32, 32)
@@ -479,14 +463,6 @@ region = Rect2(64, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
 atlas = ExtResource("3_6t5aa")
 region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(160, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fs7ks"]
 animations = [{
@@ -508,12 +484,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x3wgy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3smsa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8erm5")
 }],
 "loop": false,
 "name": &"plant-down",
@@ -537,12 +507,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gymyn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pu2lt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ukyrk")
 }],
 "loop": false,
 "name": &"plant-side",
@@ -566,16 +530,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fd4e3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qqcod")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igrcy")
 }],
 "loop": false,
 "name": &"plant-up",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"reset",
+"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Sort"]]
@@ -584,7 +550,7 @@ script = ExtResource("1_sweqy")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"plant-side"
+animation = &"plant-down"
 frame = 6
 frame_progress = 1.0
 
@@ -596,10 +562,31 @@ position_smoothing_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3dxm6")
 
-[node name="Effects" type="AnimatedSprite2D" parent="."]
+[node name="Effects" type="Node2D" parent="."]
+
+[node name="side" type="AnimatedSprite2D" parent="Effects"]
+position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"plant-up"
-frame = 7
-frame_progress = 1.0
+animation = &"reset"
+autoplay = "reset"
+offset = Vector2(16, 2)
+
+[node name="up" type="AnimatedSprite2D" parent="Effects"]
+z_index = -1
+position = Vector2(-13, -17)
+sprite_frames = SubResource("SpriteFrames_fs7ks")
+animation = &"reset"
+autoplay = "reset"
+offset = Vector2(16, 2)
+
+[node name="down" type="AnimatedSprite2D" parent="Effects"]
+position = Vector2(-15, 0)
+sprite_frames = SubResource("SpriteFrames_fs7ks")
+animation = &"reset"
+autoplay = "reset"
+offset = Vector2(16, 2)
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="Effects/side" to="." method="_on_side_animation_finished"]
+[connection signal="animation_finished" from="Effects/up" to="." method="_on_up_animation_finished"]
+[connection signal="animation_finished" from="Effects/down" to="." method="_on_down_animation_finished"]

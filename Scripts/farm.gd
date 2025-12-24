@@ -2,6 +2,7 @@ extends Node2D
 
 
 func _ready() -> void:
+	GameManager.plantable=$Ground
 	await get_tree().process_frame
 	await get_tree().process_frame
 	for child in $Plants.get_children():

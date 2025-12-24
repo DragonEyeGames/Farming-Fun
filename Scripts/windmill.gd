@@ -8,11 +8,12 @@ var mainScene
 
 func _process(_delta: float) -> void:
 	if(animationPlaying==false and state!=""):
+		print(state)
 		$Door.play(state)
 		animationPlaying=true
 		state=""
 	if(playerCollided and Input.is_action_just_pressed("Interact")):
-		mainScene.transport("res://windmill.tscn")
+		mainScene.transport("res://Scenes/windmill.tscn")
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	state="open"
@@ -20,6 +21,7 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 
 
 func _on_area_2d_body_exited(_body: Node2D) -> void:
+	print('close')
 	state="close"
 	playerCollided=false
 

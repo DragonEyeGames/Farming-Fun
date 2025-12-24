@@ -5,6 +5,8 @@ var time:= 0.0
 var hud
 var player
 
+var plantable: TileMapLayer
+
 var playerMoney:=100
 
 enum inventoryItem {
@@ -20,6 +22,7 @@ enum inventoryItem {
 
 var playerInventory: Dictionary[inventoryItem, int] = {}
 var playerSelected = null
+var selectedItem
 
 func addItem(item, count):
 	if(playerInventory.has(item)):
@@ -35,8 +38,12 @@ func _process(_delta: float) -> void:
 			else:
 				playerSelected=null
 	#The code below prints the name of the currently selected item in the inventoryqawd
-	#if(playerSelected!=null):
-		#var keys := playerInventory.keys()
-		#if playerSelected < keys.size():
-			#var selectedItem = keys[playerSelected]
-			#print(inventoryItem.keys()[selectedItem])
+	if(playerSelected!=null):
+		var keys := playerInventory.keys()
+		if playerSelected < keys.size():
+			var selectedItems = keys[playerSelected]
+			selectedItem = (inventoryItem.keys()[selectedItems])
+		else:
+			selectedItem=null
+	else:
+		selectedItem=null
