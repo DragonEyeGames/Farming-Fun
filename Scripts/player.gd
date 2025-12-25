@@ -14,12 +14,6 @@ func _ready() -> void:
 	GameManager.player=self
 
 func _process(_delta: float) -> void:
-	if(GameManager.plantable!=null):
-		var cell := GameManager.plantable.local_to_map(
-		GameManager.plantable.to_local(global_position)
-		)
-		var tile := GameManager.plantable.get_cell_source_id(cell)
-		#print(tile)
 	if(not canMove):
 		return
 	#if(Input.is_action_just_pressed("Interact")):
@@ -51,14 +45,26 @@ func _process(_delta: float) -> void:
 		canMove=false
 		sprite.play("pickup-" + direction)
 	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null):
-		if("seeds" in str(GameManager.selectedItem).to_lower()):
-			canMove=false
-			sprite.play("plant-" + direction)
-			effects.get_node(direction).play("plant-" + direction)
+		if("seeds" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
 			if(sprite.flip_h):
-				effects.scale.x=-1
+				$plantChecker/side.position.x=-abs($plantChecker/side.position.x)
 			else:
-				effects.scale.x=1
+				$plantChecker/side.position.x=abs($plantChecker/side.position.x)
+			var cell := GameManager.plantable.local_to_map(
+			GameManager.plantable.to_local($plantChecker.get_node(direction).global_position)
+			)
+			var tile := GameManager.plantable.get_cell_source_id(cell)
+			var keys := GameManager.playerInventory.keys()
+			var selectedItems = keys[GameManager.playerSelected]
+			GameManager.removeItem(selectedItems, 1)
+			if(tile==0):
+				canMove=false
+				sprite.play("plant-" + direction)
+				effects.get_node(direction).play("plant-" + direction)
+				if(sprite.flip_h):
+					effects.scale.x=-1
+				else:
+					effects.scale.x=1
 
 
 func _on_sprite_animation_finished() -> void:

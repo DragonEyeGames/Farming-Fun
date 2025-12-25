@@ -24,11 +24,14 @@ var playerInventory: Dictionary[inventoryItem, int] = {}
 var playerSelected = null
 var selectedItem
 
-func addItem(item, count):
-	if(playerInventory.has(item)):
-		playerInventory[item]+=count
-	else:
-		playerInventory[item]=count
+func removeItem(item, count := 1) -> void:
+	if not playerInventory.has(item):
+		return
+
+	playerInventory[item] -= count
+
+	if playerInventory[item] <= 0:
+		playerInventory.erase(item)
 		
 func _process(_delta: float) -> void:
 	for i in range(0, 10):

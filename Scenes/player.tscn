@@ -567,8 +567,9 @@ shape = SubResource("CapsuleShape2D_3dxm6")
 [node name="side" type="AnimatedSprite2D" parent="Effects"]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"reset"
+animation = &"plant-side"
 autoplay = "reset"
+frame = 5
 offset = Vector2(16, 2)
 
 [node name="up" type="AnimatedSprite2D" parent="Effects"]
@@ -585,6 +586,17 @@ sprite_frames = SubResource("SpriteFrames_fs7ks")
 animation = &"reset"
 autoplay = "reset"
 offset = Vector2(16, 2)
+
+[node name="plantChecker" type="Node2D" parent="."]
+
+[node name="down" type="Marker2D" parent="plantChecker"]
+position = Vector2(2, 11)
+
+[node name="up" type="Marker2D" parent="plantChecker"]
+position = Vector2(2, -20)
+
+[node name="side" type="Marker2D" parent="plantChecker"]
+position = Vector2(25, 2)
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Effects/side" to="." method="_on_side_animation_finished"]
