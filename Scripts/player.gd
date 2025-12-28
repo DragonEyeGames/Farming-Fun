@@ -7,6 +7,11 @@ var interacting:=[]
 var sprite: AnimatedSprite2D
 var effects
 var pickedUp:=false
+@export var carrot: PackedScene
+@export var raddish: PackedScene
+@export var potato: PackedScene
+@export var onion: PackedScene
+var selectedSeed
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -56,8 +61,9 @@ func _process(_delta: float) -> void:
 			var tile := GameManager.plantable.get_cell_source_id(cell)
 			var keys := GameManager.playerInventory.keys()
 			var selectedItems = keys[GameManager.playerSelected]
-			GameManager.removeItem(selectedItems, 1)
+			selectedSeed=GameManager.playerSelected
 			if(tile==0):
+				GameManager.removeItem(selectedItems, 1)
 				canMove=false
 				sprite.play("plant-" + direction)
 				effects.get_node(direction).play("plant-" + direction)
@@ -83,6 +89,25 @@ func _on_sprite_animation_finished() -> void:
 	if("pickup" in sprite.animation):
 		canMove=true
 	if("plant" in sprite.animation):
+		if(sprite.flip_h):
+			$plantChecker/side.position.x=-abs($plantChecker/side.position.x)
+		else:
+			$plantChecker/side.position.x=abs($plantChecker/side.position.x)
+		var plant
+		if(GameManager.inventoryItem.keys()[selectedSeed]=="Carrot"):
+			plant=carrot.instantiate()
+		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Potato"):
+			plant=potato.instantiate()
+		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Raddish"):
+			plant=raddish.instantiate()
+		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Onion"):
+			plant=onion.instantiate()
+		plant.global_position=$plantChecker.get_node(direction).global_position
+		GameManager.ySort.add_child(plant)
+		plant.global_position=$plantChecker.get_node(direction).global_position
+		await get_tree().process_frame
+		print(plant.get_parent())
+		print($plantChecker.get_node(direction).global_position)
 		canMove=true
 
 

@@ -20,6 +20,7 @@ func _ready() -> void:
 	if ResourceLoader.exists("user://player_data.tres"):
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
 		GameManager.playerInventory = data.inventory
+		GameManager.playerMoney=data.money
 	for door in get_tree().get_nodes_in_group("Door"):
 		door.mainScene=self
 	for object in get_tree().get_nodes_in_group("Sort"):
@@ -41,6 +42,7 @@ func transport(file: String):
 	world.time = sky.time
 	var player = PlayerData.new()
 	player.inventory=GameManager.playerInventory
+	player.money=GameManager.playerMoney
 	ResourceSaver.save(save, "user://farm_data.tres")
 	ResourceSaver.save(world, "user://world_data.tres")
 	ResourceSaver.save(player, "user://player_data.tres")

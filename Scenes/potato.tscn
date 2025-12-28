@@ -59,7 +59,6 @@ radius = 8.0
 height = 22.0
 
 [node name="Potato" type="AnimatedSprite2D" groups=["Crop", "Save"]]
-position = Vector2(-1, 5)
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
 offset = Vector2(1, -5)

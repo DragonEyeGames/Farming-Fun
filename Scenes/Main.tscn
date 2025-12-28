@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://dfkvs8ju8sow5" path="res://Scripts/turbine.gd" id="8_devvj"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="8_wkp8b"]
-[ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/Onion.tscn" id="9_20pc6"]
+[ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="9_20pc6"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bsy53bcsoyo4d" path="res://Scripts/pond.gd" id="12_c6i3y"]
 [ext_resource type="Texture2D" uid="uid://bj4dndcwxs7vo" path="res://assets/Farm/fishes.png" id="13_c2ibq"]

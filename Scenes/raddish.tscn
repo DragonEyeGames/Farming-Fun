@@ -59,7 +59,6 @@ radius = 7.0
 height = 20.0
 
 [node name="Raddish" type="AnimatedSprite2D" groups=["Crop", "Save"]]
-position = Vector2(0, 5)
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
 offset = Vector2(0, -5)

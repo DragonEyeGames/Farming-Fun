@@ -1,8 +1,12 @@
-[gd_scene load_steps=55 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=59 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
+[ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
 [ext_resource type="Texture2D" uid="uid://difasmduk376r" path="res://Characters/Main.png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dexo0q5yykvwg" path="res://Characters/farmer_base_effects/farmer animations 32x32 v00.png" id="3_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="3_8erm5"]
+[ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="4_f1ek2"]
+[ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="5_tx1dd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -546,6 +550,10 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["Sort"]]
 script = ExtResource("1_sweqy")
+carrot = ExtResource("2_3smsa")
+raddish = ExtResource("3_8erm5")
+potato = ExtResource("4_f1ek2")
+onion = ExtResource("5_tx1dd")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
@@ -592,11 +600,32 @@ offset = Vector2(16, 2)
 [node name="down" type="Marker2D" parent="plantChecker"]
 position = Vector2(2, 11)
 
+[node name="ColorRect" type="ColorRect" parent="plantChecker/down"]
+visible = false
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = 3.0
+
 [node name="up" type="Marker2D" parent="plantChecker"]
 position = Vector2(2, -20)
 
+[node name="ColorRect" type="ColorRect" parent="plantChecker/up"]
+visible = false
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = 3.0
+
 [node name="side" type="Marker2D" parent="plantChecker"]
 position = Vector2(25, 2)
+
+[node name="ColorRect" type="ColorRect" parent="plantChecker/side"]
+visible = false
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = 3.0
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Effects/side" to="." method="_on_side_animation_finished"]

@@ -9,6 +9,8 @@ var plantable: TileMapLayer
 
 var playerMoney:=100
 
+var ySort
+
 enum inventoryItem {
 	Carrot,
 	Raddish,
@@ -23,6 +25,12 @@ enum inventoryItem {
 var playerInventory: Dictionary[inventoryItem, int] = {}
 var playerSelected = null
 var selectedItem
+
+func addItem(item, count):
+	if(playerInventory.has(item)):
+		playerInventory[item]+=count
+	else:
+		playerInventory[item]=count
 
 func removeItem(item, count := 1) -> void:
 	if not playerInventory.has(item):
