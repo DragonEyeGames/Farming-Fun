@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=80 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -25,6 +25,14 @@
 [ext_resource type="Texture2D" uid="uid://r1k5u4fnpsmj" path="res://Characters/Shopkeep.png" id="23_3tgeq"]
 [ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scenes/shopkeep.gd" id="24_c4ay3"]
 [ext_resource type="PackedScene" uid="uid://cx1ywkbf2hdqx" path="res://Scenes/shopHUD.tscn" id="25_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://d2q1bw43msqqv" path="res://assets/House/House-1.png" id="26_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://cyt5rcek2nik" path="res://assets/House/House-2.png" id="27_qta6b"]
+[ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
+[ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
+[ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
+[ext_resource type="Texture2D" uid="uid://ee3i260vb6fr" path="res://assets/House/House-6.png" id="31_btbly"]
+[ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
+[ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_im7ls"]
 atlas = ExtResource("6_lgr22")
@@ -421,8 +429,8 @@ y_sort_enabled = true
 
 [node name="Windmill2" type="Sprite2D" parent="." groups=["Door", "Sort"]]
 texture_filter = 2
-position = Vector2(0, -74)
-scale = Vector2(0.2936709, 0.2936709)
+position = Vector2(-61, -79)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("5_2gh4u")
 offset = Vector2(-0.55385864, -186.34927)
 script = ExtResource("4_sc1dx")
@@ -447,8 +455,7 @@ shape = SubResource("CapsuleShape2D_kjvhd")
 
 [node name="Turbine" type="Sprite2D" parent="Windmill2"]
 z_index = 2
-position = Vector2(-0.51075166, -271.5216)
-scale = Vector2(1.0011208, 1.0011208)
+position = Vector2(-1.0000019, -270)
 texture = ExtResource("7_2gh4u")
 script = ExtResource("8_devvj")
 
@@ -699,6 +706,37 @@ shape = SubResource("RectangleShape2D_3tgeq")
 
 [node name="HUD" parent="Shop" instance=ExtResource("25_c4ay3")]
 visible = false
+
+[node name="House" type="Node2D" parent="." groups=["Sort"]]
+texture_filter = 2
+position = Vector2(136, -138.99998)
+scale = Vector2(0.35, 0.35)
+
+[node name="House1" type="Sprite2D" parent="House"]
+texture = ExtResource("26_4yxf6")
+
+[node name="House2" type="Sprite2D" parent="House"]
+texture = ExtResource("27_qta6b")
+
+[node name="House3" type="Sprite2D" parent="House"]
+texture = ExtResource("28_x3rx7")
+
+[node name="House4" type="Sprite2D" parent="House"]
+texture = ExtResource("29_6heos")
+
+[node name="House5" type="Sprite2D" parent="House"]
+texture = ExtResource("30_vvnwx")
+
+[node name="House6" type="Sprite2D" parent="House" groups=["Sort"]]
+position = Vector2(-3.7037048, 237.03702)
+texture = ExtResource("31_btbly")
+offset = Vector2(3.7037048, -237.03702)
+
+[node name="House7" type="Sprite2D" parent="House"]
+texture = ExtResource("32_vs04g")
+
+[node name="House8" type="Sprite2D" parent="House"]
+texture = ExtResource("33_6ehlx")
 
 [connection signal="animation_finished" from="Windmill2/Door" to="Windmill2" method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_entered"]

@@ -36,6 +36,7 @@ offset_left = 7.0
 offset_top = 7.0
 offset_right = 26.0
 offset_bottom = 31.0
+mouse_filter = 2
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -46,6 +47,7 @@ offset_left = 71.0
 offset_top = 68.0
 offset_right = 90.0
 offset_bottom = 92.0
+mouse_filter = 2
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -53,7 +55,6 @@ vertical_alignment = 1
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Carrot" type="Sprite2D" parent="Items"]
-visible = false
 position = Vector2(55.999996, 49.000004)
 scale = Vector2(4.86, 4.86)
 texture = ExtResource("4_x3kwo")
@@ -137,3 +138,61 @@ scale = Vector2(44.91, 44.91)
 texture = ExtResource("4_x3kwo")
 region_enabled = true
 region_rect = Rect2(210, 290, 12, 12)
+
+[node name="Popup" type="ColorRect" parent="."]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = 87.0
+offset_top = -53.0
+offset_right = 224.0
+offset_bottom = 75.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Popup"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 135.0
+offset_bottom = 126.0
+mouse_filter = 2
+color = Color(0.653982, 0.6079894, 0.47235602, 1)
+
+[node name="Description" type="RichTextLabel" parent="Popup"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 37.0
+offset_right = 135.0
+offset_bottom = 104.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 16
+text = "Yummy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="Popup"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 134.0
+offset_bottom = 43.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 16
+text = "Carrot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SellPrice" type="RichTextLabel" parent="Popup"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 99.0
+offset_right = 135.0
+offset_bottom = 126.0
+theme_override_font_sizes/normal_font_size = 16
+text = "$10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]
