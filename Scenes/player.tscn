@@ -598,34 +598,52 @@ offset = Vector2(16, 2)
 [node name="plantChecker" type="Node2D" parent="."]
 
 [node name="down" type="Marker2D" parent="plantChecker"]
-position = Vector2(2, 11)
+position = Vector2(1, 11)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/down"]
-visible = false
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = 3.0
+z_index = 2
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1.67, 1.67)
+color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="up" type="Marker2D" parent="plantChecker"]
-position = Vector2(2, -20)
+position = Vector2(1, -20)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/up"]
-visible = false
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = 3.0
+z_index = 2
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1.67, 1.67)
+color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
-[node name="side" type="Marker2D" parent="plantChecker"]
+[node name="right-side" type="Marker2D" parent="plantChecker"]
 position = Vector2(25, 2)
 
-[node name="ColorRect" type="ColorRect" parent="plantChecker/side"]
-visible = false
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = 3.0
+[node name="ColorRect" type="ColorRect" parent="plantChecker/right-side"]
+z_index = 2
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1.67, 1.67)
+color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
+
+[node name="left-side" type="Marker2D" parent="plantChecker"]
+position = Vector2(-25, 2)
+
+[node name="ColorRect" type="ColorRect" parent="plantChecker/left-side"]
+z_index = 2
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 1.0
+offset_bottom = 1.0
+scale = Vector2(1.67, 1.67)
+color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Effects/side" to="." method="_on_side_animation_finished"]

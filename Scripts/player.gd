@@ -21,6 +21,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if(not canMove):
 		return
+		
+		
 	#if(Input.is_action_just_pressed("Interact")):
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
 	if(velocity.x<0):
@@ -39,6 +41,33 @@ func _process(_delta: float) -> void:
 	else:
 		state="idle"
 		
+	if("seeds" in str(GameManager.selectedItem).to_lower()):
+		for child in $plantChecker.get_children():
+			child.visible=false
+		var selectedBit
+		if(direction=="up"):
+			selectedBit=$plantChecker/up
+		if(direction=="down"):
+			selectedBit=$plantChecker/down
+		if(direction=="side"):
+			if(sprite.flip_h):
+				selectedBit=$"plantChecker/left-side"
+			else:
+				selectedBit=$"plantChecker/right-side"
+		selectedBit.visible=true
+		var cell := GameManager.plantable.local_to_map(
+		GameManager.plantable.to_local(selectedBit.global_position)
+		)
+		var tile := GameManager.plantable.get_cell_source_id(cell)
+		if(tile==0):
+			selectedBit.get_child(0).color=Color.WEB_GREEN
+		else:
+			selectedBit.get_child(0).color=Color.RED
+		selectedBit.modulate.a=.6
+	else:
+		for child in $plantChecker.get_children():
+			child.visible=false
+		
 	var animation = state + "-" + direction
 	if(pickedUp):
 		animation = "picked-" + animation
@@ -51,12 +80,13 @@ func _process(_delta: float) -> void:
 		sprite.play("pickup-" + direction)
 	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null):
 		if("seeds" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
-			if(sprite.flip_h):
-				$plantChecker/side.position.x=-abs($plantChecker/side.position.x)
-			else:
-				$plantChecker/side.position.x=abs($plantChecker/side.position.x)
+			var backupDirection=direction
+			if(sprite.flip_h and direction=="side"):
+				backupDirection="left-side"
+			elif(direction=="side"):
+				backupDirection="right-side"
 			var cell := GameManager.plantable.local_to_map(
-			GameManager.plantable.to_local($plantChecker.get_node(direction).global_position)
+			GameManager.plantable.to_local($plantChecker.get_node(backupDirection).global_position)
 			)
 			var tile := GameManager.plantable.get_cell_source_id(cell)
 			var keys := GameManager.playerInventory.keys()
@@ -89,10 +119,11 @@ func _on_sprite_animation_finished() -> void:
 	if("pickup" in sprite.animation):
 		canMove=true
 	if("plant" in sprite.animation):
-		if(sprite.flip_h):
-			$plantChecker/side.position.x=-abs($plantChecker/side.position.x)
-		else:
-			$plantChecker/side.position.x=abs($plantChecker/side.position.x)
+		var backupDirection=direction
+		if(sprite.flip_h and direction=="side"):
+			backupDirection="left-side"
+		elif(direction=="side"):
+			backupDirection="right-side"
 		var plant
 		if(GameManager.inventoryItem.keys()[selectedSeed]=="Carrot"):
 			plant=carrot.instantiate()
@@ -102,12 +133,9 @@ func _on_sprite_animation_finished() -> void:
 			plant=raddish.instantiate()
 		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Onion"):
 			plant=onion.instantiate()
-		plant.global_position=$plantChecker.get_node(direction).global_position
+		plant.global_position=$plantChecker.get_node(backupDirection).global_position
 		GameManager.ySort.add_child(plant)
-		plant.global_position=$plantChecker.get_node(direction).global_position
-		await get_tree().process_frame
-		print(plant.get_parent())
-		print($plantChecker.get_node(direction).global_position)
+		plant.global_position=$plantChecker.get_node(backupDirection).global_position
 		canMove=true
 
 
