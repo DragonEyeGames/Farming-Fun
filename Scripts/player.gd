@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 var state="idle"
 var direction="down"
 var canMove:=true

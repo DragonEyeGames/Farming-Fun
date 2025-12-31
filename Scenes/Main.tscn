@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=82 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scenes/shopkeep.gd" id="24_c4ay3"]
 [ext_resource type="PackedScene" uid="uid://cx1ywkbf2hdqx" path="res://Scenes/shopHUD.tscn" id="25_c4ay3"]
 [ext_resource type="Texture2D" uid="uid://d2q1bw43msqqv" path="res://assets/House/House-1.png" id="26_4yxf6"]
+[ext_resource type="Script" uid="uid://cwdcluk0384b" path="res://Scenes/house.gd" id="26_qta6b"]
 [ext_resource type="Texture2D" uid="uid://cyt5rcek2nik" path="res://assets/House/House-2.png" id="27_qta6b"]
 [ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
@@ -411,6 +412,9 @@ height = 50.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tgeq"]
 size = Vector2(73, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yxf6"]
+size = Vector2(82.85715, 41.428574)
+
 [node name="Main" type="Node2D" node_paths=PackedStringArray("sky")]
 texture_filter = 1
 script = ExtResource("1_kjvhd")
@@ -508,34 +512,34 @@ tile_map_data = PackedByteArray("AAD/////AAAJAA4AAAD//wAAAAAJAA8AAAAAAP//AAAKAA4
 z_index = -1
 
 [node name="Carrot" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(59, -25)
+position = Vector2(81, -14)
 
 [node name="Carrot2" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(40, -26)
+position = Vector2(62, -15)
 
 [node name="Carrot3" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(20, -26)
+position = Vector2(42, -15)
 
 [node name="Carrot4" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(0, -27)
+position = Vector2(22, -16)
 
 [node name="Carrot5" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-17, -27)
+position = Vector2(5, -16)
 
 [node name="Carrot6" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-35, -28)
+position = Vector2(-13, -17)
 
 [node name="Carrot7" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-52, -29)
+position = Vector2(-30, -18)
 
 [node name="Carrot8" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-71, -28)
+position = Vector2(-49, -17)
 
 [node name="Carrot9" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-87, -30)
+position = Vector2(-65, -19)
 
 [node name="Carrot10" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
-position = Vector2(-104, -30)
+position = Vector2(-82, -19)
 
 [node name="Raddish" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 position = Vector2(-86, 3)
@@ -707,36 +711,59 @@ shape = SubResource("RectangleShape2D_3tgeq")
 [node name="HUD" parent="Shop" instance=ExtResource("25_c4ay3")]
 visible = false
 
-[node name="House" type="Node2D" parent="." groups=["Sort"]]
+[node name="House" type="Node2D" parent="." groups=["Door", "Sort"]]
 texture_filter = 2
-position = Vector2(136, -138.99998)
+position = Vector2(137, -96)
 scale = Vector2(0.35, 0.35)
+script = ExtResource("26_qta6b")
 
 [node name="House1" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("26_4yxf6")
 
 [node name="House2" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("27_qta6b")
 
 [node name="House3" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("28_x3rx7")
 
 [node name="House4" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("29_6heos")
 
 [node name="House5" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("30_vvnwx")
 
 [node name="House6" type="Sprite2D" parent="House" groups=["Sort"]]
-position = Vector2(-3.7037048, 237.03702)
+position = Vector2(-0.48941922, 117.03698)
 texture = ExtResource("31_btbly")
 offset = Vector2(3.7037048, -237.03702)
 
 [node name="House7" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("32_vs04g")
 
 [node name="House8" type="Sprite2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
 texture = ExtResource("33_6ehlx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="House"]
+position = Vector2(3.2142856, -120.00004)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="House/StaticBody2D"]
+polygon = PackedVector2Array(22.857147, 248.57137, 122.85712, 248.57137, 125.714294, 171.42851, 220, 171.42851, 220, -2.8571777, -222.85713, -3.0517578e-05, -222.85713, 168.57138, -125.714294, 168.57138, -125.714294, 245.71423, -25.714294, 245.71423, -25.714294, 231.42851, -114.285706, 231.42851, -111.42856, 151.42853, -40, 157.1428, -34.285706, 145.71423, 31.428558, 145.71423, 42.857147, 157.1428, 111.42856, 157.1428, 108.57141, 228.57138, 22.857147, 231.42851)
+
+[node name="Area2D" type="Area2D" parent="House"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/Area2D"]
+position = Vector2(-1.4285889, 10.714294)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_4yxf6")
 
 [connection signal="animation_finished" from="Windmill2/Door" to="Windmill2" method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_entered"]
@@ -745,3 +772,5 @@ texture = ExtResource("33_6ehlx")
 [connection signal="animation_finished" from="Shop/Shopkeep" to="Shop/Shopkeep" method="_on_animation_finished"]
 [connection signal="body_entered" from="Shop/Shopkeep/Area2D" to="Shop/Shopkeep" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Shop/Shopkeep/Area2D" to="Shop/Shopkeep" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="House/Area2D" to="House" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="House/Area2D" to="House" method="_on_area_2d_body_exited"]

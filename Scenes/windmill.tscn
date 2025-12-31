@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://dqk8jjdqhhr8t"]
 
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_0jr3m"]
-[ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/house.gd" id="1_rcfog"]
+[ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/buildingInterior.gd" id="1_rcfog"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://assets/Farm/House_interior.png" id="2_aeunn"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="3_qiw6i"]
 
