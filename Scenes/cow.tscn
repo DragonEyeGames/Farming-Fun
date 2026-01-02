@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://dw20lindfs40d"]
+[gd_scene load_steps=45 format=3 uid="uid://dw20lindfs40d"]
 
+[ext_resource type="Script" uid="uid://bsi6fgmbei8g1" path="res://Scenes/cow.gd" id="1_asfwn"]
 [ext_resource type="Texture2D" uid="uid://c6v8ykbvmqg00" path="res://assets/Farm/Cow_animation.png" id="1_nuh3y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fos0i"]
@@ -331,6 +332,8 @@ height = 24.0
 
 [node name="Cow" type="CharacterBody2D" groups=["Animal", "Save", "Sort"]]
 collision_layer = 0
+script = ExtResource("1_asfwn")
+speed = 40
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y1tbi")
@@ -341,3 +344,5 @@ frame_progress = 0.9938532
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_sc1dx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

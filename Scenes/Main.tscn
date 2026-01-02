@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=83 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -91,6 +91,12 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjvhd"]
 radius = 8.438818
 height = 27.00422
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_qta6b"]
+vertices = PackedVector2Array(79, 105.00781, -78, 105.97656, -78, 1, 79, 1)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-80, -1, 81, -1, 81, 107, -80, 108)])
+agent_radius = 2.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
 atlas = ExtResource("13_c2ibq")
@@ -486,6 +492,12 @@ tile_map_data = PackedByteArray("AAABAAIAAQAEAAgAAAD9/wAAAQABAAgAAAAEAAEAAQANAAg
 [node name="Cow" parent="CowPen" instance=ExtResource("6_sc1dx")]
 position = Vector2(62, 48)
 
+[node name="TopLeft" type="Marker2D" parent="CowPen/Cow"]
+position = Vector2(-127, -35)
+
+[node name="BottomRight" type="Marker2D" parent="CowPen/Cow"]
+position = Vector2(5, 47)
+
 [node name="Food" type="Sprite2D" parent="CowPen" groups=["Sort"]]
 position = Vector2(-71, 6)
 texture = ExtResource("3_cm0pq")
@@ -497,6 +509,9 @@ position = Vector2(-45, 6)
 texture = ExtResource("3_cm0pq")
 region_enabled = true
 region_rect = Rect2(240, 90, 18, 16)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="CowPen"]
+navigation_polygon = SubResource("NavigationPolygon_qta6b")
 
 [node name="CobblePath" parent="." instance=ExtResource("8_trn2v")]
 tile_map_data = PackedByteArray("AAD///3/AAASAAgAAAAAAP3/AAATAAgAAAD9//3/AAASAAgAAAD+//3/AAATAAgAAAD9//7/AAASAAgAAAD+//7/AAATAAgAAAD///7/AAASAAgAAAAAAP7/AAATAAgAAAABAP7/AAASAAgAAAACAP7/AAATAAgAAAABAP3/AAASAAgAAAACAP3/AAATAAgAAAADAP7/AAASAAgAAAAEAP7/AAATAAgAAAADAP3/AAASAAgAAAAEAP3/AAATAAgAAAD7//7/AAASAAgAAAD8//7/AAATAAgAAAD7//3/AAASAAgAAAD8//3/AAATAAgAAAAFAP7/AAASAAgAAAAGAP7/AAATAAgAAAAFAP3/AAASAAgAAAAGAP3/AAATAAgAAAD5//7/AAASAAgAAAD6//7/AAATAAgAAAD5//3/AAASAAgAAAD6//3/AAATAAgAAAA=")
