@@ -19,8 +19,6 @@ func _ready() -> void:
 	GameManager.player=self
 
 func _process(_delta: float) -> void:
-	if(not canMove):
-		return
 		
 		
 	#if(Input.is_action_just_pressed("Interact")):
@@ -35,7 +33,8 @@ func _process(_delta: float) -> void:
 		direction="down"
 	elif(velocity.y<0):
 		direction="up"
-	move_and_slide()
+	if(canMove):
+		move_and_slide()
 	if(velocity!=Vector2.ZERO):
 		state="walk"
 	else:
@@ -69,10 +68,22 @@ func _process(_delta: float) -> void:
 			child.visible=false
 		
 	var animation = state + "-" + direction
+	print(sprite.animation)
+	if(GameManager.selectedItem!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
+		pickedUp=true
+		print(GameManager.selectedItem)
+		for child in $Items.get_children():
+			child.visible=(child.name==str(GameManager.selectedItem))
+	else:
+		pickedUp=false
+		for child in $Items.get_children():
+			child.visible=false
+		print("invisible")
 	if(pickedUp):
 		animation = "picked-" + animation
-	if(sprite.animation!=animation):
-		sprite.play(animation)
+	if(canMove):
+		if(sprite.animation!=animation):
+			sprite.play(animation)
 	if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
 		interacting[0].interact()
 		interacting.remove_at(0)

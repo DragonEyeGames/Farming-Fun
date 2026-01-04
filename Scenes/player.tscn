@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=60 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="3_8erm5"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="4_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="5_tx1dd"]
+[ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="8_8erm5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -558,9 +559,7 @@ onion = ExtResource("5_tx1dd")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"plant-down"
-frame = 6
-frame_progress = 1.0
+animation = &"picked-walk-side"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -6)
@@ -601,6 +600,7 @@ offset = Vector2(16, 2)
 position = Vector2(1, 11)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/down"]
+visible = false
 z_index = 2
 offset_left = -3.0
 offset_top = -3.0
@@ -613,6 +613,7 @@ color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 position = Vector2(1, -20)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/up"]
+visible = false
 z_index = 2
 offset_left = -3.0
 offset_top = -3.0
@@ -625,6 +626,7 @@ color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 position = Vector2(25, 2)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/right-side"]
+visible = false
 z_index = 2
 offset_left = -3.0
 offset_top = -3.0
@@ -637,6 +639,7 @@ color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 position = Vector2(-25, 2)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/left-side"]
+visible = false
 z_index = 2
 offset_left = -3.0
 offset_top = -3.0
@@ -644,6 +647,9 @@ offset_right = 1.0
 offset_bottom = 1.0
 scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
+
+[node name="Items" parent="." instance=ExtResource("8_8erm5")]
+position = Vector2(1, -22)
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="Effects/side" to="." method="_on_side_animation_finished"]
