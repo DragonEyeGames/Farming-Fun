@@ -68,17 +68,14 @@ func _process(_delta: float) -> void:
 			child.visible=false
 		
 	var animation = state + "-" + direction
-	print(sprite.animation)
 	if(GameManager.selectedItem!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
 		pickedUp=true
-		print(GameManager.selectedItem)
 		for child in $Items.get_children():
 			child.visible=(child.name==str(GameManager.selectedItem))
 	else:
 		pickedUp=false
 		for child in $Items.get_children():
 			child.visible=false
-		print("invisible")
 	if(pickedUp):
 		animation = "picked-" + animation
 	if(canMove):
@@ -102,7 +99,8 @@ func _process(_delta: float) -> void:
 			var tile := GameManager.plantable.get_cell_source_id(cell)
 			var keys := GameManager.playerInventory.keys()
 			var selectedItems = keys[GameManager.playerSelected]
-			selectedSeed=GameManager.playerSelected
+			selectedSeed=GameManager.selectedItem
+			print(selectedSeed)
 			if(tile==0):
 				GameManager.removeItem(selectedItems, 1)
 				canMove=false
@@ -136,13 +134,13 @@ func _on_sprite_animation_finished() -> void:
 		elif(direction=="side"):
 			backupDirection="right-side"
 		var plant
-		if(GameManager.inventoryItem.keys()[selectedSeed]=="Carrot"):
+		if(selectedSeed=="Carrot_Seeds"):
 			plant=carrot.instantiate()
-		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Potato"):
+		elif(selectedSeed=="Potato_Seeds"):
 			plant=potato.instantiate()
-		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Raddish"):
+		elif(selectedSeed=="Raddish_Seeds"):
 			plant=raddish.instantiate()
-		elif(GameManager.inventoryItem.keys()[selectedSeed]=="Onion"):
+		elif(selectedSeed=="Onion_Seeds"):
 			plant=onion.instantiate()
 		plant.global_position=$plantChecker.get_node(backupDirection).global_position
 		GameManager.ySort.add_child(plant)
