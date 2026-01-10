@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Player
 var state="idle"
 var direction="down"
-var canMove:=true
+@export var canMove:=true
 var interacting:=[]
 var sprite: AnimatedSprite2D
 var effects
@@ -15,8 +15,9 @@ var selectedSeed
 
 func _ready() -> void:
 	sprite = $Sprite
-	effects=$Effects
+	effects=$PlantEffects
 	GameManager.player=self
+	$plantChecker.visible=true
 
 func _process(_delta: float) -> void:
 		
@@ -110,6 +111,19 @@ func _process(_delta: float) -> void:
 					effects.scale.x=-1
 				else:
 					effects.scale.x=1
+		if("watering" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
+			if(sprite.flip_h):
+				print("Left")
+				$ActionAnimator.play("waterLeft")
+			else:
+				print("Right")
+				$ActionAnimator.play("waterRight")
+			# Find if any plants are colliding
+			#Add to backup list
+			#Make it so can't move
+			#Play animation
+			#Water plants in list (make them grow one tick for now)
+			pass
 
 
 func _on_sprite_animation_finished() -> void:
@@ -149,12 +163,16 @@ func _on_sprite_animation_finished() -> void:
 
 
 func _on_down_animation_finished() -> void:
-	$Effects/down.play("reset")
+	$PlantEffects/down.play("reset")
 
 
 func _on_up_animation_finished() -> void:
-	$Effects/up.play("reset")
+	$PlantEffects/up.play("reset")
 
 
 func _on_side_animation_finished() -> void:
-	$Effects/side.play("reset")
+	$PlantEffects/side.play("reset")
+
+
+func _side_water() -> void:
+	$WaterEffects/side.play("reset")

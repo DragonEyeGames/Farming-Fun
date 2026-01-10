@@ -27,6 +27,10 @@ var playerInventory: Dictionary[inventoryItem, int] = {}
 var playerSelected = null
 var selectedItem
 
+func _ready() -> void:
+	await get_tree().create_timer(1).timeout
+	addItem(inventoryItem.Watering_Can, 1)
+
 func addItem(item, count):
 	if(playerInventory.has(item)):
 		playerInventory[item]+=count
