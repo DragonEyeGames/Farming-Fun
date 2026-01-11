@@ -3,20 +3,25 @@ extends CharacterBody2D
 var sprite: AnimatedSprite2D
 var navAgent
 @export var speed=200
-var topLeft
-var bottomRight
+@export var topLeft: Vector2
+@export var bottomRight: Vector2
+@export var globalized:=false
 var recalculating:=false
 var currentVelocity:=Vector2.ZERO
 var currentDirection="left"
 
+
 func _ready() -> void:
 	navAgent=$NavigationAgent2D
 	sprite=$Sprite
-	topLeft=$TopLeft
-	bottomRight=$BottomRight
+	if(globalized!=true):
+		globalized=true
+		bottomRight=to_global(bottomRight)
+		topLeft=to_global(topLeft)
+		print("globalized")
 	await get_tree().process_frame
-	bottomRight.reparent(get_parent())
-	topLeft.reparent(get_parent())
+	print(topLeft)
+	print(bottomRight)
 	makePath()
 
 func _process(_delta: float) -> void:
@@ -54,8 +59,8 @@ func _physics_process(_delta: float) -> void:
 
 func makePath():
 	var targetPos=Vector2.ZERO
-	targetPos.x=randf_range(topLeft.global_position.x, bottomRight.global_position.x)
-	targetPos.y=randf_range(topLeft.global_position.y, bottomRight.global_position.y)
+	targetPos.x=randf_range(topLeft.x, bottomRight.x)
+	targetPos.y=randf_range(topLeft.y, bottomRight.y)
 	navAgent.target_position=targetPos
 	await navAgent.path_changed
 	

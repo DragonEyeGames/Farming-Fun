@@ -491,12 +491,8 @@ tile_map_data = PackedByteArray("AAABAAIAAQAEAAgAAAD9/wAAAQABAAgAAAAEAAEAAQANAAg
 
 [node name="Cow" parent="CowPen" instance=ExtResource("6_sc1dx")]
 position = Vector2(62, 48)
-
-[node name="TopLeft" type="Marker2D" parent="CowPen/Cow"]
-position = Vector2(-127, -35)
-
-[node name="BottomRight" type="Marker2D" parent="CowPen/Cow"]
-position = Vector2(5, 47)
+topLeft = Vector2(-127, -3)
+bottomRight = Vector2(5, 47)
 
 [node name="Food" type="Sprite2D" parent="CowPen" groups=["Sort"]]
 position = Vector2(-71, 6)
