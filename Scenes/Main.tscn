@@ -634,7 +634,7 @@ position = Vector2(69, 40)
 position = Vector2(87, 39)
 
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
-position = Vector2(1, -49)
+position = Vector2(355, -27)
 collision_layer = 2
 
 [node name="Pond" type="Node2D" parent="."]

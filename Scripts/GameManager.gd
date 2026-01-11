@@ -23,6 +23,20 @@ enum inventoryItem {
 	Watering_Can
 }
 
+const sellValue := {
+	inventoryItem.Carrot: 12,
+	inventoryItem.Raddish: 20,
+	inventoryItem.Onion: 10,
+	inventoryItem.Potato: 24,
+
+	inventoryItem.Carrot_Seeds: 2,
+	inventoryItem.Raddish_Seeds: 3,
+	inventoryItem.Onion_Seeds: 2,
+	inventoryItem.Potato_Seeds: 4,
+}
+
+
+
 var playerInventory: Dictionary[inventoryItem, int] = {}
 var playerSelected = null
 var selectedItem

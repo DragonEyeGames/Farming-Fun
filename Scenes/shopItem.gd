@@ -22,8 +22,18 @@ func _on_mouse_exited() -> void:
 
 
 func _on_pressed() -> void:
+	pass
+	
+func success():
 	var tween=create_tween()
 	tween.tween_property($ColorRect, "color", Color.html('9d5f24'), .05)
+	await get_tree().create_timer(0.05).timeout
+	var tween2=create_tween()
+	tween2.tween_property($ColorRect, "color", Color.html("#b8936d"), .05)
+	
+func fail():
+	var tween=create_tween()
+	tween.tween_property($ColorRect, "color", Color.INDIAN_RED, .05)
 	await get_tree().create_timer(0.05).timeout
 	var tween2=create_tween()
 	tween2.tween_property($ColorRect, "color", Color.html("#b8936d"), .05)

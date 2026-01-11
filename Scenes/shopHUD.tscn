@@ -183,21 +183,22 @@ layout_mode = 2
 
 [node name="Item" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
+cost = 5
 
 [node name="Item2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 6
-cost = 20
+cost = 4
 
 [node name="Item3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 5
-cost = 35
+cost = 7
 
 [node name="Item4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 7
-cost = 40
+cost = 8
 
 [node name="Money Holder" type="ColorRect" parent="."]
 offset_left = 1291.0
