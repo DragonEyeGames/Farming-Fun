@@ -19,7 +19,7 @@ func _ready() -> void:
 	topLeft.reparent(get_parent())
 	makePath()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if(currentVelocity!=Vector2.ZERO):
 		if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
 			if(currentVelocity.x<0):

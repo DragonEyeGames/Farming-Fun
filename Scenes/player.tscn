@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=80 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -734,6 +734,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("WaterEffects/down:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, -5)]
+}
 
 [sub_resource type="Animation" id="Animation_f1ek2"]
 resource_name = "waterRight"
@@ -917,11 +929,79 @@ tracks/6/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_pu2lt"]
+resource_name = "waterdown"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["water-down"],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:canMove")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaterEffects/down:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-10, -5), Vector2(-13, 4)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaterEffects/down")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["water-down"],
+"method": &"play"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gymyn"]
 _data = {
 &"RESET": SubResource("Animation_tx1dd"),
 &"waterLeft": SubResource("Animation_gymyn"),
-&"waterRight": SubResource("Animation_f1ek2")
+&"waterRight": SubResource("Animation_f1ek2"),
+&"waterdown": SubResource("Animation_pu2lt")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Sort"]]
@@ -934,7 +1014,9 @@ onion = ExtResource("5_tx1dd")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"water-side"
+animation = &"water-down"
+frame = 3
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -6)
@@ -972,7 +1054,7 @@ offset = Vector2(16, 2)
 [node name="side" type="AnimatedSprite2D" parent="WaterEffects"]
 position = Vector2(-9, -6)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"water-side"
+animation = &"reset"
 autoplay = "reset"
 offset = Vector2(16, 2)
 
@@ -985,9 +1067,10 @@ autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="down" type="AnimatedSprite2D" parent="WaterEffects"]
-position = Vector2(-13, 4)
+position = Vector2(-10, -5)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
 animation = &"reset"
+autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="plantChecker" type="Node2D" parent="."]
@@ -1084,6 +1167,25 @@ offset_bottom = 1.1856289
 scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
+[node name="Side2" type="Area2D" parent="waterChecker"]
+position = Vector2(-22, 4)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("9_f1ek2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="waterChecker/Side2"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_f1ek2")
+
+[node name="ColorRect" type="ColorRect" parent="waterChecker/Side2"]
+z_index = 2
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1.784431
+offset_bottom = 1.1856289
+scale = Vector2(1.67, 1.67)
+color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
+
 [node name="ActionAnimator" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_gymyn")
@@ -1095,8 +1197,10 @@ libraries = {
 [connection signal="animation_finished" from="PlantEffects/down" to="." method="_on_down_animation_finished"]
 [connection signal="animation_finished" from="WaterEffects/side" to="." method="_side_water"]
 [connection signal="animation_finished" from="WaterEffects/up" to="." method="_on_up_animation_finished"]
-[connection signal="animation_finished" from="WaterEffects/down" to="." method="_on_down_animation_finished"]
+[connection signal="animation_finished" from="WaterEffects/down" to="." method="_water_down"]
 [connection signal="area_entered" from="waterChecker/Down" to="waterChecker/Down" method="_on_area_entered"]
 [connection signal="area_exited" from="waterChecker/Down" to="waterChecker/Down" method="_on_area_exited"]
 [connection signal="area_entered" from="waterChecker/Side" to="waterChecker/Side" method="_on_area_entered"]
 [connection signal="area_exited" from="waterChecker/Side" to="waterChecker/Side" method="_on_area_exited"]
+[connection signal="area_entered" from="waterChecker/Side2" to="waterChecker/Side2" method="_on_area_entered"]
+[connection signal="area_exited" from="waterChecker/Side2" to="waterChecker/Side2" method="_on_area_exited"]

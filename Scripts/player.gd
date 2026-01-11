@@ -112,12 +112,13 @@ func _process(_delta: float) -> void:
 				else:
 					effects.scale.x=1
 		if("watering" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
-			if(sprite.flip_h):
-				print("Left")
-				$ActionAnimator.play("waterLeft")
-			else:
-				print("Right")
-				$ActionAnimator.play("waterRight")
+			var backupDirection=direction
+			if(backupDirection=="side"):
+				if(sprite.flip_h):
+					backupDirection="Left"
+				else:
+					backupDirection="Right"
+			$ActionAnimator.play("water" + backupDirection)
 			# Find if any plants are colliding
 			#Add to backup list
 			#Make it so can't move
@@ -176,3 +177,7 @@ func _on_side_animation_finished() -> void:
 
 func _side_water() -> void:
 	$WaterEffects/side.play("reset")
+
+
+func _water_down() -> void:
+	$WaterEffects/down.play("reset")
