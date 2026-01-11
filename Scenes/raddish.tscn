@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhuhjmt48tro"]
+[gd_scene load_steps=10 format=3 uid="uid://bhuhjmt48tro"]
 
 [ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://assets/Farm/Plants.png" id="1_sd1cv"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_428b1"]
@@ -58,6 +58,9 @@ animations = [{
 radius = 7.0
 height = 20.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ruimk"]
+radius = 7.0
+
 [node name="Raddish" type="AnimatedSprite2D" groups=["Crop", "Save"]]
 sprite_frames = SubResource("SpriteFrames_ek63v")
 animation = &"ready"
@@ -68,12 +71,20 @@ type = 1
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -4)
-collision_layer = 4
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_428b1")
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_ruimk")
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

@@ -15,3 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_area_exited(area: Area2D) -> void:
 	collidingList.erase(area.get_parent())
+	
+func growPlants():
+	for plant in collidingList:
+		plant.tick()

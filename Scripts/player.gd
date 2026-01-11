@@ -18,9 +18,9 @@ func _ready() -> void:
 	effects=$PlantEffects
 	GameManager.player=self
 	$plantChecker.visible=true
+	$Items.visible=true
 
 func _process(_delta: float) -> void:
-		
 		
 	#if(Input.is_action_just_pressed("Interact")):
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
@@ -36,6 +36,12 @@ func _process(_delta: float) -> void:
 		direction="up"
 	if(canMove):
 		move_and_slide()
+		
+	if(velocity.x<0):
+		$Items.scale.x=-1
+	else:
+		$Items.scale.x=1
+		
 	if(velocity!=Vector2.ZERO):
 		state="walk"
 	else:
@@ -66,6 +72,24 @@ func _process(_delta: float) -> void:
 		selectedBit.modulate.a=.6
 	else:
 		for child in $plantChecker.get_children():
+			child.visible=false
+		
+	if("watering" in str(GameManager.selectedItem).to_lower()):
+		for child in $waterChecker.get_children():
+			child.visible=false
+		var selectedBit
+		if(direction=="up"):
+			selectedBit=$waterChecker/Up
+		if(direction=="down"):
+			selectedBit=$waterChecker/Down
+		if(direction=="side"):
+			if(sprite.flip_h):
+				selectedBit=$waterChecker/Side2
+			else:
+				selectedBit=$waterChecker/Side
+		selectedBit.visible=true
+	else:
+		for child in $waterChecker.get_children():
 			child.visible=false
 		
 	var animation = state + "-" + direction
@@ -161,6 +185,12 @@ func _on_sprite_animation_finished() -> void:
 		GameManager.ySort.add_child(plant)
 		plant.global_position=$plantChecker.get_node(backupDirection).global_position
 		canMove=true
+	if("water" in sprite.animation):
+		canMove=true
+		for child in $waterChecker.get_children():
+			if(child.visible):
+				child.growPlants()
+				break
 
 
 func _on_down_animation_finished() -> void:
@@ -181,3 +211,7 @@ func _side_water() -> void:
 
 func _water_down() -> void:
 	$WaterEffects/down.play("reset")
+
+
+func _water_up() -> void:
+	$WaterEffects/up.play("reset")
