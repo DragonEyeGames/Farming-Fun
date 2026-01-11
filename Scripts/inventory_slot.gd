@@ -13,25 +13,25 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	itemName=""
 	$InventoryOutline.visible=GameManager.playerSelected==index and selectable
-	var keys := GameManager.playerInventory.keys()
 	
 	for child in $Items.get_children():
 			child.visible=false
 	
-	if index < keys.size():
-		var item = keys[index]
-		if GameManager.playerInventory[item] > 0:
-			itemName = GameManager.inventoryItem.keys()[item]
-			$Items.get_node(itemName).visible = true
-			var count := GameManager.playerInventory[item]
-			$Value.text = str(count)
-			if(selected and shopSlot and Input.is_action_just_pressed("Interact")):
-				if(item in GameManager.sellValue):
-					GameManager.removeItem(item, 1)
-					GameManager.playerMoney+=GameManager.sellValue[GameManager.inventoryItem[itemName]]
+	var item = GameManager.playerInventory[index]
+	if item.amount > 0:
+		print(item.amount)
+		var itemIndex = (item.item)
+		print(itemIndex)
+		print(GameManager.inventoryItem.keys()[itemIndex])
+		$Items.get_node(GameManager.inventoryItem.keys()[itemIndex]).visible = true
+		var count = item.amount
+		$Value.text = str(count)
+		if(selected and shopSlot and Input.is_action_just_pressed("Interact")):
+			if(item.item in GameManager.sellValue):
+				GameManager.removeItem(item.item, 1)
+				GameManager.playerMoney+=GameManager.sellValue[GameManager.inventoryItem[itemName]]
 	else:
 		$Value.text=""
-		$Popup.visible=false
 	if(itemName!=""):
 		$Popup/Title.text=itemName
 		$Popup/Title.text=$Popup/Title.text.replace("_", " ")

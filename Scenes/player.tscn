@@ -1190,7 +1190,6 @@ autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="plantChecker" type="Node2D" parent="."]
-visible = false
 
 [node name="down" type="Marker2D" parent="plantChecker"]
 position = Vector2(1, 11)

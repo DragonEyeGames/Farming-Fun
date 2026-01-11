@@ -24,17 +24,17 @@ func _process(_delta: float) -> void:
 		
 	#if(Input.is_action_just_pressed("Interact")):
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
-	if(velocity.x<0):
-		direction="side"
-		sprite.flip_h=true
-	elif(velocity.x>0):
-		sprite.flip_h=false
-		direction="side"
-	elif(velocity.y>0):
-		direction="down"
-	elif(velocity.y<0):
-		direction="up"
 	if(canMove):
+		if(velocity.x<0):
+			direction="side"
+			sprite.flip_h=true
+		elif(velocity.x>0):
+			sprite.flip_h=false
+			direction="side"
+		elif(velocity.y>0):
+			direction="down"
+		elif(velocity.y<0):
+			direction="up"
 		move_and_slide()
 		
 	if(velocity.x<0):
@@ -47,7 +47,7 @@ func _process(_delta: float) -> void:
 	else:
 		state="idle"
 		
-	if("seeds" in str(GameManager.selectedItem).to_lower()):
+	if("seeds" in str(GameManager.selectedItem).to_lower() and canMove):
 		for child in $plantChecker.get_children():
 			child.visible=false
 		var selectedBit
@@ -60,6 +60,7 @@ func _process(_delta: float) -> void:
 				selectedBit=$"plantChecker/left-side"
 			else:
 				selectedBit=$"plantChecker/right-side"
+		print(selectedBit)
 		selectedBit.visible=true
 		var cell := GameManager.plantable.local_to_map(
 		GameManager.plantable.to_local(selectedBit.global_position)
@@ -70,7 +71,7 @@ func _process(_delta: float) -> void:
 		else:
 			selectedBit.get_child(0).color=Color.RED
 		selectedBit.modulate.a=.6
-	else:
+	elif(not "seeds" in str(GameManager.selectedItem).to_lower()):
 		for child in $plantChecker.get_children():
 			child.visible=false
 		
@@ -122,12 +123,9 @@ func _process(_delta: float) -> void:
 			GameManager.plantable.to_local($plantChecker.get_node(backupDirection).global_position)
 			)
 			var tile := GameManager.plantable.get_cell_source_id(cell)
-			var keys := GameManager.playerInventory.keys()
-			var selectedItems = keys[GameManager.playerSelected]
 			selectedSeed=GameManager.selectedItem
-			print(selectedSeed)
 			if(tile==0):
-				GameManager.removeItem(selectedItems, 1)
+				GameManager.removeItem(selectedSeed, 1)
 				canMove=false
 				sprite.play("plant-" + direction)
 				effects.get_node(direction).play("plant-" + direction)
@@ -167,11 +165,6 @@ func _on_sprite_animation_finished() -> void:
 	if("pickup" in sprite.animation):
 		canMove=true
 	if("plant" in sprite.animation):
-		var backupDirection=direction
-		if(sprite.flip_h and direction=="side"):
-			backupDirection="left-side"
-		elif(direction=="side"):
-			backupDirection="right-side"
 		var plant
 		if(selectedSeed=="Carrot_Seeds"):
 			plant=carrot.instantiate()
@@ -181,9 +174,12 @@ func _on_sprite_animation_finished() -> void:
 			plant=raddish.instantiate()
 		elif(selectedSeed=="Onion_Seeds"):
 			plant=onion.instantiate()
-		plant.global_position=$plantChecker.get_node(backupDirection).global_position
-		GameManager.ySort.add_child(plant)
-		plant.global_position=$plantChecker.get_node(backupDirection).global_position
+		for child in $plantChecker.get_children():
+			if(child.visible):
+				plant.global_position=child.global_position
+				GameManager.ySort.add_child(plant)
+				plant.global_position=child.global_position
+				break
 		canMove=true
 	if("water" in sprite.animation):
 		canMove=true

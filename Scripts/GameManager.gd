@@ -37,28 +37,40 @@ const sellValue := {
 
 
 
-var playerInventory: Dictionary[inventoryItem, int] = {}
+var playerInventory: Array[InventorySlot] = []
 var playerSelected = null
 var selectedItem
 
 func _ready() -> void:
-	await get_tree().create_timer(1).timeout
+	if(len(playerInventory)<=0):
+		for i in 10:
+			playerInventory.append(InventorySlot.new())
+	await get_tree().create_timer(.1).timeout
 	addItem(inventoryItem.Watering_Can, 1)
 
-func addItem(item, count):
-	if(playerInventory.has(item)):
-		playerInventory[item]+=count
-	else:
-		playerInventory[item]=count
+func addItem(item: inventoryItem, amount := 1):
+	for slot in playerInventory:
+		if slot.item == item and slot.amount > 0:
+			slot.amount += amount
+			return true
 
-func removeItem(item, count := 1) -> void:
-	if not playerInventory.has(item):
-		return
+	for slot in playerInventory:
+		if slot.is_empty():
+			slot.item = item
+			slot.amount = amount
+			return true
 
-	playerInventory[item] -= count
+	return false # inventory full
 
-	if playerInventory[item] <= 0:
-		playerInventory.erase(item)
+func removeItem(item: inventoryItem, amount := 1) -> bool:
+	for slot in playerInventory:
+		if slot.item == item:
+			slot.amount -= amount
+			if slot.amount <= 0:
+				slot.item = null
+				slot.amount = 0
+			return true
+	return false
 		
 func _process(_delta: float) -> void:
 	for i in range(0, 10):
@@ -69,11 +81,6 @@ func _process(_delta: float) -> void:
 				playerSelected=null
 	#The code below prints the name of the currently selected item in the inventoryqawd
 	if(playerSelected!=null):
-		var keys := playerInventory.keys()
-		if playerSelected < keys.size():
-			var selectedItems = keys[playerSelected]
-			selectedItem = (inventoryItem.keys()[selectedItems])
-		else:
-			selectedItem=null
+		selectedItem = (playerInventory[playerSelected])
 	else:
 		selectedItem=null
