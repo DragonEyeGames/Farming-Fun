@@ -18,11 +18,15 @@ func _process(_delta: float) -> void:
 		child.visible=false
 	
 	var item = GameManager.playerInventory[index]
-	if item.amount > 0:
+	if (item.amount > 0 or item.item in GameManager.limited):
 		var itemIndex = (item.item)
 		$Items.get_node(GameManager.inventoryItem.keys()[itemIndex]).visible = true
 		var count = item.amount
-		$Value.text = str(count)
+		if(not item.item in GameManager.limited):
+			$Value.text = str(count)
+		else:
+			$Value.text = ""
+			$Items.get_node(GameManager.inventoryItem.keys()[itemIndex]).get_child(0).value=item.amount
 		if(selected and shopSlot and Input.is_action_just_pressed("Interact")):
 			if(item.item in GameManager.sellValue):
 				GameManager.removeItem(item.item, 1)

@@ -8,3 +8,10 @@ func _init(_item = null, _amount := 0):
 
 func is_empty() -> bool:
 	return item == null
+	
+func use():
+	if(item in GameManager.limited):
+		GameManager.removeItem(item, 1)
+		
+	else:
+		GameManager.removeItem(item, 1)

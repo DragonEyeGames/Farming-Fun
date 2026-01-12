@@ -12,6 +12,7 @@ var pickedUp:=false
 @export var potato: PackedScene
 @export var onion: PackedScene
 var selectedSeed=""
+@export var busy:=false
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -39,7 +40,7 @@ func _process(_delta: float) -> void:
 		
 	if(velocity.x<0):
 		$Items.scale.x=-1
-	else:
+	elif(velocity.x>0):
 		$Items.scale.x=1
 		
 	if(velocity!=Vector2.ZERO):
@@ -60,7 +61,6 @@ func _process(_delta: float) -> void:
 				selectedBit=$"plantChecker/left-side"
 			else:
 				selectedBit=$"plantChecker/right-side"
-		print(selectedBit)
 		selectedBit.visible=true
 		var cell := GameManager.plantable.local_to_map(
 		GameManager.plantable.to_local(selectedBit.global_position)
@@ -97,7 +97,6 @@ func _process(_delta: float) -> void:
 	if(GameManager.selectedItem!=null and GameManager.selectedItem.item!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
 		pickedUp=true
 		for child in $Items.get_children():
-			print(GameManager.inventoryItem.keys()[GameManager.selectedItem.item])
 			child.visible=(child.name==str(GameManager.inventoryItem.keys()[GameManager.selectedItem.item]))
 	else:
 		pickedUp=false
@@ -113,7 +112,7 @@ func _process(_delta: float) -> void:
 		interacting.remove_at(0)
 		canMove=false
 		sprite.play("pickup-" + direction)
-	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null):
+	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null and canMove):
 		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null):
 			var backupDirection=direction
 			if(sprite.flip_h and direction=="side"):
@@ -125,9 +124,8 @@ func _process(_delta: float) -> void:
 			)
 			var tile := GameManager.plantable.get_cell_source_id(cell)
 			selectedSeed=GameManager.inventoryItem.keys()[GameManager.selectedItem.item]
-			print(selectedSeed)
 			if(tile==0):
-				GameManager.removeItem(GameManager.selectedItem.item, 1)
+				GameManager.selectedItem.use()
 				canMove=false
 				sprite.play("plant-" + direction)
 				effects.get_node(direction).play("plant-" + direction)
@@ -135,20 +133,24 @@ func _process(_delta: float) -> void:
 					effects.scale.x=-1
 				else:
 					effects.scale.x=1
-		if(GameManager.itemSelected("watering") and GameManager.plantable!=null):
+		if(GameManager.itemSelected("watering") and GameManager.plantable!=null and not busy and canMove and GameManager.selectedItem.amount>0 and not $ActionAnimator.is_playing()):
+			busy=true
 			var backupDirection=direction
 			if(backupDirection=="side"):
 				if(sprite.flip_h):
 					backupDirection="Left"
 				else:
 					backupDirection="Right"
+			canMove=false
 			$ActionAnimator.play("water" + backupDirection)
 			# Find if any plants are colliding
 			#Add to backup list
 			#Make it so can't move
 			#Play animation
 			#Water plants in list (make them grow one tick for now)
-			pass
+			GameManager.selectedItem.use()
+			await get_tree().create_timer(.1).timeout
+			busy=false
 
 
 func _on_sprite_animation_finished() -> void:

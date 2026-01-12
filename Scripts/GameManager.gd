@@ -35,6 +35,11 @@ const sellValue := {
 	inventoryItem.Potato_Seeds: 4,
 }
 
+#items that are limited in use.  In style; Item: Max# uses
+const limited := {
+	inventoryItem.Watering_Can: 10
+}
+
 
 
 var playerInventory:= []
@@ -51,13 +56,19 @@ func _ready() -> void:
 func addItem(item: inventoryItem, amount := 1):
 	for slot in playerInventory:
 		if slot.item == item and slot.amount > 0:
-			slot.amount += amount
+			if(not item in limited):
+				slot.amount += amount
+			else:
+				slot.amount+=limited[item]
 			return true
 
 	for slot in playerInventory:
 		if slot.is_empty():
 			slot.item = item
-			slot.amount = amount
+			if(not item in limited):
+				slot.amount = amount
+			else:
+				slot.amount=limited[item]
 			return true
 
 	return false # inventory full
@@ -67,7 +78,8 @@ func removeItem(item: inventoryItem, amount := 1) -> bool:
 		if slot.item == item:
 			slot.amount -= amount
 			if slot.amount <= 0:
-				slot.item = null
+				if(not item in limited):
+					slot.item = null
 				slot.amount = 0
 			return true
 	return false
