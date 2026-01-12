@@ -10,4 +10,5 @@ func _on_item_pressed(id) -> void:
 		caller.success()
 		GameManager.playerMoney-=caller.cost
 		GameManager.addItem(caller.item, 1)
-	caller.fail()
+	else:
+		caller.fail()

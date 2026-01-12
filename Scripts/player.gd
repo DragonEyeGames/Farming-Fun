@@ -11,7 +11,7 @@ var pickedUp:=false
 @export var raddish: PackedScene
 @export var potato: PackedScene
 @export var onion: PackedScene
-var selectedSeed
+var selectedSeed=""
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -47,7 +47,7 @@ func _process(_delta: float) -> void:
 	else:
 		state="idle"
 		
-	if("seeds" in str(GameManager.selectedItem).to_lower() and canMove):
+	if((GameManager.itemSelected("seeds") and canMove) or selectedSeed!=""):
 		for child in $plantChecker.get_children():
 			child.visible=false
 		var selectedBit
@@ -71,11 +71,11 @@ func _process(_delta: float) -> void:
 		else:
 			selectedBit.get_child(0).color=Color.RED
 		selectedBit.modulate.a=.6
-	elif(not "seeds" in str(GameManager.selectedItem).to_lower()):
+	elif(not GameManager.itemSelected("seeds")):
 		for child in $plantChecker.get_children():
 			child.visible=false
 		
-	if("watering" in str(GameManager.selectedItem).to_lower()):
+	if(GameManager.itemSelected("watering")):
 		for child in $waterChecker.get_children():
 			child.visible=false
 		var selectedBit
@@ -94,10 +94,11 @@ func _process(_delta: float) -> void:
 			child.visible=false
 		
 	var animation = state + "-" + direction
-	if(GameManager.selectedItem!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
+	if(GameManager.selectedItem!=null and GameManager.selectedItem.item!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
 		pickedUp=true
 		for child in $Items.get_children():
-			child.visible=(child.name==str(GameManager.selectedItem))
+			print(GameManager.inventoryItem.keys()[GameManager.selectedItem.item])
+			child.visible=(child.name==str(GameManager.inventoryItem.keys()[GameManager.selectedItem.item]))
 	else:
 		pickedUp=false
 		for child in $Items.get_children():
@@ -113,7 +114,7 @@ func _process(_delta: float) -> void:
 		canMove=false
 		sprite.play("pickup-" + direction)
 	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null):
-		if("seeds" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
+		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null):
 			var backupDirection=direction
 			if(sprite.flip_h and direction=="side"):
 				backupDirection="left-side"
@@ -123,9 +124,10 @@ func _process(_delta: float) -> void:
 			GameManager.plantable.to_local($plantChecker.get_node(backupDirection).global_position)
 			)
 			var tile := GameManager.plantable.get_cell_source_id(cell)
-			selectedSeed=GameManager.selectedItem
+			selectedSeed=GameManager.inventoryItem.keys()[GameManager.selectedItem.item]
+			print(selectedSeed)
 			if(tile==0):
-				GameManager.removeItem(selectedSeed, 1)
+				GameManager.removeItem(GameManager.selectedItem.item, 1)
 				canMove=false
 				sprite.play("plant-" + direction)
 				effects.get_node(direction).play("plant-" + direction)
@@ -133,7 +135,7 @@ func _process(_delta: float) -> void:
 					effects.scale.x=-1
 				else:
 					effects.scale.x=1
-		if("watering" in str(GameManager.selectedItem).to_lower() and GameManager.plantable!=null):
+		if(GameManager.itemSelected("watering") and GameManager.plantable!=null):
 			var backupDirection=direction
 			if(backupDirection=="side"):
 				if(sprite.flip_h):
@@ -181,6 +183,7 @@ func _on_sprite_animation_finished() -> void:
 				plant.global_position=child.global_position
 				break
 		canMove=true
+		selectedSeed=""
 	if("water" in sprite.animation):
 		canMove=true
 		for child in $waterChecker.get_children():

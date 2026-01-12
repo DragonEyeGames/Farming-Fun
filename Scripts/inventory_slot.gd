@@ -15,14 +15,11 @@ func _process(_delta: float) -> void:
 	$InventoryOutline.visible=GameManager.playerSelected==index and selectable
 	
 	for child in $Items.get_children():
-			child.visible=false
+		child.visible=false
 	
 	var item = GameManager.playerInventory[index]
 	if item.amount > 0:
-		print(item.amount)
 		var itemIndex = (item.item)
-		print(itemIndex)
-		print(GameManager.inventoryItem.keys()[itemIndex])
 		$Items.get_node(GameManager.inventoryItem.keys()[itemIndex]).visible = true
 		var count = item.amount
 		$Value.text = str(count)

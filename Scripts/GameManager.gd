@@ -37,7 +37,7 @@ const sellValue := {
 
 
 
-var playerInventory: Array[InventorySlot] = []
+var playerInventory:= []
 var playerSelected = null
 var selectedItem
 
@@ -84,3 +84,21 @@ func _process(_delta: float) -> void:
 		selectedItem = (playerInventory[playerSelected])
 	else:
 		selectedItem=null
+
+func itemSelected(item):
+	if(selectedItem!=null and selectedItem.item!=null):
+		return(item.to_lower() in inventoryItem.keys()[selectedItem.item].to_lower())
+	else:
+		return false
+
+func inventoryHas(item):
+	var itemStr=""
+	for invItem in playerInventory:
+		if(invItem.item!=null):
+			print(inventoryItem.keys()[invItem.item])
+			itemStr=inventoryItem.keys()[invItem.item]
+	if(itemStr!="" and item.to_lower() in itemStr.to_lower()):
+		print("true dat")
+		return true
+	else:
+		return false
