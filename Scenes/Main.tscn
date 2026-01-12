@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=84 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -346,6 +346,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qta6b"]
+size = Vector2(89, 72)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
 atlas = ExtResource("23_3tgeq")
 region = Rect2(0, 0, 64, 64)
@@ -635,7 +638,6 @@ position = Vector2(87, 39)
 
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
 position = Vector2(-78, 81)
-collision_layer = 2
 
 [node name="Pond" type="Node2D" parent="."]
 position = Vector2(-188, -85)
@@ -672,6 +674,19 @@ position = Vector2(52, 35)
 sprite_frames = SubResource("SpriteFrames_wnkxs")
 autoplay = "default"
 frame_progress = 0.15717971
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pond"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pond/StaticBody2D"]
+polygon = PackedVector2Array(-15, 0, 8, -1, 31, -1, 49, 1, 50, 19, 50, 48, 43, 51, 16, 51, -15, 49, -18, 37, -18, 14)
+
+[node name="RefillArea" type="Area2D" parent="Pond"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pond/RefillArea"]
+position = Vector2(16.5, 24)
+shape = SubResource("RectangleShape2D_qta6b")
 
 [node name="Night" type="CanvasModulate" parent="." node_paths=PackedStringArray("SignalBus")]
 script = ExtResource("15_j4qnp")
@@ -779,6 +794,8 @@ shape = SubResource("RectangleShape2D_4yxf6")
 [connection signal="animation_finished" from="Windmill2/Door" to="Windmill2" method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
+[connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]
 [connection signal="animation_finished" from="Shop/Shopkeep" to="Shop/Shopkeep" method="_on_animation_finished"]
 [connection signal="body_entered" from="Shop/Shopkeep/Area2D" to="Shop/Shopkeep" method="_on_area_2d_body_entered"]
