@@ -424,10 +424,11 @@ size = Vector2(73, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yxf6"]
 size = Vector2(82.85715, 41.428574)
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("sky")]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("sky", "playerNode")]
 texture_filter = 1
 script = ExtResource("1_kjvhd")
 sky = NodePath("Night")
+playerNode = NodePath("Player")
 
 [node name="Dirt" parent="." instance=ExtResource("8_trn2v")]
 z_index = -2

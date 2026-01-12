@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=4 uid="uid://w8rof17oksa5"]
+[gd_scene load_steps=8 format=4 uid="uid://w8rof17oksa5"]
 
+[ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/buildingInterior.gd" id="1_iqtyj"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_okrnj"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://assets/Farm/House_interior.png" id="2_n87ef"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="3_3jr7h"]
+[ext_resource type="Script" uid="uid://chfqwjj80xmy7" path="res://Scenes/bed.gd" id="4_xi0mm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqtyj"]
+size = Vector2(36.666668, 7.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi0mm"]
+size = Vector2(35, 31.666676)
 
 [node name="House" type="Node2D"]
+script = ExtResource("1_iqtyj")
 
 [node name="Control" type="Control" parent="."]
 clip_contents = true
@@ -40,6 +49,32 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("2_n87ef")
 region_enabled = true
 region_rect = Rect2(100.00376, 14.993141, 40.059563, 42.005905)
+script = ExtResource("4_xi0mm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bed"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bed/StaticBody2D"]
+position = Vector2(0, -13.333336)
+shape = SubResource("RectangleShape2D_iqtyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/StaticBody2D"]
+position = Vector2(0, 15.416664)
+shape = SubResource("RectangleShape2D_iqtyj")
+
+[node name="Bed" type="Sprite2D" parent="Bed"]
+z_index = 1
+position = Vector2(0, 5.8333335)
+texture = ExtResource("2_n87ef")
+region_enabled = true
+region_rect = Rect2(104, 35, 32, 14)
+
+[node name="Area2D" type="Area2D" parent="Bed"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Area2D"]
+position = Vector2(0, -1.5258789e-05)
+shape = SubResource("RectangleShape2D_xi0mm")
 
 [node name="Shelf" type="Sprite2D" parent="."]
 position = Vector2(-52.000004, -108.00001)
@@ -56,4 +91,16 @@ region_enabled = true
 region_rect = Rect2(50, 12, 44, 46)
 
 [node name="Player" parent="." instance=ExtResource("3_3jr7h")]
-position = Vector2(46, 99)
+position = Vector2(13, -74)
+
+[node name="Door" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door"]
+position = Vector2(47, -44)
+polygon = PackedVector2Array(-10, 149, -8, 151, 7, 151, 10, 149, 10, 153, -10, 153)
+
+[connection signal="body_entered" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]
