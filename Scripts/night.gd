@@ -8,12 +8,14 @@ var prev_time := 0.0
 @onready var color_rect := self
 
 func _process(delta):
+	time=GameManager.time
 	prev_time = time
 	time += delta / day_length_seconds
 	time = fposmod(time, 1.0)
 
 	if prev_time > time:
 		SignalBus.emit_signal("tick")
+		GameManager.day+=1
 
 	update_lighting()
 	GameManager.time=time

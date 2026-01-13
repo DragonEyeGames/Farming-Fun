@@ -1,16 +1,72 @@
-[gd_scene load_steps=8 format=4 uid="uid://w8rof17oksa5"]
+[gd_scene load_steps=14 format=4 uid="uid://w8rof17oksa5"]
 
 [ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/buildingInterior.gd" id="1_iqtyj"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_okrnj"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://assets/Farm/House_interior.png" id="2_n87ef"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="3_3jr7h"]
 [ext_resource type="Script" uid="uid://chfqwjj80xmy7" path="res://Scenes/bed.gd" id="4_xi0mm"]
+[ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="5_bu6dc"]
+[ext_resource type="PackedScene" uid="uid://q73ievm14tf7" path="res://Scenes/night.tscn" id="7_l3jqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqtyj"]
 size = Vector2(36.666668, 7.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi0mm"]
 size = Vector2(35, 31.666676)
+
+[sub_resource type="Animation" id="Animation_gau5j"]
+resource_name = "darken"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sleep/ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.8), Color(0, 0, 0, 0.70000005), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7ug6d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sleep/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l3jqw"]
+resource_name = "lighten"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sleep/ColorRect:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.2), Color(0, 0, 0, 0.3), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lmwq5"]
+_data = {
+&"RESET": SubResource("Animation_7ug6d"),
+&"darken": SubResource("Animation_gau5j"),
+&"lighten": SubResource("Animation_l3jqw")
+}
 
 [node name="House" type="Node2D"]
 script = ExtResource("1_iqtyj")
@@ -76,6 +132,8 @@ collision_mask = 2
 position = Vector2(0, -1.5258789e-05)
 shape = SubResource("RectangleShape2D_xi0mm")
 
+[node name="HUD" parent="Bed" instance=ExtResource("5_bu6dc")]
+
 [node name="Shelf" type="Sprite2D" parent="."]
 position = Vector2(-52.000004, -108.00001)
 scale = Vector2(1.2, 1.2)
@@ -100,6 +158,25 @@ collision_mask = 2
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door"]
 position = Vector2(47, -44)
 polygon = PackedVector2Array(-10, 149, -8, 151, 7, 151, 10, 149, 10, 153, -10, 153)
+
+[node name="Sleep" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="ColorRect" type="ColorRect" parent="Sleep"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Night" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lmwq5")
+}
+
+[node name="TimeCounter" parent="." instance=ExtResource("7_l3jqw")]
+position = Vector2(102, -65)
 
 [connection signal="body_entered" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_exited"]

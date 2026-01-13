@@ -13,6 +13,7 @@ var pickedUp:=false
 @export var onion: PackedScene
 var selectedSeed=""
 @export var busy:=false
+var sleeping:=false
 
 func _ready() -> void:
 	sprite = $Sprite
@@ -22,7 +23,8 @@ func _ready() -> void:
 	$Items.visible=true
 
 func _process(_delta: float) -> void:
-		
+	if(sleeping):
+		canMove=false
 	#if(Input.is_action_just_pressed("Interact")):
 	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
 	if(canMove):

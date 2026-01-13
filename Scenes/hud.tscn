@@ -19,15 +19,32 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
+offset_left = 254.0
 offset_top = -1.0
-offset_right = 1.0
+offset_right = -15.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 60
-text = "Time: 0:00"
+text = "99:99"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Day" type="RichTextLabel" parent="TimeHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -1.0
+offset_right = -201.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 60
+text = "Day: 1"
 vertical_alignment = 1
 
 [node name="TimeHolder2" type="ColorRect" parent="TimeHolder"]

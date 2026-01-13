@@ -2,8 +2,10 @@ extends Node2D
 
 @export var sky: Node2D
 @export var playerNode: Node2D
+@export var SignalBus: Node2D
 
 func _ready() -> void:
+	var lastRenderedDay
 	if ResourceLoader.exists("user://farm_data.tres"):
 		var data = ResourceLoader.load("user://farm_data.tres") as FarmData
 		for saveable in get_tree().get_nodes_in_group("Save"):
@@ -15,6 +17,12 @@ func _ready() -> void:
 			var newCrop=crop.instantiate()
 			$YSort.add_child(newCrop)
 			newCrop.state=data.cropStates[data.crops.find(crop)]
+		lastRenderedDay=data.lastRendered
+		GameManager.lastRenderedDay=GameManager.day
+		if(lastRenderedDay<GameManager.lastRenderedDay):
+			for i in GameManager.lastRenderedDay-lastRenderedDay:
+				SignalBus.emit_signal("tick")
+				print("ForgottenTick")
 	if ResourceLoader.exists("user://world_data.tres"):
 		var data = ResourceLoader.load("user://world_data.tres") as WorldData
 		sky.time = data.time
@@ -29,6 +37,7 @@ func _ready() -> void:
 		object.reparent($YSort)
 		
 func transport(file: String):
+	GameManager.lastRenderedDay=GameManager.day
 	var save = FarmData.new()
 	for saveable in get_tree().get_nodes_in_group("Save"):
 		if(saveable.is_in_group("Animal")):
@@ -40,6 +49,7 @@ func transport(file: String):
 			cropScene.pack(saveable)
 			save.crops.append(cropScene)
 			save.cropStates.append(saveable.state)
+		save.lastRendered=GameManager.lastRenderedDay
 	var world = WorldData.new()
 	world.time = sky.time
 	var player = PlayerData.new()
