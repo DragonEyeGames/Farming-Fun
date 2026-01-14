@@ -1,58 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cuegbiplk4swv"]
+[gd_scene load_steps=11 format=3 uid="uid://cuegbiplk4swv"]
 
-[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://assets/Farm/Plants.png" id="1_cy7s4"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_aq00n"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf3a2"]
-atlas = ExtResource("1_cy7s4")
-region = Rect2(176, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oaklg"]
-atlas = ExtResource("1_cy7s4")
-region = Rect2(128, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uy3go"]
-atlas = ExtResource("1_cy7s4")
-region = Rect2(160, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4bst2"]
-atlas = ExtResource("1_cy7s4")
-region = Rect2(144, 84, 16, 28)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gdb40"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yf3a2")
-}],
-"loop": false,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oaklg")
-}],
-"loop": false,
-"name": &"planted",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uy3go")
-}],
-"loop": false,
-"name": &"ready",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4bst2")
-}],
-"loop": false,
-"name": &"stage1",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://cfses4r1agm4d" path="res://Onions/Plants-5.png" id="2_q2txl"]
+[ext_resource type="Texture2D" uid="uid://ik22pj1vs3j8" path="res://Onions/Plants-2.png" id="3_bsdmh"]
+[ext_resource type="Texture2D" uid="uid://7ap2va0fs3j2" path="res://Onions/Plants-6.png" id="4_tbj8p"]
+[ext_resource type="Texture2D" uid="uid://ngpkvno6w5dq" path="res://Onions/Plants-3.png" id="5_3n4t0"]
+[ext_resource type="Texture2D" uid="uid://l0lu0xuqpcj8" path="res://Onions/Plants-7.png" id="6_5fsbr"]
+[ext_resource type="Texture2D" uid="uid://duwnl3mauhfsa" path="res://Onions/Plants-4.png" id="7_ckkjd"]
+[ext_resource type="Texture2D" uid="uid://bamhto6fovuxu" path="res://Onions/Plants-1.png" id="8_h4hao"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq00n"]
 radius = 7.0
@@ -61,15 +16,13 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_uic3q"]
 radius = 7.0
 
-[node name="Onion" type="AnimatedSprite2D" groups=["Crop", "Save"]]
-sprite_frames = SubResource("SpriteFrames_gdb40")
-animation = &"ready"
-offset = Vector2(0, -7)
+[node name="Onion" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 script = ExtResource("2_aq00n")
-animations = Array[String](["planted", "planted", "stage1", "stage1", "ready", "empty"])
+animations = [NodePath("Sprites/Onion-1"), NodePath("Sprites/Onion-1"), NodePath("Sprites/Onion-2"), NodePath("Sprites/Onion-2"), NodePath("Sprites/Onion-3"), NodePath("Sprites/OnionHole-5")]
 type = 2
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, -7)
 collision_layer = 0
 collision_mask = 2
@@ -79,11 +32,47 @@ position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_aq00n")
 
 [node name="Area2D2" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 shape = SubResource("CircleShape2D_uic3q")
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(4, -7)
+scale = Vector2(0.285, 0.285)
+
+[node name="Onion-3" type="Sprite2D" parent="Sprites"]
+position = Vector2(-8, 6)
+texture = ExtResource("2_q2txl")
+
+[node name="Plants2" type="Sprite2D" parent="Sprites/Onion-3"]
+z_index = -1
+texture = ExtResource("3_bsdmh")
+
+[node name="Onion-2" type="Sprite2D" parent="Sprites"]
+visible = false
+position = Vector2(56.14035, 3.508772)
+texture = ExtResource("4_tbj8p")
+
+[node name="Plants3" type="Sprite2D" parent="Sprites/Onion-2"]
+z_index = -1
+texture = ExtResource("5_3n4t0")
+
+[node name="Onion-1" type="Sprite2D" parent="Sprites"]
+visible = false
+position = Vector2(119.29824, 3.508772)
+texture = ExtResource("6_5fsbr")
+
+[node name="Plants4" type="Sprite2D" parent="Sprites/Onion-1"]
+z_index = -1
+texture = ExtResource("7_ckkjd")
+
+[node name="OnionHole-5" type="Sprite2D" parent="Sprites"]
+visible = false
+position = Vector2(-73.68422, 3.508772)
+texture = ExtResource("8_h4hao")
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

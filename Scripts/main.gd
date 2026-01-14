@@ -26,6 +26,8 @@ func _ready() -> void:
 	if ResourceLoader.exists("user://world_data.tres"):
 		var data = ResourceLoader.load("user://world_data.tres") as WorldData
 		sky.time = data.time
+		GameManager.time=data.time
+		print(data.time)
 	if ResourceLoader.exists("user://player_data.tres"):
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
 		GameManager.playerInventory = data.inventory

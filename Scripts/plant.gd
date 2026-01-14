@@ -1,26 +1,30 @@
-extends AnimatedSprite2D
+extends Node2D
 
 var state:=0
-@export var animations : Array[String] = ["planted", "stage1", "ready", "empty"]
+@export var animations : Array[Sprite2D]
 var picked:=false
 var playerEntered:=false
 var animationsBackup
 @export var type: GameManager.inventoryItem
 
 func _ready() -> void:
-	animation=animations[state]
+	for child in $Sprites.get_children():
+		child.visible=false
+	animations[state].visible=true
 	await get_tree().process_frame
 	if(state>len(animations)-1):
 		state=len(animations)-1
-	animation=animations[state]
+	animations[state].visible=true
 
 func tick() -> void:
+	for child in $Sprites.get_children():
+		child.visible=false
 	if(picked):
 		return
 	state+=1
 	if(state+2>len(animations)):
 		state=len(animations)-2
-	animation=animations[state]
+	animations[state].visible=true
 
 func _player_entered(body: Node2D) -> void:
 	if(state==len(animations)-2):
@@ -33,7 +37,11 @@ func _player_exited(body: Node2D) -> void:
 		
 func interact():
 	picked=true
-	animation="empty"
+	for child in $Sprites.get_children():
+		child.visible=false
 	state=len(animations)-1
+	for child in $Sprites.get_children():
+		child.visible=false
+	animations[state].visible=true
 	GameManager.addItem(type, 1)
 	z_index-=1

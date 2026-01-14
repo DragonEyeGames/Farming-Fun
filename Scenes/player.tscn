@@ -1115,21 +1115,21 @@ potato = ExtResource("4_f1ek2")
 onion = ExtResource("5_tx1dd")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"water-up"
-frame = 3
-frame_progress = 1.0
+animation = &"walk-side"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -9)
 zoom = Vector2(5.475, 5.475)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_3dxm6")
 
 [node name="PlantEffects" type="Node2D" parent="."]
+position = Vector2(0, -3)
 
 [node name="side" type="AnimatedSprite2D" parent="PlantEffects"]
 position = Vector2(0, -6)
@@ -1153,6 +1153,7 @@ animation = &"reset"
 offset = Vector2(16, 2)
 
 [node name="WaterEffects" type="Node2D" parent="."]
+position = Vector2(0, -3)
 
 [node name="side" type="AnimatedSprite2D" parent="WaterEffects"]
 position = Vector2(-9, -6)
@@ -1179,6 +1180,7 @@ autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="plantChecker" type="Node2D" parent="."]
+position = Vector2(0, -3)
 
 [node name="down" type="Marker2D" parent="plantChecker"]
 position = Vector2(1, 11)
@@ -1229,10 +1231,11 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="Items" parent="." instance=ExtResource("8_8erm5")]
-position = Vector2(1, -22)
+position = Vector2(1, -25)
 showBar = false
 
 [node name="waterChecker" type="Node2D" parent="."]
+position = Vector2(0, -3)
 
 [node name="Down" type="Area2D" parent="waterChecker"]
 position = Vector2(2, 15)

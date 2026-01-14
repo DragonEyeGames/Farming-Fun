@@ -21,7 +21,6 @@ radius = 7.0
 [node name="Carrot" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 script = ExtResource("2_l7vel")
 animations = [NodePath("Sprites/Carrot1"), NodePath("Sprites/Carrot2"), NodePath("Sprites/Carrot3"), NodePath("Sprites/Carrot4"), NodePath("Sprites/CarrotHole5")]
-type = null
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false

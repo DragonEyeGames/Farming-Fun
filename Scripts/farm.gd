@@ -7,10 +7,7 @@ func _ready() -> void:
 	await get_tree().process_frame
 	await get_tree().process_frame
 	for child in $Plants.get_children():
-		if(child.animation!="empty"):
-			child.reparent($"../YSort")
-		else:
-			print(child.animation)
+		child.reparent($"../YSort")
 
 func _on_signal_bus_tick() -> void:
 	for plant in get_tree().get_nodes_in_group("Crop"):

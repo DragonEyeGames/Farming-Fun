@@ -442,7 +442,7 @@ tile_map_data = PackedByteArray("AAAHAPj/AQANAAYAAAAGAPj/AQAMAAYAAAD4/wMAAQADAAM
 z_index = 1
 y_sort_enabled = true
 
-[node name="Windmill2" type="Sprite2D" parent="." groups=["Door", "Sort"]]
+[node name="Windmill" type="Sprite2D" parent="." groups=["Door", "Sort"]]
 texture_filter = 2
 position = Vector2(-61, -79)
 scale = Vector2(0.35, 0.35)
@@ -450,7 +450,7 @@ texture = ExtResource("5_2gh4u")
 offset = Vector2(-0.55385864, -186.34927)
 script = ExtResource("4_sc1dx")
 
-[node name="Door" type="AnimatedSprite2D" parent="Windmill2"]
+[node name="Door" type="AnimatedSprite2D" parent="Windmill"]
 z_index = -1
 texture_filter = 1
 position = Vector2(-13.450406, 10.4266815)
@@ -460,23 +460,23 @@ animation = &"close"
 frame = 3
 frame_progress = 1.0
 
-[node name="Area2D" type="Area2D" parent="Windmill2/Door"]
+[node name="Area2D" type="Area2D" parent="Windmill/Door"]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill2/Door/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill/Door/Area2D"]
 position = Vector2(3.1561182, 1.6329093)
 shape = SubResource("CapsuleShape2D_kjvhd")
 
-[node name="Turbine" type="Sprite2D" parent="Windmill2"]
+[node name="Turbine" type="Sprite2D" parent="Windmill"]
 z_index = 2
 position = Vector2(-1.0000019, -270)
 texture = ExtResource("7_2gh4u")
 script = ExtResource("8_devvj")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Windmill2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Windmill"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Windmill2/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Windmill/StaticBody2D"]
 polygon = PackedVector2Array(125.99138, -10.215515, 61.293102, 57.88794, 40.86207, 54.482758, 40.86207, 30.64656, -30.646551, 30.64656, -37.456894, 54.482758, -64.69827, 54.482758, -122.586205, -6.8103333, -115.77586, -34.051727, 119.18103, -37.45688)
 
 [node name="CowPen" type="Node2D" parent="."]
@@ -789,9 +789,9 @@ position = Vector2(-1.4285889, 10.714294)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_4yxf6")
 
-[connection signal="animation_finished" from="Windmill2/Door" to="Windmill2" method="_on_door_animation_finished"]
-[connection signal="body_entered" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Windmill2/Door/Area2D" to="Windmill2" method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="Windmill/Door" to="Windmill" method="_on_door_animation_finished"]
+[connection signal="body_entered" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
 [connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]

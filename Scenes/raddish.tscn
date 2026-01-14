@@ -1,58 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhuhjmt48tro"]
+[gd_scene load_steps=11 format=3 uid="uid://bhuhjmt48tro"]
 
-[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://assets/Farm/Plants.png" id="1_sd1cv"]
+[ext_resource type="Texture2D" uid="uid://bkml8rs0bajc4" path="res://Raddish/Plants-1.png" id="1_usssr"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_428b1"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
-atlas = ExtResource("1_sd1cv")
-region = Rect2(112, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
-atlas = ExtResource("1_sd1cv")
-region = Rect2(64, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
-atlas = ExtResource("1_sd1cv")
-region = Rect2(96, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
-atlas = ExtResource("1_sd1cv")
-region = Rect2(80, 84, 16, 28)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5tfui")
-}],
-"loop": false,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a34eg")
-}],
-"loop": false,
-"name": &"planted",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_via5u")
-}],
-"loop": false,
-"name": &"ready",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ac6pf")
-}],
-"loop": false,
-"name": &"stage1",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://v3gux1ng7pbg" path="res://Raddish/Plants-5.png" id="2_k3swr"]
+[ext_resource type="Texture2D" uid="uid://bat5cqj0v6lhg" path="res://Raddish/Plants-2.png" id="3_b2mrc"]
+[ext_resource type="Texture2D" uid="uid://0o4wkugyk588" path="res://Raddish/Plants-6.png" id="4_5g51h"]
+[ext_resource type="Texture2D" uid="uid://dipi2xwl8jlje" path="res://Raddish/Plants-3.png" id="5_et8bb"]
+[ext_resource type="Texture2D" uid="uid://chwe1vs35c1xu" path="res://Raddish/Plants-7.png" id="6_78t6h"]
+[ext_resource type="Texture2D" uid="uid://dvfsv2vjybip5" path="res://Raddish/Plants-4.png" id="7_olewg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_428b1"]
 radius = 7.0
@@ -61,15 +16,13 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ruimk"]
 radius = 7.0
 
-[node name="Raddish" type="AnimatedSprite2D" groups=["Crop", "Save"]]
-sprite_frames = SubResource("SpriteFrames_ek63v")
-animation = &"ready"
-offset = Vector2(0, -5)
+[node name="Raddish" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 script = ExtResource("2_428b1")
-animations = Array[String](["planted", "planted", "stage1", "stage1", "stage1", "ready", "empty"])
+animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Hole-4")]
 type = 1
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, -4)
 collision_layer = 0
 collision_mask = 2
@@ -79,12 +32,45 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_428b1")
 
 [node name="Area2D2" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_ruimk")
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(3, -6.9999995)
+scale = Vector2(0.295, 0.295)
+
+[node name="Hole-4" type="Sprite2D" parent="Sprites"]
+position = Vector2(-74.57627, 16.949152)
+texture = ExtResource("1_usssr")
+
+[node name="Stage-3" type="Sprite2D" parent="Sprites"]
+position = Vector2(-9, 15)
+texture = ExtResource("2_k3swr")
+
+[node name="Plants2" type="Sprite2D" parent="Sprites/Stage-3"]
+z_index = -1
+texture = ExtResource("3_b2mrc")
+
+[node name="Stage-2" type="Sprite2D" parent="Sprites"]
+position = Vector2(50.84746, 10.169491)
+texture = ExtResource("4_5g51h")
+
+[node name="Plants3" type="Sprite2D" parent="Sprites/Stage-2"]
+z_index = -1
+texture = ExtResource("5_et8bb")
+
+[node name="Stage-1" type="Sprite2D" parent="Sprites"]
+position = Vector2(118.644066, 10.169491)
+texture = ExtResource("6_78t6h")
+
+[node name="Plants4" type="Sprite2D" parent="Sprites/Stage-1"]
+z_index = -1
+texture = ExtResource("7_olewg")
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]
