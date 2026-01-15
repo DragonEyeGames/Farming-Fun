@@ -1,15 +1,15 @@
 [gd_scene load_steps=13 format=3 uid="uid://cp2dwgarjtbf4"]
 
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_l7vel"]
-[ext_resource type="Texture2D" uid="uid://c6fekwosic6q8" path="res://Carrots/Carrot-1.png" id="2_ni15g"]
-[ext_resource type="Texture2D" uid="uid://hi85g56t306q" path="res://Carrots/CarrotHole-1.png" id="3_8tkmy"]
-[ext_resource type="Texture2D" uid="uid://d24b81reksf54" path="res://Carrots/Carrot-3.png" id="4_3kscm"]
-[ext_resource type="Texture2D" uid="uid://d0siaqoyfgtxk" path="res://Carrots/CarrotHole-3.png" id="5_352fm"]
-[ext_resource type="Texture2D" uid="uid://daej7cesg51w6" path="res://Carrots/Carrot-2.png" id="6_r0g6j"]
-[ext_resource type="Texture2D" uid="uid://bnma6jneloqd6" path="res://Carrots/CarrotHole-4.png" id="7_bxw1x"]
-[ext_resource type="Texture2D" uid="uid://bynt5y75gqnbq" path="res://Carrots/Carrot-4.png" id="8_i5ccr"]
-[ext_resource type="Texture2D" uid="uid://b8hq3ej878lba" path="res://Carrots/CarrotHole-4.5.png" id="9_gt0n6"]
-[ext_resource type="Texture2D" uid="uid://ourcwrvj1n67" path="res://Carrots/CarrotHole-5.png" id="10_ca1pp"]
+[ext_resource type="Texture2D" uid="uid://c6fekwosic6q8" path="res://assets/Plants/Carrots/Carrot-1.png" id="2_ni15g"]
+[ext_resource type="Texture2D" uid="uid://hi85g56t306q" path="res://assets/Plants/Carrots/CarrotHole-1.png" id="3_8tkmy"]
+[ext_resource type="Texture2D" uid="uid://d24b81reksf54" path="res://assets/Plants/Carrots/Carrot-3.png" id="4_3kscm"]
+[ext_resource type="Texture2D" uid="uid://d0siaqoyfgtxk" path="res://assets/Plants/Carrots/CarrotHole-3.png" id="5_352fm"]
+[ext_resource type="Texture2D" uid="uid://daej7cesg51w6" path="res://assets/Plants/Carrots/Carrot-2.png" id="6_r0g6j"]
+[ext_resource type="Texture2D" uid="uid://bnma6jneloqd6" path="res://assets/Plants/Carrots/CarrotHole-4.png" id="7_bxw1x"]
+[ext_resource type="Texture2D" uid="uid://bynt5y75gqnbq" path="res://assets/Plants/Carrots/Carrot-4.png" id="8_i5ccr"]
+[ext_resource type="Texture2D" uid="uid://b8hq3ej878lba" path="res://assets/Plants/Carrots/CarrotHole-4.5.png" id="9_gt0n6"]
+[ext_resource type="Texture2D" uid="uid://ourcwrvj1n67" path="res://assets/Plants/Carrots/CarrotHole-5.png" id="10_ca1pp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l7vel"]
 radius = 6.0
@@ -21,7 +21,6 @@ radius = 7.0
 [node name="Carrot" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 script = ExtResource("2_l7vel")
 animations = [NodePath("Sprites/Carrot1"), NodePath("Sprites/Carrot2"), NodePath("Sprites/Carrot3"), NodePath("Sprites/Carrot4"), NodePath("Sprites/CarrotHole5")]
-type = null
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false

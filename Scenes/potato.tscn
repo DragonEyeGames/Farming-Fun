@@ -1,64 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://btvy66yb0plbx"]
+[gd_scene load_steps=11 format=3 uid="uid://btvy66yb0plbx"]
 
-[ext_resource type="Texture2D" uid="uid://bmb1yg32f06xf" path="res://assets/Farm/Plants.png" id="1_5wy20"]
-[ext_resource type="Texture2D" uid="uid://gu5kokd0nada" path="res://Potato/Plants-1.png" id="2_gmojo"]
-[ext_resource type="Texture2D" uid="uid://clp1riffhorv4" path="res://Potato/Plants-5.png" id="3_5su27"]
-[ext_resource type="Texture2D" uid="uid://4kf6sn3trmsm" path="res://Potato/Plants-2.png" id="4_5c2fc"]
-[ext_resource type="Texture2D" uid="uid://7ftqa3e4htc5" path="res://Potato/Plants-6.png" id="5_8ipad"]
-[ext_resource type="Texture2D" uid="uid://ygr1w60ec8uc" path="res://Potato/Plants-3.png" id="6_qhkbe"]
-[ext_resource type="Texture2D" uid="uid://yqlxjk50wl4g" path="res://Potato/Plants-7.png" id="7_0jtyu"]
-[ext_resource type="Texture2D" uid="uid://biqwh56o1f4ix" path="res://Potato/Plants-4.png" id="8_6yxst"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
-atlas = ExtResource("1_5wy20")
-region = Rect2(240, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
-atlas = ExtResource("1_5wy20")
-region = Rect2(192, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
-atlas = ExtResource("1_5wy20")
-region = Rect2(224, 84, 16, 28)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
-atlas = ExtResource("1_5wy20")
-region = Rect2(208, 84, 16, 28)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ek63v"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5tfui")
-}],
-"loop": false,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a34eg")
-}],
-"loop": false,
-"name": &"planted",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_via5u")
-}],
-"loop": false,
-"name": &"ready",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ac6pf")
-}],
-"loop": false,
-"name": &"stage1",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://gu5kokd0nada" path="res://assets/Plants/Potato/Plants-1.png" id="2_gmojo"]
+[ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_rx63k"]
+[ext_resource type="Texture2D" uid="uid://clp1riffhorv4" path="res://assets/Plants/Potato/Plants-5.png" id="3_5su27"]
+[ext_resource type="Texture2D" uid="uid://4kf6sn3trmsm" path="res://assets/Plants/Potato/Plants-2.png" id="4_5c2fc"]
+[ext_resource type="Texture2D" uid="uid://7ftqa3e4htc5" path="res://assets/Plants/Potato/Plants-6.png" id="5_8ipad"]
+[ext_resource type="Texture2D" uid="uid://ygr1w60ec8uc" path="res://assets/Plants/Potato/Plants-3.png" id="6_qhkbe"]
+[ext_resource type="Texture2D" uid="uid://yqlxjk50wl4g" path="res://assets/Plants/Potato/Plants-7.png" id="7_0jtyu"]
+[ext_resource type="Texture2D" uid="uid://biqwh56o1f4ix" path="res://assets/Plants/Potato/Plants-4.png" id="8_6yxst"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rx63k"]
 radius = 8.0
@@ -67,10 +16,10 @@ height = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_d4g48"]
 radius = 7.0
 
-[node name="Potato" type="AnimatedSprite2D" groups=["Crop", "Save"]]
-sprite_frames = SubResource("SpriteFrames_ek63v")
-animation = &"ready"
-offset = Vector2(1, -5)
+[node name="Potato" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
+script = ExtResource("2_rx63k")
+animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Hole")]
+type = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(2, -5)

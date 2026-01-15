@@ -1,0 +1,149 @@
+[gd_scene load_steps=20 format=3 uid="uid://bag6u10ct76hr"]
+
+[ext_resource type="Script" uid="uid://dbnmpxhoao62m" path="res://Scripts/windmill.gd" id="2_fgt0f"]
+[ext_resource type="Texture2D" uid="uid://d58ag617vlg1" path="res://assets/Farm/Doors_windows_fire.png" id="3_84m7a"]
+[ext_resource type="Texture2D" uid="uid://dm835pqxpomkj" path="res://assets/Turbine.png" id="4_5sy5u"]
+[ext_resource type="Texture2D" uid="uid://3mkqdjkdr4x4" path="res://assets/Windmill/Back.png" id="5_meshx"]
+[ext_resource type="Script" uid="uid://dfkvs8ju8sow5" path="res://Scripts/turbine.gd" id="5_q45rk"]
+[ext_resource type="Texture2D" uid="uid://dcrtl6ljiepxt" path="res://assets/Windmill/Bars.png" id="6_i6mwg"]
+[ext_resource type="Texture2D" uid="uid://cqxe33rsvgr55" path="res://assets/Windmill/Railing.png" id="7_6nu5b"]
+[ext_resource type="Texture2D" uid="uid://b3bic8248vcad" path="res://assets/Windmill/Windmill-1.png" id="8_88iq0"]
+[ext_resource type="Texture2D" uid="uid://dwbggeryogofn" path="res://assets/Windmill/Windmill-2.png" id="9_3c8ql"]
+[ext_resource type="Texture2D" uid="uid://c0sx2ga27j1pm" path="res://assets/Windmill/Windmill-3.png" id="10_w7aoh"]
+[ext_resource type="Texture2D" uid="uid://2glbdhbe87uv" path="res://assets/Windmill/Windmill-4.png" id="11_vvtt5"]
+[ext_resource type="Texture2D" uid="uid://ckeq84twbmnvn" path="res://assets/Windmill/Windmill-5.png" id="12_rfupb"]
+[ext_resource type="Texture2D" uid="uid://cscocx6730h4d" path="res://assets/Windmill/Windmill-6.png" id="13_eioy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im7ls"]
+atlas = ExtResource("3_84m7a")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4yo4"]
+atlas = ExtResource("3_84m7a")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khphd"]
+atlas = ExtResource("3_84m7a")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38apo"]
+atlas = ExtResource("3_84m7a")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a34eg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im7ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4yo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khphd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38apo")
+}],
+"loop": false,
+"name": &"close",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38apo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khphd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4yo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_im7ls")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjvhd"]
+radius = 8.438818
+height = 27.00422
+
+[node name="Windmill" type="Node2D" groups=["Door", "Sort"]]
+texture_filter = 2
+scale = Vector2(0.35, 0.35)
+script = ExtResource("2_fgt0f")
+
+[node name="Door" type="AnimatedSprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(-13.450406, 10.4266815)
+scale = Vector2(4.086207, 4.086207)
+sprite_frames = SubResource("SpriteFrames_a34eg")
+animation = &"close"
+frame = 3
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="Door"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
+position = Vector2(3.1561182, 1.6329093)
+shape = SubResource("CapsuleShape2D_kjvhd")
+
+[node name="Turbine" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-0.7575417, -267.43515)
+texture = ExtResource("4_5sy5u")
+script = ExtResource("5_q45rk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(125.99138, -10.215515, 61.293102, 57.88794, 40.86207, 54.482758, 40.86207, 30.64656, -30.646551, 30.64656, -37.456894, 54.482758, -64.69827, 54.482758, -122.586205, -6.8103333, -115.77586, -34.051727, 119.18103, -37.45688)
+
+[node name="Windmill1" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("8_88iq0")
+
+[node name="Windmill2" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("9_3c8ql")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(-0.6428635, -183.85713)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("5_meshx")
+
+[node name="Windmill3" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("10_w7aoh")
+
+[node name="Windmill4" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("11_vvtt5")
+
+[node name="Windmill5" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("12_rfupb")
+
+[node name="Windmill6" type="Sprite2D" parent="."]
+position = Vector2(-0.64286363, -183.85715)
+texture = ExtResource("13_eioy7")
+
+[node name="Bars" type="Sprite2D" parent="."]
+position = Vector2(-0.6428636, -183.85713)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_i6mwg")
+
+[node name="Railing" type="Sprite2D" parent="."]
+position = Vector2(-0.6428636, -183.85713)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("7_6nu5b")
+
+[connection signal="animation_finished" from="Door" to="." method="_on_door_animation_finished"]
+[connection signal="body_entered" from="Door/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Door/Area2D" to="." method="_on_area_2d_body_exited"]

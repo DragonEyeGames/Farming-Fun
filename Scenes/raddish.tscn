@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://bhuhjmt48tro"]
 
-[ext_resource type="Texture2D" uid="uid://bkml8rs0bajc4" path="res://Raddish/Plants-1.png" id="1_usssr"]
+[ext_resource type="Texture2D" uid="uid://bkml8rs0bajc4" path="res://assets/Plants/Raddish/Plants-1.png" id="1_usssr"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_428b1"]
-[ext_resource type="Texture2D" uid="uid://v3gux1ng7pbg" path="res://Raddish/Plants-5.png" id="2_k3swr"]
-[ext_resource type="Texture2D" uid="uid://bat5cqj0v6lhg" path="res://Raddish/Plants-2.png" id="3_b2mrc"]
-[ext_resource type="Texture2D" uid="uid://0o4wkugyk588" path="res://Raddish/Plants-6.png" id="4_5g51h"]
-[ext_resource type="Texture2D" uid="uid://dipi2xwl8jlje" path="res://Raddish/Plants-3.png" id="5_et8bb"]
-[ext_resource type="Texture2D" uid="uid://chwe1vs35c1xu" path="res://Raddish/Plants-7.png" id="6_78t6h"]
-[ext_resource type="Texture2D" uid="uid://dvfsv2vjybip5" path="res://Raddish/Plants-4.png" id="7_olewg"]
+[ext_resource type="Texture2D" uid="uid://v3gux1ng7pbg" path="res://assets/Plants/Raddish/Plants-5.png" id="2_k3swr"]
+[ext_resource type="Texture2D" uid="uid://bat5cqj0v6lhg" path="res://assets/Plants/Raddish/Plants-2.png" id="3_b2mrc"]
+[ext_resource type="Texture2D" uid="uid://0o4wkugyk588" path="res://assets/Plants/Raddish/Plants-6.png" id="4_5g51h"]
+[ext_resource type="Texture2D" uid="uid://dipi2xwl8jlje" path="res://assets/Plants/Raddish/Plants-3.png" id="5_et8bb"]
+[ext_resource type="Texture2D" uid="uid://chwe1vs35c1xu" path="res://assets/Plants/Raddish/Plants-7.png" id="6_78t6h"]
+[ext_resource type="Texture2D" uid="uid://dvfsv2vjybip5" path="res://assets/Plants/Raddish/Plants-4.png" id="7_olewg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_428b1"]
 radius = 7.0

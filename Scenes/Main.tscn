@@ -1,16 +1,12 @@
-[gd_scene load_steps=84 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=76 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://bag6u10ct76hr" path="res://Scenes/windmillExt.tscn" id="3_c5snn"]
 [ext_resource type="Texture2D" uid="uid://bn3uc8ut65wkg" path="res://assets/Farm/Houses.png" id="3_cm0pq"]
-[ext_resource type="Script" uid="uid://dbnmpxhoao62m" path="res://Scripts/windmill.gd" id="4_sc1dx"]
-[ext_resource type="Texture2D" uid="uid://bjf1amxodyibo" path="res://assets/Windmill.png" id="5_2gh4u"]
-[ext_resource type="Texture2D" uid="uid://d58ag617vlg1" path="res://assets/Farm/Doors_windows_fire.png" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://dw20lindfs40d" path="res://Scenes/cow.tscn" id="6_sc1dx"]
-[ext_resource type="Texture2D" uid="uid://dm835pqxpomkj" path="res://assets/Turbine.png" id="7_2gh4u"]
 [ext_resource type="Script" uid="uid://dtfvf2q4wew6f" path="res://Scripts/farm.gd" id="7_20pc6"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="7_trn2v"]
-[ext_resource type="Script" uid="uid://dfkvs8ju8sow5" path="res://Scripts/turbine.gd" id="8_devvj"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="8_trn2v"]
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="8_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="9_20pc6"]
@@ -32,65 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
 [ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
 [ext_resource type="Texture2D" uid="uid://ee3i260vb6fr" path="res://assets/House/House-6.png" id="31_btbly"]
+[ext_resource type="PackedScene" uid="uid://bd0un723f3mmv" path="res://Scenes/chicken.tscn" id="31_xvtyr"]
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_im7ls"]
-atlas = ExtResource("6_lgr22")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4yo4"]
-atlas = ExtResource("6_lgr22")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_khphd"]
-atlas = ExtResource("6_lgr22")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_38apo"]
-atlas = ExtResource("6_lgr22")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_a34eg"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_im7ls")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g4yo4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_khphd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_38apo")
-}],
-"loop": false,
-"name": &"close",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_38apo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_khphd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g4yo4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_im7ls")
-}],
-"loop": false,
-"name": &"open",
-"speed": 8.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjvhd"]
-radius = 8.438818
-height = 27.00422
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qta6b"]
 vertices = PackedVector2Array(79, 105.00781, -78, 105.97656, -78, 1, 79, 1)
@@ -424,6 +364,12 @@ size = Vector2(73, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yxf6"]
 size = Vector2(82.85715, 41.428574)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4yxf6"]
+vertices = PackedVector2Array(342.65625, 36.578125, 333.8125, 11, 356.35156, 11, 348.35156, 39, 267.0078, 12.8984375, 326, 10.1015625, 326, 39.359375, 267.97656, 116.00781, 422.03125, 116.97656, 365.96875, 39, 423.96094, 12.0078125, 366.39844, 12.359375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 7, 6, 0, 3), PackedInt32Array(8, 3, 9), PackedInt32Array(10, 8, 9, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(265, 11, 328, 8, 328, 37, 340, 35, 331, 9, 359, 9, 351, 37, 364, 37, 364.4396, 10.382364, 426, 10, 424, 119, 266, 118)])
+agent_radius = 2.0
+
 [node name="Main" type="Node2D" node_paths=PackedStringArray("sky", "playerNode", "SignalBus")]
 texture_filter = 1
 script = ExtResource("1_kjvhd")
@@ -442,42 +388,8 @@ tile_map_data = PackedByteArray("AAAHAPj/AQANAAYAAAAGAPj/AQAMAAYAAAD4/wMAAQADAAM
 z_index = 1
 y_sort_enabled = true
 
-[node name="Windmill" type="Sprite2D" parent="." groups=["Door", "Sort"]]
-texture_filter = 2
+[node name="Windmill" parent="." instance=ExtResource("3_c5snn")]
 position = Vector2(-61, -79)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("5_2gh4u")
-offset = Vector2(-0.55385864, -186.34927)
-script = ExtResource("4_sc1dx")
-
-[node name="Door" type="AnimatedSprite2D" parent="Windmill"]
-z_index = -1
-texture_filter = 1
-position = Vector2(-13.450406, 10.4266815)
-scale = Vector2(4.086207, 4.086207)
-sprite_frames = SubResource("SpriteFrames_a34eg")
-animation = &"close"
-frame = 3
-frame_progress = 1.0
-
-[node name="Area2D" type="Area2D" parent="Windmill/Door"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Windmill/Door/Area2D"]
-position = Vector2(3.1561182, 1.6329093)
-shape = SubResource("CapsuleShape2D_kjvhd")
-
-[node name="Turbine" type="Sprite2D" parent="Windmill"]
-z_index = 2
-position = Vector2(-1.0000019, -270)
-texture = ExtResource("7_2gh4u")
-script = ExtResource("8_devvj")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Windmill"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Windmill/StaticBody2D"]
-polygon = PackedVector2Array(125.99138, -10.215515, 61.293102, 57.88794, 40.86207, 54.482758, 40.86207, 30.64656, -30.646551, 30.64656, -37.456894, 54.482758, -64.69827, 54.482758, -122.586205, -6.8103333, -115.77586, -34.051727, 119.18103, -37.45688)
 
 [node name="CowPen" type="Node2D" parent="."]
 position = Vector2(117, 4)
@@ -789,9 +701,30 @@ position = Vector2(-1.4285889, 10.714294)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_4yxf6")
 
-[connection signal="animation_finished" from="Windmill/Door" to="Windmill" method="_on_door_animation_finished"]
-[connection signal="body_entered" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Windmill/Door/Area2D" to="Windmill" method="_on_area_2d_body_exited"]
+[node name="Chicken Pen" type="Node2D" parent="."]
+
+[node name="Ground" parent="Chicken Pen" instance=ExtResource("8_trn2v")]
+position = Vector2(345, 76)
+tile_map_data = PackedByteArray("AAD9//3/AAABAA4AAAD+//3/AAABAA4AAAD///3/AAABAA4AAAAAAP3/AAABAA4AAAABAP3/AAABAA4AAAACAP3/AAABAA4AAAADAP3/AAABAA4AAAAEAP3/AAABAA4AAAAEAP7/AAABAA4AAAAEAP//AAABAA4AAAAEAAAAAAABAA4AAAAEAAEAAAABAA4AAAAEAAIAAAAEABYAAAADAAIAAAAEABYAAAACAAIAAAAEABYAAAABAAIAAAAEABYAAAAAAAIAAAAEABYAAAD//wIAAAAEABYAAAD+/wIAAAAEABYAAAD9/wIAAAAEABYAAAD9/wEAAAABAA4AAAD9/wAAAAABAA4AAAD9////AAABAA4AAAD9//7/AAABAA4AAAD+//7/AAABAA4AAAD/////AAABAA4AAAAAAP//AAABAA4AAAABAP//AAABAA4AAAACAP//AAABAA4AAAACAP7/AAABAA4AAAADAP7/AAABAA4AAAADAP//AAABAA4AAAADAAAAAAABAA4AAAACAAAAAAABAA4AAAACAAEAAAABAA4AAAABAAEAAAABAA4AAAAAAAEAAAABAA4AAAD//wEAAAABAA4AAAD+/wEAAAABAA4AAAD+/wAAAAABAA4AAAD+////AAABAA4AAAD///7/AAABAA4AAAAAAP7/AAABAA4AAAABAP7/AAABAA4AAAADAAEAAAABAA4AAAABAAAAAAABAA4AAAAAAAAAAAABAA4AAAD//wAAAAABAA4AAAAEAPz/AAABAA4AAAADAPz/AAABAA4AAAACAPz/AAABAA4AAAABAPz/AAABAA4AAAAAAPz/AAABAA4AAAD///z/AAABAA4AAAD+//z/AAABAA4AAAD9//z/AAABAA4AAAD8//z/AAABAA4AAAD8//3/AAABAA4AAAD8//7/AAABAA4AAAD8////AAABAA4AAAD8/wAAAAABAA4AAAD8/wEAAAABAA4AAAD8/wIAAAAEABYAAAD7//z/AAABAA4AAAD7//3/AAABAA4AAAD7//7/AAABAA4AAAD7////AAABAA4AAAD7/wAAAAABAA4AAAD7/wEAAAABAA4AAAD7/wIAAAAEABYAAAD6/wIAAAADABYAAAD6/wEAAAADABUAAAD6/wAAAAADABUAAAD6////AAADABUAAAD6//7/AAADABUAAAD6//3/AAADABUAAAD6//z/AAADABUAAAD6//v/AAADABQAAAD7//v/AAAEABQAAAD8//v/AAAEABQAAAD9//v/AAAEABQAAAD+//v/AAAEABQAAAD///v/AAAEABQAAAAAAPv/AAAEABQAAAABAPv/AAAEABQAAAACAPv/AAAEABQAAAADAPv/AAAEABQAAAAEAPv/AAAEABQAAAAFAPv/AAAFABQAAAAFAPz/AAAFABUAAAAFAP3/AAAFABUAAAAFAP7/AAAFABUAAAAFAP//AAAFABUAAAAFAAAAAAAFABUAAAAFAAEAAAAFABUAAAAFAAIAAAAFABYAAAA=")
+
+[node name="Coop" type="Sprite2D" parent="Chicken Pen"]
+position = Vector2(344, 18)
+texture = ExtResource("3_cm0pq")
+region_enabled = true
+region_rect = Rect2(226, 14, 40, 60)
+
+[node name="CoopRoof" type="Sprite2D" parent="Chicken Pen"]
+position = Vector2(344, 6)
+texture = ExtResource("3_cm0pq")
+region_enabled = true
+region_rect = Rect2(226, 14, 40, 36)
+
+[node name="Chicken" parent="Chicken Pen" instance=ExtResource("31_xvtyr")]
+position = Vector2(317, 66)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chicken Pen"]
+navigation_polygon = SubResource("NavigationPolygon_4yxf6")
+
 [connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
 [connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]

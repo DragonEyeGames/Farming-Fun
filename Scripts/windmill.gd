@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 var state=""
 var animationPlaying:=false

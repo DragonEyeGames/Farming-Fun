@@ -54,6 +54,10 @@ func _ready() -> void:
 			playerInventory.append(InventorySlot.new())
 	await get_tree().create_timer(.1).timeout
 	addItem(inventoryItem.Watering_Can, 1)
+	addItem(inventoryItem.Potato, 1)
+	addItem(inventoryItem.Carrot, 1)
+	addItem(inventoryItem.Onion, 1)
+	addItem(inventoryItem.Raddish, 1)
 
 func addItem(item: inventoryItem, amount := 1):
 	for slot in playerInventory:

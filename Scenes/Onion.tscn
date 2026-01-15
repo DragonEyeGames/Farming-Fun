@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://cuegbiplk4swv"]
 
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_aq00n"]
-[ext_resource type="Texture2D" uid="uid://cfses4r1agm4d" path="res://Onions/Plants-5.png" id="2_q2txl"]
-[ext_resource type="Texture2D" uid="uid://ik22pj1vs3j8" path="res://Onions/Plants-2.png" id="3_bsdmh"]
-[ext_resource type="Texture2D" uid="uid://7ap2va0fs3j2" path="res://Onions/Plants-6.png" id="4_tbj8p"]
-[ext_resource type="Texture2D" uid="uid://ngpkvno6w5dq" path="res://Onions/Plants-3.png" id="5_3n4t0"]
-[ext_resource type="Texture2D" uid="uid://l0lu0xuqpcj8" path="res://Onions/Plants-7.png" id="6_5fsbr"]
-[ext_resource type="Texture2D" uid="uid://duwnl3mauhfsa" path="res://Onions/Plants-4.png" id="7_ckkjd"]
-[ext_resource type="Texture2D" uid="uid://bamhto6fovuxu" path="res://Onions/Plants-1.png" id="8_h4hao"]
+[ext_resource type="Texture2D" uid="uid://cfses4r1agm4d" path="res://assets/Plants/Onions/Plants-5.png" id="2_q2txl"]
+[ext_resource type="Texture2D" uid="uid://ik22pj1vs3j8" path="res://assets/Plants/Onions/Plants-2.png" id="3_bsdmh"]
+[ext_resource type="Texture2D" uid="uid://7ap2va0fs3j2" path="res://assets/Plants/Onions/Plants-6.png" id="4_tbj8p"]
+[ext_resource type="Texture2D" uid="uid://ngpkvno6w5dq" path="res://assets/Plants/Onions/Plants-3.png" id="5_3n4t0"]
+[ext_resource type="Texture2D" uid="uid://l0lu0xuqpcj8" path="res://assets/Plants/Onions/Plants-7.png" id="6_5fsbr"]
+[ext_resource type="Texture2D" uid="uid://duwnl3mauhfsa" path="res://assets/Plants/Onions/Plants-4.png" id="7_ckkjd"]
+[ext_resource type="Texture2D" uid="uid://bamhto6fovuxu" path="res://assets/Plants/Onions/Plants-1.png" id="8_h4hao"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aq00n"]
 radius = 7.0
