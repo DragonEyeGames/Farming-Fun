@@ -386,10 +386,12 @@ animations = [{
 radius = 3.1622777
 
 [node name="Chicken" type="CharacterBody2D" groups=["Animal", "Save"]]
+collision_layer = 0
 script = ExtResource("1_jy3mo")
 speed = 30
-topLeft = Vector2(50, -53)
-bottomRight = Vector2(105, 48)
+topLeft = Vector2(367, 13)
+bottomRight = Vector2(422, 114)
+globalized = true
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vvjo1")
@@ -402,3 +404,5 @@ position = Vector2(-1, 6)
 shape = SubResource("CircleShape2D_yisvs")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 1.0
+debug_enabled = true

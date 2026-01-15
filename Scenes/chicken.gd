@@ -6,58 +6,103 @@ var navAgent
 @export var topLeft: Vector2
 @export var bottomRight: Vector2
 @export var globalized:=false
+@export var home: Vector2
 var recalculating:=false
 var currentVelocity:=Vector2.ZERO
 var currentDirection="left"
 
+enum states {
+	WANDERING,
+	IDLE,
+	SLEEP
+}
+
+var currentState=states.WANDERING
+
 
 func _ready() -> void:
+	print(to_global(home))
 	navAgent=$NavigationAgent2D
 	sprite=$Sprite
 	if(globalized!=true):
 		globalized=true
 		bottomRight=to_global(bottomRight)
 		topLeft=to_global(topLeft)
-		print("globalized")
+		home=to_global(home)
 	await get_tree().process_frame
-	print(topLeft)
-	print(bottomRight)
 	makePath()
+	stateControlling()
 
 func _process(_delta: float) -> void:
-	if(currentVelocity!=Vector2.ZERO):
-		if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
-			if(currentVelocity.x<0):
-				currentDirection="left"
-				sprite.play("left")
+	if(Input.is_action_just_pressed("1")):
+		currentState=states.SLEEP
+		sleepPath()
+		print("Sel")
+	match currentState:
+		states.WANDERING:
+			if(currentVelocity!=Vector2.ZERO):
+				if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
+					if(currentVelocity.x<0):
+						currentDirection="left"
+						sprite.play("left")
+					else:
+						currentDirection="right"
+						sprite.play("right")
+				else:
+					if(currentVelocity.y<0):
+						currentDirection="up"
+						sprite.play("up")
+					else:
+						currentDirection="down"
+						sprite.play("down")
 			else:
-				currentDirection="right"
-				sprite.play("right")
-		else:
-			if(currentVelocity.y<0):
-				currentDirection="up"
-				sprite.play("up")
+				sprite.play(currentDirection+"Idle")
+		states.IDLE:
+			sprite.play(currentDirection+"Idle")
+		states.SLEEP:
+			if(currentVelocity!=Vector2.ZERO):
+				if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
+					if(currentVelocity.x<0):
+						currentDirection="left"
+						sprite.play("left")
+					else:
+						currentDirection="right"
+						sprite.play("right")
+				else:
+					if(currentVelocity.y<0):
+						currentDirection="up"
+						sprite.play("up")
+					else:
+						currentDirection="down"
+						sprite.play("down")
 			else:
-				currentDirection="down"
-				sprite.play("down")
-	else:
-		sprite.play(currentDirection+"Idle")
+				sprite.play(currentDirection+"Idle")
 
 func _physics_process(_delta: float) -> void:
-	if navAgent.is_navigation_finished() and not recalculating:
-		recalculating=true
-		await get_tree().create_timer(randf_range(.5, 3)).timeout
-		recalculating=false
-		makePath()
-		return
-	var dir = to_local(navAgent.get_next_path_position()).normalized()
-	velocity = dir*speed
-	if(recalculating):
-		velocity=Vector2.ZERO
-	move_and_slide()
-	currentVelocity=velocity
+	if(currentState==states.WANDERING):
+		if navAgent.is_navigation_finished() and not recalculating:
+			recalculating=true
+			await get_tree().create_timer(randf_range(.5, 3)).timeout
+			recalculating=false
+			makePath()
+			return
+		var dir = to_local(navAgent.get_next_path_position()).normalized()
+		velocity = dir*speed
+		if(recalculating):
+			velocity=Vector2.ZERO
+		move_and_slide()
+		currentVelocity=velocity
+	elif(currentState==states.SLEEP):
+		var dir = to_local(navAgent.get_next_path_position()).normalized()
+		velocity = dir*speed
+		if(navAgent.is_navigation_finished()):
+			velocity=Vector2.ZERO
+		move_and_slide()
+		currentVelocity=velocity
 
 func makePath():
+	if(currentState==states.SLEEP):
+		return
 	var targetPos=Vector2.ZERO
 	targetPos.x=randf_range(topLeft.x, bottomRight.x)
 	targetPos.y=randf_range(topLeft.y, bottomRight.y)
@@ -70,6 +115,19 @@ func makePath():
 	for i in range(points.size() - 1):
 		length += points[i].distance_to(points[i + 1])
 
-	if length < 20:
+	if length < 40:
 		# Too short — cancel the move
 		makePath()
+		
+func sleepPath():
+	var targetPos=home
+	navAgent.target_position=targetPos
+	await navAgent.path_changed
+		
+func stateControlling():
+	await get_tree().create_timer(randf_range(5, 20)).timeout
+	if(currentState==states.WANDERING):
+		currentState=states.IDLE
+	elif(currentState==states.IDLE):
+		currentState=states.WANDERING
+	stateControlling()

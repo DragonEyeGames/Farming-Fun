@@ -18,10 +18,7 @@ func _ready() -> void:
 		globalized=true
 		bottomRight=to_global(bottomRight)
 		topLeft=to_global(topLeft)
-		print("globalized")
 	await get_tree().process_frame
-	print(topLeft)
-	print(bottomRight)
 	makePath()
 
 func _process(_delta: float) -> void:

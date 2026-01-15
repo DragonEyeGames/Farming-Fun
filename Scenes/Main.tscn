@@ -714,6 +714,7 @@ region_enabled = true
 region_rect = Rect2(226, 14, 40, 60)
 
 [node name="CoopRoof" type="Sprite2D" parent="Chicken Pen"]
+z_index = 1
 position = Vector2(344, 6)
 texture = ExtResource("3_cm0pq")
 region_enabled = true
@@ -721,6 +722,10 @@ region_rect = Rect2(226, 14, 40, 36)
 
 [node name="Chicken" parent="Chicken Pen" instance=ExtResource("31_xvtyr")]
 position = Vector2(317, 66)
+home = Vector2(346, 15)
+
+[node name="Marker2D" type="Marker2D" parent="Chicken Pen/Chicken"]
+position = Vector2(29, -51)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chicken Pen"]
 navigation_polygon = SubResource("NavigationPolygon_4yxf6")
