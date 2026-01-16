@@ -724,9 +724,11 @@ region_rect = Rect2(226, 14, 40, 36)
 position = Vector2(415, 103)
 home = Vector2(346, 15)
 
-[node name="Chicken2" parent="Chicken Pen" instance=ExtResource("31_xvtyr")]
-position = Vector2(306, 64)
-home = Vector2(346, 15)
+[node name="TopLeft" type="Marker2D" parent="Chicken Pen/Chicken"]
+position = Vector2(-147, -90)
+
+[node name="BottomRight" type="Marker2D" parent="Chicken Pen/Chicken"]
+position = Vector2(6, 12)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chicken Pen"]
 navigation_polygon = SubResource("NavigationPolygon_4yxf6")

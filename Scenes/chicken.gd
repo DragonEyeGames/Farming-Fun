@@ -7,6 +7,7 @@ var navAgent
 @export var bottomRight: Vector2
 @export var globalized:=false
 @export var home: Vector2
+@export var egg: PackedScene
 var recalculating:=false
 var currentVelocity:=Vector2.ZERO
 var currentDirection="left"
@@ -21,7 +22,6 @@ var currentState=states.WANDERING
 
 
 func _ready() -> void:
-	print(to_global(home))
 	navAgent=$NavigationAgent2D
 	sprite=$Sprite
 	if(globalized!=true):
@@ -32,12 +32,27 @@ func _ready() -> void:
 	await get_tree().process_frame
 	makePath()
 	stateControlling()
+	eggRandom()
+	
+func eggRandom():
+	await get_tree().create_timer(randf_range(5, 10)).timeout
+	spawnEgg()
+	eggRandom()
+	
+func spawnEgg():
+	var newEgg=egg.instantiate()
+	get_parent().add_child(newEgg)
+	newEgg.global_position=global_position
 
 func _process(_delta: float) -> void:
 	if(Input.is_action_just_pressed("1")):
 		currentState=states.SLEEP
 		sleepPath()
-		print("Sel")
+	if(Input.is_action_just_pressed("2")):
+		currentState=states.WANDERING
+		makePath()
+	if(Input.is_action_just_pressed("3")):
+		currentState=states.IDLE
 	match currentState:
 		states.WANDERING:
 			if(currentVelocity!=Vector2.ZERO):

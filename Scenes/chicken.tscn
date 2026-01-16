@@ -1,7 +1,8 @@
-[gd_scene load_steps=53 format=3 uid="uid://bd0un723f3mmv"]
+[gd_scene load_steps=54 format=3 uid="uid://bd0un723f3mmv"]
 
 [ext_resource type="Script" uid="uid://dhuq4nl7in4mg" path="res://Scenes/chicken.gd" id="1_jy3mo"]
 [ext_resource type="Texture2D" uid="uid://dol33jd3j83gv" path="res://assets/Farm/Chicken_animation.png" id="2_7h841"]
+[ext_resource type="PackedScene" uid="uid://p880hjiflxnk" path="res://Scenes/egg.tscn" id="2_jayuq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvjo1"]
 atlas = ExtResource("2_7h841")
@@ -389,9 +390,10 @@ radius = 3.1622777
 collision_layer = 0
 script = ExtResource("1_jy3mo")
 speed = 30
-topLeft = Vector2(367, 13)
-bottomRight = Vector2(422, 114)
+topLeft = Vector2(268, 13)
+bottomRight = Vector2(421, 115)
 globalized = true
+egg = ExtResource("2_jayuq")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vvjo1")
@@ -405,4 +407,3 @@ shape = SubResource("CircleShape2D_yisvs")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 target_desired_distance = 1.0
-debug_enabled = true
