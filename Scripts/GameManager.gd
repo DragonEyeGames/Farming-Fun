@@ -22,7 +22,8 @@ enum inventoryItem {
 	Raddish_Seeds,
 	Onion_Seeds,
 	Potato_Seeds,
-	Watering_Can
+	Watering_Can,
+	Egg
 }
 
 const sellValue := {
@@ -35,6 +36,7 @@ const sellValue := {
 	inventoryItem.Raddish_Seeds: 3,
 	inventoryItem.Onion_Seeds: 2,
 	inventoryItem.Potato_Seeds: 4,
+	inventoryItem.Egg: 5
 }
 
 #items that are limited in use.  In style; Item: Max# uses

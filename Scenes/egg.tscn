@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://p880hjiflxnk"]
 
 [ext_resource type="Script" uid="uid://cwqnj73sxelb4" path="res://Scenes/egg.gd" id="1_1iuog"]
-[ext_resource type="Texture2D" uid="uid://j2psfkrea7j6" path="res://assets/Farm/Barn_interior.png" id="1_jdgtd"]
+[ext_resource type="Texture2D" uid="uid://c3jh71eupq1ms" path="res://Scenes/Egg.png" id="2_1iuog"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_85tk0"]
+radius = 9.0
 
 [node name="Egg" type="Node2D"]
 script = ExtResource("1_1iuog")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 z_index = -1
-texture = ExtResource("1_jdgtd")
-region_enabled = true
+position = Vector2(1, 0)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("2_1iuog")
 region_rect = Rect2(98, 306, 12, 12)
 
 [node name="Area2D" type="Area2D" parent="."]

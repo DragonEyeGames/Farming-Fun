@@ -11,13 +11,18 @@ func _ready() -> void:
 	$RichTextLabel.text=str(index+1)
 
 func _process(_delta: float) -> void:
-	itemName=""
 	$InventoryOutline.visible=GameManager.playerSelected==index and selectable
 	
 	for child in $Items.get_children():
 		child.visible=false
 	
-	var item = GameManager.playerInventory[index]
+	var item = GameManager.playerInventory[index] as InventorySlot
+	if(item.item!=null):
+		itemName=GameManager.inventoryItem.keys()[item.item]
+	else:
+		itemName=""
+		if($Popup.visible):
+			$Popup.visible=false
 	if (item.amount > 0 or item.item in GameManager.limited):
 		var itemIndex = (item.item)
 		$Items.get_node(GameManager.inventoryItem.keys()[itemIndex]).visible = true

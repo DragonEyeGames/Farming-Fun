@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3j5f17jte8l7"]
+[gd_scene load_steps=12 format=3 uid="uid://c3j5f17jte8l7"]
 
 [ext_resource type="Script" uid="uid://bkjt7bogn2nvg" path="res://Scenes/inventory_items.gd" id="1_g43xj"]
 [ext_resource type="Texture2D" uid="uid://j2psfkrea7j6" path="res://assets/Farm/Barn_interior.png" id="1_ml0rm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://11m5jpt8x06t" path="res://assets/Plants/RaddishIcon.png" id="3_wfhs1"]
 [ext_resource type="Texture2D" uid="uid://crtn6ph6r43ng" path="res://assets/Plants/OnionIcon.png" id="4_3kf4r"]
 [ext_resource type="Texture2D" uid="uid://b7fgcln0ynsi1" path="res://assets/Plants/PotatoIcon.png" id="5_hwat8"]
+[ext_resource type="Texture2D" uid="uid://c3jh71eupq1ms" path="res://Scenes/Egg.png" id="9_wfhs1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g43xj"]
 bg_color = Color(0.19714275, 0.15421787, 0.62896115, 1)
@@ -56,6 +57,7 @@ texture = ExtResource("4_3kf4r")
 region_rect = Rect2(114, 260, 10, 12)
 
 [node name="Potato" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -1)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_hwat8")
@@ -132,3 +134,9 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_10ob3")
 max_value = 10.0
 value = 10.0
 show_percentage = false
+
+[node name="Egg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 2.842171e-14)
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("9_wfhs1")
