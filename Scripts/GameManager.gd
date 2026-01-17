@@ -39,6 +39,20 @@ const sellValue := {
 	inventoryItem.Egg: 5
 }
 
+const description := {
+	inventoryItem.Carrot: "A yummy lil' vegetable. Popular among rabbits!",
+	inventoryItem.Raddish: "A slightly spicy funky lil' thing. Fan favorite!",
+	inventoryItem.Onion: "Put this stinky guy on your door to scare away vampires.",
+	inventoryItem.Potato: "Mash 'em, boil 'em, stick 'em in a stew.",
+
+	inventoryItem.Carrot_Seeds: "Lets you grow the orange vegetable. 4 days to grow.",
+	inventoryItem.Raddish_Seeds: "Lets you grow the red thing. One full week to grow!",
+	inventoryItem.Onion_Seeds: "Plant these in your enemys yard if you want. 5 days till ripe.",
+	inventoryItem.Potato_Seeds: "Plant natures french fries in the ground and get more in 6 days.",
+	inventoryItem.Egg: "Eggs are peak cinema. Put them in anything and it goes great!",
+	inventoryItem.Watering_Can: "Used to water stuff. You must refill at a pond to get more water."
+}
+
 #items that are limited in use.  In style; Item: Max# uses
 const limited := {
 	inventoryItem.Watering_Can: 10

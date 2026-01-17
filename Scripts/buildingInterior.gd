@@ -9,5 +9,8 @@ func _on_door_body_entered(_body: Node2D) -> void:
 	player.inventory=GameManager.playerInventory
 	player.money=GameManager.playerMoney
 	player.lastLocation=lastSeen
+	var worldData = WorldData.new()
+	worldData.time=GameManager.time
 	ResourceSaver.save(player, "user://player_data.tres")
+	ResourceSaver.save(worldData, "user://world_data.tres")
 	get_tree().call_deferred("change_scene_to_file", "res://Scenes/Main.tscn")

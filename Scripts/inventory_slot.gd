@@ -45,6 +45,7 @@ func _process(_delta: float) -> void:
 			$Popup/SellPrice.text="$" + str(GameManager.sellValue[GameManager.inventoryItem[itemName]])
 		else:
 			$Popup/SellPrice.text=""
+		$Popup/Description.text=GameManager.description[GameManager.inventoryItem[itemName]]
 		
 
 

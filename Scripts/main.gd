@@ -17,6 +17,9 @@ func _ready() -> void:
 			var newCrop=crop.instantiate()
 			$YSort.add_child(newCrop)
 			newCrop.state=data.cropStates[data.crops.find(crop)]
+		for misc in data.misc:
+			var newMisc=misc.instantiate()
+			$YSort.add_child(newMisc)
 		lastRenderedDay=data.lastRendered
 		GameManager.lastRenderedDay=GameManager.day
 		if(lastRenderedDay<GameManager.lastRenderedDay):
@@ -46,6 +49,10 @@ func transport(file: String):
 			var animalScene = PackedScene.new()
 			animalScene.pack(saveable)
 			save.animals.append(animalScene)
+		if(saveable.is_in_group("Misc")):
+			var miscScene = PackedScene.new()
+			miscScene.pack(saveable)
+			save.misc.append(miscScene)
 		if(saveable.is_in_group("Crop")):
 			var cropScene = PackedScene.new()
 			cropScene.pack(saveable)

@@ -78,11 +78,11 @@ color = Color(0.653982, 0.6079894, 0.47235602, 1)
 [node name="Description" type="RichTextLabel" parent="Popup"]
 layout_mode = 0
 offset_left = 2.0
-offset_top = 37.0
+offset_top = 35.0
 offset_right = 135.0
 offset_bottom = 104.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/normal_font_size = 10
 text = "Yummy"
 horizontal_alignment = 1
 vertical_alignment = 1
