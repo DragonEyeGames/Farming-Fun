@@ -29,9 +29,11 @@ func _process(_delta: float) -> void:
 		dragging=false
 		$Items.position=Vector2(47, 48)
 		$Items.z_index=0
+		$Value.visible=true
 	if(dragging):
 		$Items.global_position=get_global_mouse_position()
 		$Items.z_index=1
+		$Value.visible=false
 	if($Popup.visible and GameManager.dragging!=-1):
 		$Popup.visible=false
 	$InventoryOutline.visible=GameManager.playerSelected==index and selectable

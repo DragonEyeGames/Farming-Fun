@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=79 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -27,8 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
 [ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
+[ext_resource type="Script" uid="uid://nfcgkm8ukflb" path="res://Scenes/foodHolder.gd" id="31_4yxf6"]
 [ext_resource type="Texture2D" uid="uid://ee3i260vb6fr" path="res://assets/House/House-6.png" id="31_btbly"]
 [ext_resource type="PackedScene" uid="uid://bd0un723f3mmv" path="res://Scenes/chicken.tscn" id="31_xvtyr"]
+[ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="32_qta6b"]
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
 
@@ -363,6 +365,9 @@ size = Vector2(73, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yxf6"]
 size = Vector2(82.85715, 41.428574)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3rx7"]
+size = Vector2(19, 14)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4yxf6"]
 vertices = PackedVector2Array(342.65625, 36.578125, 333.8125, 11, 356.35156, 11, 348.35156, 39, 267.0078, 12.8984375, 326, 10.1015625, 326, 39.359375, 267.97656, 116.00781, 422.03125, 116.97656, 365.96875, 39, 423.96094, 12.0078125, 366.39844, 12.359375)
@@ -703,6 +708,46 @@ shape = SubResource("RectangleShape2D_4yxf6")
 
 [node name="Chicken Pen" type="Node2D" parent="."]
 
+[node name="Food" type="Sprite2D" parent="Chicken Pen" groups=["Sort"]]
+position = Vector2(276, 24)
+texture = ExtResource("3_cm0pq")
+offset = Vector2(0, -4)
+region_enabled = true
+region_rect = Rect2(240, 122, 18, 16)
+script = ExtResource("31_4yxf6")
+
+[node name="ColorRect" type="ColorRect" parent="Chicken Pen/Food"]
+visible = false
+offset_left = -7.0
+offset_top = -9.0
+offset_right = 6.0
+offset_bottom = -4.0
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="Chicken Pen/Food"]
+position = Vector2(0, -4)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken Pen/Food/Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_x3rx7")
+
+[node name="Water" type="Sprite2D" parent="Chicken Pen" groups=["Sort"]]
+position = Vector2(302, 25)
+texture = ExtResource("3_cm0pq")
+offset = Vector2(0, -5)
+region_enabled = true
+region_rect = Rect2(240, 90, 18, 16)
+script = ExtResource("32_qta6b")
+
+[node name="ColorRect2" type="ColorRect" parent="Chicken Pen/Water"]
+offset_left = -7.0
+offset_top = -10.0
+offset_right = 6.0
+offset_bottom = -5.0
+color = Color(0, 0, 0, 1)
+
 [node name="Ground" parent="Chicken Pen" instance=ExtResource("8_trn2v")]
 position = Vector2(345, 76)
 tile_map_data = PackedByteArray("AAD9//3/AAABAA4AAAD+//3/AAABAA4AAAD///3/AAABAA4AAAAAAP3/AAABAA4AAAABAP3/AAABAA4AAAACAP3/AAABAA4AAAADAP3/AAABAA4AAAAEAP3/AAABAA4AAAAEAP7/AAABAA4AAAAEAP//AAABAA4AAAAEAAAAAAABAA4AAAAEAAEAAAABAA4AAAAEAAIAAAAEABYAAAADAAIAAAAEABYAAAACAAIAAAAEABYAAAABAAIAAAAEABYAAAAAAAIAAAAEABYAAAD//wIAAAAEABYAAAD+/wIAAAAEABYAAAD9/wIAAAAEABYAAAD9/wEAAAABAA4AAAD9/wAAAAABAA4AAAD9////AAABAA4AAAD9//7/AAABAA4AAAD+//7/AAABAA4AAAD/////AAABAA4AAAAAAP//AAABAA4AAAABAP//AAABAA4AAAACAP//AAABAA4AAAACAP7/AAABAA4AAAADAP7/AAABAA4AAAADAP//AAABAA4AAAADAAAAAAABAA4AAAACAAAAAAABAA4AAAACAAEAAAABAA4AAAABAAEAAAABAA4AAAAAAAEAAAABAA4AAAD//wEAAAABAA4AAAD+/wEAAAABAA4AAAD+/wAAAAABAA4AAAD+////AAABAA4AAAD///7/AAABAA4AAAAAAP7/AAABAA4AAAABAP7/AAABAA4AAAADAAEAAAABAA4AAAABAAAAAAABAA4AAAAAAAAAAAABAA4AAAD//wAAAAABAA4AAAAEAPz/AAABAA4AAAADAPz/AAABAA4AAAACAPz/AAABAA4AAAABAPz/AAABAA4AAAAAAPz/AAABAA4AAAD///z/AAABAA4AAAD+//z/AAABAA4AAAD9//z/AAABAA4AAAD8//z/AAABAA4AAAD8//3/AAABAA4AAAD8//7/AAABAA4AAAD8////AAABAA4AAAD8/wAAAAABAA4AAAD8/wEAAAABAA4AAAD8/wIAAAAEABYAAAD7//z/AAABAA4AAAD7//3/AAABAA4AAAD7//7/AAABAA4AAAD7////AAABAA4AAAD7/wAAAAABAA4AAAD7/wEAAAABAA4AAAD7/wIAAAAEABYAAAD6/wIAAAADABYAAAD6/wEAAAADABUAAAD6/wAAAAADABUAAAD6////AAADABUAAAD6//7/AAADABUAAAD6//3/AAADABUAAAD6//z/AAADABUAAAD6//v/AAADABQAAAD7//v/AAAEABQAAAD8//v/AAAEABQAAAD9//v/AAAEABQAAAD+//v/AAAEABQAAAD///v/AAAEABQAAAAAAPv/AAAEABQAAAABAPv/AAAEABQAAAACAPv/AAAEABQAAAADAPv/AAAEABQAAAAEAPv/AAAEABQAAAAFAPv/AAAFABQAAAAFAPz/AAAFABUAAAAFAP3/AAAFABUAAAAFAP7/AAAFABUAAAAFAP//AAAFABUAAAAFAAAAAAAFABUAAAAFAAEAAAAFABUAAAAFAAIAAAAFABYAAAA=")
@@ -722,13 +767,12 @@ region_rect = Rect2(226, 14, 40, 36)
 
 [node name="Chicken" parent="Chicken Pen" instance=ExtResource("31_xvtyr")]
 position = Vector2(415, 103)
-home = Vector2(346, 15)
 
 [node name="Chicken2" parent="Chicken Pen" instance=ExtResource("31_xvtyr")]
 position = Vector2(306, 64)
-home = Vector2(346, 15)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chicken Pen"]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_4yxf6")
 
 [connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]

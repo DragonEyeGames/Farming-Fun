@@ -8,14 +8,19 @@ var navAgent
 @export var globalized:=false
 @export var home: Vector2
 @export var egg: PackedScene
+@export var food: Vector2
+var maxFood=2
+var currentFood = 2.0
 var recalculating:=false
 var currentVelocity:=Vector2.ZERO
 var currentDirection="left"
+var foodRepository
 
 enum states {
 	WANDERING,
 	IDLE,
-	SLEEP
+	SLEEP,
+	EATING
 }
 
 var currentState=states.WANDERING
@@ -44,7 +49,8 @@ func spawnEgg():
 	get_parent().add_child(newEgg)
 	newEgg.global_position=global_position
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	currentFood-=delta/60
 	if(Input.is_action_just_pressed("1")):
 		currentState=states.SLEEP
 		sleepPath()
@@ -53,45 +59,47 @@ func _process(_delta: float) -> void:
 		makePath()
 	if(Input.is_action_just_pressed("3")):
 		currentState=states.IDLE
+	if(Input.is_action_just_pressed("4")):
+		currentState=states.EATING
+		eatPath()
 	match currentState:
 		states.WANDERING:
 			if(currentVelocity!=Vector2.ZERO):
-				if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
-					if(currentVelocity.x<0):
-						currentDirection="left"
-						sprite.play("left")
-					else:
-						currentDirection="right"
-						sprite.play("right")
+				if(currentVelocity.x<0):
+					currentDirection="left"
+					sprite.play("left")
 				else:
-					if(currentVelocity.y<0):
-						currentDirection="up"
-						sprite.play("up")
-					else:
-						currentDirection="down"
-						sprite.play("down")
+					currentDirection="right"
+					sprite.play("right")
 			else:
 				sprite.play(currentDirection+"Idle")
 		states.IDLE:
 			sprite.play(currentDirection+"Idle")
 		states.SLEEP:
 			if(currentVelocity!=Vector2.ZERO):
-				if(abs(currentVelocity.x)>=abs(currentVelocity.y)):
-					if(currentVelocity.x<0):
-						currentDirection="left"
-						sprite.play("left")
-					else:
-						currentDirection="right"
-						sprite.play("right")
+				if(currentVelocity.x<0):
+					currentDirection="left"
+					sprite.play("left")
 				else:
-					if(currentVelocity.y<0):
-						currentDirection="up"
-						sprite.play("up")
-					else:
-						currentDirection="down"
-						sprite.play("down")
+					currentDirection="right"
+					sprite.play("right")
 			else:
 				sprite.play(currentDirection+"Idle")
+		states.EATING:
+			if(currentVelocity!=Vector2.ZERO):
+				if(currentVelocity.x<0):
+					currentDirection="left"
+					sprite.play("left")
+				else:
+					currentDirection="right"
+					sprite.play("right")
+			else:
+				sprite.play(currentDirection+"Idle")
+			if(foodRepository!=null):
+				foodRepository.food-=1
+				currentFood+=1
+				foodRepository=null
+				currentState=states.WANDERING
 
 func _physics_process(_delta: float) -> void:
 	if(currentState==states.WANDERING):
@@ -114,9 +122,16 @@ func _physics_process(_delta: float) -> void:
 			velocity=Vector2.ZERO
 		move_and_slide()
 		currentVelocity=velocity
+	elif(currentState==states.EATING):
+		var dir = to_local(navAgent.get_next_path_position()).normalized()
+		velocity = dir*speed
+		if(navAgent.is_navigation_finished()):
+			velocity=Vector2.ZERO
+		move_and_slide()
+		currentVelocity=velocity
 
 func makePath():
-	if(currentState==states.SLEEP):
+	if(currentState==states.SLEEP or currentState==states.EATING):
 		return
 	var targetPos=Vector2.ZERO
 	targetPos.x=randf_range(topLeft.x, bottomRight.x)
@@ -139,10 +154,31 @@ func sleepPath():
 	navAgent.target_position=targetPos
 	await navAgent.path_changed
 		
+func eatPath():
+	var targetPos=food
+	navAgent.target_position=targetPos
+	await navAgent.path_changed
+	
 func stateControlling():
-	await get_tree().create_timer(randf_range(5, 20)).timeout
-	if(currentState==states.WANDERING):
-		currentState=states.IDLE
-	elif(currentState==states.IDLE):
-		currentState=states.WANDERING
+	await get_tree().create_timer(randf_range(5, 10)).timeout
+	var random = randi_range(1, 20)
+	if(currentFood>1 or (currentFood>.3 and randi_range(1, 5)==3)):
+		if(random<=7):
+			currentState=states.IDLE
+		elif(random<=14):
+			currentState=states.WANDERING
+		elif(random<=17):
+			currentState=states.SLEEP
+	else:
+		currentState=states.EATING 
+	
 	stateControlling()
+
+
+func _on_food_checker_area_entered(area: Area2D) -> void:
+	foodRepository=area.get_parent()
+
+
+func _on_food_checker_area_exited(area: Area2D) -> void:
+	if(foodRepository==area.get_parent()):
+		foodRepository=null
