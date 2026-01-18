@@ -77,7 +77,6 @@ z_index = -1
 texture = ExtResource("9_gt0n6")
 
 [node name="CarrotHole5" type="Sprite2D" parent="Sprites"]
-z_index = -1
 position = Vector2(-60.869564, -4.347826)
 texture = ExtResource("10_ca1pp")
 

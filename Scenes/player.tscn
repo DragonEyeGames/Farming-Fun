@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=88 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="5_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="8_8erm5"]
 [ext_resource type="Script" uid="uid://8jm7ctbx2x4c" path="res://Scenes/wateringChecker.gd" id="9_f1ek2"]
+[ext_resource type="PackedScene" uid="uid://bnrecf00dh1w3" path="res://Scenes/inventory.tscn" id="10_tx1dd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -1117,7 +1118,7 @@ onion = ExtResource("5_tx1dd")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"walk-side"
+animation = &"picked-idle-side"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
@@ -1317,6 +1318,9 @@ color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 libraries = {
 &"": SubResource("AnimationLibrary_gymyn")
 }
+
+[node name="Inventory" parent="." instance=ExtResource("10_tx1dd")]
+visible = false
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="PlantEffects/side" to="." method="_on_side_animation_finished"]

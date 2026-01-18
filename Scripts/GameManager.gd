@@ -4,6 +4,8 @@ var time:= 0.0
 var day:=1
 var lastRenderedDay:=1
 
+var dragging:=-1
+
 var hud
 var player
 

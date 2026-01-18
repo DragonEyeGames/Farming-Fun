@@ -149,7 +149,7 @@ region_enabled = true
 region_rect = Rect2(50, 12, 44, 46)
 
 [node name="Player" parent="." instance=ExtResource("3_3jr7h")]
-position = Vector2(13, -74)
+position = Vector2(46, 103)
 
 [node name="Door" type="Area2D" parent="."]
 collision_layer = 0

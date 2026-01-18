@@ -35,7 +35,7 @@ func _ready() -> void:
 	eggRandom()
 	
 func eggRandom():
-	await get_tree().create_timer(randf_range(5, 10)).timeout
+	await get_tree().create_timer(randf_range(60, 120)).timeout
 	spawnEgg()
 	eggRandom()
 	
