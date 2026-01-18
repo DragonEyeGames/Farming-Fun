@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://bhuhjmt48tro"]
+[gd_scene load_steps=25 format=3 uid="uid://bhuhjmt48tro"]
 
+[ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_14pjv"]
 [ext_resource type="Texture2D" uid="uid://bkml8rs0bajc4" path="res://assets/Plants/Raddish/Plants-1.png" id="1_usssr"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_428b1"]
 [ext_resource type="Texture2D" uid="uid://v3gux1ng7pbg" path="res://assets/Plants/Raddish/Plants-5.png" id="2_k3swr"]
@@ -17,6 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://cdr72ecqadh7x" path="res://assets/Plants/Raddish/Fixed-Plants-8.png" id="15_8yq76"]
 [ext_resource type="Texture2D" uid="uid://cqadihdka0nya" path="res://assets/Plants/Raddish/Fixed-Plants-7.png" id="16_4kr2y"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v4w37"]
+resource_local_to_scene = true
+shader = ExtResource("1_14pjv")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_428b1"]
 radius = 7.0
 height = 20.0
@@ -24,7 +34,62 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_ruimk"]
 radius = 7.0
 
+[sub_resource type="Animation" id="Animation_14pjv"]
+resource_name = "outline"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0000000298024]
+}
+
+[sub_resource type="Animation" id="Animation_v4w37"]
+resource_name = "normal"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2f46g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnrgu"]
+_data = {
+&"RESET": SubResource("Animation_2f46g"),
+&"normal": SubResource("Animation_v4w37"),
+&"outline": SubResource("Animation_14pjv")
+}
+
 [node name="Raddish" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
+material = SubResource("ShaderMaterial_v4w37")
 script = ExtResource("2_428b1")
 animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/FixedPlants2"), NodePath("Sprites/FixedPlants4"), NodePath("Sprites/Stage-2"), NodePath("Sprites/FixedPlants6"), NodePath("Sprites/FixedPlants8"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Hole-4")]
 type = 1
@@ -49,14 +114,18 @@ position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_ruimk")
 
 [node name="Sprites" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(3, -6.9999995)
 scale = Vector2(0.295, 0.295)
 
 [node name="Hole-4" type="Sprite2D" parent="Sprites"]
+visible = false
 position = Vector2(-74.57627, 16.949152)
 texture = ExtResource("1_usssr")
 
 [node name="Stage-3" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(-9, 15)
 texture = ExtResource("2_k3swr")
 
@@ -65,6 +134,8 @@ z_index = -1
 texture = ExtResource("3_b2mrc")
 
 [node name="Stage-2" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(50.84746, 10.169491)
 texture = ExtResource("4_5g51h")
 
@@ -73,6 +144,8 @@ z_index = -1
 texture = ExtResource("5_et8bb")
 
 [node name="Stage-1" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(118.644066, 10.169491)
 texture = ExtResource("6_78t6h")
 
@@ -81,6 +154,7 @@ z_index = -1
 texture = ExtResource("7_olewg")
 
 [node name="FixedPlants2" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(152.54237, 10.169491)
 texture = ExtResource("9_0mjqt")
 
@@ -89,6 +163,8 @@ z_index = -1
 texture = ExtResource("10_14pjv")
 
 [node name="FixedPlants4" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(108.474594, 10.169491)
 texture = ExtResource("11_v4w37")
 
@@ -97,6 +173,8 @@ z_index = -1
 texture = ExtResource("12_2f46g")
 
 [node name="FixedPlants6" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(3.3898468, 13.559319)
 texture = ExtResource("13_nnrgu")
 
@@ -105,12 +183,19 @@ z_index = -1
 texture = ExtResource("14_2a13c")
 
 [node name="FixedPlants8" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
 position = Vector2(-54.237274, 10.169491)
 texture = ExtResource("15_8yq76")
 
 [node name="FixedPlants7" type="Sprite2D" parent="Sprites/FixedPlants8"]
 z_index = -1
 texture = ExtResource("16_4kr2y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nnrgu")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

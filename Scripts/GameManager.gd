@@ -6,6 +6,8 @@ var lastRenderedDay:=1
 
 var dragging:=-1
 
+var energy=20
+
 var hud
 var player
 

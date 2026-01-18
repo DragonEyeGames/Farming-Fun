@@ -8,6 +8,7 @@ func _ready() -> void:
 		index+=1
 
 func _process(_delta: float) -> void:
+	$Energy/ProgressBar.value=GameManager.energy
 	var total_minutes := int(GameManager.time * 24 * 60)
 	var hours := int(total_minutes / 60.0)
 	var minutes := total_minutes % 60

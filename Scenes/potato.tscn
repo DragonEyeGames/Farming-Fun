@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://btvy66yb0plbx"]
+[gd_scene load_steps=17 format=3 uid="uid://btvy66yb0plbx"]
 
+[ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_5su27"]
 [ext_resource type="Texture2D" uid="uid://gu5kokd0nada" path="res://assets/Plants/Potato/Plants-1.png" id="2_gmojo"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_rx63k"]
 [ext_resource type="Texture2D" uid="uid://clp1riffhorv4" path="res://assets/Plants/Potato/Plants-5.png" id="3_5su27"]
@@ -9,6 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://yqlxjk50wl4g" path="res://assets/Plants/Potato/Plants-7.png" id="7_0jtyu"]
 [ext_resource type="Texture2D" uid="uid://biqwh56o1f4ix" path="res://assets/Plants/Potato/Plants-4.png" id="8_6yxst"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5c2fc"]
+resource_local_to_scene = true
+shader = ExtResource("1_5su27")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rx63k"]
 radius = 8.0
 height = 22.0
@@ -16,7 +26,62 @@ height = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_d4g48"]
 radius = 7.0
 
+[sub_resource type="Animation" id="Animation_5su27"]
+resource_name = "outline"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0000000298024]
+}
+
+[sub_resource type="Animation" id="Animation_5c2fc"]
+resource_name = "normal"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8ipad"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhkbe"]
+_data = {
+&"RESET": SubResource("Animation_8ipad"),
+&"normal": SubResource("Animation_5c2fc"),
+&"outline": SubResource("Animation_5su27")
+}
+
 [node name="Potato" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
+material = SubResource("ShaderMaterial_5c2fc")
 script = ExtResource("2_rx63k")
 animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Hole")]
 type = 3
@@ -39,10 +104,12 @@ position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_d4g48")
 
 [node name="Sprites" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(3, -7.0000005)
 scale = Vector2(0.27, 0.27)
 
 [node name="Stage-3" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(-12, 12)
 texture = ExtResource("3_5su27")
 
@@ -51,6 +118,7 @@ z_index = -1
 texture = ExtResource("4_5c2fc")
 
 [node name="Stage-2" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(51.85185, 3.7037048)
 texture = ExtResource("5_8ipad")
 
@@ -59,6 +127,7 @@ z_index = -1
 texture = ExtResource("6_qhkbe")
 
 [node name="Stage-1" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(118.518524, 9.536743e-07)
 texture = ExtResource("7_0jtyu")
 
@@ -69,6 +138,11 @@ texture = ExtResource("8_6yxst")
 [node name="Hole" type="Sprite2D" parent="Sprites"]
 position = Vector2(-74.07407, 11.111114)
 texture = ExtResource("2_gmojo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qhkbe")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

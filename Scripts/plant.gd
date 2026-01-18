@@ -45,3 +45,9 @@ func interact():
 	animations[state].visible=true
 	GameManager.addItem(type, 1)
 	z_index-=1
+	
+func wateringHover():
+	$AnimationPlayer.play("outline")
+	
+func wateringExit():
+	$AnimationPlayer.play("normal")

@@ -122,8 +122,9 @@ func _process(_delta: float) -> void:
 		canMove=false
 		sprite.play("pickup-" + direction)
 	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null and canMove):
-		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null):
+		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null and GameManager.energy>0):
 			var backupDirection=direction
+			GameManager.energy-=1
 			if(sprite.flip_h and direction=="side"):
 				backupDirection="left-side"
 			elif(direction=="side"):
@@ -142,8 +143,9 @@ func _process(_delta: float) -> void:
 					effects.scale.x=-1
 				else:
 					effects.scale.x=1
-		if(GameManager.itemSelected("watering") and GameManager.plantable!=null and not busy and canMove and GameManager.selectedItem.amount>0 and not $ActionAnimator.is_playing()):
+		if(GameManager.itemSelected("watering") and GameManager.plantable!=null and not busy and canMove and GameManager.selectedItem.amount>0 and not $ActionAnimator.is_playing() and GameManager.energy>0):
 			busy=true
+			GameManager.energy-=1
 			var backupDirection=direction
 			if(backupDirection=="side"):
 				if(sprite.flip_h):

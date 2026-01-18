@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cp2dwgarjtbf4"]
+[gd_scene load_steps=19 format=3 uid="uid://cp2dwgarjtbf4"]
 
+[ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_8tkmy"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_l7vel"]
 [ext_resource type="Texture2D" uid="uid://c6fekwosic6q8" path="res://assets/Plants/Carrots/Carrot-1.png" id="2_ni15g"]
 [ext_resource type="Texture2D" uid="uid://hi85g56t306q" path="res://assets/Plants/Carrots/CarrotHole-1.png" id="3_8tkmy"]
@@ -11,6 +12,15 @@
 [ext_resource type="Texture2D" uid="uid://b8hq3ej878lba" path="res://assets/Plants/Carrots/CarrotHole-4.5.png" id="9_gt0n6"]
 [ext_resource type="Texture2D" uid="uid://ourcwrvj1n67" path="res://assets/Plants/Carrots/CarrotHole-5.png" id="10_ca1pp"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3kscm"]
+resource_local_to_scene = true
+shader = ExtResource("1_8tkmy")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l7vel"]
 radius = 6.0
 height = 20.0
@@ -18,7 +28,62 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ucds"]
 radius = 7.0
 
+[sub_resource type="Animation" id="Animation_352fm"]
+resource_name = "outline"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0000000298024]
+}
+
+[sub_resource type="Animation" id="Animation_r0g6j"]
+resource_name = "normal"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bxw1x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5ccr"]
+_data = {
+&"RESET": SubResource("Animation_bxw1x"),
+&"normal": SubResource("Animation_r0g6j"),
+&"outline": SubResource("Animation_352fm")
+}
+
 [node name="Carrot" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
+material = SubResource("ShaderMaterial_3kscm")
 script = ExtResource("2_l7vel")
 animations = [NodePath("Sprites/Carrot1"), NodePath("Sprites/Carrot2"), NodePath("Sprites/Carrot3"), NodePath("Sprites/Carrot4"), NodePath("Sprites/CarrotHole5")]
 
@@ -42,10 +107,12 @@ position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_4ucds")
 
 [node name="Sprites" type="Node2D" parent="."]
+use_parent_material = true
 position = Vector2(-13, -4)
 scale = Vector2(0.23, 0.23)
 
 [node name="Carrot1" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(191.30435, -8.695652)
 texture = ExtResource("2_ni15g")
 
@@ -54,6 +121,7 @@ z_index = -1
 texture = ExtResource("3_8tkmy")
 
 [node name="Carrot2" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(126.08695, -4.347826)
 texture = ExtResource("4_3kscm")
 
@@ -62,6 +130,7 @@ z_index = -1
 texture = ExtResource("5_352fm")
 
 [node name="Carrot3" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 position = Vector2(60.869564, 0)
 texture = ExtResource("6_r0g6j")
 
@@ -70,6 +139,7 @@ z_index = -1
 texture = ExtResource("7_bxw1x")
 
 [node name="Carrot4" type="Sprite2D" parent="Sprites"]
+use_parent_material = true
 texture = ExtResource("8_i5ccr")
 
 [node name="CarrotHole4_5" type="Sprite2D" parent="Sprites/Carrot4"]
@@ -79,6 +149,11 @@ texture = ExtResource("9_gt0n6")
 [node name="CarrotHole5" type="Sprite2D" parent="Sprites"]
 position = Vector2(-60.869564, -4.347826)
 texture = ExtResource("10_ca1pp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_i5ccr")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]
