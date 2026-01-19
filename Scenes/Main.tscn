@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=123 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dtfvf2q4wew6f" path="res://Scripts/farm.gd" id="7_20pc6"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="7_trn2v"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="8_trn2v"]
+[ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="8_vs04g"]
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="8_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="9_20pc6"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="10_wkp8b"]
@@ -33,12 +34,350 @@
 [ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="32_qta6b"]
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
+[ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="33_utia5"]
+[ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="34_f7hdo"]
+[ext_resource type="Texture2D" uid="uid://coohbgm67vwcv" path="res://assets/AnimalBox/Untitled_Artwork-6.png" id="35_clvyn"]
+[ext_resource type="Texture2D" uid="uid://yb2xmpmapnlc" path="res://assets/AnimalBox/Untitled_Artwork-3.png" id="36_d8m2u"]
+[ext_resource type="Texture2D" uid="uid://yxl3rkbm63j8" path="res://assets/AnimalBox/Untitled_Artwork-5.png" id="37_5psol"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qta6b"]
 vertices = PackedVector2Array(79, 105.00781, -78, 105.97656, -78, 1, 79, 1)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-80, -1, 81, -1, 81, 107, -80, 108)])
 agent_radius = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m4llh"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lac6x"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hpjjw"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_off7b"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lfh1j"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7sj7i"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_semxg"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ep8v8"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3133c"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_js5gh"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvjo1"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yisvs"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rgw24"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gwyn"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6gtk"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81ldr"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eywpa"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j7e3e"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y2ulj"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t3x2a"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bbis"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yn2g2"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yic5e"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ex7s8"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4clwk"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2tpa"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nkjwg"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8n4h5"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_as1io"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xd5mi"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt1x2"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2wrh7"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_atu2d"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5wht"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbeql"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5nnb"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fsd2l"]
+resource_local_to_scene = true
+shader = ExtResource("8_vs04g")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_size = 0.0
+shader_parameter/alpha_threshold = 0.35999999195328
+shader_parameter/outline_samples = 4
+shader_parameter/shade_color = Color(1, 1, 1, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
 atlas = ExtResource("13_c2ibq")
@@ -369,6 +708,9 @@ size = Vector2(82.85715, 41.428574)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3rx7"]
 size = Vector2(19, 14)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kgcr"]
+size = Vector2(17.026993, 5.088521)
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4yxf6"]
 vertices = PackedVector2Array(342.65625, 36.578125, 333.8125, 11, 356.35156, 11, 348.35156, 39, 267.0078, 12.8984375, 326, 10.1015625, 326, 39.359375, 267.97656, 116.00781, 422.03125, 116.97656, 365.96875, 39, 423.96094, 12.0078125, 366.39844, 12.359375)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 7, 6, 0, 3), PackedInt32Array(8, 3, 9), PackedInt32Array(10, 8, 9, 11)])
@@ -445,114 +787,151 @@ tile_map_data = PackedByteArray("AAD/////AAAJAA4AAAD//wAAAAAJAA8AAAAAAP//AAAKAA4
 z_index = -1
 
 [node name="Carrot" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_m4llh")
 position = Vector2(81, -14)
 
 [node name="Carrot2" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_lac6x")
 position = Vector2(62, -15)
 
 [node name="Carrot3" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_hpjjw")
 position = Vector2(42, -15)
 
 [node name="Carrot4" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_off7b")
 position = Vector2(22, -16)
 
 [node name="Carrot5" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_lfh1j")
 position = Vector2(5, -16)
 
 [node name="Carrot6" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_7sj7i")
 position = Vector2(-13, -17)
 
 [node name="Carrot7" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_semxg")
 position = Vector2(-30, -18)
 
 [node name="Carrot8" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_ep8v8")
 position = Vector2(-49, -17)
 
 [node name="Carrot9" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_3133c")
 position = Vector2(-65, -19)
 
 [node name="Carrot10" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
+material = SubResource("ShaderMaterial_js5gh")
 position = Vector2(-82, -19)
 
 [node name="Raddish" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_vvjo1")
 position = Vector2(-86, 3)
 
 [node name="Raddish2" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_yisvs")
 position = Vector2(-65, 3)
 
 [node name="Raddish3" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_rgw24")
 position = Vector2(-44, 3)
 
 [node name="Raddish4" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_5gwyn")
 position = Vector2(-23, 3)
 
 [node name="Raddish5" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_r6gtk")
 position = Vector2(-1, 4)
 
 [node name="Raddish6" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_81ldr")
 position = Vector2(22, 4)
 
 [node name="Raddish7" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_eywpa")
 position = Vector2(47, 4)
 
 [node name="Raddish8" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_j7e3e")
 position = Vector2(69, 4)
 
 [node name="Raddish9" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
+material = SubResource("ShaderMaterial_y2ulj")
 position = Vector2(87, 3)
 
 [node name="Onion" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_t3x2a")
 position = Vector2(-86, 21)
 
 [node name="Onion2" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_1bbis")
 position = Vector2(-63, 21)
 
 [node name="Onion3" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_yn2g2")
 position = Vector2(-41, 21)
 
 [node name="Onion4" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_yic5e")
 position = Vector2(-21, 20)
 
 [node name="Onion5" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_ex7s8")
 position = Vector2(0, 20)
 
 [node name="Onion6" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_4clwk")
 position = Vector2(22, 21)
 
 [node name="Onion7" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_h2tpa")
 position = Vector2(46, 22)
 
 [node name="Onion8" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_nkjwg")
 position = Vector2(72, 23)
 
 [node name="Onion9" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
+material = SubResource("ShaderMaterial_8n4h5")
 position = Vector2(87, 23)
 
 [node name="Potato" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_as1io")
 position = Vector2(-85, 40)
 
 [node name="Potato2" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_xd5mi")
 position = Vector2(-62, 40)
 
 [node name="Potato3" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_tt1x2")
 position = Vector2(-42, 40)
 
 [node name="Potato4" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_2wrh7")
 position = Vector2(-20, 41)
 
 [node name="Potato5" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_atu2d")
 position = Vector2(1, 41)
 
 [node name="Potato6" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_x5wht")
 position = Vector2(23, 40)
 
 [node name="Potato7" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_tbeql")
 position = Vector2(46, 39)
 
 [node name="Potato8" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_c5nnb")
 position = Vector2(69, 40)
 
 [node name="Potato9" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
+material = SubResource("ShaderMaterial_fsd2l")
 position = Vector2(87, 39)
 
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
@@ -708,21 +1087,9 @@ shape = SubResource("RectangleShape2D_4yxf6")
 
 [node name="Chicken Pen" type="Node2D" parent="."]
 
-[node name="Food" type="Sprite2D" parent="Chicken Pen" groups=["Sort"]]
+[node name="Food" type="Node2D" parent="Chicken Pen" groups=["Sort"]]
 position = Vector2(276, 24)
-texture = ExtResource("3_cm0pq")
-offset = Vector2(0, -4)
-region_enabled = true
-region_rect = Rect2(240, 122, 18, 16)
 script = ExtResource("31_4yxf6")
-
-[node name="ColorRect" type="ColorRect" parent="Chicken Pen/Food"]
-visible = false
-offset_left = -7.0
-offset_top = -9.0
-offset_right = 6.0
-offset_bottom = -4.0
-color = Color(0, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="Chicken Pen/Food"]
 position = Vector2(0, -4)
@@ -732,6 +1099,45 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken Pen/Food/Area2D"]
 position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_x3rx7")
+
+[node name="Sprites" type="Node2D" parent="Chicken Pen/Food"]
+position = Vector2(3.6561584, -6.312298)
+scale = Vector2(0.27, 0.27)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("33_utia5")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("34_f7hdo")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("35_clvyn")
+
+[node name="FoodControl" type="Control" parent="Chicken Pen/Food/Sprites"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.08264
+offset_top = -8.614563
+offset_right = 10.393677
+offset_bottom = 11.945869
+
+[node name="Food" type="Sprite2D" parent="Chicken Pen/Food/Sprites/FoodControl"]
+position = Vector2(30.082642, 13.614563)
+texture = ExtResource("36_d8m2u")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("37_5psol")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Chicken Pen/Food"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken Pen/Food/StaticBody2D"]
+position = Vector2(-0.45639038, -2.5223293)
+shape = SubResource("RectangleShape2D_8kgcr")
 
 [node name="Water" type="Sprite2D" parent="Chicken Pen" groups=["Sort"]]
 position = Vector2(302, 25)
