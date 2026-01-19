@@ -27,6 +27,8 @@ var currentState=states.WANDERING
 
 
 func _ready() -> void:
+	Engine.time_scale=5
+	currentFood=randf_range(maxFood-0.5, maxFood+0.5)
 	navAgent=$NavigationAgent2D
 	sprite=$Sprite
 	if(globalized!=true):
@@ -162,15 +164,25 @@ func eatPath():
 func stateControlling():
 	await get_tree().create_timer(randf_range(5, 10)).timeout
 	var random = randi_range(1, 20)
-	if(currentFood>1 or (currentFood>.3 and randi_range(1, 5)==3)):
-		if(random<=7):
-			currentState=states.IDLE
-		elif(random<=14):
-			currentState=states.WANDERING
-		elif(random<=17):
-			currentState=states.SLEEP
+	if(currentState==states.IDLE or currentState==states.WANDERING):
+		if(currentFood>1 or (currentFood>.3 and randi_range(1, 2)==2)):
+			if(random<=7):
+				currentState=states.IDLE
+				print("idle")
+			else:#lif(random<=14):
+				currentState=states.WANDERING
+				print("wander")
+				makePath()
+			#elif(random<=17):
+				#currentState=states.SLEEP
+				#sleepPath()
+				#print("Bed")
+		else:
+			currentState=states.EATING 
+			eatPath()
+			print("HOm Now")
 	else:
-		currentState=states.EATING 
+		print("cetinue")
 	
 	stateControlling()
 
