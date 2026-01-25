@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=116 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -28,17 +28,12 @@
 [ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
 [ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
-[ext_resource type="Script" uid="uid://nfcgkm8ukflb" path="res://Scenes/foodHolder.gd" id="31_4yxf6"]
 [ext_resource type="Texture2D" uid="uid://ee3i260vb6fr" path="res://assets/House/House-6.png" id="31_btbly"]
 [ext_resource type="PackedScene" uid="uid://bd0un723f3mmv" path="res://Scenes/chicken.tscn" id="31_xvtyr"]
-[ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="32_qta6b"]
+[ext_resource type="PackedScene" uid="uid://7q80fwxxvb7b" path="res://Scenes/foodPan.tscn" id="32_6ehlx"]
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
-[ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="33_utia5"]
-[ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="34_f7hdo"]
-[ext_resource type="Texture2D" uid="uid://coohbgm67vwcv" path="res://assets/AnimalBox/Untitled_Artwork-6.png" id="35_clvyn"]
-[ext_resource type="Texture2D" uid="uid://yb2xmpmapnlc" path="res://assets/AnimalBox/Untitled_Artwork-3.png" id="36_d8m2u"]
-[ext_resource type="Texture2D" uid="uid://yxl3rkbm63j8" path="res://assets/AnimalBox/Untitled_Artwork-5.png" id="37_5psol"]
+[ext_resource type="PackedScene" uid="uid://br7lry3mlue2h" path="res://Scenes/waterHolder.tscn" id="33_qta6b"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qta6b"]
 vertices = PackedVector2Array(79, 105.00781, -78, 105.97656, -78, 1, 79, 1)
@@ -705,12 +700,6 @@ size = Vector2(73, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4yxf6"]
 size = Vector2(82.85715, 41.428574)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3rx7"]
-size = Vector2(19, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kgcr"]
-size = Vector2(17.026993, 5.088521)
-
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4yxf6"]
 vertices = PackedVector2Array(342.65625, 36.578125, 333.8125, 11, 356.35156, 11, 348.35156, 39, 267.0078, 12.8984375, 326, 10.1015625, 326, 39.359375, 267.97656, 116.00781, 422.03125, 116.97656, 365.96875, 39, 423.96094, 12.0078125, 366.39844, 12.359375)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 7, 6, 0, 3), PackedInt32Array(8, 3, 9), PackedInt32Array(10, 8, 9, 11)])
@@ -1087,72 +1076,11 @@ shape = SubResource("RectangleShape2D_4yxf6")
 
 [node name="Chicken Pen" type="Node2D" parent="."]
 
-[node name="Food" type="Node2D" parent="Chicken Pen" groups=["Sort"]]
+[node name="Food" parent="Chicken Pen" instance=ExtResource("32_6ehlx")]
 position = Vector2(276, 24)
-script = ExtResource("31_4yxf6")
 
-[node name="Area2D" type="Area2D" parent="Chicken Pen/Food"]
-position = Vector2(0, -4)
-collision_layer = 16
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken Pen/Food/Area2D"]
-position = Vector2(-0.5, -1)
-shape = SubResource("RectangleShape2D_x3rx7")
-
-[node name="Sprites" type="Node2D" parent="Chicken Pen/Food"]
-position = Vector2(3.6561584, -6.312298)
-scale = Vector2(0.27, 0.27)
-
-[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
-position = Vector2(-12, 5)
-texture = ExtResource("33_utia5")
-
-[node name="UntitledArtwork4" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
-position = Vector2(-12, 5)
-texture = ExtResource("34_f7hdo")
-
-[node name="UntitledArtwork6" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
-position = Vector2(-12, 5)
-texture = ExtResource("35_clvyn")
-
-[node name="FoodControl" type="Control" parent="Chicken Pen/Food/Sprites"]
-clip_contents = true
-layout_mode = 3
-anchors_preset = 0
-offset_left = -42.08264
-offset_top = -8.614563
-offset_right = 10.393677
-offset_bottom = 11.945869
-
-[node name="Food" type="Sprite2D" parent="Chicken Pen/Food/Sprites/FoodControl"]
-position = Vector2(30.082642, 13.614563)
-texture = ExtResource("36_d8m2u")
-
-[node name="UntitledArtwork5" type="Sprite2D" parent="Chicken Pen/Food/Sprites"]
-position = Vector2(-12, 5)
-texture = ExtResource("37_5psol")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Chicken Pen/Food"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken Pen/Food/StaticBody2D"]
-position = Vector2(-0.45639038, -2.5223293)
-shape = SubResource("RectangleShape2D_8kgcr")
-
-[node name="Water" type="Sprite2D" parent="Chicken Pen" groups=["Sort"]]
+[node name="Water" parent="Chicken Pen" instance=ExtResource("33_qta6b")]
 position = Vector2(302, 25)
-texture = ExtResource("3_cm0pq")
-offset = Vector2(0, -5)
-region_enabled = true
-region_rect = Rect2(240, 90, 18, 16)
-script = ExtResource("32_qta6b")
-
-[node name="ColorRect2" type="ColorRect" parent="Chicken Pen/Water"]
-offset_left = -7.0
-offset_top = -10.0
-offset_right = 6.0
-offset_bottom = -5.0
-color = Color(0, 0, 0, 1)
 
 [node name="Ground" parent="Chicken Pen" instance=ExtResource("8_trn2v")]
 position = Vector2(345, 76)

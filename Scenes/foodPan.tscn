@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://7q80fwxxvb7b"]
+
+[ext_resource type="Script" uid="uid://nfcgkm8ukflb" path="res://Scenes/foodHolder.gd" id="1_6tjt3"]
+[ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="2_mcmlx"]
+[ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="3_aswx7"]
+[ext_resource type="Texture2D" uid="uid://coohbgm67vwcv" path="res://assets/AnimalBox/Untitled_Artwork-6.png" id="4_i5oqk"]
+[ext_resource type="Texture2D" uid="uid://yb2xmpmapnlc" path="res://assets/AnimalBox/Untitled_Artwork-3.png" id="5_m5x2q"]
+[ext_resource type="Texture2D" uid="uid://yxl3rkbm63j8" path="res://assets/AnimalBox/Untitled_Artwork-5.png" id="6_onoic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3rx7"]
+size = Vector2(19, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kgcr"]
+size = Vector2(17.026993, 5.088521)
+
+[node name="Food" type="Node2D" groups=["Sort"]]
+script = ExtResource("1_6tjt3")
+maxFood = 20.0
+food = 20.0
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -4)
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_x3rx7")
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(3.6561584, -6.312298)
+scale = Vector2(0.27, 0.27)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("2_mcmlx")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("3_aswx7")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("4_i5oqk")
+
+[node name="FoodControl" type="Control" parent="Sprites"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -42.08264
+offset_top = -8.614563
+offset_right = 10.393677
+offset_bottom = 11.945869
+
+[node name="Food" type="Sprite2D" parent="Sprites/FoodControl"]
+position = Vector2(30.082642, 13.614563)
+texture = ExtResource("5_m5x2q")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Sprites"]
+position = Vector2(-12, 5)
+texture = ExtResource("6_onoic")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.45639038, -2.5223293)
+shape = SubResource("RectangleShape2D_8kgcr")

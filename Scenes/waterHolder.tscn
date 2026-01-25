@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://br7lry3mlue2h"]
+
+[ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="1_3s1yl"]
+[ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="2_78xsq"]
+[ext_resource type="Texture2D" uid="uid://etnju87dwefx" path="res://assets/AnimalBox/Untitled_Artwork-2.png" id="3_abg6t"]
+[ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="4_iv2wp"]
+[ext_resource type="Texture2D" uid="uid://yxl3rkbm63j8" path="res://assets/AnimalBox/Untitled_Artwork-5.png" id="5_s414g"]
+[ext_resource type="Texture2D" uid="uid://coohbgm67vwcv" path="res://assets/AnimalBox/Untitled_Artwork-6.png" id="6_kknqj"]
+
+[node name="Water" type="Node2D" groups=["Sort"]]
+script = ExtResource("1_3s1yl")
+refillMethod = 8
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(1.5949097, -4.8540306)
+scale = Vector2(0.27, 0.27)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Sprites"]
+position = Vector2(0.064453125, -3.39497)
+texture = ExtResource("2_78xsq")
+
+[node name="WaterControl" type="Control" parent="Sprites"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -32.68457
+offset_top = -20.032516
+offset_right = 25.403564
+offset_bottom = 6.2497177
+
+[node name="Water" type="Sprite2D" parent="Sprites/WaterControl"]
+modulate = Color(1, 1, 1, 0.702)
+position = Vector2(33.485516, 20.974691)
+texture = ExtResource("3_abg6t")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Sprites"]
+position = Vector2(0.064453125, -3.39497)
+texture = ExtResource("4_iv2wp")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Sprites"]
+position = Vector2(0.064453125, -3.39497)
+texture = ExtResource("5_s414g")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Sprites"]
+position = Vector2(0.064453125, -3.39497)
+texture = ExtResource("6_kknqj")
