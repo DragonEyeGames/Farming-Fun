@@ -344,6 +344,7 @@ globalized = true
 home = Vector2(346, 15)
 egg = ExtResource("2_jayuq")
 food = Vector2(276, 20)
+water = Vector2(302, 20)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.2314262, -2.5575714)
@@ -359,6 +360,7 @@ shape = SubResource("CircleShape2D_yisvs")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 1
+debug_enabled = true
 
 [node name="FoodChecker" type="Area2D" parent="."]
 position = Vector2(0.47362518, -6.015026)
@@ -369,5 +371,16 @@ collision_mask = 16
 position = Vector2(-0.5588751, 2.941183)
 shape = SubResource("CircleShape2D_7h841")
 
+[node name="WaterChecker" type="Area2D" parent="."]
+position = Vector2(0.47362518, -6.015026)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterChecker"]
+position = Vector2(-0.5588751, 2.941183)
+shape = SubResource("CircleShape2D_7h841")
+
 [connection signal="area_entered" from="FoodChecker" to="." method="_on_food_checker_area_entered"]
 [connection signal="area_exited" from="FoodChecker" to="." method="_on_food_checker_area_exited"]
+[connection signal="area_entered" from="WaterChecker" to="." method="_on_water_checker_area_entered"]
+[connection signal="area_exited" from="WaterChecker" to="." method="_on_water_checker_area_exited"]
