@@ -58,6 +58,7 @@ func spawnEgg():
 	newEgg.global_position=global_position
 
 func _process(delta: float) -> void:
+	print(currentState)
 	currentFood-=delta/60
 	currentWater-=delta/60
 	if(Input.is_action_just_pressed("1")):
@@ -73,6 +74,7 @@ func _process(delta: float) -> void:
 		eatPath()
 	if(Input.is_action_just_pressed("5")):
 		currentState=states.DRINKING
+		print(currentState)
 		waterPath()
 	match currentState:
 		states.WANDERING:
@@ -123,7 +125,7 @@ func _process(delta: float) -> void:
 			else:
 				sprite.play(currentDirection+"Idle")
 			if(waterRepository!=null):
-				waterRepository.water-=1
+				waterRepository.water-=.5
 				currentWater+=.5
 				waterRepository=null
 				currentState=states.WANDERING
@@ -165,7 +167,7 @@ func _physics_process(_delta: float) -> void:
 		currentVelocity=velocity
 
 func makePath():
-	if(currentState==states.SLEEP or currentState==states.EATING):
+	if(currentState==states.SLEEP or currentState==states.EATING or currentState==states.DRINKING):
 		return
 	var targetPos=Vector2.ZERO
 	targetPos.x=randf_range(topLeft.x, bottomRight.x)

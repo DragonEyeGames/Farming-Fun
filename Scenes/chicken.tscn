@@ -360,7 +360,6 @@ shape = SubResource("CircleShape2D_yisvs")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 1
-debug_enabled = true
 
 [node name="FoodChecker" type="Area2D" parent="."]
 position = Vector2(0.47362518, -6.015026)
