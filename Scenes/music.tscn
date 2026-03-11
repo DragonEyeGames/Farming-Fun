@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c85qhkqc7ije1"]
+
+[ext_resource type="Script" uid="uid://c3ic2c06rjsve" path="res://Scenes/MusicController.gd" id="1_vi5kw"]
+[ext_resource type="AudioStream" uid="uid://bau3utrt4jn3p" path="res://Music/Option1.mp3" id="2_timup"]
+[ext_resource type="AudioStream" uid="uid://dffe71ttyeu7l" path="res://Music/Option2.mp3" id="3_8dy0s"]
+[ext_resource type="AudioStream" uid="uid://dgmjfvsk63oqw" path="res://Music/Option3.mp3" id="4_ckt5d"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_vi5kw")
+
+[node name="Option1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_timup")
+bus = &"Music"
+
+[node name="Option2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_8dy0s")
+bus = &"Music"
+
+[node name="Option3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ckt5d")
+bus = &"Music"
+
+[connection signal="finished" from="Option1" to="." method="select"]
+[connection signal="finished" from="Option2" to="." method="select"]
+[connection signal="finished" from="Option3" to="." method="select"]

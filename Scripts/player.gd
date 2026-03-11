@@ -3,6 +3,7 @@ class_name Player
 var state="idle"
 var direction="down"
 @export var canMove:=true
+@export var speed=100
 var interacting:=[]
 var sprite: AnimatedSprite2D
 var effects
@@ -33,7 +34,7 @@ func _process(_delta: float) -> void:
 	if(sleeping):
 		canMove=false
 	#if(Input.is_action_just_pressed("Interact")):
-	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*80
+	velocity = (Input.get_vector("Left", "Right", "Up", "Down")).normalized()*speed
 	if(canMove):
 		if(velocity.x<0):
 			direction="side"

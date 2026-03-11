@@ -32,7 +32,6 @@ var currentState=states.WANDERING
 
 
 func _ready() -> void:
-	Engine.time_scale=5
 	currentFood=randf_range(maxFood-0.5, maxFood+0.5)
 	currentWater=randf_range(maxWater-0.25, maxWater+0.25)
 	navAgent=$NavigationAgent2D
