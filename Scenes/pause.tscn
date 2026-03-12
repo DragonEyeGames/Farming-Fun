@@ -1,0 +1,362 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt7cjdyf3dqwm"]
+
+[ext_resource type="Script" uid="uid://buqdg3tevb2s3" path="res://Scenes/pause.gd" id="1_l2mpd"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="2_5a6ek"]
+
+[sub_resource type="Animation" id="Animation_vvnwx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Holder:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Holder/RichTextLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -15.005127)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Holder/VBoxContainer/Resume/Resume:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Holder/VBoxContainer/Settings/Settings:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Holder/VBoxContainer/Save/Save:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Holder/VBoxContainer/Exit/Exit:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_btbly"]
+resource_name = "close"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Holder:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.8666667, 1.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Holder/RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8333333, 1.9333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -15.005127), Vector2(12.531738, -328.29895)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Holder/VBoxContainer/Resume/Resume:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.53333336, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1518.5225, -10.508795)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Holder/VBoxContainer/Settings/Settings:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.33333334, 1.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1490.3394, 4.7768645)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Holder/VBoxContainer/Save/Save:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.100000024, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1560.5573, 709.3442)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Holder/VBoxContainer/Exit/Exit:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.1333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1481.7413, 520.1858)]
+}
+
+[sub_resource type="Animation" id="Animation_6heos"]
+resource_name = "open"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Holder:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Holder/RichTextLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12.531738, -328.29895), Vector2(0, -15.005127)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Holder/VBoxContainer/Resume/Resume:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 1.1333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1518.5225, -10.508795), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Holder/VBoxContainer/Settings/Settings:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 1.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1490.3394, 4.7768645), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Holder/VBoxContainer/Save/Save:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.33333334, 1.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1560.5573, 709.3442), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Holder/VBoxContainer/Exit/Exit:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.46666667, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1481.7413, 520.1858), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btbly"]
+_data = {
+&"RESET": SubResource("Animation_vvnwx"),
+&"close": SubResource("Animation_btbly"),
+&"open": SubResource("Animation_6heos")
+}
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+layer = 5
+script = ExtResource("1_l2mpd")
+
+[node name="Holder" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="Holder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.52000004)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Holder"]
+layout_mode = 0
+offset_top = -15.005127
+offset_right = 1920.2161
+offset_bottom = 295.8061
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 228
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Holder"]
+layout_mode = 0
+offset_left = 730.01904
+offset_top = 295.9538
+offset_right = 1277.7335
+offset_bottom = 976.38666
+scale = Vector2(0.795, 0.795)
+mouse_filter = 2
+alignment = 1
+
+[node name="Resume" type="Control" parent="Holder/VBoxContainer"]
+custom_minimum_size = Vector2(0, 155)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Resume" type="Button" parent="Holder/VBoxContainer/Resume"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -0.00048828125
+offset_bottom = 129.57642
+grow_horizontal = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_5a6ek")
+theme_override_font_sizes/font_size = 86
+text = "Resume"
+
+[node name="Settings" type="Control" parent="Holder/VBoxContainer"]
+custom_minimum_size = Vector2(0, 155)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Settings" type="Button" parent="Holder/VBoxContainer/Settings"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 129.57642
+grow_horizontal = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_5a6ek")
+theme_override_font_sizes/font_size = 86
+text = "Settings"
+
+[node name="Save" type="Control" parent="Holder/VBoxContainer"]
+custom_minimum_size = Vector2(0, 155)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Save" type="Button" parent="Holder/VBoxContainer/Save"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -0.0008544922
+offset_bottom = 129.57599
+grow_horizontal = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_5a6ek")
+theme_override_font_sizes/font_size = 86
+text = "Save"
+
+[node name="Exit" type="Control" parent="Holder/VBoxContainer"]
+custom_minimum_size = Vector2(0, 155)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Exit" type="Button" parent="Holder/VBoxContainer/Exit"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 129.57611
+grow_horizontal = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_5a6ek")
+theme_override_font_sizes/font_size = 86
+text = "Main Menu"
+
+[node name="Animate" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_btbly")
+}
+speed_scale = 2.0
+
+[connection signal="pressed" from="Holder/VBoxContainer/Resume/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Holder/VBoxContainer/Settings/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Holder/VBoxContainer/Save/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Holder/VBoxContainer/Exit/Exit" to="." method="_on_exit_pressed"]

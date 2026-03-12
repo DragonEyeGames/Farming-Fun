@@ -19,6 +19,7 @@ config/icon="res://assets/icon.svg"
 
 GameManager="*res://Scripts/GameManager.gd"
 Music="*res://Scenes/music.tscn"
+Pause="*res://Scenes/pause.tscn"
 
 [display]
 

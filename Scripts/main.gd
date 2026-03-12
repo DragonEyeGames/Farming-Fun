@@ -5,6 +5,7 @@ extends Node2D
 @export var SignalBus: Node2D
 
 func _ready() -> void:
+	GameManager.main=self
 	var lastRenderedDay
 	if ResourceLoader.exists("user://farm_data.tres"):
 		var data = ResourceLoader.load("user://farm_data.tres") as FarmData
@@ -42,6 +43,7 @@ func _ready() -> void:
 		object.reparent($YSort)
 		
 func transport(file: String):
+	GameManager.main=null
 	GameManager.lastRenderedDay=GameManager.day
 	var save = FarmData.new()
 	for saveable in get_tree().get_nodes_in_group("Save"):
@@ -69,3 +71,31 @@ func transport(file: String):
 	ResourceSaver.save(world, "user://world_data.tres")
 	ResourceSaver.save(player, "user://player_data.tres")
 	get_tree().change_scene_to_file(file)
+	
+func saveGame():
+	GameManager.lastRenderedDay=GameManager.day
+	var save = FarmData.new()
+	for saveable in get_tree().get_nodes_in_group("Save"):
+		if(saveable.is_in_group("Animal")):
+			var animalScene = PackedScene.new()
+			animalScene.pack(saveable)
+			save.animals.append(animalScene)
+		if(saveable.is_in_group("Misc")):
+			var miscScene = PackedScene.new()
+			miscScene.pack(saveable)
+			save.misc.append(miscScene)
+		if(saveable.is_in_group("Crop")):
+			var cropScene = PackedScene.new()
+			cropScene.pack(saveable)
+			save.crops.append(cropScene)
+			save.cropStates.append(saveable.state)
+		save.lastRendered=GameManager.lastRenderedDay
+	var world = WorldData.new()
+	world.time = sky.time
+	var player = PlayerData.new()
+	player.inventory=GameManager.playerInventory
+	player.money=GameManager.playerMoney
+	player.lastLocation=playerNode.global_position
+	ResourceSaver.save(save, "user://farm_data.tres")
+	ResourceSaver.save(world, "user://world_data.tres")
+	ResourceSaver.save(player, "user://player_data.tres")

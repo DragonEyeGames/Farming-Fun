@@ -8,6 +8,8 @@ var dragging:=-1
 
 var energy=20
 
+var main
+
 var hud
 var player
 
