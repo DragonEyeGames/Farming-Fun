@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=121 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -34,6 +34,11 @@
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
 [ext_resource type="PackedScene" uid="uid://br7lry3mlue2h" path="res://Scenes/waterHolder.tscn" id="33_qta6b"]
+[ext_resource type="Texture2D" uid="uid://blabxalja68rj" path="res://assets/Fence/Untitled_Artwork-1.png" id="35_6heos"]
+[ext_resource type="Texture2D" uid="uid://6pvf0d7g6p3d" path="res://assets/Fence/Untitled_Artwork-2.png" id="36_vvnwx"]
+[ext_resource type="Texture2D" uid="uid://d2wx8tm2wgd5a" path="res://assets/Fence/Untitled_Artwork-3.png" id="37_vs04g"]
+[ext_resource type="Texture2D" uid="uid://cre8cveqv0fet" path="res://assets/Fence/Untitled_Artwork-4.png" id="38_6ehlx"]
+[ext_resource type="Texture2D" uid="uid://du1bypaq5xa3c" path="res://assets/Fence/Untitled_Artwork-6.png" id="39_utia5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_qta6b"]
 vertices = PackedVector2Array(79, 105.00781, -78, 105.97656, -78, 1, 79, 1)
@@ -1078,14 +1083,14 @@ shape = SubResource("RectangleShape2D_4yxf6")
 [node name="Chicken Pen" type="Node2D" parent="."]
 
 [node name="Food" parent="Chicken Pen" instance=ExtResource("32_6ehlx")]
-position = Vector2(276, 24)
+position = Vector2(282.5403, 24.490524)
 
 [node name="Water" parent="Chicken Pen" instance=ExtResource("33_qta6b")]
-position = Vector2(302, 25)
+position = Vector2(308.5403, 25.490524)
 
 [node name="Ground" parent="Chicken Pen" instance=ExtResource("8_trn2v")]
 position = Vector2(345, 76)
-tile_map_data = PackedByteArray("AAD9//3/AAABAA4AAAD+//3/AAABAA4AAAD///3/AAABAA4AAAAAAP3/AAABAA4AAAABAP3/AAABAA4AAAACAP3/AAABAA4AAAADAP3/AAABAA4AAAAEAP3/AAABAA4AAAAEAP7/AAABAA4AAAAEAP//AAABAA4AAAAEAAAAAAABAA4AAAAEAAEAAAABAA4AAAAEAAIAAAAEABYAAAADAAIAAAAEABYAAAACAAIAAAAEABYAAAABAAIAAAAEABYAAAAAAAIAAAAEABYAAAD//wIAAAAEABYAAAD+/wIAAAAEABYAAAD9/wIAAAAEABYAAAD9/wEAAAABAA4AAAD9/wAAAAABAA4AAAD9////AAABAA4AAAD9//7/AAABAA4AAAD+//7/AAABAA4AAAD/////AAABAA4AAAAAAP//AAABAA4AAAABAP//AAABAA4AAAACAP//AAABAA4AAAACAP7/AAABAA4AAAADAP7/AAABAA4AAAADAP//AAABAA4AAAADAAAAAAABAA4AAAACAAAAAAABAA4AAAACAAEAAAABAA4AAAABAAEAAAABAA4AAAAAAAEAAAABAA4AAAD//wEAAAABAA4AAAD+/wEAAAABAA4AAAD+/wAAAAABAA4AAAD+////AAABAA4AAAD///7/AAABAA4AAAAAAP7/AAABAA4AAAABAP7/AAABAA4AAAADAAEAAAABAA4AAAABAAAAAAABAA4AAAAAAAAAAAABAA4AAAD//wAAAAABAA4AAAAEAPz/AAABAA4AAAADAPz/AAABAA4AAAACAPz/AAABAA4AAAABAPz/AAABAA4AAAAAAPz/AAABAA4AAAD///z/AAABAA4AAAD+//z/AAABAA4AAAD9//z/AAABAA4AAAD8//z/AAABAA4AAAD8//3/AAABAA4AAAD8//7/AAABAA4AAAD8////AAABAA4AAAD8/wAAAAABAA4AAAD8/wEAAAABAA4AAAD8/wIAAAAEABYAAAD7//z/AAABAA4AAAD7//3/AAABAA4AAAD7//7/AAABAA4AAAD7////AAABAA4AAAD7/wAAAAABAA4AAAD7/wEAAAABAA4AAAD7/wIAAAAEABYAAAD6/wIAAAADABYAAAD6/wEAAAADABUAAAD6/wAAAAADABUAAAD6////AAADABUAAAD6//7/AAADABUAAAD6//3/AAADABUAAAD6//z/AAADABUAAAD6//v/AAADABQAAAD7//v/AAAEABQAAAD8//v/AAAEABQAAAD9//v/AAAEABQAAAD+//v/AAAEABQAAAD///v/AAAEABQAAAAAAPv/AAAEABQAAAABAPv/AAAEABQAAAACAPv/AAAEABQAAAADAPv/AAAEABQAAAAEAPv/AAAEABQAAAAFAPv/AAAFABQAAAAFAPz/AAAFABUAAAAFAP3/AAAFABUAAAAFAP7/AAAFABUAAAAFAP//AAAFABUAAAAFAAAAAAAFABUAAAAFAAEAAAAFABUAAAAFAAIAAAAFABYAAAA=")
+tile_map_data = PackedByteArray("AAD9//3/AAABAA4AAAD+//3/AAABAA4AAAD///3/AAABAA4AAAAAAP3/AAABAA4AAAABAP3/AAABAA4AAAACAP3/AAABAA4AAAADAP3/AAABAA4AAAAEAP3/AAADAA8AAAAEAP7/AAADAA8AAAAEAP//AAADAA8AAAAEAAAAAAADAA8AAAAEAAEAAAADAA8AAAAEAAIAAAADABAAAAADAAIAAAABABAAAAACAAIAAAABABAAAAABAAIAAAABABAAAAAAAAIAAAABABAAAAD//wIAAAABABAAAAD+/wIAAAABABAAAAD9/wIAAAABABAAAAD9/wEAAAABAA4AAAD9/wAAAAABAA4AAAD9////AAABAA4AAAD9//7/AAABAA4AAAD+//7/AAABAA4AAAD/////AAABAA4AAAAAAP//AAABAA4AAAABAP//AAABAA4AAAACAP//AAABAA4AAAACAP7/AAABAA4AAAADAP7/AAABAA4AAAADAP//AAABAA4AAAADAAAAAAABAA4AAAACAAAAAAABAA4AAAACAAEAAAABAA4AAAABAAEAAAABAA4AAAAAAAEAAAABAA4AAAD//wEAAAABAA4AAAD+/wEAAAABAA4AAAD+/wAAAAABAA4AAAD+////AAABAA4AAAD///7/AAABAA4AAAAAAP7/AAABAA4AAAABAP7/AAABAA4AAAADAAEAAAABAA4AAAABAAAAAAABAA4AAAAAAAAAAAABAA4AAAD//wAAAAABAA4AAAAEAPz/AAADAA0AAAADAPz/AAABAA0AAAACAPz/AAABAA0AAAABAPz/AAABAA0AAAAAAPz/AAABAA0AAAD///z/AAABAA0AAAD+//z/AAABAA0AAAD9//z/AAABAA0AAAD8//z/AAABAA0AAAD8//3/AAABAA4AAAD8//7/AAABAA4AAAD8////AAABAA4AAAD8/wAAAAABAA4AAAD8/wEAAAABAA4AAAD8/wIAAAABABAAAAD7//z/AAAAAA0AAAD7//3/AAAAAA8AAAD7//7/AAAAAA8AAAD7////AAAAAA8AAAD7/wAAAAAAAA8AAAD7/wEAAAAAAA8AAAD7/wIAAAAAABAAAAA=")
 
 [node name="Coop" type="Sprite2D" parent="Chicken Pen"]
 position = Vector2(344, 18)
@@ -1109,6 +1114,413 @@ position = Vector2(306, 64)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chicken Pen"]
 visible = false
 navigation_polygon = SubResource("NavigationPolygon_4yxf6")
+
+[node name="Fence" type="Node2D" parent="Chicken Pen"]
+
+[node name="HorizontalSegment" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-199.70308, -65.03047)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment2" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-214.50758, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment2"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment2"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment3" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-229.27258, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment3"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment3"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment4" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-244.07759, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment4"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment4"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment8" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-304.2876, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment8"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment8"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment9" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-319.3826, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment9"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment9"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment10" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(-334.63757, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment10"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment10"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment11" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-200.12926, -169.73247)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment11"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment11"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment12" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-214.93376, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment12"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment12"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment13" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-229.69876, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment13"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment13"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment14" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-244.50377, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment14"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment14"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment15" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-259.20877, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment15"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment15"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment16" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-274.48376, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment16"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment16"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment17" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-289.62378, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment17"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment17"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment18" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-304.71378, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment18"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment18"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment19" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-319.80878, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment19"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment19"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="HorizontalSegment20" type="Node2D" parent="Chicken Pen/Fence"]
+z_index = -2
+position = Vector2(-335.06375, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment20"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("35_6heos")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/HorizontalSegment20"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.12927, 5.614897)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment2" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.2644, 16.425335)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment2"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment3" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.12927, 28.722214)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment3"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment4" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.2644, 40.748833)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment4"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment5" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.39954, 53.586227)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment5"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment6" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(160.04785, 66.43856)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment6"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment7" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(159.75058, 81.36853)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment7"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment8" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(159.69614, 96.21492)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment8"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment10" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(159.8992, 110.12393)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment10"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment11" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.85727, 16.644657)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment11"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment12" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.72214, 28.941536)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment12"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment13" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.85727, 40.968155)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment13"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment14" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.9924, 53.80555)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment14"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment15" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.64072, 66.65788)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment15"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment16" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.3434, 81.58785)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment16"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="VerticalSegment17" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(310.28897, 96.43424)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/VerticalSegment17"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("36_vvnwx")
+
+[node name="Gate" type="Node2D" parent="Chicken Pen/Fence"]
+position = Vector2(216.39986, 69.88353)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(310.85397, 55.742043)
+texture = ExtResource("37_vs04g")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(343.3369, 123.554184)
+texture = ExtResource("36_vvnwx")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(307.2289, 71.50142)
+texture = ExtResource("37_vs04g")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(242.42632, 55.79194)
+scale = Vector2(1.14, 1)
+texture = ExtResource("37_vs04g")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(244.36865, 57.246685)
+texture = ExtResource("38_6ehlx")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(329.5066, 55.35726)
+texture = ExtResource("39_utia5")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(306.57144, 56.347755)
+texture = ExtResource("39_utia5")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(287.44754, 56.338127)
+texture = ExtResource("39_utia5")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Chicken Pen/Fence/Gate"]
+position = Vector2(261.31726, 56.32091)
+texture = ExtResource("39_utia5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Chicken Pen"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chicken Pen/StaticBody2D"]
+polygon = PackedVector2Array(316.22736, 119.83801, 316.22736, 114.52396, 270.28143, 114.39167, 270.82605, 13.820955, 416.4766, 14.115955, 416.35626, 115.43199, 357.9681, 114.92744, 357.82227, 119.81262, 420.83466, 119.69739, 420.6373, 10.216019, 265.72714, 10.244997, 265.68918, 119.25317)
 
 [connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
 [connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
