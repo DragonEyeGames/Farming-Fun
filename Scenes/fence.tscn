@@ -1,0 +1,365 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx5sa8j48ve5t"]
+
+[ext_resource type="Texture2D" uid="uid://blabxalja68rj" path="res://assets/Fence/Untitled_Artwork-1.png" id="1_0m5cy"]
+[ext_resource type="Texture2D" uid="uid://6pvf0d7g6p3d" path="res://assets/Fence/Untitled_Artwork-2.png" id="2_oklvd"]
+
+[node name="Fence" type="Node2D"]
+
+[node name="HorizontalSegment" type="Node2D" parent="."]
+position = Vector2(-199.70308, -65.03047)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment2" type="Node2D" parent="."]
+position = Vector2(-214.50758, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment2"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment2"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment3" type="Node2D" parent="."]
+position = Vector2(-229.27258, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment3"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment3"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment4" type="Node2D" parent="."]
+position = Vector2(-244.07759, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment4"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment4"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment8" type="Node2D" parent="."]
+position = Vector2(-304.2876, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment8"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment8"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment9" type="Node2D" parent="."]
+position = Vector2(-319.3826, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment9"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment9"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment10" type="Node2D" parent="."]
+position = Vector2(-334.63757, -65.03057)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment10"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment10"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment11" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-200.12926, -169.73247)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment11"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment11"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment12" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-214.93376, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment12"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment12"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment13" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-229.69876, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment13"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment13"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment14" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-244.50377, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment14"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment14"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment15" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-259.20877, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment15"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment15"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment16" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-274.48376, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment16"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment16"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment17" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-289.62378, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment17"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment17"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment18" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-304.71378, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment18"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment18"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment19" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-319.80878, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment19"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment19"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="HorizontalSegment20" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(-335.06375, -169.73257)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment20"]
+position = Vector2(1527.1094, 455.89328)
+texture = ExtResource("1_0m5cy")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment20"]
+z_index = 1
+position = Vector2(1530.0677, 460.41815)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment" type="Node2D" parent="."]
+position = Vector2(160.12927, 5.614897)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment2" type="Node2D" parent="."]
+position = Vector2(160.2644, 16.425335)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment2"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment3" type="Node2D" parent="."]
+position = Vector2(160.12927, 28.722214)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment3"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment4" type="Node2D" parent="."]
+position = Vector2(160.2644, 40.748833)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment4"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment5" type="Node2D" parent="."]
+position = Vector2(160.39954, 53.586227)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment5"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment6" type="Node2D" parent="."]
+position = Vector2(160.04785, 66.43856)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment6"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment7" type="Node2D" parent="."]
+position = Vector2(159.75058, 81.36853)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment7"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment8" type="Node2D" parent="."]
+position = Vector2(159.69614, 96.21492)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment8"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment10" type="Node2D" parent="."]
+position = Vector2(159.8992, 110.12393)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment10"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment11" type="Node2D" parent="."]
+position = Vector2(310.85727, 16.644657)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment11"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment12" type="Node2D" parent="."]
+position = Vector2(310.72214, 28.941536)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment12"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment13" type="Node2D" parent="."]
+position = Vector2(310.85727, 40.968155)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment13"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment14" type="Node2D" parent="."]
+position = Vector2(310.9924, 53.80555)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment14"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment15" type="Node2D" parent="."]
+position = Vector2(310.64072, 66.65788)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment15"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment16" type="Node2D" parent="."]
+position = Vector2(310.3434, 81.58785)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment16"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
+
+[node name="VerticalSegment17" type="Node2D" parent="."]
+position = Vector2(310.28897, 96.43424)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment17"]
+position = Vector2(254.36392, 22.30365)
+texture = ExtResource("2_oklvd")
