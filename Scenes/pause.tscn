@@ -354,9 +354,219 @@ text = "Main Menu"
 libraries = {
 &"": SubResource("AnimationLibrary_btbly")
 }
+autoplay = "RESET"
 speed_scale = 2.0
+
+[node name="Settings" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 505.00177
+offset_top = 253.92746
+offset_right = 1460.8524
+offset_bottom = 941.5852
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 510.59985
+offset_top = 262.1919
+offset_right = 1452.588
+offset_bottom = 936.4536
+color = Color(0.39151636, 0.25278953, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -34.522705
+offset_top = -25.107422
+offset_right = 1914.4417
+offset_bottom = 1076.4812
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.596)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 515.07916
+offset_top = 212.75809
+offset_right = 1453.1414
+offset_bottom = 476.51553
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 170
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 512.90546
+offset_top = 220.29623
+offset_right = 1450.9677
+offset_bottom = 452.92868
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 170
+text = "Volumes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 510.919
+offset_top = 426.91324
+offset_right = 1453.4736
+offset_bottom = 796.4258
+
+[node name="Master" type="Control" parent="Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer/Master"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/Master"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 100
+text = "Master:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="Control" parent="Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer/Music"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/Music"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 100
+text = "Music:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX" type="Control" parent="Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Settings/VBoxContainer/SFX"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/SFX"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 100
+text = "SFX:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsClose" type="Button" parent="Settings"]
+z_index = 2
+layout_mode = 0
+offset_left = 830.2146
+offset_top = 842.00464
+offset_right = 1154.4932
+offset_bottom = 938.88184
+pivot_offset = Vector2(159.0581, 53.34247)
+focus_mode = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Settings/SettingsClose"]
+z_index = 1
+layout_mode = 0
+offset_left = 3.6645508
+offset_top = 4.305847
+offset_right = 320.58313
+offset_bottom = 93.12952
+mouse_filter = 2
+color = Color(0.333763, 0.16576943, 0.010252307, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Settings/SettingsClose"]
+layout_mode = 0
+offset_left = 0.20581055
+offset_top = 0.26818848
+offset_right = 324.5078
+offset_bottom = 96.64612
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/SettingsClose"]
+z_index = 1
+layout_mode = 0
+offset_left = 2.3258057
+offset_top = 3.2537842
+offset_right = 321.13403
+offset_bottom = 95.022766
+pivot_offset = Vector2(186.28778, 90.6272)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_5a6ek")
+theme_override_font_sizes/normal_font_size = 67
+text = "Close"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Holder/VBoxContainer/Resume/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Holder/VBoxContainer/Settings/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Holder/VBoxContainer/Save/Save" to="." method="_on_save_pressed"]
 [connection signal="pressed" from="Holder/VBoxContainer/Exit/Exit" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/Master/HSlider" to="." method="on_master_change"]
+[connection signal="value_changed" from="Settings/VBoxContainer/Music/HSlider" to="." method="on_music_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer/SFX/HSlider" to="." method="on_sfx_change"]
+[connection signal="mouse_entered" from="Settings/SettingsClose" to="." method="_on_settings_close_mouse_entered"]
+[connection signal="mouse_exited" from="Settings/SettingsClose" to="." method="_on_settings_close_mouse_exited"]
+[connection signal="pressed" from="Settings/SettingsClose" to="." method="_on_settings_close_pressed"]

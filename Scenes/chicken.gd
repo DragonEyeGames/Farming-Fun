@@ -57,7 +57,6 @@ func spawnEgg():
 	newEgg.global_position=global_position
 
 func _process(delta: float) -> void:
-	print(currentState)
 	currentFood-=delta/60
 	currentWater-=delta/60
 	if(Input.is_action_just_pressed("1")):
@@ -222,10 +221,8 @@ func stateControlling():
 		if(currentWater>.5 or (currentWater>.15 and randi_range(1, 2)==2)):
 			if(random<=7):
 				currentState=states.IDLE
-				print("idle")
 			else:#lif(random<=14):
 				currentState=states.WANDERING
-				print("wander")
 				makePath()
 			#elif(random<=17):
 				#currentState=states.SLEEP
@@ -234,9 +231,8 @@ func stateControlling():
 		else:
 			currentState=states.DRINKING 
 			waterPath()
-			print("HOm Now")
 	else:
-		print("cetinue")
+		pass
 	
 	stateControlling()
 
