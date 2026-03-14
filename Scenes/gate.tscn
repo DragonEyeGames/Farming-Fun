@@ -574,7 +574,7 @@ offset = Vector2(-7.595093, -53.815033)
 libraries = {
 &"": SubResource("AnimationLibrary_clvyn")
 }
-autoplay = "open-up"
+autoplay = "RESET"
 speed_scale = 8.0
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="."]
@@ -583,6 +583,7 @@ scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("3_dyksl")
 
 [node name="Bottom" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
@@ -592,6 +593,7 @@ scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_5psol")
 
 [node name="Top" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, -17.192553)
 collision_layer = 0
 collision_mask = 2

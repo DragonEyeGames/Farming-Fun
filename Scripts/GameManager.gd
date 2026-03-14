@@ -1,9 +1,9 @@
 extends Node
 
 
-var masterVolume
-var musicVolume
-var sfxVolume
+var masterVolume=0.0
+var musicVolume=0.0
+var sfxVolume=0.0
 
 var time:= 0.0
 var day:=1

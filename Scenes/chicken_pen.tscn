@@ -1,0 +1,96 @@
+[gd_scene load_steps=15 format=4 uid="uid://bb0ltvim723fh"]
+
+[ext_resource type="PackedScene" uid="uid://7q80fwxxvb7b" path="res://Scenes/foodPan.tscn" id="1_5lb6d"]
+[ext_resource type="PackedScene" uid="uid://br7lry3mlue2h" path="res://Scenes/waterHolder.tscn" id="2_w6xnw"]
+[ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="3_5c4lt"]
+[ext_resource type="PackedScene" uid="uid://bd0un723f3mmv" path="res://Scenes/chicken.tscn" id="4_lq27g"]
+[ext_resource type="PackedScene" uid="uid://cx5sa8j48ve5t" path="res://Scenes/fence.tscn" id="5_feq5k"]
+[ext_resource type="PackedScene" uid="uid://bgj6gybedvlve" path="res://Scenes/gate.tscn" id="6_g0hu5"]
+[ext_resource type="PackedScene" uid="uid://dnuomj5fkog3u" path="res://Scenes/grass.tscn" id="7_boklh"]
+[ext_resource type="Texture2D" uid="uid://bqomfuo40g7dx" path="res://assets/Chicken Coop/Coop-1.png" id="8_r5iu6"]
+[ext_resource type="Texture2D" uid="uid://crqhqyq1bjsus" path="res://assets/Chicken Coop/Coop-2.png" id="9_ee4qw"]
+[ext_resource type="Texture2D" uid="uid://b6nsmsf05asix" path="res://assets/Chicken Coop/Coop-3.png" id="10_57tt6"]
+[ext_resource type="Texture2D" uid="uid://dbs1etjruw6n2" path="res://assets/Chicken Coop/Coop-4.png" id="11_7ki8x"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4yxf6"]
+vertices = PackedVector2Array(347.3203, 36.523438, 331.1172, 36.78125, 332.1172, 18.421875, 367.4375, 19.21875, 350.6328, 36.320313, 372.77344, 12.7578125, 423.96094, 12.0234375, 422.03125, 116.97656, 372.6328, 46.078125, 267.97656, 116.00781, 351.89844, 59.117188, 347.0703, 58.28125, 349.78906, 57.84375, 344.96875, 59.289063, 267.0078, 13.0078125, 325.85156, 13.53125, 325.4297, 45.640625, 367.4375, 35.65625, 347.57813, 44.710938, 350.6328, 44.742188, 350.22656, 52.289063, 347.5, 52.34375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(8, 7, 9, 10), PackedInt32Array(11, 12, 10, 9, 13), PackedInt32Array(9, 14, 15, 16), PackedInt32Array(3, 17, 4), PackedInt32Array(18, 0, 4, 19, 20), PackedInt32Array(21, 18, 20, 12), PackedInt32Array(11, 21, 12), PackedInt32Array(13, 9, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(265, 11, 327.87173, 11.555447, 327.43387, 44.610626, 345.1535, 56.974724, 345.5002, 52.25938, 345.57986, 44.73753, 345.38416, 38.553017, 329.0072, 38.823353, 330.23566, 16.376057, 369.43466, 17.269482, 369.43466, 37.594894, 352.62552, 38.239876, 352.62552, 44.854958, 352.2265, 52.398067, 351.8798, 56.766693, 370.62735, 44.966194, 370.77957, 10.790196, 426, 10, 424, 119, 266, 118)])
+agent_radius = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clvyn"]
+size = Vector2(41.54426, 23.564083)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8m2u"]
+size = Vector2(15.522509, 13.755793)
+
+[node name="Chicken Pen" type="Node2D"]
+
+[node name="Food" parent="." instance=ExtResource("1_5lb6d")]
+position = Vector2(282.5403, 26.473742)
+
+[node name="Water" parent="." instance=ExtResource("2_w6xnw")]
+position = Vector2(308.5403, 27.473742)
+
+[node name="Ground" parent="." instance=ExtResource("3_5c4lt")]
+visible = false
+position = Vector2(345, 76)
+tile_map_data = PackedByteArray("AAD9//3/AAABAA4AAAD+//3/AAABAA4AAAD///3/AAABAA4AAAAAAP3/AAABAA4AAAABAP3/AAABAA4AAAACAP3/AAABAA4AAAADAP3/AAABAA4AAAAEAP3/AAADAA8AAAAEAP7/AAADAA8AAAAEAP//AAADAA8AAAAEAAAAAAADAA8AAAAEAAEAAAADAA8AAAAEAAIAAAADABAAAAADAAIAAAABABAAAAACAAIAAAABABAAAAABAAIAAAABABAAAAAAAAIAAAABABAAAAD//wIAAAABABAAAAD+/wIAAAABABAAAAD9/wIAAAABABAAAAD9/wEAAAABAA4AAAD9/wAAAAABAA4AAAD9////AAABAA4AAAD9//7/AAABAA4AAAD+//7/AAABAA4AAAD/////AAABAA4AAAAAAP//AAABAA4AAAABAP//AAABAA4AAAACAP//AAABAA4AAAACAP7/AAABAA4AAAADAP7/AAABAA4AAAADAP//AAABAA4AAAADAAAAAAABAA4AAAACAAAAAAABAA4AAAACAAEAAAABAA4AAAABAAEAAAABAA4AAAAAAAEAAAABAA4AAAD//wEAAAABAA4AAAD+/wEAAAABAA4AAAD+/wAAAAABAA4AAAD+////AAABAA4AAAD///7/AAABAA4AAAAAAP7/AAABAA4AAAABAP7/AAABAA4AAAADAAEAAAABAA4AAAABAAAAAAABAA4AAAAAAAAAAAABAA4AAAD//wAAAAABAA4AAAAEAPz/AAADAA0AAAADAPz/AAABAA0AAAACAPz/AAABAA0AAAABAPz/AAABAA0AAAAAAPz/AAABAA0AAAD///z/AAABAA0AAAD+//z/AAABAA0AAAD9//z/AAABAA0AAAD8//z/AAABAA0AAAD8//3/AAABAA4AAAD8//7/AAABAA4AAAD8////AAABAA4AAAD8/wAAAAABAA4AAAD8/wEAAAABAA4AAAD8/wIAAAABABAAAAD7//z/AAAAAA0AAAD7//3/AAAAAA8AAAD7//7/AAAAAA8AAAD7////AAAAAA8AAAD7/wAAAAAAAA8AAAD7/wEAAAAAAA8AAAD7/wIAAAAAABAAAAA=")
+
+[node name="Chicken" parent="." instance=ExtResource("4_lq27g")]
+position = Vector2(415, 103)
+
+[node name="Chicken2" parent="." instance=ExtResource("4_lq27g")]
+position = Vector2(306, 64)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_4yxf6")
+
+[node name="Fence" parent="." instance=ExtResource("5_feq5k")]
+position = Vector2(342.2309, 62.59133)
+
+[node name="Gate" parent="." instance=ExtResource("6_g0hu5")]
+position = Vector2(340.45215, 112.87603)
+
+[node name="Grass" parent="." instance=ExtResource("7_boklh")]
+position = Vector2(344.85004, 60.5)
+
+[node name="Coop" type="Node2D" parent="."]
+position = Vector2(349.84006, 34.876755)
+
+[node name="Coop2" type="Node2D" parent="Coop" groups=["Sort"]]
+position = Vector2(-0.7878723, -6.757494)
+scale = Vector2(0.315, 0.315)
+
+[node name="Coop1" type="Sprite2D" parent="Coop/Coop2"]
+position = Vector2(0, -27)
+texture = ExtResource("8_r5iu6")
+
+[node name="Coop2" type="Sprite2D" parent="Coop/Coop2"]
+position = Vector2(0, -27)
+texture = ExtResource("9_ee4qw")
+
+[node name="CoopTop" type="Node2D" parent="Coop" groups=["Sort"]]
+position = Vector2(-0.9654541, 1.072506)
+
+[node name="Coop3" type="Sprite2D" parent="Coop/CoopTop"]
+position = Vector2(0.17758179, -16.335)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("10_57tt6")
+
+[node name="Coop4" type="Sprite2D" parent="Coop/CoopTop"]
+position = Vector2(0.17758179, -16.335)
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("11_7ki8x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Coop"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coop/StaticBody2D"]
+position = Vector2(-0.55688477, -5.104994)
+shape = SubResource("RectangleShape2D_clvyn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Coop/StaticBody2D"]
+position = Vector2(-1.042572, 12.9363365)
+shape = SubResource("RectangleShape2D_d8m2u")

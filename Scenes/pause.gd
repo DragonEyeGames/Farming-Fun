@@ -3,7 +3,14 @@ extends CanvasLayer
 var paused=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if ResourceLoader.exists("user://volume_data.tres"):
+		var data = ResourceLoader.load("user://volume_data.tres") as VolumeData
+		GameManager.musicVolume=data.music
+		GameManager.sfxVolume=data.sfx
+		GameManager.masterVolume=data.master
+		$Settings/VBoxContainer/Master/HSlider.value=GameManager.masterVolume
+		$Settings/VBoxContainer/Music/HSlider.value=GameManager.musicVolume
+		$Settings/VBoxContainer/SFX/HSlider.value=GameManager.sfxVolume
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -102,6 +109,11 @@ func _on_settings_close_mouse_exited() -> void:
 
 
 func _on_settings_close_pressed() -> void:
+	var volume = VolumeData.new()
+	volume.master=GameManager.masterVolume
+	volume.sfx=GameManager.sfxVolume
+	volume.music=GameManager.musicVolume
+	ResourceSaver.save(volume, "user://volume_data.tres")
 	var tween=create_tween()
 	tween.tween_property($Settings, "modulate:a", 0, .1)
 	await get_tree().create_timer(.1).timeout

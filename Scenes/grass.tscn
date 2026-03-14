@@ -188,33 +188,40 @@ offset_bottom = 232.85902
 color = Color(0.11372549, 0.54901963, 0.18039216, 1)
 
 [node name="UntitledArtwork37" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(246.1643, 57.2778)
 texture = ExtResource("2_vaoxa")
 flip_h = true
 
 [node name="UntitledArtwork38" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(-208.87195, -49.108032)
 texture = ExtResource("4_e406d")
 
 [node name="UntitledArtwork39" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(206.13794, -119.680786)
 texture = ExtResource("5_47oxd")
 flip_h = true
 
 [node name="UntitledArtwork40" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(-228.88525, 108.890686)
 texture = ExtResource("2_vaoxa")
 
 [node name="UntitledArtwork41" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(-99.32617, -112.30754)
 texture = ExtResource("1_y1qba")
 flip_h = true
 
 [node name="UntitledArtwork42" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(2.8461914, 117.31729)
 texture = ExtResource("6_2opp2")
 
 [node name="UntitledArtwork43" type="Sprite2D" parent="."]
+modulate = Color(0.9384497, 0.9384497, 0.9384497, 1)
 position = Vector2(150.31165, -25.934906)
 texture = ExtResource("4_e406d")
 flip_h = true
