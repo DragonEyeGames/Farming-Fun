@@ -12,55 +12,55 @@ z_index = -3
 scale = Vector2(0.25, 0.25)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="."]
-position = Vector2(-178.25037, -198.46725)
+position = Vector2(-174.80563, -206.82079)
 texture = ExtResource("1_y1qba")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="."]
-position = Vector2(-210.9607, -192.25288)
+position = Vector2(-207.51596, -200.60641)
 texture = ExtResource("2_vaoxa")
 
 [node name="UntitledArtwork3" type="Sprite2D" parent="."]
-position = Vector2(-210.9607, -192.25288)
+position = Vector2(-207.51596, -200.60641)
 texture = ExtResource("2_vaoxa")
 
 [node name="UntitledArtwork4" type="Sprite2D" parent="."]
-position = Vector2(-85.127686, -196.37697)
+position = Vector2(-81.68295, -204.7305)
 texture = ExtResource("3_gr604")
 
 [node name="UntitledArtwork5" type="Sprite2D" parent="."]
-position = Vector2(-101.59143, -197.56384)
+position = Vector2(-98.1467, -205.91737)
 texture = ExtResource("4_e406d")
 
 [node name="UntitledArtwork6" type="Sprite2D" parent="."]
-position = Vector2(108.88257, -200.85146)
+position = Vector2(112.3273, -209.20499)
 texture = ExtResource("5_47oxd")
 
 [node name="UntitledArtwork7" type="Sprite2D" parent="."]
-position = Vector2(134.9773, -200.24309)
+position = Vector2(138.42203, -208.59662)
 texture = ExtResource("6_2opp2")
 
 [node name="UntitledArtwork8" type="Sprite2D" parent="."]
-position = Vector2(164.84766, -200.57872)
+position = Vector2(168.29239, -208.93225)
 texture = ExtResource("1_y1qba")
 
 [node name="UntitledArtwork9" type="Sprite2D" parent="."]
-position = Vector2(178.27258, -198.22937)
+position = Vector2(181.71732, -206.5829)
 texture = ExtResource("3_gr604")
 
 [node name="UntitledArtwork10" type="Sprite2D" parent="."]
-position = Vector2(207.80725, -200.2431)
+position = Vector2(211.25198, -208.59663)
 texture = ExtResource("4_e406d")
 
 [node name="UntitledArtwork11" type="Sprite2D" parent="."]
-position = Vector2(223.91699, -201.9212)
+position = Vector2(227.36172, -210.27473)
 texture = ExtResource("3_gr604")
 
 [node name="UntitledArtwork12" type="Sprite2D" parent="."]
-position = Vector2(249.0885, -199.90747)
+position = Vector2(252.53323, -208.261)
 texture = ExtResource("6_2opp2")
 
 [node name="UntitledArtwork13" type="Sprite2D" parent="."]
-position = Vector2(281.9795, -202.59244)
+position = Vector2(285.42422, -210.94597)
 texture = ExtResource("1_y1qba")
 
 [node name="UntitledArtwork14" type="Sprite2D" parent="."]
