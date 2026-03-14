@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://br7lry3mlue2h"]
+[gd_scene load_steps=9 format=3 uid="uid://br7lry3mlue2h"]
 
 [ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="1_3s1yl"]
 [ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="2_78xsq"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3s1yl"]
 size = Vector2(19, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78xsq"]
+size = Vector2(17.026993, 5.088521)
 
 [node name="Water" type="Node2D" groups=["Sort"]]
 script = ExtResource("1_3s1yl")
@@ -56,3 +59,10 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_3s1yl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1.0764189, 0.12917042)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.45639038, -2.5223293)
+shape = SubResource("RectangleShape2D_78xsq")

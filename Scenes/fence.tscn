@@ -13,7 +13,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment2" type="Node2D" parent="." groups=["Sort"]]
@@ -24,7 +23,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment2"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment3" type="Node2D" parent="." groups=["Sort"]]
@@ -35,7 +33,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment3"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment4" type="Node2D" parent="." groups=["Sort"]]
@@ -46,7 +43,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment4"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment8" type="Node2D" parent="." groups=["Sort"]]
@@ -57,7 +53,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment8"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment9" type="Node2D" parent="." groups=["Sort"]]
@@ -68,7 +63,6 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment9"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment10" type="Node2D" parent="." groups=["Sort"]]
@@ -79,127 +73,126 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment10"]
-z_index = 1
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment11" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(72.06677, -50.185936)
+position = Vector2(72.27517, -48.987667)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment11"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment11"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment12" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(57.262268, -50.186043)
+position = Vector2(57.470665, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment12"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment12"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment13" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(42.49727, -50.186043)
+position = Vector2(42.705666, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment13"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment13"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment14" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(27.69226, -50.186043)
+position = Vector2(27.900658, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment14"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment14"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment15" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(12.987259, -50.186043)
+position = Vector2(13.195656, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment15"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment15"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment16" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(-2.2877347, -50.186043)
+position = Vector2(-2.0793378, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment16"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment16"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment17" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(-17.42775, -50.186043)
+position = Vector2(-17.219353, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment17"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment17"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment18" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(-32.517746, -50.186043)
+position = Vector2(-32.30935, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment18"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment18"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment19" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(-47.612747, -50.186043)
+position = Vector2(-47.40435, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment19"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment19"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="HorizontalSegment20" type="Node2D" parent="." groups=["Sort"]]
-z_index = -2
-position = Vector2(-62.86772, -50.186043)
+position = Vector2(-62.659325, -48.987774)
 scale = Vector2(0.4, 0.4)
 
 [node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment20"]
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("1_0m5cy")
 
 [node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment20"]
-z_index = 1
+position = Vector2(0.10765075, -4.3056674)
 texture = ExtResource("2_oklvd")
 
 [node name="VerticalSegment" type="Node2D" parent="." groups=["Sort"]]

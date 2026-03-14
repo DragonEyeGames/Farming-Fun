@@ -8,6 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	$Holder/VBoxContainer/Resume/Resume.size=Vector2(547, 130)
+	$Holder/VBoxContainer/Settings/Settings.size=Vector2(547, 130)
+	$Holder/VBoxContainer/Save/Save.size=Vector2(547, 130)
+	$Holder/VBoxContainer/Exit/Exit.size=Vector2(547, 130)
 	if(Input.is_action_just_pressed("Pause")):
 		print("pause")
 		paused=!paused
