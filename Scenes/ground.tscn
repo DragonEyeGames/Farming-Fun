@@ -1,0 +1,4522 @@
+[gd_scene load_steps=23 format=3 uid="uid://bfcpcfrafxs2g"]
+
+[ext_resource type="Texture2D" uid="uid://cnlghkj3g14l5" path="res://assets/Grass/grass (1).png" id="1_vwsr8"]
+[ext_resource type="Texture2D" uid="uid://byh7op32trcjk" path="res://assets/Grass/grass (2).png" id="2_c5qj0"]
+[ext_resource type="Texture2D" uid="uid://bvdu4r1xlortv" path="res://assets/Grass/grass (3).png" id="3_fo7on"]
+[ext_resource type="Texture2D" uid="uid://b20o5sn3wwsbo" path="res://assets/Grass/grass (4).png" id="4_4mrer"]
+[ext_resource type="Texture2D" uid="uid://cl1p2e2p7ecvx" path="res://assets/Grass/grass (5).png" id="5_dh4o7"]
+[ext_resource type="Texture2D" uid="uid://du3kq4y12hxmd" path="res://assets/Grass/grass (6).png" id="6_jq68u"]
+[ext_resource type="Texture2D" uid="uid://b4aoioa720gdw" path="res://assets/Grass/grass (7).png" id="7_h2qa8"]
+[ext_resource type="Texture2D" uid="uid://d1v6iiusw6hi2" path="res://assets/Dirt/Untitled_Artwork-1.png" id="8_0dhjh"]
+[ext_resource type="Texture2D" uid="uid://bjfwa5sovhnqn" path="res://assets/Dirt/Untitled_Artwork-2.png" id="9_q4ter"]
+[ext_resource type="Texture2D" uid="uid://go7q5t3peak7" path="res://assets/Dirt/Untitled_Artwork-3.png" id="10_fc66y"]
+[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/Untitled_Artwork-4.png" id="11_7tg3i"]
+[ext_resource type="Texture2D" uid="uid://bpdyg4rqfov8x" path="res://assets/Dirt/Untitled_Artwork-5.png" id="12_07wfi"]
+[ext_resource type="Texture2D" uid="uid://df4usw8alkxfb" path="res://assets/Dirt/Untitled_Artwork-6.png" id="13_5baxj"]
+[ext_resource type="Texture2D" uid="uid://rc7vxnewscav" path="res://assets/Dirt/Untitled_Artwork-7.png" id="14_nw2di"]
+[ext_resource type="Texture2D" uid="uid://dgugfnuf2hat8" path="res://assets/Dirt/Untitled_Artwork-8.png" id="15_md7xo"]
+[ext_resource type="Texture2D" uid="uid://dlk33g6e33u14" path="res://assets/Rocks/Untitled_Artwork-3.png" id="16_a7i2j"]
+[ext_resource type="Texture2D" uid="uid://bxil7vtat1to7" path="res://assets/Rocks/Untitled_Artwork-5.png" id="17_f06hp"]
+[ext_resource type="Texture2D" uid="uid://cs7v72qnh0yyv" path="res://assets/Rocks/Untitled_Artwork-7.png" id="18_q5ifp"]
+[ext_resource type="Texture2D" uid="uid://dotxsqgru4khu" path="res://assets/Rocks/Untitled_Artwork-1.png" id="19_eu7y4"]
+[ext_resource type="Texture2D" uid="uid://dskgd15ct3irb" path="res://assets/Rocks/Untitled_Artwork-4.png" id="20_dhhtu"]
+[ext_resource type="Texture2D" uid="uid://dn2bxdu4pyh1s" path="res://assets/Rocks/Untitled_Artwork-6.png" id="21_13ojr"]
+[ext_resource type="Texture2D" uid="uid://vp147queh3ot" path="res://assets/Rocks/Untitled_Artwork-2.png" id="22_yy5c3"]
+
+[node name="Ground" type="Node2D"]
+z_index = -2
+
+[node name="Grass" type="Node2D" parent="."]
+
+[node name="Ground" type="ColorRect" parent="Grass"]
+z_index = -6
+offset_left = -344.4629
+offset_top = -297.65417
+offset_right = 538.43274
+offset_bottom = 264.1609
+color = Color(0.4, 0.54901963, 0.24313726, 1)
+
+[node name="Grasses" type="Node2D" parent="Grass"]
+scale = Vector2(0.25, 0.25)
+
+[node name="Grass(1)8" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(1507.9941, -532.0014)
+texture = ExtResource("1_vwsr8")
+offset = Vector2(2.8728561, -16.62384)
+
+[node name="Grass(1)10" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(1619.9941, -84.0014)
+texture = ExtResource("1_vwsr8")
+offset = Vector2(2.8728561, -16.62384)
+
+[node name="Grass(2)3" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(86.940155, 460.43475)
+texture = ExtResource("2_c5qj0")
+offset = Vector2(-6.6166077, -16.809998)
+
+[node name="Grass(2)4" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(910.3811, -281.8642)
+texture = ExtResource("2_c5qj0")
+offset = Vector2(-6.6166077, -16.809998)
+
+[node name="Grass(2)5" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-9.059845, -267.56525)
+texture = ExtResource("2_c5qj0")
+offset = Vector2(-6.6166077, -16.809998)
+
+[node name="Grass(2)9" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-729.0598, -519.56525)
+texture = ExtResource("2_c5qj0")
+offset = Vector2(-6.6166077, -16.809998)
+
+[node name="Grass(2)15" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(482.9402, 728.43475)
+texture = ExtResource("2_c5qj0")
+offset = Vector2(-6.6166077, -16.809998)
+
+[node name="Grass(3)7" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(1384.3564, 727.48785)
+texture = ExtResource("3_fo7on")
+offset = Vector2(3.1524658, -18.493011)
+
+[node name="Grass(4)5" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(176.1167, -495.2553)
+texture = ExtResource("4_4mrer")
+offset = Vector2(-0.88897705, -18.384796)
+
+[node name="Grass(4)7" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-836.6555, -23.429688)
+texture = ExtResource("4_4mrer")
+offset = Vector2(-0.88897705, -18.384796)
+
+[node name="Grass(4)8" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(1162.9983, -456.5494)
+texture = ExtResource("4_4mrer")
+offset = Vector2(-0.88897705, -18.384796)
+
+[node name="Grass(5)5" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(1718.0531, -375.3289)
+texture = ExtResource("5_dh4o7")
+offset = Vector2(2.012268, -18.29792)
+
+[node name="Grass(5)7" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(955.43274, 732.79736)
+texture = ExtResource("5_dh4o7")
+offset = Vector2(2.012268, -18.29792)
+
+[node name="Grass(6)3" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-881.4321, -500.7796)
+texture = ExtResource("6_jq68u")
+offset = Vector2(-3.2824097, -14.774292)
+
+[node name="Grass(6)7" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-1041.4321, 775.2204)
+texture = ExtResource("6_jq68u")
+offset = Vector2(-3.2824097, -14.774292)
+
+[node name="Grass(7)3" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(86.5553, -655.1968)
+texture = ExtResource("7_h2qa8")
+offset = Vector2(4.8553467, -8.063721)
+
+[node name="Grass(7)5" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
+modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
+position = Vector2(-435.1969, -277.19275)
+texture = ExtResource("7_h2qa8")
+offset = Vector2(4.8553467, -8.063721)
+
+[node name="Dirt" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = -284.4019
+offset_top = -45.220535
+offset_right = 469.43527
+offset_bottom = -20.514816
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = -284.02835
+offset_top = 131.39638
+offset_right = 469.60764
+offset_bottom = 156.1021
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = -70.39494
+offset_top = -57.200546
+offset_right = -50.27408
+offset_bottom = -26.683502
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = 127.91437
+offset_top = -50.8288
+offset_right = 148.03523
+offset_bottom = -20.311756
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = -23.005417
+offset_top = -25.170895
+offset_right = 12.638489
+offset_bottom = 141.3279
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = -283.95715
+offset_top = -27.397655
+offset_right = -252.41852
+offset_bottom = 139.10114
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = 433.52753
+offset_top = -23.839931
+offset_right = 469.17145
+offset_bottom = 142.65886
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Dirt"]
+z_index = -4
+offset_left = 219.15387
+offset_top = -29.517345
+offset_right = 254.79778
+offset_bottom = 136.98145
+color = Color(0.5603774, 0.31851354, 0.17279628, 1)
+
+[node name="Dirt Patches" type="Node2D" parent="Dirt"]
+scale = Vector2(0.25, 0.25)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-212.89417, -218.25438)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-300.4021, -180.3516)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-338.41882, -185.04971)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-362.94687, -175.88036)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-395.72736, -181.38197)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-425.10715, -174.02563)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-416.21927, -158.11885)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-440.29956, -174.3471)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(412.8601, 0.86624146)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(396.73398, -7.2636414)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(358.71725, -11.961761)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(334.1892, -2.7924042)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(301.40872, -8.294022)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(272.02893, -0.9376831)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(280.9168, 14.969101)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(255.41315, -2.0355225)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(362.4701, 3.9440155)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(345.06195, -3.0372314)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(307.04523, -7.7353516)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(282.5172, 1.4340057)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(249.73671, -4.0676117)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(220.35692, 3.2887268)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(229.2448, 19.19551)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(203.74113, 2.1908875)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(527.28894, -4.4612427)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(499.03802, -4.634247)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(461.0213, -9.332367)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(436.49323, -0.16300964)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(403.71277, -5.664627)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(374.33295, 1.6917114)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(383.22083, 17.598495)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(357.71716, 0.5938721)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-19.237183, 1.3229523)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-40.94348, -6.2558136)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-75.68787, -6.8204956)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-103.48828, -1.7845764)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-136.26874, -7.286194)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-165.64856, 0.07014465)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-156.76068, 15.976929)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8/UntitledArtwork8"]
+position = Vector2(-182.26434, -1.0276947)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(176.34705, -44.854553)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(229.80444, -21.151733)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(226.5264, -24.934113)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/UntitledArtwork8"]
+position = Vector2(186.68552, -7.535248)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-467.31866, -172.02917)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-488.34756, -181.31221)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-490.24207, -172.59753)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-502.37317, -175.16689)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-527.5455, -171.18977)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-528.06305, -179.08298)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-559.1182, -182.0591)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-567.9104, -175.56412)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-591.90765, -177.44624)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-621.9041, -181.09286)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-631.10425, -158.20377)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-663.78687, -173.03214)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-666.657, -175.66734)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-684.53723, -181.16896)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-718.0054, -173.83347)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-731.30096, -174.0627)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-762.5142, -180.60263)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-797.2719, -179.6054)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-834.53394, -174.35812)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-850.3442, -174.91287)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-867.264, -179.35085)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-894.44653, -175.19025)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-924.9061, -180.29712)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-937.3703, -158.70163)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-962.58606, -178.645)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-977.94476, -160.5355)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1023.3151, -181.19778)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1046.2213, -180.16441)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1082.173, -180.9951)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1095.2338, -180.09698)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1110.9125, -180.03853)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1112.336, -172.9217)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1110.1362, -158.94687)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(602.33716, -175.3352)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(623.59344, -174.29324)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(638.59784, -176.16876)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(664.1059, -178.08403)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(674.1922, -175.05814)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(701.1731, -174.04951)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork48" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(718.0676, -174.04951)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork49" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(725.561, -182.1533)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(758.81964, -184.54834)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork51" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(798.15625, -183.28755)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork52" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(832.65686, -176.866)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork53" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(852.4114, -181.72488)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork54" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(898.8061, -163.05426)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork55" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(915.3109, -179.55911)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork56" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(934.8426, -180.727)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork57" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(967.3794, -174.26543)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork58" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(970.28625, -174.86932)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork59" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1002.3102, -179.66031)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork60" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1020.9295, -175.41895)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork61" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1041.0613, -181.66498)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork62" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1082.0547, -180.37611)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork63" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1105.2554, -174.96733)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork64" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1119.571, -175.50174)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork65" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1142.2026, -173.65137)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork66" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1157.2903, -180.76819)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork67" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1197.179, -179.29054)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork68" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1216.8213, -176.44383)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork69" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1228.7776, -180.71391)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork70" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1268.2551, -180.72746)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork71" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1283.19, -176.56438)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork72" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1298.8744, -175.95428)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork73" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1320.3234, -180.81018)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork74" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1350.3911, -183.25835)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork75" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1381.6503, -174.16476)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork76" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1391.7684, -174.50621)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork77" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1411.1492, -180.13287)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork78" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1442.6167, -172.42227)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork79" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1455.954, -173.88103)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork80" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1480.1057, -172.57831)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork81" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1501.7407, -174.5199)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork82" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1526.3973, -183.74211)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork83" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1563.5653, -180.13628)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork84" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1595.4838, -173.73581)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork85" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1624.1381, -173.50656)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork86" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1642.6855, -174.55168)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork87" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1655.2738, -172.53996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork88" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1654.857, -180.25056)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork89" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1683.4071, -180.04218)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork90" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1713.3162, -175.16153)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork91" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1745.5226, -181.41338)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork92" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1780.4224, -177.80638)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork93" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1806.0878, -174.06349)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork94" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1822.9426, -183.16852)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork95" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1869.4713, -162.1288)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork96" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1859.6427, -177.269)
+texture = ExtResource("15_md7xo")
+flip_h = true
+
+[node name="UntitledArtwork97" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-265.83258, -204.18619)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork98" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-256.9566, -206.9599)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork99" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-275.3689, -182.04984)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork100" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(518.9633, -183.32936)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(531.91595, -200.55205)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork102" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(515.79803, -181.99974)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork103" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(580.40985, -194.95923)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork104" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(577.4564, -193.85168)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch" type="Node2D" parent="Dirt/Dirt Patches"]
+rotation = 1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch2" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1043.3013, -17.874947)
+rotation = 1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch2"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch3" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(2012.267, -12.843788)
+rotation = 1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch3"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch4" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(2869.0125, -11.961647)
+rotation = 1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch4"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch5" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(751.75574, 452.7444)
+rotation = -1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch5"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch6" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-116.76416, 455.74963)
+rotation = -1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch6"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch7" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-1075.4666, 440.84753)
+rotation = -1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch7"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="Side Patch8" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-2145.7383, 458.68005)
+rotation = -1.5707964
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-136.3121, 1121.9576)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-103.70985, 1124.688)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-85.98902, 1126.1647)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-56.305325, 1123.9435)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-69.22293, 1121.7505)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-24.740925, 1121.6127)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-44.028965, 1120.8732)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(0.5912365, 1122.9292)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(11.149904, 1119.6803)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(34.472244, 1119.328)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(47.406048, 1123.024)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(78.954475, 1122.6885)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(67.20772, 1120.6747)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(104.68717, 1122.7014)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(132.17235, 1119.6758)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(149.08585, 1120.6533)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(170.98758, 1113.0619)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(183.84761, 1117.6007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(196.2367, 1118.0492)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(225.98123, 1117.7451)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(222.82947, 1122.0164)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(126.50957, 1121.1373)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(23.95464, 1121.3256)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(244.00734, 1123.0538)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(268.52704, 1124.243)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(292.32568, 1121.4248)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(311.07034, 1120.1799)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(339.68658, 1120.6299)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(331.7297, 1118.546)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(352.65033, 1120.8759)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(371.38672, 1120.4846)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(400.54584, 1120.2352)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(418.32855, 1120.7477)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(439.3764, 1120.1226)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(463.5502, 1121.7898)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(433.90103, 1122.567)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(478.55057, 1119.1904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(504.61163, 1112.7809)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(495.13553, 1118.9546)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(533.66907, 1121.0225)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(557.93134, 1123.549)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(557.93134, 1119.8877)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(584.78107, 1118.9723)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(603.0877, 1122.0233)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="Dirt/Dirt Patches/Side Patch8"]
+position = Vector2(-146.1914, 4020.1162)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-797.14734, -183.07219)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="Dirt/Dirt Patches"]
+position = Vector2(-823.471, -175.26028)
+texture = ExtResource("13_5baxj")
+
+[node name="Dirt Bottom" type="Node2D" parent="Dirt/Dirt Patches"]
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom2" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(846.7844, 0.022766113)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom2"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom3" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1697.5361, -1.9188232)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom3"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom4" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(2150.0605, -1.1993408)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom4"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom5" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(2010.9565, -695.02295)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom5"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom6" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(1178.7075, -702.48706)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom6"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom7" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(178.51593, -698.755)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom7"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="Dirt Bottom8" type="Node2D" parent="Dirt/Dirt Patches"]
+position = Vector2(178.51593, -698.755)
+
+[node name="UntitledArtwork107" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1114.5581, 610.0073)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork108" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1084.341, 613.75836)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork109" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1056.8328, 614.8004)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork110" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1032.4506, 612.2996)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork111" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1001.1164, 614.8674)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork112" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-988.2793, 608.67804)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork113" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-966.7313, 608.6781)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork114" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-940.1694, 602.46295)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork115" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-907.15967, 606.1307)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork116" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-883.5485, 609.7984)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork117" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-851.9143, 612.5492)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork118" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-945.4272, 606.94257)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork119" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-976.30444, 609.6275)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork120" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1005.0044, 608.82526)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork121" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-833.095, 612.4418)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork122" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-811.08856, 611.98334)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork123" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-783.35126, 611.7541)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork124" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-760.42786, 606.71094)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork125" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-739.6812, 604.7305)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork126" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-715.021, 608.6713)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork127" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-687.2836, 609.4278)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork128" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-665.0938, 603.376)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork129" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-633.306, 609.45306)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork130" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-609.92413, 610.14075)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork131" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-598.8883, 605.8976)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork132" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-571.15094, 605.43915)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork133" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-549.7936, 611.1037)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork134" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-577.80835, 606.1109)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork135" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-530.1062, 603.1896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork136" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-510.69, 606.7955)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork137" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-500.98193, 606.7955)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork138" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-473.79935, 605.686)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork139" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-445.22995, 601.8028)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork140" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-417.9688, 605.88605)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork141" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-392.96146, 607.97003)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork142" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-372.5388, 608.17834)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork143" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-338.8248, 605.26904)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork144" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-322.80768, 606.3024)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork145" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-286.2956, 608.8858)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1146.7837, 609.48157)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1184.6176, 608.2611)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1202.6189, 621.68604)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-260.59973, 617.122)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-130.62286, 621.06824)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(707.23553, 613.2207)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(831.6368, 626.0362)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1559.8884, 618.5147)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1177.1428, 1218.7513)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1148.9603, 1221.8828)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1117.6462, 1227.6759)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1094.5027, 1242.5205)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1087.77, 1228.4291)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1075.5577, 1221.2268)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1043.4609, 1227.8029)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1043.1598, 1228.1162)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1028.4084, 1220.223)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-1006.79926, 1219.4467)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-977.038, 1225.6577)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-962.727, 1227.2914)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-961.7846, 1220.0889)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-940.4679, 1219.8472)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-907.01886, 1225.5405)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-905.53845, 1227.4792)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-893.55975, 1220.4673)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-865.73114, 1226.5298)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-861.3574, 1222.4778)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-839.44556, 1221.5535)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-814.83484, 1228.462)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-814.9321, 1229.4342)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-790.0826, 1225.3682)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-770.3685, 1219.6372)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-728.901, 1241.2913)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-720.1902, 1226.1617)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-717.8978, 1219.2849)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-697.72516, 1220.4309)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-671.3633, 1218.597)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-653.2151, 1227.7097)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-628.687, 1225.876)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-623.64386, 1221.2911)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-589.2987, 1229.9116)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-587.68695, 1220.2893)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-559.614, 1220.4617)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-530.6798, 1226.4896)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-507.10333, 1225.01)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-489.41095, 1223.1311)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-467.93613, 1220.8187)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork48" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-444.76376, 1218.6267)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork49" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-413.57602, 1225.0791)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-398.66864, 1229.9824)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork51" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-380.94128, 1221.5715)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork52" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-367.89142, 1225.8197)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork53" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-346.7174, 1224.6436)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork54" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-334.3659, 1221.7026)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork55" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-301.0464, 1227.3862)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork56" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-284.96237, 1219.4154)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork57" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-263.46957, 1211.1599)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork58" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-114.39018, 1218.2346)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork59" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-86.20769, 1221.366)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork60" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-54.8936, 1227.1592)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork61" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-31.750046, 1242.0037)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork62" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-25.01738, 1227.9124)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork63" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(-12.8050995, 1220.71)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork64" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(19.291702, 1227.2861)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork65" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(19.59285, 1227.5994)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork66" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(34.344193, 1219.7063)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork67" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(55.953384, 1218.9299)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork68" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(85.714615, 1225.1409)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork69" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(100.02565, 1226.7747)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork70" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(100.96803, 1219.572)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork71" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(122.284744, 1219.3303)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork72" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(155.73378, 1225.0237)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork73" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(157.21419, 1226.9624)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork74" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(169.19289, 1219.9504)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork75" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(197.0215, 1226.013)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork76" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(201.39522, 1221.9609)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork77" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(223.30708, 1221.0366)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork78" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(247.9178, 1227.9453)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork79" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(247.82051, 1228.9175)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork80" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(272.67004, 1224.8513)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork81" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(292.3841, 1219.1204)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork82" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(333.85162, 1240.7744)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork83" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(342.56244, 1225.645)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork84" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(344.8548, 1218.7681)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork85" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(365.02747, 1219.9141)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork86" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(391.38934, 1218.0803)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork87" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(409.53754, 1227.1929)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork88" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(434.0656, 1225.3591)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork89" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(439.10876, 1220.7744)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork90" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(473.45392, 1229.3948)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork91" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(475.06567, 1219.7725)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork92" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(503.1386, 1219.9448)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork93" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(532.0728, 1225.9729)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork94" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(555.6493, 1224.4932)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork95" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(573.3417, 1222.6143)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork96" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(594.81647, 1220.302)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork97" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(617.98883, 1218.1099)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork98" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(649.1766, 1224.5623)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork99" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(664.084, 1229.4656)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork100" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(681.81134, 1221.0547)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork101" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(694.8612, 1225.303)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork102" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(716.0352, 1224.1267)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork103" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(728.3867, 1221.1858)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork104" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(761.70624, 1226.8694)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork105" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(777.7902, 1218.8987)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork106" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(799.283, 1210.6431)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork146" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(704.31396, 1208.855)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork147" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(732.49646, 1211.9863)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork148" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(763.81055, 1217.7795)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork149" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(786.9541, 1232.624)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork150" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(793.68677, 1218.5327)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork151" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(805.89905, 1211.3303)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork152" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(837.99585, 1217.9065)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork153" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(838.297, 1218.2197)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork154" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(853.04834, 1210.3267)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork155" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(874.65753, 1209.5503)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork156" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(904.41876, 1215.7612)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork157" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(918.7298, 1217.395)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork158" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(919.6722, 1210.1924)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork159" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(940.9889, 1209.9507)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork160" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(974.4379, 1215.644)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork161" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(975.91833, 1217.5828)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork162" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(987.89703, 1210.5708)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork163" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1015.7257, 1216.6333)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork164" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1020.09937, 1212.5813)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork165" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1042.0112, 1211.657)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork166" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1066.622, 1218.5657)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork167" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1066.5247, 1219.5378)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork168" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1091.3741, 1215.4717)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork169" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1111.0883, 1209.7407)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork170" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1152.5558, 1231.3948)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork171" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1161.2666, 1216.2654)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork172" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1163.559, 1209.3884)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork173" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1183.7317, 1210.5344)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork174" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1210.0935, 1208.7007)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork175" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1228.2417, 1217.8132)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork176" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1252.7698, 1215.9795)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork177" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1257.813, 1211.3948)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork178" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1292.1581, 1220.0151)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork179" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1293.7698, 1210.3928)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork180" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1321.8428, 1210.5652)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork181" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1350.777, 1216.5933)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork182" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1374.3535, 1215.1135)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork183" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1392.0459, 1213.2346)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork184" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1413.5206, 1210.9224)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork185" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1436.693, 1208.7302)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork186" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1467.8807, 1215.1826)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork187" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1482.7881, 1220.0859)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork188" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1500.5155, 1211.675)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork189" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1513.5654, 1215.9233)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork190" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1534.7394, 1214.7471)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork191" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1547.0908, 1211.8062)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork192" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1580.4104, 1217.4897)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork193" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1596.4944, 1209.519)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork194" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1617.9872, 1201.2634)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork195" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(1560.6259, 1205.2764)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork196" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(844.05566, 1213.0067)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork197" type="Sprite2D" parent="Dirt/Dirt Patches/Dirt Bottom8"]
+position = Vector2(835.4073, 1197.3315)
+texture = ExtResource("11_7tg3i")
+
+[node name="Color Splotches" type="Node2D" parent="Dirt"]
+modulate = Color(0.9428228, 0.94282264, 0.94282264, 1)
+scale = Vector2(0.25, 0.25)
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-608.1799, -155.61298)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-350.35995, -107.13625)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1096.8381, 90.49588)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1073.3718, -107.64839)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-838.16437, -134.29749)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-456.96625, -153.99463)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-183.6134, -146.07965)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-47.621765, -40.931503)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(42.01425, 134.581)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(67.11676, -132.46393)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(553.51917, -132.80182)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(224.0187, -147.40594)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(375.10007, -106.39816)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-37.454468, 290.48572)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(34.679626, 411.4415)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-74.92932, 515.9524)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-181.62518, 598.5509)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-377.00348, 548.5452)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-556.92175, 598.87854)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-697.42004, 545.897)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-902.81836, 593.2966)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1096.6302, 590.13666)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1041.3971, 499.2555)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1101.8248, 380.35153)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(-1056.9615, 252.77182)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(45.59314, 572.3916)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(144.77417, 593.2601)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(327.842, 544.5965)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(413.58264, 582.8321)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(576.0659, 546.8121)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(721.26764, 593.48975)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(842.26355, 541.8212)
+texture = ExtResource("15_md7xo")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(977.2873, 571.95795)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(914.7398, 433.58725)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(994.12573, 351.51743)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(913.60535, 252.27911)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(982.0715, 166.95982)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(915.1549, 52.408577)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork39" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(982.3336, -74.49286)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork40" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(882.15814, -143.13652)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork41" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(724.39856, -140.86469)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork42" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1082.1082, -141.682)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork43" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1185.8542, -99.62274)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork44" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1302.2185, -147.28989)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork45" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1457.8375, -94.01483)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork46" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1600.8391, -159.90768)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork47" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1755.0564, -72.98523)
+texture = ExtResource("13_5baxj")
+
+[node name="UntitledArtwork48" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1846.3309, -158.21318)
+texture = ExtResource("9_q4ter")
+
+[node name="UntitledArtwork49" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1849.4662, 23.812683)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork50" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1781.422, 140.6061)
+texture = ExtResource("14_nw2di")
+
+[node name="UntitledArtwork51" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1849.7952, 258.7307)
+texture = ExtResource("11_7tg3i")
+
+[node name="UntitledArtwork52" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1772.0807, 406.38303)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork53" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1836.3335, 495.9156)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork54" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1749.9608, 566.4884)
+texture = ExtResource("8_0dhjh")
+
+[node name="UntitledArtwork55" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1590.9088, 589.66156)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork56" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1426.4883, 547.05005)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork57" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1338.4304, 587.603)
+texture = ExtResource("12_07wfi")
+
+[node name="UntitledArtwork58" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1150.7279, 595.7136)
+texture = ExtResource("10_fc66y")
+
+[node name="UntitledArtwork59" type="Sprite2D" parent="Dirt/Color Splotches"]
+position = Vector2(1219.6887, 530.912)
+texture = ExtResource("12_07wfi")
+
+[node name="Rocks" type="Node2D" parent="."]
+modulate = Color(0.8992584, 0.8992584, 0.8992584, 0.7058824)
+scale = Vector2(0.1, 0.1)
+
+[node name="UntitledArtwork3" type="Sprite2D" parent="Rocks"]
+position = Vector2(-615.54297, -230.30217)
+texture = ExtResource("16_a7i2j")
+
+[node name="UntitledArtwork5" type="Sprite2D" parent="Rocks"]
+position = Vector2(-1227.7961, -399.45117)
+texture = ExtResource("17_f06hp")
+
+[node name="UntitledArtwork7" type="Sprite2D" parent="Rocks"]
+position = Vector2(-1759.3053, -249.745)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2315.8628, -389.84265)
+texture = ExtResource("19_eu7y4")
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2776.4292, -346.39294)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork6" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2751.4333, -107.59902)
+texture = ExtResource("21_13ojr")
+
+[node name="UntitledArtwork9" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2574.2283, 238.19264)
+texture = ExtResource("16_a7i2j")
+
+[node name="UntitledArtwork10" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2804.1667, 807.8798)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork11" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2584.3613, 1069.0347)
+texture = ExtResource("22_yy5c3")
+
+[node name="UntitledArtwork13" type="Sprite2D" parent="Rocks"]
+position = Vector2(-2818.3179, 1524.8118)
+texture = ExtResource("19_eu7y4")
+
+[node name="UntitledArtwork14" type="Sprite2D" parent="Rocks"]
+position = Vector2(-1859.4968, 1366.261)
+texture = ExtResource("22_yy5c3")
+
+[node name="UntitledArtwork15" type="Sprite2D" parent="Rocks"]
+position = Vector2(-1262.7885, 1505.2999)
+texture = ExtResource("17_f06hp")
+
+[node name="UntitledArtwork16" type="Sprite2D" parent="Rocks"]
+position = Vector2(-593.66406, 1516.8864)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork17" type="Sprite2D" parent="Rocks"]
+position = Vector2(-160.74768, 1126.3435)
+texture = ExtResource("22_yy5c3")
+
+[node name="UntitledArtwork19" type="Sprite2D" parent="Rocks"]
+position = Vector2(-190.12068, 605.08)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork20" type="Sprite2D" parent="Rocks"]
+position = Vector2(68.19321, -0.22265625)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork21" type="Sprite2D" parent="Rocks"]
+position = Vector2(-47.469635, -366.48865)
+texture = ExtResource("19_eu7y4")
+
+[node name="UntitledArtwork8" type="Sprite2D" parent="Rocks"]
+position = Vector2(678.9853, 1375.6139)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork12" type="Sprite2D" parent="Rocks"]
+position = Vector2(1374.6674, 1514.1091)
+texture = ExtResource("21_13ojr")
+
+[node name="UntitledArtwork18" type="Sprite2D" parent="Rocks"]
+position = Vector2(2183.094, 1313.9775)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork22" type="Sprite2D" parent="Rocks"]
+position = Vector2(2492.4243, 1008.1917)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="Rocks"]
+position = Vector2(2255.573, 500.86847)
+texture = ExtResource("22_yy5c3")
+
+[node name="UntitledArtwork23" type="Sprite2D" parent="Rocks"]
+position = Vector2(2485.6746, -274.04218)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork24" type="Sprite2D" parent="Rocks"]
+position = Vector2(1891.2739, -392.08868)
+texture = ExtResource("16_a7i2j")
+
+[node name="UntitledArtwork25" type="Sprite2D" parent="Rocks"]
+position = Vector2(1468.3639, -273.32623)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork26" type="Sprite2D" parent="Rocks"]
+position = Vector2(746.00415, -354.6004)
+texture = ExtResource("17_f06hp")
+
+[node name="UntitledArtwork27" type="Sprite2D" parent="Rocks"]
+position = Vector2(2867.2556, 1357.6141)
+texture = ExtResource("19_eu7y4")
+
+[node name="UntitledArtwork28" type="Sprite2D" parent="Rocks"]
+position = Vector2(3054.3086, 1526.6814)
+texture = ExtResource("17_f06hp")
+
+[node name="UntitledArtwork29" type="Sprite2D" parent="Rocks"]
+position = Vector2(3482.9878, 1325.8375)
+texture = ExtResource("21_13ojr")
+
+[node name="UntitledArtwork30" type="Sprite2D" parent="Rocks"]
+position = Vector2(3890.5479, 1521.7035)
+texture = ExtResource("16_a7i2j")
+
+[node name="UntitledArtwork31" type="Sprite2D" parent="Rocks"]
+position = Vector2(4343.612, 1290.2253)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork32" type="Sprite2D" parent="Rocks"]
+position = Vector2(4683.498, 792.5066)
+texture = ExtResource("20_dhhtu")
+
+[node name="UntitledArtwork33" type="Sprite2D" parent="Rocks"]
+position = Vector2(4608.857, 148.72668)
+texture = ExtResource("16_a7i2j")
+
+[node name="UntitledArtwork34" type="Sprite2D" parent="Rocks"]
+position = Vector2(4441.844, -390.16122)
+texture = ExtResource("17_f06hp")
+
+[node name="UntitledArtwork35" type="Sprite2D" parent="Rocks"]
+position = Vector2(4017.746, -224.37764)
+texture = ExtResource("21_13ojr")
+
+[node name="UntitledArtwork36" type="Sprite2D" parent="Rocks"]
+position = Vector2(3659.1912, -382.45044)
+texture = ExtResource("18_q5ifp")
+
+[node name="UntitledArtwork37" type="Sprite2D" parent="Rocks"]
+position = Vector2(2903.5266, -409.43842)
+texture = ExtResource("19_eu7y4")
+
+[node name="UntitledArtwork38" type="Sprite2D" parent="Rocks"]
+position = Vector2(2256.6233, 42.68387)
+texture = ExtResource("16_a7i2j")
