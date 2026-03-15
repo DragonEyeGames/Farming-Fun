@@ -32,6 +32,9 @@ func _ready() -> void:
 		sky.time = data.time
 		GameManager.time=data.time
 		print(data.time)
+	else:
+		sky.time=.4
+		GameManager.time=.4
 	if ResourceLoader.exists("user://player_data.tres"):
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
 		GameManager.playerInventory = data.inventory
