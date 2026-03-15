@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	$Energy/ProgressBar.value=remap(GameManager.energy, 0, 40, 8.1, 36.6)
 	$Water/ProgressBar.value=remap(GameManager.playerInventory[0].amount, 0, 20, 3.5, 17.5)
-	if((GameManager.selectedItem!=null and str(GameManager.inventoryItem.keys()[GameManager.selectedItem.item])=="Watering_Can")):
+	if((GameManager.selectedItem!=null and GameManager.selectedItem.item!=null and str(GameManager.inventoryItem.keys()[GameManager.selectedItem.item])=="Watering_Can")):
 		if($Water.modulate.a==0):
 			var tween=create_tween()
 			tween.tween_property($Water, "modulate:a", 1, .1)

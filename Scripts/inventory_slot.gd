@@ -11,6 +11,7 @@ var selected=false
 var mouseEntered:=false
 
 func _ready() -> void:
+	modulate=Color.LIGHT_GRAY
 	await get_tree().process_frame
 	$RichTextLabel.text=str(index+1)
 	if(shopSlot):
@@ -36,7 +37,13 @@ func _process(_delta: float) -> void:
 		$Value.visible=false
 	if($Popup.visible and GameManager.dragging!=-1):
 		$Popup.visible=false
-	$InventoryOutline.visible=GameManager.playerSelected==index and selectable
+	if(GameManager.playerSelected==index and selectable):
+		if(modulate==Color.LIGHT_GRAY):
+			var tween=create_tween()
+			tween.tween_property(self, "modulate", Color.WHITE, .1)
+	elif(modulate==Color.WHITE):
+			var tween=create_tween()
+			tween.tween_property(self, "modulate", Color.LIGHT_GRAY, .1)
 	
 	for child in $Items.get_children():
 		child.visible=false

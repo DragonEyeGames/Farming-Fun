@@ -1,26 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://dq70mbcajtim3"]
+[gd_scene load_steps=6 format=3 uid="uid://dq70mbcajtim3"]
 
 [ext_resource type="Script" uid="uid://ddvujhxbwqcdw" path="res://Scripts/inventory_slot.gd" id="1_6h8ck"]
 [ext_resource type="Texture2D" uid="uid://clj3gx2smjlx8" path="res://assets/inventory/Inventory-outline.png" id="2_ewbek"]
 [ext_resource type="Texture2D" uid="uid://ck4sicl5umf0n" path="res://assets/inventory/Inventory.png" id="3_yqceb"]
 [ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="4_6h8ck"]
+[ext_resource type="Texture2D" uid="uid://cw2saipj1goye" path="res://assets/HUD+UI/Slot.png" id="5_ewbek"]
 
 [node name="InventorySlot" type="Control"]
-custom_minimum_size = Vector2(97, 99)
+modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
+custom_minimum_size = Vector2(112.655, 99)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_6h8ck")
 
+[node name="Slot" type="Sprite2D" parent="."]
+position = Vector2(49, 51)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("5_ewbek")
+
 [node name="InventoryOutline" type="Sprite2D" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0)
 position = Vector2(49, 49)
 texture = ExtResource("2_ewbek")
 
 [node name="Inventory" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(49, 49)
 texture = ExtResource("3_yqceb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = -1
 layout_mode = 0
 offset_left = 5.0

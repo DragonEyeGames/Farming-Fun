@@ -39,6 +39,7 @@ func _ready() -> void:
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
 		GameManager.playerInventory = data.inventory
 		GameManager.playerMoney=data.money
+		GameManager.energy=data.energy
 		$Player.global_position=data.lastLocation
 	for door in get_tree().get_nodes_in_group("Door"):
 		door.mainScene=self
@@ -69,6 +70,7 @@ func transport(file: String):
 	var player = PlayerData.new()
 	player.inventory=GameManager.playerInventory
 	player.money=GameManager.playerMoney
+	player.energy=GameManager.energy
 	player.lastLocation=playerNode.global_position
 	ResourceSaver.save(save, "user://farm_data.tres")
 	ResourceSaver.save(world, "user://world_data.tres")
@@ -98,6 +100,7 @@ func saveGame():
 	var player = PlayerData.new()
 	player.inventory=GameManager.playerInventory
 	player.money=GameManager.playerMoney
+	player.energy=GameManager.energy
 	player.lastLocation=playerNode.global_position
 	ResourceSaver.save(save, "user://farm_data.tres")
 	ResourceSaver.save(world, "user://world_data.tres")
