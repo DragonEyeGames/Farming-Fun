@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cuegbiplk4swv"]
+[gd_scene load_steps=18 format=3 uid="uid://cuegbiplk4swv"]
 
 [ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_bsdmh"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_aq00n"]
@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://l0lu0xuqpcj8" path="res://assets/Plants/Onions/Plants-7.png" id="6_5fsbr"]
 [ext_resource type="Texture2D" uid="uid://duwnl3mauhfsa" path="res://assets/Plants/Onions/Plants-4.png" id="7_ckkjd"]
 [ext_resource type="Texture2D" uid="uid://bamhto6fovuxu" path="res://assets/Plants/Onions/Plants-1.png" id="8_h4hao"]
+[ext_resource type="PackedScene" uid="uid://yo44qrj3vkce" path="res://Scenes/water_splotch.tscn" id="10_tbj8p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbj8p"]
 resource_local_to_scene = true
 shader = ExtResource("1_bsdmh")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -26,9 +27,8 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_uic3q"]
 radius = 7.0
 
-[sub_resource type="Animation" id="Animation_bsdmh"]
-resource_name = "outline"
-length = 0.01
+[sub_resource type="Animation" id="Animation_3n4t0"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,7 +39,19 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [2.0000000298024]
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.06, 0.74, 0.23, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_tbj8p"]
@@ -58,8 +70,9 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_3n4t0"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_bsdmh"]
+resource_name = "outline"
+length = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -70,7 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [2.0000000298024]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5fsbr"]
@@ -140,6 +153,7 @@ texture = ExtResource("7_ckkjd")
 
 [node name="OnionHole-5" type="Sprite2D" parent="Sprites"]
 visible = false
+z_index = -1
 position = Vector2(-73.68422, 3.508772)
 texture = ExtResource("8_h4hao")
 
@@ -147,6 +161,9 @@ texture = ExtResource("8_h4hao")
 libraries = {
 &"": SubResource("AnimationLibrary_5fsbr")
 }
+
+[node name="WaterSplotch" parent="." instance=ExtResource("10_tbj8p")]
+position = Vector2(1, -1)
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

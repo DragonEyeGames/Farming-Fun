@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btvy66yb0plbx"]
+[gd_scene load_steps=18 format=3 uid="uid://btvy66yb0plbx"]
 
 [ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_5su27"]
 [ext_resource type="Texture2D" uid="uid://gu5kokd0nada" path="res://assets/Plants/Potato/Plants-1.png" id="2_gmojo"]
@@ -9,11 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://ygr1w60ec8uc" path="res://assets/Plants/Potato/Plants-3.png" id="6_qhkbe"]
 [ext_resource type="Texture2D" uid="uid://yqlxjk50wl4g" path="res://assets/Plants/Potato/Plants-7.png" id="7_0jtyu"]
 [ext_resource type="Texture2D" uid="uid://biqwh56o1f4ix" path="res://assets/Plants/Potato/Plants-4.png" id="8_6yxst"]
+[ext_resource type="PackedScene" uid="uid://yo44qrj3vkce" path="res://Scenes/water_splotch.tscn" id="10_5c2fc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5c2fc"]
 resource_local_to_scene = true
 shader = ExtResource("1_5su27")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -26,9 +27,8 @@ height = 22.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_d4g48"]
 radius = 7.0
 
-[sub_resource type="Animation" id="Animation_5su27"]
-resource_name = "outline"
-length = 0.01
+[sub_resource type="Animation" id="Animation_8ipad"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,7 +39,19 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [2.0000000298024]
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.06, 0.74, 0.23, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_5c2fc"]
@@ -58,8 +70,9 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_8ipad"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_5su27"]
+resource_name = "outline"
+length = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -70,7 +83,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [2.0000000298024]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhkbe"]
@@ -136,6 +149,7 @@ z_index = -1
 texture = ExtResource("8_6yxst")
 
 [node name="Hole" type="Sprite2D" parent="Sprites"]
+z_index = -1
 position = Vector2(-74.07407, 11.111114)
 texture = ExtResource("2_gmojo")
 
@@ -143,6 +157,9 @@ texture = ExtResource("2_gmojo")
 libraries = {
 &"": SubResource("AnimationLibrary_qhkbe")
 }
+
+[node name="WaterSplotch" parent="." instance=ExtResource("10_5c2fc")]
+position = Vector2(-9.536743e-07, 0)
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

@@ -44,7 +44,7 @@ agent_radius = 2.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m4llh"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -53,7 +53,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lac6x"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -62,7 +62,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hpjjw"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -71,7 +71,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_off7b"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -80,7 +80,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lfh1j"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -89,7 +89,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7sj7i"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -98,7 +98,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_semxg"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -107,7 +107,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ep8v8"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -116,7 +116,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3133c"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -125,7 +125,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_js5gh"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -134,7 +134,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vvjo1"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -143,7 +143,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yisvs"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -152,7 +152,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rgw24"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -161,7 +161,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5gwyn"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -170,7 +170,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6gtk"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -179,7 +179,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_81ldr"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -188,7 +188,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eywpa"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -197,7 +197,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j7e3e"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -206,7 +206,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y2ulj"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -215,7 +215,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t3x2a"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -224,7 +224,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bbis"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -233,7 +233,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yn2g2"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -242,7 +242,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yic5e"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -251,7 +251,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ex7s8"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -260,7 +260,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4clwk"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -269,7 +269,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2tpa"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -278,7 +278,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nkjwg"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -287,7 +287,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8n4h5"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -296,7 +296,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_as1io"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -305,7 +305,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xd5mi"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -314,7 +314,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tt1x2"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -323,7 +323,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2wrh7"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -332,7 +332,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_atu2d"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -341,7 +341,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x5wht"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -350,7 +350,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbeql"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -359,7 +359,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5nnb"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -368,7 +368,7 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fsd2l"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4

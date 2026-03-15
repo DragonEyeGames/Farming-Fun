@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cp2dwgarjtbf4"]
+[gd_scene load_steps=20 format=3 uid="uid://cp2dwgarjtbf4"]
 
 [ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_8tkmy"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_l7vel"]
@@ -11,11 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://bynt5y75gqnbq" path="res://assets/Plants/Carrots/Carrot-4.png" id="8_i5ccr"]
 [ext_resource type="Texture2D" uid="uid://b8hq3ej878lba" path="res://assets/Plants/Carrots/CarrotHole-4.5.png" id="9_gt0n6"]
 [ext_resource type="Texture2D" uid="uid://ourcwrvj1n67" path="res://assets/Plants/Carrots/CarrotHole-5.png" id="10_ca1pp"]
+[ext_resource type="PackedScene" uid="uid://yo44qrj3vkce" path="res://Scenes/water_splotch.tscn" id="12_3kscm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3kscm"]
 resource_local_to_scene = true
 shader = ExtResource("1_8tkmy")
-shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
@@ -28,9 +29,8 @@ height = 20.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_4ucds"]
 radius = 7.0
 
-[sub_resource type="Animation" id="Animation_352fm"]
-resource_name = "outline"
-length = 0.01
+[sub_resource type="Animation" id="Animation_bxw1x"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -41,7 +41,19 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [2.0000000298024]
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.06, 0.74, 0.23, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_r0g6j"]
@@ -60,8 +72,9 @@ tracks/0/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_bxw1x"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_352fm"]
+resource_name = "outline"
+length = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -72,7 +85,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [2.0000000298024]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i5ccr"]
@@ -147,6 +160,7 @@ z_index = -1
 texture = ExtResource("9_gt0n6")
 
 [node name="CarrotHole5" type="Sprite2D" parent="Sprites"]
+z_index = -1
 position = Vector2(-60.869564, -4.347826)
 texture = ExtResource("10_ca1pp")
 
@@ -154,6 +168,9 @@ texture = ExtResource("10_ca1pp")
 libraries = {
 &"": SubResource("AnimationLibrary_i5ccr")
 }
+
+[node name="WaterSplotch" parent="." instance=ExtResource("12_3kscm")]
+position = Vector2(0, -3)
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

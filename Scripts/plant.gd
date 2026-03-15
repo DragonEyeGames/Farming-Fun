@@ -1,6 +1,6 @@
 extends Node2D
 
-var state:=0
+var state:=0.0
 @export var animations : Array[Sprite2D]
 var picked:=false
 var playerEntered:=false
@@ -14,17 +14,29 @@ func _ready() -> void:
 	await get_tree().process_frame
 	if(state>len(animations)-1):
 		state=len(animations)-1
-	animations[state].visible=true
+	animations[floor(state)].visible=true
+	if(floor(state)!=state):
+		$WaterSplotch.visible=true
 
 func tick() -> void:
+	if($WaterSplotch.visible or floor(state)!=state):
+		$WaterSplotch.visible=false
+	else:
+		return
+	state=floor(state)
 	for child in $Sprites.get_children():
 		child.visible=false
 	if(picked):
 		return
 	state+=1
-	if(state+2>len(animations)):
+	if(state+2>=len(animations)):
 		state=len(animations)-2
+		$AnimationPlayer.play("normal")
 	animations[state].visible=true
+
+func water():
+	$WaterSplotch.visible=true
+	state=floor(state)+.5
 
 func _player_entered(body: Node2D) -> void:
 	if(state==len(animations)-2):
@@ -47,7 +59,8 @@ func interact():
 	z_index-=1
 	
 func wateringHover():
-	$AnimationPlayer.play("outline")
+	if(not state+2>=len(animations)):
+		$AnimationPlayer.play("outline")
 	
 func wateringExit():
 	$AnimationPlayer.play("normal")

@@ -3,7 +3,7 @@ shader_type canvas_item;
 // === User Controls ===
 
 // Color of the outline
-uniform vec4 outline_color    : source_color = vec4(1.0);
+uniform vec4 outline_color    : source_color = vec4(.06, .74, .23, 1.0);
 // How far to search around a pixel for solid neighbors (in texels)
 uniform float outline_size    : hint_range(0.0, 16.0, 0.1) = 1.0;
 // Minimum alpha for a pixel to be considered solid
