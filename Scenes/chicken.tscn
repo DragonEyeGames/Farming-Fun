@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=3 uid="uid://bd0un723f3mmv"]
 
-[ext_resource type="Script" uid="uid://dhuq4nl7in4mg" path="res://Scenes/chicken.gd" id="1_jy3mo"]
+[ext_resource type="Script" uid="uid://dhuq4nl7in4mg" path="res://Scripts/chicken.gd" id="1_jy3mo"]
 [ext_resource type="Texture2D" uid="uid://dol33jd3j83gv" path="res://assets/Farm/Chicken_animation.png" id="2_7h841"]
 [ext_resource type="PackedScene" uid="uid://p880hjiflxnk" path="res://Scenes/egg.tscn" id="2_jayuq"]
 [ext_resource type="Texture2D" uid="uid://cdnhslc5334b5" path="res://assets/Chicken/Chicken-Walk-L-1.png" id="4_e0pfp"]

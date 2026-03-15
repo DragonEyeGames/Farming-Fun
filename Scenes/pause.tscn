@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bt7cjdyf3dqwm"]
 
-[ext_resource type="Script" uid="uid://buqdg3tevb2s3" path="res://Scenes/pause.gd" id="1_l2mpd"]
+[ext_resource type="Script" uid="uid://buqdg3tevb2s3" path="res://Scripts/pause.gd" id="1_l2mpd"]
 [ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="2_5a6ek"]
 
 [sub_resource type="Animation" id="Animation_vvnwx"]

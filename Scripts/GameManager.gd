@@ -1,6 +1,5 @@
 extends Node
 
-
 var masterVolume=0.0
 var musicVolume=0.0
 var sfxVolume=0.0
@@ -11,7 +10,7 @@ var lastRenderedDay:=1
 
 var dragging:=-1
 
-var energy=20
+var energy=40
 
 var main
 
@@ -66,7 +65,7 @@ const description := {
 
 #items that are limited in use.  In style; Item: Max# uses
 const limited := {
-	inventoryItem.Watering_Can: 10
+	inventoryItem.Watering_Can: 20
 }
 
 
@@ -79,12 +78,6 @@ func _ready() -> void:
 	if(len(playerInventory)<=0):
 		for i in 10:
 			playerInventory.append(InventorySlot.new())
-	await get_tree().create_timer(.1).timeout
-	addItem(inventoryItem.Watering_Can, 1)
-	addItem(inventoryItem.Potato, 1)
-	addItem(inventoryItem.Carrot, 1)
-	addItem(inventoryItem.Onion, 1)
-	addItem(inventoryItem.Raddish, 1)
 
 func addItem(item: inventoryItem, amount := 1):
 	for slot in playerInventory:

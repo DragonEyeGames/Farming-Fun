@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="4_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="5_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="8_8erm5"]
-[ext_resource type="Script" uid="uid://8jm7ctbx2x4c" path="res://Scenes/wateringChecker.gd" id="9_f1ek2"]
+[ext_resource type="Script" uid="uid://8jm7ctbx2x4c" path="res://Scripts/wateringChecker.gd" id="9_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://bnrecf00dh1w3" path="res://Scenes/inventory.tscn" id="10_tx1dd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]

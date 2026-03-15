@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://br7lry3mlue2h"]
 
-[ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scenes/waterHolder.gd" id="1_3s1yl"]
+[ext_resource type="Script" uid="uid://0dgh04n06mbb" path="res://Scripts/waterHolder.gd" id="1_3s1yl"]
 [ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="2_78xsq"]
 [ext_resource type="Texture2D" uid="uid://etnju87dwefx" path="res://assets/AnimalBox/Untitled_Artwork-2.png" id="3_abg6t"]
 [ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="4_iv2wp"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_okrnj"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://assets/Farm/House_interior.png" id="2_n87ef"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="3_3jr7h"]
-[ext_resource type="Script" uid="uid://chfqwjj80xmy7" path="res://Scenes/bed.gd" id="4_xi0mm"]
+[ext_resource type="Script" uid="uid://chfqwjj80xmy7" path="res://Scripts/bed.gd" id="4_xi0mm"]
 [ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="5_bu6dc"]
 [ext_resource type="PackedScene" uid="uid://q73ievm14tf7" path="res://Scenes/night.tscn" id="7_l3jqw"]
 

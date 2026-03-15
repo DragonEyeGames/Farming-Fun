@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://7q80fwxxvb7b"]
 
-[ext_resource type="Script" uid="uid://nfcgkm8ukflb" path="res://Scenes/foodHolder.gd" id="1_6tjt3"]
+[ext_resource type="Script" uid="uid://nfcgkm8ukflb" path="res://Scripts/foodHolder.gd" id="1_6tjt3"]
 [ext_resource type="Texture2D" uid="uid://dwetrwdc0wyu3" path="res://assets/AnimalBox/Untitled_Artwork-1.png" id="2_mcmlx"]
 [ext_resource type="Texture2D" uid="uid://dry6go166sjoy" path="res://assets/AnimalBox/Untitled_Artwork-4.png" id="3_aswx7"]
 [ext_resource type="Texture2D" uid="uid://coohbgm67vwcv" path="res://assets/AnimalBox/Untitled_Artwork-6.png" id="4_i5oqk"]

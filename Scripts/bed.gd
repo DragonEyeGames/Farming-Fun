@@ -9,6 +9,7 @@ func interact():
 	await get_tree().create_timer(4).timeout
 	GameManager.day+=1
 	GameManager.time=.3
+	GameManager.energy=40
 	$"../Night".play("lighten")
 	await get_tree().create_timer(4).timeout
 	player.sleeping=false
