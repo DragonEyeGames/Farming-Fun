@@ -93,12 +93,6 @@ position = Vector2(176.1167, -495.2553)
 texture = ExtResource("4_4mrer")
 offset = Vector2(-0.88897705, -18.384796)
 
-[node name="Grass(4)7" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
-modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
-position = Vector2(-836.6555, -23.429688)
-texture = ExtResource("4_4mrer")
-offset = Vector2(-0.88897705, -18.384796)
-
 [node name="Grass(4)8" type="Sprite2D" parent="Grass/Grasses" groups=["Sort"]]
 modulate = Color(0.9166399, 0.91663986, 0.9166398, 1)
 position = Vector2(1162.9983, -456.5494)

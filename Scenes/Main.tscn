@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=115 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="9_20pc6"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="10_wkp8b"]
 [ext_resource type="Script" uid="uid://bsy53bcsoyo4d" path="res://Scripts/pond.gd" id="12_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://cqk06gthi58ac" path="res://Scenes/farmGround.tscn" id="12_qta6b"]
 [ext_resource type="Texture2D" uid="uid://bj4dndcwxs7vo" path="res://assets/Farm/fishes.png" id="13_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://l1rcl6hrb0c" path="res://assets/Farm/water_detilazation.png" id="14_c2ibq"]
 [ext_resource type="Script" uid="uid://dlg03ri1phcbk" path="res://Scripts/signal_bus.gd" id="16_fpfj3"]
@@ -766,6 +767,7 @@ position = Vector2(-141.09702, 21.254456)
 script = ExtResource("7_20pc6")
 
 [node name="Ground" parent="Farm" instance=ExtResource("8_trn2v")]
+visible = false
 tile_map_data = PackedByteArray("AAD/////AAAJAA4AAAD//wAAAAAJAA8AAAAAAP//AAAKAA4AAAAAAAAAAAAKAA8AAAABAP//AAAJAA4AAAABAAAAAAAJAA8AAAACAP//AAAKAA4AAAACAAAAAAAKAA8AAAABAAEAAAAJAA4AAAABAAIAAAAJAA8AAAACAAEAAAAKAA4AAAACAAIAAAAKAA8AAAD//wEAAAAJAA4AAAD//wIAAAAJAA8AAAAAAAEAAAAKAA4AAAAAAAIAAAAKAA8AAAD9/wEAAAAJAA4AAAD9/wIAAAAJAA8AAAD+/wEAAAAKAA4AAAD+/wIAAAAKAA8AAAD7/wEAAAAJAA4AAAD7/wIAAAAJAA8AAAD8/wEAAAAKAA4AAAD8/wIAAAAKAA8AAAD7////AAAJAA4AAAD7/wAAAAAJAA8AAAD8////AAAKAA4AAAD8/wAAAAAKAA8AAAD9////AAAJAA4AAAD9/wAAAAAJAA8AAAD+////AAAKAA4AAAD+/wAAAAAKAA8AAAADAP//AAAJAA4AAAADAAAAAAAJAA8AAAAEAP//AAAKAA4AAAAEAAAAAAAKAA8AAAADAAEAAAAJAA4AAAADAAIAAAAJAA8AAAAEAAEAAAAKAA4AAAAEAAIAAAAKAA8AAAABAAMAAAAJAA4AAAABAAQAAAAJAA8AAAACAAMAAAAKAA4AAAACAAQAAAAKAA8AAAD//wMAAAAJAA4AAAD//wQAAAAJAA8AAAAAAAMAAAAKAA4AAAAAAAQAAAAKAA8AAAD9/wMAAAAJAA4AAAD9/wQAAAAJAA8AAAD+/wMAAAAKAA4AAAD+/wQAAAAKAA8AAAD7/wMAAAAJAA4AAAD7/wQAAAAJAA8AAAD8/wMAAAAKAA4AAAD8/wQAAAAKAA8AAAADAAMAAAAJAA4AAAADAAQAAAAJAA8AAAAEAAMAAAAKAA4AAAAEAAQAAAAKAA8AAAD8//7/AAAKAA0AAAD9//7/AAAJAA0AAAD+//7/AAAKAA0AAAD///7/AAAJAA0AAAAAAP7/AAAKAA0AAAABAP7/AAAJAA0AAAACAP7/AAAKAA0AAAADAP7/AAAJAA0AAAAFAP7/AAALAA0AAAD6//7/AAAIAA0AAAD7//7/AAAJAA0AAAAEAP7/AAAKAA0AAAAFAP//AAALAA4AAAAFAAAAAAALAA8AAAAFAAEAAAALAA4AAAAFAAIAAAALAA8AAAAFAAMAAAALAA4AAAAFAAQAAAALAA8AAAAFAAUAAAALABAAAAADAAUAAAAJABAAAAAEAAUAAAAKABAAAAABAAUAAAAJABAAAAACAAUAAAAKABAAAAD//wUAAAAJABAAAAAAAAUAAAAKABAAAAD9/wUAAAAJABAAAAD+/wUAAAAKABAAAAD7/wUAAAAJABAAAAD8/wUAAAAKABAAAAD6/wUAAAAIABAAAAD6/wMAAAAIAA4AAAD6/wQAAAAIAA8AAAD6/wEAAAAIAA4AAAD6/wIAAAAIAA8AAAD6////AAAIAA4AAAD6/wAAAAAIAA8AAAA=")
 
 [node name="Plants" type="Node2D" parent="Farm"]
@@ -919,8 +921,10 @@ position = Vector2(69, 40)
 material = SubResource("ShaderMaterial_fsd2l")
 position = Vector2(87, 39)
 
+[node name="Ground2" parent="Farm" instance=ExtResource("12_qta6b")]
+
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
-position = Vector2(-78, 81)
+position = Vector2(8.361679, -19.62677)
 
 [node name="Pond" type="Node2D" parent="."]
 position = Vector2(-224.19974, -200.42926)
