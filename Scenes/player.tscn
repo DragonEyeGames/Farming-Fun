@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=152 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -70,6 +70,9 @@
 [ext_resource type="Texture2D" uid="uid://b6y7axdxle4uu" path="res://Characters/Character/Pickup-Down-2.png" id="48_sscpr"]
 [ext_resource type="Texture2D" uid="uid://c3v35b7jel4ve" path="res://Characters/Character/Pickup-Up-1.png" id="49_by7i4"]
 [ext_resource type="Texture2D" uid="uid://dcav6u3cnlyh8" path="res://Characters/Character/Pickup-Up-2.png" id="50_3uvy8"]
+[ext_resource type="Texture2D" uid="uid://barbmb1mtonad" path="res://Characters/Character/Plant-Down-1.png" id="51_ss172"]
+[ext_resource type="Texture2D" uid="uid://bgi8iwrtwf370" path="res://Characters/Character/Plant-Down-2.png" id="52_jmelf"]
+[ext_resource type="Texture2D" uid="uid://d2cx13lfg06ba" path="res://Characters/Character/Plant-Down.png" id="69_jmelf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -741,6 +744,20 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 3.0,
+"texture": ExtResource("51_ss172")
+}, {
+"duration": 4.0,
+"texture": ExtResource("52_jmelf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sscpr")
+}],
+"loop": false,
+"name": &"plant-down",
+"speed": 10.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("23_ypfnu")
 }, {
@@ -803,17 +820,17 @@ animations = [{
 radius = 5.0
 height = 10.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjdqd"]
+atlas = ExtResource("69_jmelf")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_feq18"]
+atlas = ExtResource("69_jmelf")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcnj3"]
+atlas = ExtResource("69_jmelf")
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
 atlas = ExtResource("3_6t5aa")
@@ -900,13 +917,13 @@ animations = [{
 "texture": null
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vgqql")
+"texture": SubResource("AtlasTexture_bjdqd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fkybt")
+"texture": SubResource("AtlasTexture_feq18")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x3wgy")
+"texture": SubResource("AtlasTexture_wcnj3")
 }],
 "loop": false,
 "name": &"plant-down",
@@ -1412,14 +1429,15 @@ onion = ExtResource("5_tx1dd")
 visible = false
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"pickup-down"
+animation = &"plant-down"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 scale = Vector2(0.335, 0.335)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"pickup-down"
+animation = &"plant-down"
 autoplay = "idle-up"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
@@ -1449,9 +1467,11 @@ autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="down" type="AnimatedSprite2D" parent="PlantEffects"]
-position = Vector2(-15, 0)
+position = Vector2(-3.7051277, 1.4895116)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
 animation = &"reset"
+autoplay = "reset"
 offset = Vector2(16, 2)
 
 [node name="WaterEffects" type="Node2D" parent="."]
