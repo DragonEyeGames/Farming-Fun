@@ -59,26 +59,35 @@ func _process(_delta: float) -> void:
 		state="walk"
 	else:
 		state="idle"
-	if(direction=="up" and not "up" in newSprite.animation):
-		newSprite.play("idle-up")
-	elif(direction=="down" and not "down" in newSprite.animation):
-		newSprite.play("idle-down")
-	if(pickedUp and direction=="down" and state=="idle"):
-		newSprite.play("picked-idle-down")
-	elif(pickedUp and direction=="down" and state=="walk"):
-		newSprite.play("picked-walk-down")
-	elif(direction=="down" and state=="walk"):
-		newSprite.play("walk-down")
-	elif(direction=="down" and state=="idle"):
-		newSprite.play("idle-down")
-	if(pickedUp and direction=="up" and state=="idle"):
-		newSprite.play("picked-idle-up")
-	elif(pickedUp and direction=="up" and state=="walk"):
-		newSprite.play("picked-walk-up")
-	elif(direction=="up" and state=="walk"):
-		newSprite.play("walk-up")
-	elif(direction=="up" and state=="idle"):
-		newSprite.play("idle-up")
+
+	if(Input.is_action_just_pressed("Interact") and direction=="down" ):#and len(interacting)>=1):
+		#interacting[0].interact()
+		#interacting.remove_at(0)
+		canMove=false
+		newSprite.play("pickup-down")
+	elif(Input.is_action_just_pressed("Interact") and direction=="up" ):#and len(interacting)>=1):
+		#interacting[0].interact()
+		#interacting.remove_at(0)
+		canMove=false
+		newSprite.play("pickup-up")
+	elif(canMove):
+		if(pickedUp and direction=="down" and state=="idle"):
+			newSprite.play("picked-idle-down")
+		elif(pickedUp and direction=="down" and state=="walk"):
+			newSprite.play("picked-walk-down")
+		elif(direction=="down" and state=="walk"):
+			newSprite.play("walk-down")
+		elif(direction=="down" and state=="idle"):
+			newSprite.play("idle-down")
+		if(pickedUp and direction=="up" and state=="idle"):
+			newSprite.play("picked-idle-up")
+		elif(pickedUp and direction=="up" and state=="walk"):
+			newSprite.play("picked-walk-up")
+		elif(direction=="up" and state=="walk"):
+			newSprite.play("walk-up")
+		elif(direction=="up" and state=="idle"):
+			newSprite.play("idle-up")
+	
 	if((GameManager.itemSelected("seeds") and canMove) or selectedSeed!=""):
 		for child in $plantChecker.get_children():
 			child.visible=false
@@ -138,11 +147,11 @@ func _process(_delta: float) -> void:
 	if(canMove):
 		if(sprite.animation!=animation):
 			sprite.play(animation)
-	if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
-		interacting[0].interact()
-		interacting.remove_at(0)
-		canMove=false
-		sprite.play("pickup-" + direction)
+	#if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
+	#	interacting[0].interact()
+	#	interacting.remove_at(0)
+	#	canMove=false
+	#	sprite.play("pickup-" + direction)
 	elif(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null and canMove):
 		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null and GameManager.energy>0):
 			var backupDirection=direction
@@ -249,3 +258,7 @@ func _water_down() -> void:
 
 func _water_up() -> void:
 	$WaterEffects/up.play("reset")
+
+
+func _on_new_sprite_animation_finished() -> void:
+	canMove=true

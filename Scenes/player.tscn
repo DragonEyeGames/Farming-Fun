@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=149 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -66,6 +66,10 @@
 [ext_resource type="Texture2D" uid="uid://8guhxwl4asad" path="res://Characters/Character/Picked-Up-Walk-6.png" id="44_3uvy8"]
 [ext_resource type="Texture2D" uid="uid://b3h5khsv7s25v" path="res://Characters/Character/Picked-Up-Walk-7.png" id="45_ss172"]
 [ext_resource type="Texture2D" uid="uid://bnvx1okhq2msn" path="res://Characters/Character/Picked-Up-Walk-8.png" id="46_jmelf"]
+[ext_resource type="Texture2D" uid="uid://c30m5txveb1mm" path="res://Characters/Character/Pickup-Down-1.png" id="47_qvbpb"]
+[ext_resource type="Texture2D" uid="uid://b6y7axdxle4uu" path="res://Characters/Character/Pickup-Down-2.png" id="48_sscpr"]
+[ext_resource type="Texture2D" uid="uid://c3v35b7jel4ve" path="res://Characters/Character/Pickup-Up-1.png" id="49_by7i4"]
+[ext_resource type="Texture2D" uid="uid://dcav6u3cnlyh8" path="res://Characters/Character/Pickup-Up-2.png" id="50_3uvy8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -713,6 +717,28 @@ animations = [{
 "loop": true,
 "name": &"picked-walk-up",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.8,
+"texture": ExtResource("47_qvbpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_sscpr")
+}],
+"loop": false,
+"name": &"pickup-down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.8,
+"texture": ExtResource("49_by7i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_3uvy8")
+}],
+"loop": false,
+"name": &"pickup-up",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1386,13 +1412,13 @@ onion = ExtResource("5_tx1dd")
 visible = false
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"picked-idle-down"
+animation = &"pickup-down"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 scale = Vector2(0.335, 0.335)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"picked-walk-up"
+animation = &"pickup-down"
 autoplay = "idle-up"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1598,6 +1624,7 @@ libraries = {
 visible = false
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
+[connection signal="animation_finished" from="NewSprite" to="." method="_on_new_sprite_animation_finished"]
 [connection signal="animation_finished" from="PlantEffects/side" to="." method="_on_side_animation_finished"]
 [connection signal="animation_finished" from="PlantEffects/up" to="." method="_on_up_animation_finished"]
 [connection signal="animation_finished" from="PlantEffects/down" to="." method="_on_down_animation_finished"]
