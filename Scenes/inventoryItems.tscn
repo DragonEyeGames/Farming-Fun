@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bkjt7bogn2nvg" path="res://Scripts/inventory_items.gd" id="1_g43xj"]
 [ext_resource type="Texture2D" uid="uid://reyjknqkh3co" path="res://assets/Plants/CarrotIcon.png" id="2_ac5fl"]
-[ext_resource type="Texture2D" uid="uid://bgvuhjorhrepj" path="res://Characters/farmer_base_effects/farmer icons 16x16 v00.png" id="3_mel63"]
 [ext_resource type="Texture2D" uid="uid://11m5jpt8x06t" path="res://assets/Plants/RaddishIcon.png" id="3_wfhs1"]
 [ext_resource type="Texture2D" uid="uid://crtn6ph6r43ng" path="res://assets/Plants/OnionIcon.png" id="4_3kf4r"]
 [ext_resource type="Texture2D" uid="uid://b7fgcln0ynsi1" path="res://assets/Plants/PotatoIcon.png" id="5_hwat8"]
@@ -12,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cienrdledfxha" path="res://assets/Dirt/Onion.png" id="9_i13do"]
 [ext_resource type="Texture2D" uid="uid://c3jh71eupq1ms" path="res://assets/Egg.png" id="9_wfhs1"]
 [ext_resource type="Texture2D" uid="uid://c58unya1a0usk" path="res://assets/Dirt/Potato.png" id="10_3fgmu"]
+[ext_resource type="Texture2D" uid="uid://dcbyde3lnxma" path="res://assets/HUD+UI/WateringCan.png" id="11_bpivd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g43xj"]
 bg_color = Color(0.19714275, 0.15421787, 0.62896115, 1)
@@ -115,18 +115,17 @@ texture = ExtResource("10_3fgmu")
 region_rect = Rect2(160, 304, 16, 16)
 
 [node name="Watering_Can" type="Sprite2D" parent="." groups=["Limited"]]
-visible = false
-position = Vector2(1, 0)
-texture = ExtResource("3_mel63")
-region_enabled = true
+position = Vector2(1, -1.0000001)
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("11_bpivd")
 region_rect = Rect2(64, 1, 16, 14)
 
 [node name="ProgressBar" type="ProgressBar" parent="Watering_Can"]
-offset_left = -8.0
-offset_top = 5.9999995
-offset_right = 61.999985
-offset_bottom = 16.0
-scale = Vector2(0.2, 0.2)
+offset_left = -30.169825
+offset_top = 39.955437
+offset_right = 39.830162
+offset_bottom = 49.955437
+scale = Vector2(0.77, 0.77)
 theme_override_styles/background = SubResource("StyleBoxFlat_g43xj")
 theme_override_styles/fill = SubResource("StyleBoxFlat_10ob3")
 max_value = 20.0

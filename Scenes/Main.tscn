@@ -701,6 +701,7 @@ size = Vector2(73, 22)
 size = Vector2(82.85715, 41.428574)
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("sky", "playerNode", "SignalBus")]
+texture_filter = 2
 script = ExtResource("1_kjvhd")
 sky = NodePath("Night")
 playerNode = NodePath("Player")

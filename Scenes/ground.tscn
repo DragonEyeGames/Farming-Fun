@@ -30,10 +30,10 @@ z_index = -2
 
 [node name="Ground" type="ColorRect" parent="Grass"]
 z_index = -6
-offset_left = -344.4629
-offset_top = -297.65417
-offset_right = 538.43274
-offset_bottom = 264.1609
+offset_left = -710.18066
+offset_top = -528.4973
+offset_right = 974.1815
+offset_bottom = 590.97253
 color = Color(0.4, 0.54901963, 0.24313726, 1)
 
 [node name="Grasses" type="Node2D" parent="Grass"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=101 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -10,6 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="8_8erm5"]
 [ext_resource type="Script" uid="uid://8jm7ctbx2x4c" path="res://Scripts/wateringChecker.gd" id="9_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://bnrecf00dh1w3" path="res://Scenes/inventory.tscn" id="10_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://clfm7mka0gsmb" path="res://Characters/Character/Main-1.png" id="11_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://b4eiyhkbq8tu6" path="res://Characters/Character/Main-2.png" id="12_qqcod"]
+[ext_resource type="Texture2D" uid="uid://capvmbkeogspq" path="res://Characters/Character/Main-3.png" id="13_igrcy"]
+[ext_resource type="Texture2D" uid="uid://b5i8xa3maspve" path="res://Characters/Character/Main-4.png" id="14_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://d4c5uovtxrrrv" path="res://Characters/Character/Main-5.png" id="15_l6n3p"]
+[ext_resource type="Texture2D" uid="uid://cb8ixyl3kfp2x" path="res://Characters/Character/Main-6.png" id="16_olqyp"]
+[ext_resource type="Texture2D" uid="uid://b3t27grgc8d8h" path="res://Characters/Character/Up-1.png" id="17_wpjfl"]
+[ext_resource type="Texture2D" uid="uid://ciowoddsrweiq" path="res://Characters/Character/Up-2.png" id="18_bi64h"]
+[ext_resource type="Texture2D" uid="uid://dhtswgby8me8u" path="res://Characters/Character/Up-3.png" id="19_2ijsl"]
+[ext_resource type="Texture2D" uid="uid://c2npf1p71wc56" path="res://Characters/Character/Up-4.png" id="20_p1odr"]
+[ext_resource type="Texture2D" uid="uid://5ueeedqquuds" path="res://Characters/Character/Up-5.png" id="21_0gysh"]
+[ext_resource type="Texture2D" uid="uid://dtwq2e5xjogje" path="res://Characters/Character/Up-6.png" id="22_vfarp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -1107,6 +1119,55 @@ _data = {
 &"waterup": SubResource("Animation_ukyrk")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpjfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_fd4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qqcod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_igrcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fs7ks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_l6n3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_olqyp")
+}],
+"loop": true,
+"name": &"idle-down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_wpjfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bi64h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2ijsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_p1odr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0gysh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vfarp")
+}],
+"loop": true,
+"name": &"idle-up",
+"speed": 8.0
+}]
+
 [node name="Player" type="CharacterBody2D" groups=["Sort"]]
 collision_layer = 2
 script = ExtResource("1_sweqy")
@@ -1118,7 +1179,7 @@ onion = ExtResource("5_tx1dd")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"picked-idle-side"
+animation = &"picked-idle-down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
@@ -1321,6 +1382,14 @@ libraries = {
 
 [node name="Inventory" parent="." instance=ExtResource("10_tx1dd")]
 visible = false
+
+[node name="NewSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+scale = Vector2(0.31, 0.31)
+sprite_frames = SubResource("SpriteFrames_wpjfl")
+animation = &"idle-up"
+autoplay = "idle-up"
+frame_progress = 0.96839553
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]
 [connection signal="animation_finished" from="PlantEffects/side" to="." method="_on_side_animation_finished"]

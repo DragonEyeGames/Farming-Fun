@@ -6,6 +6,7 @@ var direction="down"
 @export var speed=100
 var interacting:=[]
 var sprite: AnimatedSprite2D
+var newSprite: AnimatedSprite2D
 var effects
 var pickedUp:=false
 @export var carrot: PackedScene
@@ -18,6 +19,7 @@ var sleeping:=false
 
 func _ready() -> void:
 	sprite = $Sprite
+	newSprite=$NewSprite
 	effects=$PlantEffects
 	GameManager.player=self
 	$plantChecker.visible=true
@@ -57,7 +59,10 @@ func _process(_delta: float) -> void:
 		state="walk"
 	else:
 		state="idle"
-		
+	if(direction=="up" and not "up" in newSprite.animation):
+		newSprite.play("idle-up")
+	elif(direction=="down" and not "down" in newSprite.animation):
+		newSprite.play("idle-down")
 	if((GameManager.itemSelected("seeds") and canMove) or selectedSeed!=""):
 		for child in $plantChecker.get_children():
 			child.visible=false
