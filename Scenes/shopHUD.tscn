@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx1ywkbf2hdqx"]
+[gd_scene load_steps=11 format=3 uid="uid://cx1ywkbf2hdqx"]
 
 [ext_resource type="Script" uid="uid://bpos8g004ccg7" path="res://Scripts/shop_hud.gd" id="1_7b6gg"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="1_ai82c"]
 [ext_resource type="PackedScene" uid="uid://hubi2ixxr7k2" path="res://Scenes/item.tscn" id="2_7b6gg"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="3_bhwte"]
+[ext_resource type="Texture2D" uid="uid://c3edjuy54d1u" path="res://assets/Dirt/Bag.png" id="5_y74ng"]
+[ext_resource type="Texture2D" uid="uid://51i6uhxiy744" path="res://assets/Dirt/Carrot.png" id="6_rhqdt"]
+[ext_resource type="Texture2D" uid="uid://cienrdledfxha" path="res://assets/Dirt/Onion.png" id="7_x1b3y"]
+[ext_resource type="Texture2D" uid="uid://c8wdham3jxedl" path="res://assets/Dirt/Raddish.png" id="8_qg473"]
+[ext_resource type="Texture2D" uid="uid://c58unya1a0usk" path="res://assets/Dirt/Potato.png" id="9_axnt5"]
+[ext_resource type="Texture2D" uid="uid://vpmjrn334o2j" path="res://assets/HUD+UI/Backer.png" id="10_uxk47"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_7b6gg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -24,6 +32,7 @@ mouse_filter = 2
 color = Color(0.6156863, 0.37254903, 0.14117648, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 z_index = -1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,10 +50,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 z_index = 1
-offset_left = 405.0
-offset_top = 725.0
-offset_right = 1516.0
-offset_bottom = 837.0
+offset_left = 329.0
+offset_top = 796.0
+offset_right = 1485.0
+offset_bottom = 908.0
+scale = Vector2(1.15, 1.15)
 alignment = 1
 
 [node name="InventorySlot" parent="HBoxContainer" instance=ExtResource("1_ai82c")]
@@ -107,15 +117,16 @@ selectable = false
 shopSlot = true
 
 [node name="ColorRect3" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -504.0
-offset_top = 79.0
-offset_right = -206.0
-offset_bottom = 156.0
+offset_left = -495.99997
+offset_top = 111.0
+offset_right = -198.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.82, 0.82)
@@ -127,14 +138,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -43.902466
+offset_bottom = 9.585388
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 56
+theme_override_fonts/normal_font = ExtResource("3_bhwte")
+theme_override_font_sizes/normal_font_size = 92
 text = "Pip"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect4" type="ColorRect" parent="ColorRect3"]
+visible = false
 z_index = -1
 layout_mode = 1
 anchors_preset = 8
@@ -170,10 +185,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 730.0
-offset_top = 320.0
-offset_right = 1528.0
-offset_bottom = 735.0
+offset_left = 748.0
+offset_top = 236.0
+offset_right = 1689.3043
+offset_bottom = 776.2174
 scale = Vector2(0.92, 0.92)
 horizontal_scroll_mode = 0
 
@@ -185,22 +200,67 @@ layout_mode = 2
 layout_mode = 2
 cost = 5
 
+[node name="Carrot_Seeds" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item"]
+position = Vector2(138.04347, 71.73912)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_y74ng")
+
+[node name="Carrot2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item/Carrot_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_rhqdt")
+region_rect = Rect2(160, 304, 16, 16)
+
 [node name="Item2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 6
 cost = 4
+
+[node name="Onion_Seeds" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item2"]
+position = Vector2(135.86957, 73.13045)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_y74ng")
+
+[node name="Carrot2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item2/Onion_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_x1b3y")
+region_rect = Rect2(160, 304, 16, 16)
 
 [node name="Item3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 5
 cost = 7
 
+[node name="Raddish_Seeds" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item3"]
+position = Vector2(139.13042, 72.34783)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_y74ng")
+
+[node name="Carrot2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item3/Raddish_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("8_qg473")
+region_rect = Rect2(160, 304, 16, 16)
+
 [node name="Item4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
 layout_mode = 2
 item = 7
 cost = 8
 
+[node name="Potato_Seeds" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item4"]
+position = Vector2(141.30434, 71.56519)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_y74ng")
+
+[node name="Carrot2" type="Sprite2D" parent="ScrollContainer/VBoxContainer/Item4/Potato_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("9_axnt5")
+region_rect = Rect2(160, 304, 16, 16)
+
 [node name="Money Holder" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 1291.0
 offset_top = 247.0
 offset_right = 1510.0
@@ -212,23 +272,31 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -1.0
-offset_right = -64.0
-offset_bottom = -1.0
+offset_left = 10.0
+offset_top = -124.0
+offset_right = 28.0
+offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 44
+theme_override_fonts/normal_font = ExtResource("3_bhwte")
+theme_override_font_sizes/normal_font_size = 82
 text = "100"
 horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ColorRect" type="ColorRect" parent="Money Holder"]
+visible = false
 layout_mode = 0
 offset_left = 163.0
 offset_top = 13.0
 offset_right = 203.0
 offset_bottom = 53.0
+
+[node name="Backer" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(975, 540)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("10_uxk47")
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item" to="." method="_on_item_pressed" binds= [0]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item2" to="." method="_on_item_pressed" binds= [1]]

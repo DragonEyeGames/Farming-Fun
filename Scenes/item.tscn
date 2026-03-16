@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://hubi2ixxr7k2"]
+[gd_scene load_steps=4 format=3 uid="uid://hubi2ixxr7k2"]
 
 [ext_resource type="Script" uid="uid://dduwraqaxa3w" path="res://Scripts/shopItem.gd" id="1_ys0gr"]
+[ext_resource type="Texture2D" uid="uid://c8hn5ro5wtkmo" path="res://assets/HUD+UI/ShopSlot.png" id="2_u06aw"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="3_btogu"]
 
 [node name="Item" type="Button"]
-custom_minimum_size = Vector2(0, 100)
-offset_right = 770.0
-offset_bottom = 100.0
+custom_minimum_size = Vector2(800.34, 162.245)
+offset_right = 873.0
+offset_bottom = 162.245
 pivot_offset = Vector2(384, 50)
 focus_mode = 0
 flat = true
@@ -13,7 +15,12 @@ script = ExtResource("1_ys0gr")
 item = 4
 cost = 25
 
+[node name="ShopSlot" type="Sprite2D" parent="."]
+position = Vector2(459, 79)
+texture = ExtResource("2_u06aw")
+
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -26,6 +33,7 @@ mouse_filter = 2
 color = Color(0.72156864, 0.5764706, 0.42745098, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 30.0
 offset_top = 8.0
@@ -35,28 +43,31 @@ mouse_filter = 2
 
 [node name="Item" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 138.0
-offset_top = 8.0
-offset_right = 518.0
-offset_bottom = 96.0
+offset_left = 210.0
+offset_top = 2.0
+offset_right = 590.0
+offset_bottom = 155.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 52
+theme_override_fonts/normal_font = ExtResource("3_btogu")
+theme_override_font_sizes/normal_font_size = 85
 text = "Carrot Seeds"
 vertical_alignment = 1
 
 [node name="Cost" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 570.0
-offset_top = 10.0
-offset_right = 690.0
-offset_bottom = 93.0
+offset_left = 605.0
+offset_top = 18.0
+offset_right = 725.0
+offset_bottom = 145.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 52
+theme_override_fonts/normal_font = ExtResource("3_btogu")
+theme_override_font_sizes/normal_font_size = 85
 text = "25"
 horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="ColorRect3" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 702.0
 offset_top = 27.0

@@ -60,20 +60,25 @@ func _process(delta: float) -> void:
 	currentFood-=delta/60
 	currentWater-=delta/60
 	if(Input.is_action_just_pressed("1")):
-		currentState=states.SLEEP
-		sleepPath()
+		#currentState=states.SLEEP
+		#sleepPath()
+		pass
 	if(Input.is_action_just_pressed("2")):
-		currentState=states.WANDERING
-		makePath()
+		#currentState=states.WANDERING
+		#makePath()
+		pass
 	if(Input.is_action_just_pressed("3")):
-		currentState=states.IDLE
+		#currentState=states.IDLE
+		pass
 	if(Input.is_action_just_pressed("4")):
-		currentState=states.EATING
-		eatPath()
+		#currentState=states.EATING
+		#eatPath()
+		pass
 	if(Input.is_action_just_pressed("5")):
-		currentState=states.DRINKING
-		print(currentState)
-		waterPath()
+		#currentState=states.DRINKING
+		#print(currentState)
+		#waterPath()
+		pass
 	match currentState:
 		states.WANDERING:
 			if(currentVelocity!=Vector2.ZERO):

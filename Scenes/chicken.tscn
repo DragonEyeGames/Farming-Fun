@@ -361,6 +361,7 @@ shape = SubResource("CircleShape2D_yisvs")
 disabled = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 5.0
 path_postprocessing = 1
 
 [node name="FoodChecker" type="Area2D" parent="."]

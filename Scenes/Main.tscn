@@ -927,7 +927,7 @@ position = Vector2(87, 39)
 position = Vector2(8.361679, -19.62677)
 
 [node name="Pond" type="Node2D" parent="."]
-position = Vector2(-224.19974, -200.42926)
+position = Vector2(-212.17871, -126.800415)
 script = ExtResource("12_c6i3y")
 
 [node name="Coast" parent="Pond" instance=ExtResource("8_trn2v")]
