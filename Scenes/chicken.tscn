@@ -334,7 +334,6 @@ radius = 3.1622777
 radius = 7.0
 
 [node name="Chicken" type="CharacterBody2D" groups=["Animal", "Save", "Sort"]]
-texture_filter = 2
 collision_layer = 0
 script = ExtResource("1_jy3mo")
 speed = 30

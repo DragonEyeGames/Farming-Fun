@@ -63,14 +63,21 @@ func _process(_delta: float) -> void:
 		newSprite.play("idle-up")
 	elif(direction=="down" and not "down" in newSprite.animation):
 		newSprite.play("idle-down")
-	print(state)
-	if(direction=="down" and state=="walk"):
+	if(pickedUp and direction=="down" and state=="idle"):
+		newSprite.play("picked-idle-down")
+	elif(pickedUp and direction=="down" and state=="walk"):
+		newSprite.play("picked-walk-down")
+	elif(direction=="down" and state=="walk"):
 		newSprite.play("walk-down")
-	if(direction=="down" and state=="idle"):
+	elif(direction=="down" and state=="idle"):
 		newSprite.play("idle-down")
-	if(direction=="up" and state=="walk"):
+	if(pickedUp and direction=="up" and state=="idle"):
+		newSprite.play("picked-idle-up")
+	elif(pickedUp and direction=="up" and state=="walk"):
+		newSprite.play("picked-walk-up")
+	elif(direction=="up" and state=="walk"):
 		newSprite.play("walk-up")
-	if(direction=="up" and state=="idle"):
+	elif(direction=="up" and state=="idle"):
 		newSprite.play("idle-up")
 	if((GameManager.itemSelected("seeds") and canMove) or selectedSeed!=""):
 		for child in $plantChecker.get_children():
