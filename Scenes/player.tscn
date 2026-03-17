@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=157 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -75,7 +75,9 @@
 [ext_resource type="Texture2D" uid="uid://cqaoj6i6msbn0" path="res://Characters/Character/Plant-Up-1.png" id="53_feq18"]
 [ext_resource type="Texture2D" uid="uid://ceqxevd7oqb5r" path="res://Characters/Character/Plant-Up-2.png" id="54_wcnj3"]
 [ext_resource type="Texture2D" uid="uid://d2cx13lfg06ba" path="res://Characters/Character/Plant-Down.png" id="69_jmelf"]
+[ext_resource type="Texture2D" uid="uid://b6o3ieg8blyax" path="res://Characters/Character/Water-2.png" id="71_pg0gw"]
 [ext_resource type="Texture2D" uid="uid://b0fayxes3483" path="res://Characters/Character/Plant-Up.png" id="73_wcnj3"]
+[ext_resource type="Texture2D" uid="uid://bkn5ylwo5i4n4" path="res://Characters/Character/Watering-Down.png" id="75_qavoy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -831,6 +833,17 @@ animations = [{
 "loop": true,
 "name": &"walk-up",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_ss172")
+}, {
+"duration": 3.0,
+"texture": ExtResource("71_pg0gw")
+}],
+"loop": false,
+"name": &"water-down",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3dxm6"]
@@ -873,21 +886,21 @@ region = Rect2(128, 0, 128, 128)
 atlas = ExtResource("73_wcnj3")
 region = Rect2(256, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(32, 96, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4w4b"]
+atlas = ExtResource("75_qavoy")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(64, 96, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5cax"]
+atlas = ExtResource("75_qavoy")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(96, 96, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dj0x0"]
+atlas = ExtResource("75_qavoy")
+region = Rect2(256, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ijsl"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(128, 96, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1uaf"]
+atlas = ExtResource("75_qavoy")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfarp"]
 atlas = ExtResource("3_6t5aa")
@@ -1002,16 +1015,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ukyrk")
+"texture": SubResource("AtlasTexture_w4w4b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qqcod")
+"texture": SubResource("AtlasTexture_h5cax")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_igrcy")
+"texture": SubResource("AtlasTexture_dj0x0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2ijsl")
+"texture": SubResource("AtlasTexture_f1uaf")
 }],
 "loop": false,
 "name": &"water-down",
@@ -1119,6 +1132,42 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-10, -5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NewSprite:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("waterChecker:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:canMove")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_gymyn"]
@@ -1305,69 +1354,93 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
 resource_name = "waterdown"
-tracks/0/type = "method"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite")
+tracks/0/path = NodePath(".:canMove")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["water-down"],
-"method": &"play"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:canMove")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite:flip_h")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaterEffects/down:position")
-tracks/3/interp = 0
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaterEffects/down:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-10, -5), Vector2(-13, 4)]
+"values": [Vector2(-0.3, -1.51), Vector2(-0.8302498, 7.7168007)]
 }
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaterEffects/down")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaterEffects/down")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": ["water-down"],
 "method": &"play"
 }]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NewSprite:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NewSprite")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["water-down"],
+"method": &"play"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("waterChecker:modulate")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ukyrk"]
@@ -1446,14 +1519,13 @@ onion = ExtResource("5_tx1dd")
 visible = false
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"plant-up"
-frame = 2
+animation = &"water-down"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 scale = Vector2(0.335, 0.335)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"plant-up"
+animation = &"water-down"
 autoplay = "idle-up"
 frame = 1
 
@@ -1491,7 +1563,7 @@ offset = Vector2(16, 2)
 position = Vector2(-3.7051277, 1.4895116)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"reset"
+animation = &"plant-up"
 autoplay = "reset"
 offset = Vector2(16, 2)
 
@@ -1517,9 +1589,11 @@ offset = Vector2(16, 2)
 
 [node name="down" type="AnimatedSprite2D" parent="WaterEffects"]
 position = Vector2(-10, -5)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"reset"
+animation = &"water-down"
 autoplay = "reset"
+frame = 3
 offset = Vector2(16, 2)
 
 [node name="plantChecker" type="Node2D" parent="."]
@@ -1660,6 +1734,7 @@ color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 libraries = {
 &"": SubResource("AnimationLibrary_gymyn")
 }
+autoplay = "RESET"
 
 [node name="Inventory" parent="." instance=ExtResource("10_tx1dd")]
 visible = false

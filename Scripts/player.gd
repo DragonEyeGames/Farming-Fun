@@ -164,7 +164,7 @@ func _process(_delta: float) -> void:
 			GameManager.energy-=1
 			var backupDirection=direction
 			if(backupDirection=="side"):
-				if(sprite.flip_h):
+				if(newSprite.flip_h):
 					backupDirection="Left"
 				else:
 					backupDirection="Right"
@@ -265,6 +265,12 @@ func _on_new_sprite_animation_finished() -> void:
 				break
 		canMove=true
 		selectedSeed=""
+	if("water" in newSprite.animation):
+		canMove=true
+		for child in $waterChecker.get_children():
+			if(child.visible):
+				child.growPlants()
+				break
 
 func animate():
 	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
