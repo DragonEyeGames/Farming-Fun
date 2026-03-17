@@ -41,9 +41,9 @@ func _process(_delta: float) -> void:
 	if(canMove):
 		if(velocity.x<0):
 			direction="side"
-			sprite.flip_h=true
+			newSprite.flip_h=true
 		elif(velocity.x>0):
-			sprite.flip_h=false
+			newSprite.flip_h=false
 			direction="side"
 		elif(velocity.y>0):
 			direction="down"
@@ -138,6 +138,19 @@ func _process(_delta: float) -> void:
 	#	interacting.remove_at(0)
 	#	canMove=false
 	#	sprite.play("pickup-" + direction)
+	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
+		interacting[0].interact()
+		interacting.remove_at(0)
+		canMove=false
+		newSprite.play("pickup-down")
+		return
+	elif(Input.is_action_just_pressed("Interact") and direction=="up" and len(interacting)>=1):
+		interacting[0].interact()
+		interacting.remove_at(0)
+		canMove=false
+		newSprite.play("pickup-up")
+		return
+		
 	if(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null and canMove):
 		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null and GameManager.energy>0):
 			var backupDirection=direction
@@ -274,18 +287,7 @@ func _on_new_sprite_animation_finished() -> void:
 				break
 
 func animate():
-	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
-		interacting[0].interact()
-		interacting.remove_at(0)
-		canMove=false
-		newSprite.play("pickup-down")
-		return
-	elif(Input.is_action_just_pressed("Interact") and direction=="up" and len(interacting)>=1):
-		interacting[0].interact()
-		interacting.remove_at(0)
-		canMove=false
-		newSprite.play("pickup-up")
-		return
+		
 	if(pickedUp and direction=="down" and state=="idle"):
 		newSprite.play("picked-idle-down")
 	elif(pickedUp and direction=="down" and state=="walk"):
@@ -294,6 +296,7 @@ func animate():
 		newSprite.play("walk-down")
 	elif(direction=="down" and state=="idle"):
 		newSprite.play("idle-down")
+		
 	if(pickedUp and direction=="up" and state=="idle"):
 		newSprite.play("picked-idle-up")
 	elif(pickedUp and direction=="up" and state=="walk"):
@@ -302,3 +305,6 @@ func animate():
 		newSprite.play("walk-up")
 	elif(direction=="up" and state=="idle"):
 		newSprite.play("idle-up")
+	
+	if(direction=="side" and state=="idle"):
+		newSprite.play("side-idle")

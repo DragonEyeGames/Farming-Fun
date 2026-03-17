@@ -41,6 +41,13 @@ func _ready() -> void:
 		GameManager.playerMoney=data.money
 		GameManager.energy=data.energy
 		$Player.global_position=data.lastLocation
+	else:
+		GameManager.addItem(GameManager.inventoryItem.Watering_Can, 1)
+		GameManager.addItem(GameManager.inventoryItem.Carrot_Seeds, 3)
+		GameManager.addItem(GameManager.inventoryItem.Potato_Seeds, 3)
+		GameManager.addItem(GameManager.inventoryItem.Onion_Seeds, 3)
+		GameManager.addItem(GameManager.inventoryItem.Raddish_Seeds, 3)
+		
 	for door in get_tree().get_nodes_in_group("Door"):
 		door.mainScene=self
 	for object in get_tree().get_nodes_in_group("Sort"):

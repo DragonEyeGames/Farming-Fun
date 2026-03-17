@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=165 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -74,6 +74,12 @@
 [ext_resource type="Texture2D" uid="uid://bgi8iwrtwf370" path="res://Characters/Character/Plant-Down-2.png" id="52_jmelf"]
 [ext_resource type="Texture2D" uid="uid://cqaoj6i6msbn0" path="res://Characters/Character/Plant-Up-1.png" id="53_feq18"]
 [ext_resource type="Texture2D" uid="uid://ceqxevd7oqb5r" path="res://Characters/Character/Plant-Up-2.png" id="54_wcnj3"]
+[ext_resource type="Texture2D" uid="uid://cl5jmxaxfrmn6" path="res://Characters/Character/Side-Idle-1.png" id="55_o736f"]
+[ext_resource type="Texture2D" uid="uid://noraob2sa8uu" path="res://Characters/Character/Side-Idle-2.png" id="56_ketbw"]
+[ext_resource type="Texture2D" uid="uid://b87xsyx4ugah8" path="res://Characters/Character/Side-Idle-3.png" id="57_4grkl"]
+[ext_resource type="Texture2D" uid="uid://cyjtg6jj4flcs" path="res://Characters/Character/Side-Idle-4.png" id="58_6yrdb"]
+[ext_resource type="Texture2D" uid="uid://dc2c1vmvxjtya" path="res://Characters/Character/Side-Idle-5.png" id="59_ue0p1"]
+[ext_resource type="Texture2D" uid="uid://chcg47ywq8ygs" path="res://Characters/Character/Side-Idle-6.png" id="60_isbcs"]
 [ext_resource type="Texture2D" uid="uid://d2cx13lfg06ba" path="res://Characters/Character/Plant-Down.png" id="69_jmelf"]
 [ext_resource type="Texture2D" uid="uid://b6o3ieg8blyax" path="res://Characters/Character/Water-2.png" id="71_pg0gw"]
 [ext_resource type="Texture2D" uid="uid://ydbbdorh1fae" path="res://Characters/Character/Water-Up-2.png" id="72_w4w4b"]
@@ -777,6 +783,29 @@ animations = [{
 "loop": false,
 "name": &"plant-up",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_o736f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ketbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4grkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6yrdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ue0p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_isbcs")
+}],
+"loop": true,
+"name": &"side-idle",
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1589,9 +1618,9 @@ animation = &"water-up"
 position = Vector2(0, -13)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"water-up"
+animation = &"side-idle"
 autoplay = "idle-up"
-frame = 1
+frame_progress = 0.25650892
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
