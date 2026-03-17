@@ -26,6 +26,7 @@ func _ready() -> void:
 	$Items.visible=true
 
 func _process(_delta: float) -> void:
+	$Items.visible=canMove
 	if(Input.is_action_just_pressed("Inventory") and (canMove or $Inventory.visible)):
 		$Inventory.visible=!$Inventory.visible
 		GameManager.hud.visible=!$Inventory.visible
