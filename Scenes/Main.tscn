@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=122 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -21,11 +21,17 @@
 [ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="20_2gh4u"]
 [ext_resource type="Texture2D" uid="uid://dcbmymdn70l5x" path="res://assets/Objects.png" id="22_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://r1k5u4fnpsmj" path="res://Characters/Shopkeep.png" id="23_3tgeq"]
+[ext_resource type="Texture2D" uid="uid://csb0ncimmfwgj" path="res://assets/PipShop/Shopkeep-1.png" id="23_6ehlx"]
 [ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scripts/shopkeep.gd" id="24_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://cerbit0xste7" path="res://assets/PipShop/Shopkeep-2.png" id="24_utia5"]
 [ext_resource type="PackedScene" uid="uid://cx1ywkbf2hdqx" path="res://Scenes/shopHUD.tscn" id="25_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://jh4y2shyk0fi" path="res://assets/PipShop/Shopkeep-3.png" id="25_f7hdo"]
 [ext_resource type="Texture2D" uid="uid://d2q1bw43msqqv" path="res://assets/House/House-1.png" id="26_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://berfk3vfh1hvh" path="res://assets/PipShop/Shopkeep-4.png" id="26_clvyn"]
 [ext_resource type="Script" uid="uid://cwdcluk0384b" path="res://Scripts/house.gd" id="26_qta6b"]
+[ext_resource type="Texture2D" uid="uid://dwxsrbcyceywb" path="res://assets/PipShop/Shopkeep-5.png" id="27_d8m2u"]
 [ext_resource type="Texture2D" uid="uid://cyt5rcek2nik" path="res://assets/House/House-2.png" id="27_qta6b"]
+[ext_resource type="Texture2D" uid="uid://hvjxfuprnpe4" path="res://assets/PipShop/Shopkeep-6.png" id="28_5psol"]
 [ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
 [ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
@@ -694,6 +700,32 @@ animations = [{
 radius = 25.0
 height = 50.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4llh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_6ehlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_utia5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_f7hdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_clvyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_d8m2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5psol")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tgeq"]
 size = Vector2(73, 22)
 
@@ -998,6 +1030,7 @@ region_enabled = true
 region_rect = Rect2(264, 232, 88, 32)
 
 [node name="Shopkeep" type="AnimatedSprite2D" parent="Shop"]
+self_modulate = Color(1, 1, 1, 0)
 z_index = -1
 position = Vector2(-2, 6)
 sprite_frames = SubResource("SpriteFrames_xvtyr")
@@ -1012,6 +1045,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shop/Shopkeep/Area2D"]
 position = Vector2(1, 18)
 shape = SubResource("CapsuleShape2D_3tgeq")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Shop/Shopkeep"]
+position = Vector2(0.16351318, -2.1256027)
+scale = Vector2(0.285, 0.285)
+sprite_frames = SubResource("SpriteFrames_m4llh")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.53516144
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Shop"]
 
