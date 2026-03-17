@@ -1587,7 +1587,7 @@ animation = &"water-up"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
-scale = Vector2(0.335, 0.335)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
 animation = &"water-up"
 autoplay = "idle-up"

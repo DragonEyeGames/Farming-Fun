@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 var playerEntered:=false
 var shopVisible:=false
+@export var hud: CanvasLayer
 
 func _ready() -> void:
 	randomEvents()
@@ -17,11 +18,11 @@ func _process(_delta: float) -> void:
 		GameManager.hud.visible=false
 		GameManager.player.canMove=false
 		GameManager.player.sprite.play("idle-up")
-		$"../HUD".visible=true
+		hud.visible=true
 		shopVisible=true
 	if(shopVisible and Input.is_action_just_pressed("Escape")):
 		shopVisible=false
-		$"../HUD".visible=false
+		hud.visible=false
 		GameManager.hud.visible=true
 		GameManager.player.canMove=true
 

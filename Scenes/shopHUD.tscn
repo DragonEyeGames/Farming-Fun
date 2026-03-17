@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cx1ywkbf2hdqx"]
+[gd_scene load_steps=12 format=3 uid="uid://cx1ywkbf2hdqx"]
 
 [ext_resource type="Script" uid="uid://bpos8g004ccg7" path="res://Scripts/shop_hud.gd" id="1_7b6gg"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="1_ai82c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c8wdham3jxedl" path="res://assets/Dirt/Raddish.png" id="8_qg473"]
 [ext_resource type="Texture2D" uid="uid://c58unya1a0usk" path="res://assets/Dirt/Potato.png" id="9_axnt5"]
 [ext_resource type="Texture2D" uid="uid://vpmjrn334o2j" path="res://assets/HUD+UI/Backer.png" id="10_uxk47"]
+[ext_resource type="Texture2D" uid="uid://c8ovdckrjgfk1" path="res://assets/HUD+UI/Pip-Profile.png" id="11_y74ng"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -166,6 +167,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="."]
+visible = false
 offset_left = 454.0
 offset_top = 320.0
 offset_right = 701.0
@@ -297,6 +299,20 @@ z_index = -1
 position = Vector2(975, 540)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("10_uxk47")
+
+[node name="Control" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 399.0
+offset_top = 194.0
+offset_right = 751.0
+offset_bottom = 601.0
+
+[node name="PipProfile" type="Sprite2D" parent="Control"]
+position = Vector2(599, 350)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("11_y74ng")
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item" to="." method="_on_item_pressed" binds= [0]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item2" to="." method="_on_item_pressed" binds= [1]]
