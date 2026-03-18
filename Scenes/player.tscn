@@ -1,4 +1,4 @@
-[gd_scene load_steps=187 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=190 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -102,12 +102,15 @@
 [ext_resource type="Texture2D" uid="uid://dbktcbi14eeb5" path="res://Characters/Character/Side-Walk-4.png" id="72_aclic"]
 [ext_resource type="Texture2D" uid="uid://ydbbdorh1fae" path="res://Characters/Character/Water-Up-2.png" id="72_w4w4b"]
 [ext_resource type="Texture2D" uid="uid://dsasaxxp2ou4m" path="res://Characters/Character/Side-Walk-5.png" id="73_0y64g"]
+[ext_resource type="Texture2D" uid="uid://c4ylt47vxdmw4" path="res://Characters/Character/Plant-Side-1.png" id="73_5j7nw"]
 [ext_resource type="Texture2D" uid="uid://b0fayxes3483" path="res://Characters/Character/Plant-Up.png" id="73_wcnj3"]
+[ext_resource type="Texture2D" uid="uid://cqtdyn1qnjjy0" path="res://Characters/Character/Plant-Side-2.png" id="74_mrkcr"]
 [ext_resource type="Texture2D" uid="uid://dikjaltiykoc7" path="res://Characters/Character/Side-Walk-6.png" id="74_ramv3"]
 [ext_resource type="Texture2D" uid="uid://b0tng3nn4lvt4" path="res://Characters/Character/Side-Walk-7.png" id="75_hseb1"]
 [ext_resource type="Texture2D" uid="uid://bkn5ylwo5i4n4" path="res://Characters/Character/Watering-Down.png" id="75_qavoy"]
 [ext_resource type="Texture2D" uid="uid://cudor0dr6fpux" path="res://Characters/Character/Side-Walk-8.png" id="76_vinow"]
 [ext_resource type="Texture2D" uid="uid://c3d3g1lpueh1q" path="res://Characters/Character/Watering-Up.png" id="77_h5cax"]
+[ext_resource type="Texture2D" uid="uid://c24l4s8rsh04p" path="res://Characters/Character/Plant-Side.png" id="104_mrkcr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -869,6 +872,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 3.0,
+"texture": ExtResource("73_5j7nw")
+}, {
+"duration": 4.0,
+"texture": ExtResource("74_mrkcr")
+}],
+"loop": false,
+"name": &"plant-side",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 3.0,
 "texture": ExtResource("53_feq18")
 }, {
 "duration": 4.0,
@@ -1010,17 +1024,17 @@ region = Rect2(128, 0, 128, 128)
 atlas = ExtResource("69_jmelf")
 region = Rect2(256, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(32, 64, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_78kn1"]
+atlas = ExtResource("104_mrkcr")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(64, 64, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwtn4"]
+atlas = ExtResource("104_mrkcr")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(96, 64, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl8o5"]
+atlas = ExtResource("104_mrkcr")
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jsob3"]
 atlas = ExtResource("73_wcnj3")
@@ -1118,13 +1132,13 @@ animations = [{
 "texture": null
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f1ek2")
+"texture": SubResource("AtlasTexture_78kn1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tx1dd")
+"texture": SubResource("AtlasTexture_nwtn4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gymyn")
+"texture": SubResource("AtlasTexture_hl8o5")
 }],
 "loop": false,
 "name": &"plant-side",
@@ -1715,15 +1729,16 @@ onion = ExtResource("5_tx1dd")
 visible = false
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"water-up"
+animation = &"plant-side"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"picked-idle-side"
+animation = &"plant-side"
 autoplay = "idle-up"
-frame_progress = 0.20739469
+frame = 1
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
@@ -1739,10 +1754,12 @@ shape = SubResource("CapsuleShape2D_3dxm6")
 position = Vector2(0, -3)
 
 [node name="side" type="AnimatedSprite2D" parent="PlantEffects"]
-position = Vector2(0, -6)
+position = Vector2(9.498514, -2.146223)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"reset"
+animation = &"plant-side"
 autoplay = "reset"
+frame = 5
 offset = Vector2(16, 2)
 
 [node name="up" type="AnimatedSprite2D" parent="PlantEffects"]

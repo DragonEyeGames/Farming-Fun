@@ -5,7 +5,7 @@ var direction="down"
 @export var canMove:=true
 @export var speed=100
 var interacting:=[]
-var sprite: AnimatedSprite2D
+#var sprite: AnimatedSprite2D
 var newSprite: AnimatedSprite2D
 var effects
 var pickedUp:=false
@@ -18,7 +18,7 @@ var selectedSeed=""
 var sleeping:=false
 
 func _ready() -> void:
-	sprite = $Sprite
+	#sprite = $Sprite
 	newSprite=$NewSprite
 	effects=$PlantEffects
 	GameManager.player=self
@@ -83,7 +83,7 @@ func _process(_delta: float) -> void:
 		if(direction=="down"):
 			selectedBit=$plantChecker/down
 		if(direction=="side"):
-			if(sprite.flip_h):
+			if(newSprite.flip_h):
 				selectedBit=$"plantChecker/left-side"
 			else:
 				selectedBit=$"plantChecker/right-side"
@@ -110,7 +110,7 @@ func _process(_delta: float) -> void:
 		if(direction=="down"):
 			selectedBit=$waterChecker/Down
 		if(direction=="side"):
-			if(sprite.flip_h):
+			if(newSprite.flip_h):
 				selectedBit=$waterChecker/Side2
 			else:
 				selectedBit=$waterChecker/Side
@@ -120,7 +120,7 @@ func _process(_delta: float) -> void:
 			child.visible=false
 		
 	var animation = state + "-" + direction
-	if(GameManager.selectedItem!=null and GameManager.selectedItem.item!=null and ("walk" in sprite.animation or "idle" in sprite.animation)):
+	if(GameManager.selectedItem!=null and GameManager.selectedItem.item!=null and ("walk" in newSprite.animation or "idle" in newSprite.animation)):
 		pickedUp=true
 		for child in $Items.get_children():
 			child.visible=(child.name==str(GameManager.inventoryItem.keys()[GameManager.selectedItem.item]))
@@ -130,9 +130,6 @@ func _process(_delta: float) -> void:
 			child.visible=false
 	if(pickedUp):
 		animation = "picked-" + animation
-	if(canMove):
-		if(sprite.animation!=animation):
-			sprite.play(animation)
 	#if(Input.is_action_just_pressed("Interact") and len(interacting)>=1):
 	#	interacting[0].interact()
 	#	interacting.remove_at(0)
@@ -192,47 +189,6 @@ func _process(_delta: float) -> void:
 			GameManager.selectedItem.use()
 			await get_tree().create_timer(.1).timeout
 			busy=false
-
-
-func _on_sprite_animation_finished() -> void:
-	if(sprite.animation=="walk-up"):
-		sprite.flip_h=!sprite.flip_h
-		sprite.play("walk-up")
-	if(sprite.animation=="walk-down"):
-		sprite.flip_h=!sprite.flip_h
-		sprite.play("walk-down")
-	if(sprite.animation=="picked-walk-down"):
-		sprite.flip_h=!sprite.flip_h
-		sprite.play("picked-walk-down")
-	if(sprite.animation=="picked-walk-up"):
-		sprite.flip_h=!sprite.flip_h
-		sprite.play("picked-walk-up")
-	if("pickup" in sprite.animation):
-		canMove=true
-	if("plant" in sprite.animation):
-		var plant
-		if(selectedSeed=="Carrot_Seeds"):
-			plant=carrot.instantiate()
-		elif(selectedSeed=="Potato_Seeds"):
-			plant=potato.instantiate()
-		elif(selectedSeed=="Raddish_Seeds"):
-			plant=raddish.instantiate()
-		elif(selectedSeed=="Onion_Seeds"):
-			plant=onion.instantiate()
-		for child in $plantChecker.get_children():
-			if(child.visible):
-				plant.global_position=child.global_position
-				GameManager.ySort.add_child(plant)
-				plant.global_position=child.global_position
-				break
-		canMove=true
-		selectedSeed=""
-	if("water" in sprite.animation):
-		canMove=true
-		for child in $waterChecker.get_children():
-			if(child.visible):
-				child.growPlants()
-				break
 
 
 func _on_down_animation_finished() -> void:
