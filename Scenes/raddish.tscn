@@ -22,6 +22,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v4w37"]
 resource_local_to_scene = true
 shader = ExtResource("1_14pjv")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -140,7 +145,7 @@ texture = ExtResource("1_usssr")
 [node name="Stage-3" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(-9, 15)
+position = Vector2(-10.169492, 20.338982)
 texture = ExtResource("2_k3swr")
 
 [node name="Plants2" type="Sprite2D" parent="Sprites/Stage-3"]
@@ -150,7 +155,7 @@ texture = ExtResource("3_b2mrc")
 [node name="Stage-2" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(50.84746, 10.169491)
+position = Vector2(50.84746, 16.949152)
 texture = ExtResource("4_5g51h")
 
 [node name="Plants3" type="Sprite2D" parent="Sprites/Stage-2"]
@@ -158,9 +163,8 @@ z_index = -1
 texture = ExtResource("5_et8bb")
 
 [node name="Stage-1" type="Sprite2D" parent="Sprites"]
-visible = false
 use_parent_material = true
-position = Vector2(118.644066, 10.169491)
+position = Vector2(118.64408, 16.949152)
 texture = ExtResource("6_78t6h")
 
 [node name="Plants4" type="Sprite2D" parent="Sprites/Stage-1"]
@@ -168,6 +172,7 @@ z_index = -1
 texture = ExtResource("7_olewg")
 
 [node name="FixedPlants2" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
 position = Vector2(152.54237, 10.169491)
 texture = ExtResource("9_0mjqt")
@@ -189,7 +194,7 @@ texture = ExtResource("12_2f46g")
 [node name="FixedPlants6" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(3.3898468, 13.559319)
+position = Vector2(3.3898306, 13.559321)
 texture = ExtResource("13_nnrgu")
 
 [node name="FixedPlants5" type="Sprite2D" parent="Sprites/FixedPlants6"]
@@ -199,7 +204,7 @@ texture = ExtResource("14_2a13c")
 [node name="FixedPlants8" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(-54.237274, 10.169491)
+position = Vector2(-54.23729, 10.16949)
 texture = ExtResource("15_8yq76")
 
 [node name="FixedPlants7" type="Sprite2D" parent="Sprites/FixedPlants8"]

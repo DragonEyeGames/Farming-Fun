@@ -135,7 +135,6 @@ position = Vector2(3, -7.0000005)
 scale = Vector2(0.27, 0.27)
 
 [node name="Stage-6" type="Sprite2D" parent="Sprites"]
-visible = false
 use_parent_material = true
 position = Vector2(-11.111111, 25.925926)
 texture = ExtResource("3_5su27")
@@ -147,7 +146,7 @@ texture = ExtResource("4_5c2fc")
 [node name="Stage-5" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(-62.962963, 22.222223)
+position = Vector2(-62.962963, 18.51852)
 texture = ExtResource("5_dvank")
 
 [node name="Plants3" type="Sprite2D" parent="Sprites/Stage-5"]
@@ -157,7 +156,7 @@ texture = ExtResource("6_ukgqq")
 [node name="Stage-4" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(51.85185, 14.814816)
+position = Vector2(51.85185, 18.51852)
 texture = ExtResource("5_8ipad")
 
 [node name="Plants3" type="Sprite2D" parent="Sprites/Stage-4"]
@@ -177,7 +176,7 @@ texture = ExtResource("10_tgn3n")
 [node name="Stage-2" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(114.814804, 11.111112)
+position = Vector2(114.814804, 14.814815)
 texture = ExtResource("7_0jtyu")
 
 [node name="Plants4" type="Sprite2D" parent="Sprites/Stage-2"]
@@ -187,7 +186,7 @@ texture = ExtResource("8_6yxst")
 [node name="Stage-1" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(185.18518, 7.407408)
+position = Vector2(185.18518, 18.51852)
 texture = ExtResource("13_yamhm")
 
 [node name="Plants4" type="Sprite2D" parent="Sprites/Stage-1"]

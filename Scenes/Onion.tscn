@@ -132,8 +132,9 @@ position = Vector2(4, -7)
 scale = Vector2(0.285, 0.285)
 
 [node name="Onion-5" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(-8, 6)
+position = Vector2(-10.526316, 14.035088)
 texture = ExtResource("2_q2txl")
 
 [node name="Plants2" type="Sprite2D" parent="Sprites/Onion-5"]
@@ -143,7 +144,7 @@ texture = ExtResource("3_bsdmh")
 [node name="Onion-4" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(35.08772, 0)
+position = Vector2(35.08772, 14.035088)
 texture = ExtResource("5_h4hao")
 
 [node name="Plants3" type="Sprite2D" parent="Sprites/Onion-4"]
@@ -153,7 +154,7 @@ texture = ExtResource("6_pgnul")
 [node name="Onion-3" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(56.14035, 3.508772)
+position = Vector2(56.14035, 17.54386)
 texture = ExtResource("4_tbj8p")
 
 [node name="Plants3" type="Sprite2D" parent="Sprites/Onion-3"]
@@ -163,7 +164,7 @@ texture = ExtResource("5_3n4t0")
 [node name="Onion-2" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
-position = Vector2(143.85965, 3.508772)
+position = Vector2(143.85965, 17.54386)
 texture = ExtResource("7_5fsbr")
 
 [node name="Plants4" type="Sprite2D" parent="Sprites/Onion-2"]
@@ -171,9 +172,8 @@ z_index = -1
 texture = ExtResource("8_ckkjd")
 
 [node name="Onion-1" type="Sprite2D" parent="Sprites"]
-visible = false
 use_parent_material = true
-position = Vector2(119.29824, 3.508772)
+position = Vector2(119.29824, 14.035088)
 texture = ExtResource("6_5fsbr")
 
 [node name="Plants4" type="Sprite2D" parent="Sprites/Onion-1"]

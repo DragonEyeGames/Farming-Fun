@@ -131,7 +131,7 @@ scale = Vector2(0.23, 0.23)
 
 [node name="Carrot1" type="Sprite2D" parent="Sprites"]
 use_parent_material = true
-position = Vector2(191.30435, -8.695652)
+position = Vector2(191.30435, 13.043478)
 texture = ExtResource("2_ni15g")
 
 [node name="CarrotHole1" type="Sprite2D" parent="Sprites/Carrot1"]
@@ -139,8 +139,9 @@ z_index = -1
 texture = ExtResource("3_8tkmy")
 
 [node name="Carrot2" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(126.08695, -4.347826)
+position = Vector2(126.08695, 17.391304)
 texture = ExtResource("4_3kscm")
 
 [node name="CarrotHole2" type="Sprite2D" parent="Sprites/Carrot2"]
@@ -148,8 +149,9 @@ z_index = -1
 texture = ExtResource("5_352fm")
 
 [node name="Carrot3" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(60.869564, 0)
+position = Vector2(60.869564, 21.73913)
 texture = ExtResource("6_r0g6j")
 
 [node name="CarrotHole4" type="Sprite2D" parent="Sprites/Carrot3"]
@@ -157,7 +159,9 @@ z_index = -1
 texture = ExtResource("7_bxw1x")
 
 [node name="Carrot4" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
+position = Vector2(0, 17.391304)
 texture = ExtResource("8_i5ccr")
 
 [node name="CarrotHole4_5" type="Sprite2D" parent="Sprites/Carrot4"]
@@ -165,6 +169,7 @@ z_index = -1
 texture = ExtResource("9_gt0n6")
 
 [node name="CarrotHole5" type="Sprite2D" parent="Sprites"]
+visible = false
 z_index = -1
 position = Vector2(-60.869564, -4.347826)
 texture = ExtResource("10_ca1pp")
