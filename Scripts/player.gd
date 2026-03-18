@@ -147,10 +147,17 @@ func _process(_delta: float) -> void:
 		canMove=false
 		newSprite.play("pickup-up")
 		return
+	elif(Input.is_action_just_pressed("Interact") and direction=="side" and len(interacting)>=1):
+		interacting[0].interact()
+		interacting.remove_at(0)
+		canMove=false
+		newSprite.play("pickup-side")
+		return
 		
 	if(Input.is_action_just_pressed("Interact") and GameManager.selectedItem!=null and canMove):
 		if(GameManager.itemSelected("seeds") and GameManager.plantable!=null and GameManager.energy>0):
 			var backupDirection=direction
+			$plantChecker.modulate.a=0
 			GameManager.energy-=1
 			if(newSprite.flip_h and direction=="side"):
 				backupDirection="left-side"
@@ -193,14 +200,17 @@ func _process(_delta: float) -> void:
 
 func _on_down_animation_finished() -> void:
 	$PlantEffects/down.play("reset")
+	$plantChecker.modulate.a=1
 
 
 func _on_up_animation_finished() -> void:
 	$PlantEffects/up.play("reset")
+	$plantChecker.modulate.a=1
 
 
 func _on_side_animation_finished() -> void:
 	$PlantEffects/side.play("reset")
+	$plantChecker.modulate.a=1
 
 
 func _side_water() -> void:

@@ -1,9 +1,8 @@
-[gd_scene load_steps=190 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=193 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
 [ext_resource type="Texture2D" uid="uid://difasmduk376r" path="res://Characters/Main.png" id="2_onrkg"]
-[ext_resource type="Texture2D" uid="uid://dexo0q5yykvwg" path="res://Characters/farmer_base_effects/farmer animations 32x32 v00.png" id="3_6t5aa"]
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="3_8erm5"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="4_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="5_tx1dd"]
@@ -96,6 +95,8 @@
 [ext_resource type="Texture2D" uid="uid://chcg47ywq8ygs" path="res://Characters/Character/Side-Idle-6.png" id="60_isbcs"]
 [ext_resource type="Texture2D" uid="uid://c0l7qyninquom" path="res://Characters/Character/Side-Walk-1.png" id="69_hcgbs"]
 [ext_resource type="Texture2D" uid="uid://d2cx13lfg06ba" path="res://Characters/Character/Plant-Down.png" id="69_jmelf"]
+[ext_resource type="Texture2D" uid="uid://7irnotai4l4c" path="res://Characters/Character/Pickup-Side-1.png" id="69_nwtn4"]
+[ext_resource type="Texture2D" uid="uid://crbvv2k18mo4d" path="res://Characters/Character/Pickup-Side-2.png" id="70_hl8o5"]
 [ext_resource type="Texture2D" uid="uid://d1osqbfiwjot1" path="res://Characters/Character/Side-Walk-2.png" id="70_mpfyg"]
 [ext_resource type="Texture2D" uid="uid://b6o3ieg8blyax" path="res://Characters/Character/Water-2.png" id="71_pg0gw"]
 [ext_resource type="Texture2D" uid="uid://c702mpg78x2nm" path="res://Characters/Character/Side-Walk-3.png" id="71_un823"]
@@ -110,7 +111,9 @@
 [ext_resource type="Texture2D" uid="uid://bkn5ylwo5i4n4" path="res://Characters/Character/Watering-Down.png" id="75_qavoy"]
 [ext_resource type="Texture2D" uid="uid://cudor0dr6fpux" path="res://Characters/Character/Side-Walk-8.png" id="76_vinow"]
 [ext_resource type="Texture2D" uid="uid://c3d3g1lpueh1q" path="res://Characters/Character/Watering-Up.png" id="77_h5cax"]
+[ext_resource type="Texture2D" uid="uid://dp2i42ab4jxnv" path="res://Characters/Character/Watering-1.png" id="104_hl8o5"]
 [ext_resource type="Texture2D" uid="uid://c24l4s8rsh04p" path="res://Characters/Character/Plant-Side.png" id="104_mrkcr"]
+[ext_resource type="Texture2D" uid="uid://drbr625nojwvq" path="res://Characters/Character/Watering-Side.png" id="110_v8gx6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
 atlas = ExtResource("2_onrkg")
@@ -847,6 +850,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.8,
+"texture": ExtResource("69_nwtn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_hl8o5")
+}],
+"loop": false,
+"name": &"pickup-side",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.8,
 "texture": ExtResource("49_by7i4")
 }, {
 "duration": 1.0,
@@ -995,6 +1009,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("73_5j7nw")
+}, {
+"duration": 3.0,
+"texture": ExtResource("104_hl8o5")
+}],
+"loop": false,
+"name": &"water-side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("49_by7i4")
 }, {
 "duration": 3.0,
@@ -1064,21 +1089,21 @@ region = Rect2(256, 0, 128, 128)
 atlas = ExtResource("75_qavoy")
 region = Rect2(384, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vfarp"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(32, 160, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlr8u"]
+atlas = ExtResource("110_v8gx6")
+region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y6uwr"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(64, 160, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fip0x"]
+atlas = ExtResource("110_v8gx6")
+region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_83xs0"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(96, 160, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tc2f"]
+atlas = ExtResource("110_v8gx6")
+region = Rect2(256, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ypfnu"]
-atlas = ExtResource("3_6t5aa")
-region = Rect2(128, 160, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5w1p"]
+atlas = ExtResource("110_v8gx6")
+region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6hq81"]
 atlas = ExtResource("77_h5cax")
@@ -1194,16 +1219,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vfarp")
+"texture": SubResource("AtlasTexture_vlr8u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y6uwr")
+"texture": SubResource("AtlasTexture_fip0x")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_83xs0")
+"texture": SubResource("AtlasTexture_4tc2f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ypfnu")
+"texture": SubResource("AtlasTexture_u5w1p")
 }],
 "loop": false,
 "name": &"water-side",
@@ -1346,51 +1371,37 @@ tracks/8/keys = {
 
 [sub_resource type="Animation" id="Animation_gymyn"]
 resource_name = "waterLeft"
-tracks/0/type = "method"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite")
+tracks/0/path = NodePath(".:canMove")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["water-side"],
-"method": &"play"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:canMove")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaterEffects/side:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaterEffects/side:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaterEffects/side")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaterEffects/side")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1398,22 +1409,34 @@ tracks/3/keys = {
 "method": &"play"
 }]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaterEffects/side:position")
-tracks/4/interp = 0
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaterEffects/side:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-23, -6), Vector2(-34, -6)]
+"values": [Vector2(-0.885, -1.34), Vector2(-15.43, -3.17)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaterEffects/side:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite:flip_h")
+tracks/5/path = NodePath("NewSprite:flip_h")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1422,66 +1445,66 @@ tracks/5/keys = {
 "update": 1,
 "values": [true]
 }
-tracks/6/type = "value"
+tracks/6/type = "method"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("WaterEffects/side:flip_h")
+tracks/6/path = NodePath("NewSprite")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"values": [{
+"args": ["water-side"],
+"method": &"play"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("waterChecker:modulate")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_f1ek2"]
 resource_name = "waterRight"
-tracks/0/type = "method"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite")
+tracks/0/path = NodePath(".:canMove")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["water-side"],
-"method": &"play"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:canMove")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("WaterEffects/side:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaterEffects/side:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaterEffects/side")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WaterEffects/side")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -1489,22 +1512,34 @@ tracks/3/keys = {
 "method": &"play"
 }]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaterEffects/side:position")
-tracks/4/interp = 0
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaterEffects/side:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-11, -5), Vector2(3, -7)]
+"values": [Vector2(-5.4317327, -1.2623961), Vector2(9, -2.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaterEffects/side:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite:flip_h")
+tracks/5/path = NodePath("NewSprite:flip_h")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -1513,17 +1548,31 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/6/type = "value"
+tracks/6/type = "method"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("WaterEffects/side:flip_h")
+tracks/6/path = NodePath("NewSprite")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"values": [{
+"args": ["water-side"],
+"method": &"play"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("waterChecker:modulate")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
@@ -1729,13 +1778,13 @@ onion = ExtResource("5_tx1dd")
 visible = false
 position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_wkp8b")
-animation = &"plant-side"
+animation = &"water-side"
 
 [node name="NewSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -13)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"plant-side"
+animation = &"water-side"
 autoplay = "idle-up"
 frame = 1
 frame_progress = 1.0
@@ -1784,9 +1833,12 @@ position = Vector2(0, -3)
 
 [node name="side" type="AnimatedSprite2D" parent="WaterEffects"]
 position = Vector2(-9, -6)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_fs7ks")
-animation = &"reset"
+animation = &"water-side"
 autoplay = "reset"
+frame = 3
+frame_progress = 1.0
 offset = Vector2(16, 2)
 
 [node name="up" type="AnimatedSprite2D" parent="WaterEffects"]
@@ -1811,7 +1863,7 @@ offset = Vector2(16, 2)
 position = Vector2(0, -3)
 
 [node name="down" type="Marker2D" parent="plantChecker"]
-position = Vector2(1, 11)
+position = Vector2(0.08626938, 10.289318)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/down"]
 z_index = 2
@@ -1823,7 +1875,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="up" type="Marker2D" parent="plantChecker"]
-position = Vector2(1, -20)
+position = Vector2(-0.11678314, -15.532877)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/up"]
 z_index = 2
@@ -1835,7 +1887,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="right-side" type="Marker2D" parent="plantChecker"]
-position = Vector2(25, 2)
+position = Vector2(21.751183, 2.1015282)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/right-side"]
 z_index = 2
@@ -1847,7 +1899,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="left-side" type="Marker2D" parent="plantChecker"]
-position = Vector2(-25, 2)
+position = Vector2(-21.142029, 2.1015244)
 
 [node name="ColorRect" type="ColorRect" parent="plantChecker/left-side"]
 z_index = 2
@@ -1866,7 +1918,7 @@ showBar = false
 position = Vector2(0, -3)
 
 [node name="Down" type="Area2D" parent="waterChecker"]
-position = Vector2(2, 15)
+position = Vector2(-0.030509949, 11.852707)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_f1ek2")
@@ -1885,7 +1937,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="Up" type="Area2D" parent="waterChecker"]
-position = Vector2(2, -21)
+position = Vector2(1.1877937, -16.2283)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_f1ek2")
@@ -1904,7 +1956,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="Side" type="Area2D" parent="waterChecker"]
-position = Vector2(22, 4)
+position = Vector2(14.1852, 3.8105497)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_f1ek2")
@@ -1923,7 +1975,7 @@ scale = Vector2(1.67, 1.67)
 color = Color(0.19966345, 0.59695137, 0.07016479, 0.508)
 
 [node name="Side2" type="Area2D" parent="waterChecker"]
-position = Vector2(-22, 4)
+position = Vector2(-15.897789, 3.7226257)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("9_f1ek2")
