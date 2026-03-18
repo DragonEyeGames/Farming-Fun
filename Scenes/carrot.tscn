@@ -16,6 +16,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3kscm"]
 resource_local_to_scene = true
 shader = ExtResource("1_8tkmy")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.050000002375
+shader_parameter/curve_scale = 0.2000000095
+shader_parameter/speed = 1.0000000475
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
