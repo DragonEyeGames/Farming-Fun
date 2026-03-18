@@ -261,10 +261,10 @@ tracks/3/path = NodePath("CanvasLayer2/Title:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.033333335),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.7278883, 0.49001038, 0.08833647, 1), Color(0.42243674, 0.2768713, 0.0338312, 1)]
+"values": [Color(0.42243674, 0.2768713, 0.0338312, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -405,6 +405,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer5"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 layer = 7
 follow_viewport_enabled = true
@@ -419,29 +431,32 @@ offset_bottom = 40.0
 
 [node name="Start" type="TextureButton" parent="CanvasLayer4/Control"]
 layout_mode = 0
-offset_left = -493.64648
-offset_top = -563.6874
-offset_right = 1666.3535
-offset_bottom = 1056.3126
+offset_left = -1040.5126
+offset_top = -958.4682
+offset_right = 1119.4874
+offset_bottom = 661.5318
 scale = Vector2(0.505, 0.505)
+pivot_offset = Vector2(1101.9592, 795.532)
 texture_normal = ExtResource("9_cmrfp")
 
 [node name="Settings" type="TextureButton" parent="CanvasLayer4/Control"]
 layout_mode = 0
-offset_left = -483.56726
-offset_top = -329.53955
-offset_right = 1676.4327
-offset_bottom = 1290.4604
+offset_left = -1029.4667
+offset_top = -745.87317
+offset_right = 1130.5333
+offset_bottom = 874.12683
 scale = Vector2(0.505, 0.505)
+pivot_offset = Vector2(1094.3188, 842.5754)
 texture_normal = ExtResource("10_loo7a")
 
 [node name="Quit" type="TextureButton" parent="CanvasLayer4/Control"]
 layout_mode = 0
-offset_left = -473.48804
-offset_top = -92.786125
-offset_right = 1686.512
-offset_bottom = 1527.2139
+offset_left = -1022.3369
+offset_top = -534.635
+offset_right = 1137.6631
+offset_bottom = 1085.365
 scale = Vector2(0.505, 0.505)
+pivot_offset = Vector2(1104.6287, 914.9619)
 texture_normal = ExtResource("11_if7li")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -449,3 +464,7 @@ stream = ExtResource("12_rrcx7")
 volume_db = 15.0
 autoplay = true
 bus = &"Music"
+
+[connection signal="mouse_entered" from="CanvasLayer4/Control/Start" to="." method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer4/Control/Start" to="." method="_on_start_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer4/Control/Start" to="." method="_on_start_pressed"]
