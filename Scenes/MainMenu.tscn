@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnbmw1wlmgh36"]
+
+[ext_resource type="Script" uid="uid://w31ac8g13dre" path="res://Scenes/MainMenu.gd" id="1_8um5k"]
+[ext_resource type="Texture2D" uid="uid://c1tkgnrbexanl" path="res://assets/MainMenu/Stars.png" id="1_853f1"]
+[ext_resource type="Texture2D" uid="uid://ci37sdo54iqql" path="res://assets/MainMenu/Mountains-2.png" id="2_8saeu"]
+[ext_resource type="Texture2D" uid="uid://cratlqp8jya4u" path="res://assets/MainMenu/Sun.png" id="2_xim88"]
+[ext_resource type="Texture2D" uid="uid://2brjiwc0c24w" path="res://assets/MainMenu/Mountains-3.png" id="3_df05h"]
+[ext_resource type="Texture2D" uid="uid://6xgjk3kqkoc8" path="res://assets/MainMenu/Mountains-1.png" id="4_8um5k"]
+[ext_resource type="Texture2D" uid="uid://booc7smjc0yvw" path="res://assets/MainMenu/Hills.png" id="5_xim88"]
+[ext_resource type="Texture2D" uid="uid://baaxlyg5wgf7k" path="res://assets/MainMenu/Title.png" id="8_koqhg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8um5k")
+
+[node name="Back5" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.1
+
+[node name="Sun" type="Sprite2D" parent="Back5"]
+z_index = 1
+position = Vector2(-255.48828, -4343.1055)
+scale = Vector2(10, 10)
+texture = ExtResource("2_xim88")
+
+[node name="Stars" type="Sprite2D" parent="Back5"]
+visible = false
+scale = Vector2(10, 10)
+texture = ExtResource("1_853f1")
+
+[node name="Back" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.2
+
+[node name="Mountains2" type="Sprite2D" parent="Back"]
+scale = Vector2(5, 5)
+texture = ExtResource("2_8saeu")
+
+[node name="Back2" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.35
+
+[node name="Mountains2" type="Sprite2D" parent="Back2"]
+scale = Vector2(2.85, 2.85)
+texture = ExtResource("3_df05h")
+
+[node name="Back3" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.5
+
+[node name="Mountains2" type="Sprite2D" parent="Back3"]
+scale = Vector2(2, 2)
+texture = ExtResource("4_8um5k")
+
+[node name="Back4" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.8
+
+[node name="Mountains2" type="Sprite2D" parent="Back4"]
+scale = Vector2(1.265, 1.265)
+texture = ExtResource("5_xim88")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 5
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4324, 0.87232006, 0.94, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+follow_viewport_enabled = true
+follow_viewport_scale = 0.15
+
+[node name="Title" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(181.41992, -583.6095)
+scale = Vector2(3.585, 3.585)
+texture = ExtResource("8_koqhg")

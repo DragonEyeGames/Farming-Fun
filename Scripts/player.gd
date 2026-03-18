@@ -307,4 +307,6 @@ func animate():
 		newSprite.play("idle-up")
 	
 	if(direction=="side" and state=="idle"):
-		newSprite.play("side-idle")
+		newSprite.play("idle-side")
+	elif(direction=="side" and state=="walk"):
+		newSprite.play("walk-side")

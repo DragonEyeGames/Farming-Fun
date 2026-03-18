@@ -1,4 +1,4 @@
-[gd_scene load_steps=165 format=3 uid="uid://dxfle2k15hmmm"]
+[gd_scene load_steps=173 format=3 uid="uid://dxfle2k15hmmm"]
 
 [ext_resource type="Script" uid="uid://cvwpoobhk1j41" path="res://Scripts/player.gd" id="1_sweqy"]
 [ext_resource type="PackedScene" uid="uid://cp2dwgarjtbf4" path="res://Scenes/carrot.tscn" id="2_3smsa"]
@@ -80,11 +80,19 @@
 [ext_resource type="Texture2D" uid="uid://cyjtg6jj4flcs" path="res://Characters/Character/Side-Idle-4.png" id="58_6yrdb"]
 [ext_resource type="Texture2D" uid="uid://dc2c1vmvxjtya" path="res://Characters/Character/Side-Idle-5.png" id="59_ue0p1"]
 [ext_resource type="Texture2D" uid="uid://chcg47ywq8ygs" path="res://Characters/Character/Side-Idle-6.png" id="60_isbcs"]
+[ext_resource type="Texture2D" uid="uid://c0l7qyninquom" path="res://Characters/Character/Side-Walk-1.png" id="69_hcgbs"]
 [ext_resource type="Texture2D" uid="uid://d2cx13lfg06ba" path="res://Characters/Character/Plant-Down.png" id="69_jmelf"]
+[ext_resource type="Texture2D" uid="uid://d1osqbfiwjot1" path="res://Characters/Character/Side-Walk-2.png" id="70_mpfyg"]
 [ext_resource type="Texture2D" uid="uid://b6o3ieg8blyax" path="res://Characters/Character/Water-2.png" id="71_pg0gw"]
+[ext_resource type="Texture2D" uid="uid://c702mpg78x2nm" path="res://Characters/Character/Side-Walk-3.png" id="71_un823"]
+[ext_resource type="Texture2D" uid="uid://dbktcbi14eeb5" path="res://Characters/Character/Side-Walk-4.png" id="72_aclic"]
 [ext_resource type="Texture2D" uid="uid://ydbbdorh1fae" path="res://Characters/Character/Water-Up-2.png" id="72_w4w4b"]
+[ext_resource type="Texture2D" uid="uid://dsasaxxp2ou4m" path="res://Characters/Character/Side-Walk-5.png" id="73_0y64g"]
 [ext_resource type="Texture2D" uid="uid://b0fayxes3483" path="res://Characters/Character/Plant-Up.png" id="73_wcnj3"]
+[ext_resource type="Texture2D" uid="uid://dikjaltiykoc7" path="res://Characters/Character/Side-Walk-6.png" id="74_ramv3"]
+[ext_resource type="Texture2D" uid="uid://b0tng3nn4lvt4" path="res://Characters/Character/Side-Walk-7.png" id="75_hseb1"]
 [ext_resource type="Texture2D" uid="uid://bkn5ylwo5i4n4" path="res://Characters/Character/Watering-Down.png" id="75_qavoy"]
+[ext_resource type="Texture2D" uid="uid://cudor0dr6fpux" path="res://Characters/Character/Side-Walk-8.png" id="76_vinow"]
 [ext_resource type="Texture2D" uid="uid://c3d3g1lpueh1q" path="res://Characters/Character/Watering-Up.png" id="77_h5cax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
@@ -609,6 +617,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("55_o736f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ketbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4grkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6yrdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ue0p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_isbcs")
+}],
+"loop": true,
+"name": &"idle-side",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("17_wpjfl")
 }, {
 "duration": 1.0,
@@ -786,29 +817,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("55_o736f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_ketbw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_4grkl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_6yrdb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_ue0p1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_isbcs")
-}],
-"loop": true,
-"name": &"side-idle",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": ExtResource("23_ypfnu")
 }, {
 "duration": 1.2,
@@ -834,7 +842,36 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk-down",
-"speed": 9.0
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_hcgbs")
+}, {
+"duration": 1.2,
+"texture": ExtResource("70_mpfyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_un823")
+}, {
+"duration": 1.2,
+"texture": ExtResource("72_aclic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_0y64g")
+}, {
+"duration": 1.2,
+"texture": ExtResource("74_ramv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_hseb1")
+}, {
+"duration": 1.2,
+"texture": ExtResource("76_vinow")
+}],
+"loop": true,
+"name": &"walk-side",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -863,7 +900,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk-up",
-"speed": 9.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1618,9 +1655,9 @@ animation = &"water-up"
 position = Vector2(0, -13)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_wpjfl")
-animation = &"side-idle"
+animation = &"walk-up"
 autoplay = "idle-up"
-frame_progress = 0.25650892
+frame_progress = 0.30954495
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -9)
