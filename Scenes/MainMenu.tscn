@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dnbmw1wlmgh36"]
+[gd_scene load_steps=20 format=3 uid="uid://dnbmw1wlmgh36"]
 
 [ext_resource type="Script" uid="uid://w31ac8g13dre" path="res://Scenes/MainMenu.gd" id="1_8um5k"]
 [ext_resource type="Texture2D" uid="uid://c1tkgnrbexanl" path="res://assets/MainMenu/Stars.png" id="1_853f1"]
@@ -9,9 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://booc7smjc0yvw" path="res://assets/MainMenu/Hills.png" id="5_xim88"]
 [ext_resource type="Texture2D" uid="uid://baaxlyg5wgf7k" path="res://assets/MainMenu/Title.png" id="8_koqhg"]
 [ext_resource type="Texture2D" uid="uid://3xwfmmfgbw2u" path="res://assets/MainMenu/Start.png" id="9_cmrfp"]
+[ext_resource type="BitMap" uid="uid://ccjau8mukkms1" path="res://assets/MainMenu/Bitmask.png" id="10_fh7cp"]
 [ext_resource type="Texture2D" uid="uid://dqpdpwquwu1xc" path="res://assets/MainMenu/Settings.png" id="10_loo7a"]
 [ext_resource type="Texture2D" uid="uid://cf6adful438ph" path="res://assets/MainMenu/Quit.png" id="11_if7li"]
 [ext_resource type="AudioStream" uid="uid://ckotidye75id7" path="res://Music/Intro.mp3" id="12_rrcx7"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="13_8e205"]
 
 [sub_resource type="Animation" id="Animation_koqhg"]
 resource_name = "set"
@@ -438,6 +440,7 @@ offset_bottom = 661.5318
 scale = Vector2(0.505, 0.505)
 pivot_offset = Vector2(1101.9592, 795.532)
 texture_normal = ExtResource("9_cmrfp")
+texture_click_mask = ExtResource("10_fh7cp")
 
 [node name="Settings" type="TextureButton" parent="CanvasLayer4/Control"]
 layout_mode = 0
@@ -448,6 +451,7 @@ offset_bottom = 874.12683
 scale = Vector2(0.505, 0.505)
 pivot_offset = Vector2(1094.3188, 842.5754)
 texture_normal = ExtResource("10_loo7a")
+texture_click_mask = ExtResource("10_fh7cp")
 
 [node name="Quit" type="TextureButton" parent="CanvasLayer4/Control"]
 layout_mode = 0
@@ -458,6 +462,7 @@ offset_bottom = 1085.365
 scale = Vector2(0.505, 0.505)
 pivot_offset = Vector2(1104.6287, 914.9619)
 texture_normal = ExtResource("11_if7li")
+texture_click_mask = ExtResource("10_fh7cp")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_rrcx7")
@@ -465,6 +470,230 @@ volume_db = 15.0
 autoplay = true
 bus = &"Music"
 
+[node name="CanvasLayer6" type="CanvasLayer" parent="."]
+layer = 9
+follow_viewport_enabled = true
+follow_viewport_scale = 0.95
+
+[node name="Settings" type="Control" parent="CanvasLayer6"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -985.0605
+offset_top = -629.05707
+offset_right = -945.0605
+offset_bottom = -589.05707
+scale = Vector2(1.065, 1.065)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer6/Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 505.00177
+offset_top = 253.92746
+offset_right = 1460.8524
+offset_bottom = 941.5852
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer6/Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 510.59985
+offset_top = 262.1919
+offset_right = 1452.588
+offset_bottom = 936.4536
+color = Color(0.39151636, 0.25278953, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer6/Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -677.86707
+offset_top = -462.7926
+offset_right = 2411.4824
+offset_bottom = 1479.8766
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.596)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer6/Settings"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 515.07916
+offset_top = 212.75809
+offset_right = 1453.1414
+offset_bottom = 476.51553
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 170
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer6/Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 512.90546
+offset_top = 220.29623
+offset_right = 1450.9677
+offset_bottom = 452.92868
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 170
+text = "Volumes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer6/Settings"]
+z_index = 1
+layout_mode = 0
+offset_left = 510.919
+offset_top = 426.91324
+offset_right = 1453.4736
+offset_bottom = 796.4258
+
+[node name="Master" type="Control" parent="CanvasLayer6/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer6/Settings/VBoxContainer/Master"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer6/Settings/VBoxContainer/Master"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 100
+text = "Master:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="Control" parent="CanvasLayer6/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer6/Settings/VBoxContainer/Music"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer6/Settings/VBoxContainer/Music"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 100
+text = "Music:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX" type="Control" parent="CanvasLayer6/Settings/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer6/Settings/VBoxContainer/SFX"]
+layout_mode = 0
+offset_left = 287.83533
+offset_top = 23.972523
+offset_right = 413.7713
+offset_bottom = 39.972523
+scale = Vector2(5, 5)
+min_value = -2000.0
+max_value = 36.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer6/Settings/VBoxContainer/SFX"]
+z_index = 1
+layout_mode = 0
+offset_left = -46.851196
+offset_top = -16.55365
+offset_right = 350.50354
+offset_bottom = 129.85645
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 100
+text = "SFX:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsClose" type="Button" parent="CanvasLayer6/Settings"]
+z_index = 2
+layout_mode = 0
+offset_left = 830.2146
+offset_top = 827.2185
+offset_right = 1154.4932
+offset_bottom = 924.0957
+pivot_offset = Vector2(159.0581, 53.34247)
+focus_mode = 0
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer6/Settings/SettingsClose"]
+z_index = 1
+layout_mode = 0
+offset_left = 3.6645508
+offset_top = 4.305847
+offset_right = 320.58313
+offset_bottom = 93.12952
+mouse_filter = 2
+color = Color(0.333763, 0.16576943, 0.010252307, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer6/Settings/SettingsClose"]
+layout_mode = 0
+offset_left = 0.20581055
+offset_top = 0.26818848
+offset_right = 324.5078
+offset_bottom = 96.64612
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer6/Settings/SettingsClose"]
+z_index = 1
+layout_mode = 0
+offset_left = 2.3258057
+offset_top = 3.2537842
+offset_right = 321.13403
+offset_bottom = 95.022766
+pivot_offset = Vector2(186.28778, 90.6272)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("13_8e205")
+theme_override_font_sizes/normal_font_size = 67
+text = "Close"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="mouse_entered" from="CanvasLayer4/Control/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer4/Control/Start" to="." method="_on_start_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer4/Control/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer4/Control/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer4/Control/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer4/Control/Settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer4/Control/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer4/Control/Quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer4/Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="CanvasLayer6/Settings/VBoxContainer/Master/HSlider" to="." method="on_master_change"]
+[connection signal="value_changed" from="CanvasLayer6/Settings/VBoxContainer/Music/HSlider" to="." method="on_music_changed"]
+[connection signal="value_changed" from="CanvasLayer6/Settings/VBoxContainer/SFX/HSlider" to="." method="on_sfx_change"]
+[connection signal="mouse_entered" from="CanvasLayer6/Settings/SettingsClose" to="." method="_on_settings_close_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer6/Settings/SettingsClose" to="." method="_on_settings_close_mouse_exited"]
+[connection signal="pressed" from="CanvasLayer6/Settings/SettingsClose" to="." method="_on_settings_close_pressed"]

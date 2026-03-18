@@ -54,6 +54,9 @@ func _ready() -> void:
 		object.reparent($YSort)
 		
 func transport(file: String):
+	$Black/AnimationPlayer.play("dissapear")
+	await get_tree().create_timer(.2).timeout
+	await get_tree().process_frame
 	GameManager.main=null
 	GameManager.lastRenderedDay=GameManager.day
 	var save = FarmData.new()

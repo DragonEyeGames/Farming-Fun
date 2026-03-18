@@ -19,8 +19,7 @@ func _process(_delta: float) -> void:
 	$Holder/VBoxContainer/Settings/Settings.size=Vector2(547, 130)
 	$Holder/VBoxContainer/Save/Save.size=Vector2(547, 130)
 	$Holder/VBoxContainer/Exit/Exit.size=Vector2(547, 130)
-	if(Input.is_action_just_pressed("Pause")):
-		print("pause")
+	if(Input.is_action_just_pressed("Pause") and not GameManager.muted):
 		paused=!paused
 		if(paused):
 			AudioServer.set_bus_effect_enabled(1, 0, true)
@@ -45,6 +44,9 @@ func _on_resume_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
+	$Settings/VBoxContainer/Master/HSlider.value=GameManager.masterVolume
+	$Settings/VBoxContainer/Music/HSlider.value=GameManager.musicVolume
+	$Settings/VBoxContainer/SFX/HSlider.value=GameManager.sfxVolume
 	$Settings.visible=true
 	var tween=create_tween()
 	tween.tween_property($Settings, "modulate:a", 1, .1)
@@ -64,7 +66,7 @@ func _on_save_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 
 func on_master_change(value: float) -> void:
