@@ -8,3 +8,8 @@ func _ready() -> void:
 func select():
 	var child = get_children().pick_random()
 	child.play()
+	
+func _process(_delta: float) -> void:
+	if(GameManager.muted):
+		for child in get_children():
+			child.stop()

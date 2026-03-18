@@ -16,7 +16,7 @@ var main
 
 var hud
 var player
-
+var muted=false
 var plantable: TileMapLayer
 
 var playerMoney:=100
