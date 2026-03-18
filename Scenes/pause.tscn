@@ -484,7 +484,7 @@ offset_right = 413.7713
 offset_bottom = 39.972523
 scale = Vector2(5, 5)
 min_value = -2000.0
-max_value = 36.0
+max_value = 0.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/Master"]
 z_index = 1
@@ -512,7 +512,7 @@ offset_right = 413.7713
 offset_bottom = 39.972523
 scale = Vector2(5, 5)
 min_value = -2000.0
-max_value = 36.0
+max_value = 0.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/Music"]
 z_index = 1
@@ -540,7 +540,7 @@ offset_right = 413.7713
 offset_bottom = 39.972523
 scale = Vector2(5, 5)
 min_value = -2000.0
-max_value = 36.0
+max_value = 0.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Settings/VBoxContainer/SFX"]
 z_index = 1

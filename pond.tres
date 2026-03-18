@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://qjdxyk8riud0"]
+
+[ext_resource type="Shader" uid="uid://ca3q2urxnhese" path="res://Scenes/sway.gdshader" id="1_rmfoo"]
+
+[resource]
+shader = ExtResource("1_rmfoo")
+shader_parameter/start_y = 0.3
+shader_parameter/strength = 0.15
+shader_parameter/curve_scale = 1.5
+shader_parameter/speed = 2.0
+shader_parameter/wind_start = 0.0

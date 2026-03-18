@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cuegbiplk4swv"]
+[gd_scene load_steps=22 format=3 uid="uid://cuegbiplk4swv"]
 
 [ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_bsdmh"]
 [ext_resource type="Script" uid="uid://cpw82wnjihvyf" path="res://Scripts/plant.gd" id="2_aq00n"]
@@ -6,14 +6,23 @@
 [ext_resource type="Texture2D" uid="uid://ik22pj1vs3j8" path="res://assets/Plants/Onions/Plants-2.png" id="3_bsdmh"]
 [ext_resource type="Texture2D" uid="uid://7ap2va0fs3j2" path="res://assets/Plants/Onions/Plants-6.png" id="4_tbj8p"]
 [ext_resource type="Texture2D" uid="uid://ngpkvno6w5dq" path="res://assets/Plants/Onions/Plants-3.png" id="5_3n4t0"]
+[ext_resource type="Texture2D" uid="uid://d3nyyb2x2ij8m" path="res://assets/Plants/Onions/Onion-5.png" id="5_h4hao"]
 [ext_resource type="Texture2D" uid="uid://l0lu0xuqpcj8" path="res://assets/Plants/Onions/Plants-7.png" id="6_5fsbr"]
+[ext_resource type="Texture2D" uid="uid://duxxlabvxlr0g" path="res://assets/Plants/Onions/OnionHole-5.png" id="6_pgnul"]
+[ext_resource type="Texture2D" uid="uid://m6xdct5codc5" path="res://assets/Plants/Onions/Onion-4.png" id="7_5fsbr"]
 [ext_resource type="Texture2D" uid="uid://duwnl3mauhfsa" path="res://assets/Plants/Onions/Plants-4.png" id="7_ckkjd"]
+[ext_resource type="Texture2D" uid="uid://begwk0v8hqtde" path="res://assets/Plants/Onions/OnionHole-4.png" id="8_ckkjd"]
 [ext_resource type="Texture2D" uid="uid://bamhto6fovuxu" path="res://assets/Plants/Onions/Plants-1.png" id="8_h4hao"]
 [ext_resource type="PackedScene" uid="uid://yo44qrj3vkce" path="res://Scenes/water_splotch.tscn" id="10_tbj8p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbj8p"]
 resource_local_to_scene = true
 shader = ExtResource("1_bsdmh")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -96,7 +105,7 @@ _data = {
 [node name="Onion" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 material = SubResource("ShaderMaterial_tbj8p")
 script = ExtResource("2_aq00n")
-animations = [NodePath("Sprites/Onion-1"), NodePath("Sprites/Onion-1"), NodePath("Sprites/Onion-2"), NodePath("Sprites/Onion-2"), NodePath("Sprites/Onion-3"), NodePath("Sprites/OnionHole-5")]
+animations = [NodePath("Sprites/Onion-1"), NodePath("Sprites/Onion-2"), NodePath("Sprites/Onion-3"), NodePath("Sprites/Onion-4"), NodePath("Sprites/Onion-5"), NodePath("Sprites/OnionHole-5")]
 type = 2
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -122,24 +131,44 @@ use_parent_material = true
 position = Vector2(4, -7)
 scale = Vector2(0.285, 0.285)
 
-[node name="Onion-3" type="Sprite2D" parent="Sprites"]
+[node name="Onion-5" type="Sprite2D" parent="Sprites"]
 use_parent_material = true
 position = Vector2(-8, 6)
 texture = ExtResource("2_q2txl")
 
-[node name="Plants2" type="Sprite2D" parent="Sprites/Onion-3"]
+[node name="Plants2" type="Sprite2D" parent="Sprites/Onion-5"]
 z_index = -1
 texture = ExtResource("3_bsdmh")
 
-[node name="Onion-2" type="Sprite2D" parent="Sprites"]
+[node name="Onion-4" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
+position = Vector2(35.08772, 0)
+texture = ExtResource("5_h4hao")
+
+[node name="Plants3" type="Sprite2D" parent="Sprites/Onion-4"]
+z_index = -1
+texture = ExtResource("6_pgnul")
+
+[node name="Onion-3" type="Sprite2D" parent="Sprites"]
 visible = false
 use_parent_material = true
 position = Vector2(56.14035, 3.508772)
 texture = ExtResource("4_tbj8p")
 
-[node name="Plants3" type="Sprite2D" parent="Sprites/Onion-2"]
+[node name="Plants3" type="Sprite2D" parent="Sprites/Onion-3"]
 z_index = -1
 texture = ExtResource("5_3n4t0")
+
+[node name="Onion-2" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
+position = Vector2(143.85965, 3.508772)
+texture = ExtResource("7_5fsbr")
+
+[node name="Plants4" type="Sprite2D" parent="Sprites/Onion-2"]
+z_index = -1
+texture = ExtResource("8_ckkjd")
 
 [node name="Onion-1" type="Sprite2D" parent="Sprites"]
 visible = false

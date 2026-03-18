@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://btvy66yb0plbx"]
+[gd_scene load_steps=24 format=3 uid="uid://btvy66yb0plbx"]
 
 [ext_resource type="Shader" uid="uid://bdxtm7oefhdhx" path="res://Scenes/outline.gdshader" id="1_5su27"]
 [ext_resource type="Texture2D" uid="uid://gu5kokd0nada" path="res://assets/Plants/Potato/Plants-1.png" id="2_gmojo"]
@@ -6,14 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://clp1riffhorv4" path="res://assets/Plants/Potato/Plants-5.png" id="3_5su27"]
 [ext_resource type="Texture2D" uid="uid://4kf6sn3trmsm" path="res://assets/Plants/Potato/Plants-2.png" id="4_5c2fc"]
 [ext_resource type="Texture2D" uid="uid://7ftqa3e4htc5" path="res://assets/Plants/Potato/Plants-6.png" id="5_8ipad"]
+[ext_resource type="Texture2D" uid="uid://dxeha8mcrjwp0" path="res://assets/Plants/Potato/Potato-5.png" id="5_dvank"]
 [ext_resource type="Texture2D" uid="uid://ygr1w60ec8uc" path="res://assets/Plants/Potato/Plants-3.png" id="6_qhkbe"]
+[ext_resource type="Texture2D" uid="uid://2w61c5dctnre" path="res://assets/Plants/Potato/PotatoHole-1.png" id="6_ukgqq"]
 [ext_resource type="Texture2D" uid="uid://yqlxjk50wl4g" path="res://assets/Plants/Potato/Plants-7.png" id="7_0jtyu"]
 [ext_resource type="Texture2D" uid="uid://biqwh56o1f4ix" path="res://assets/Plants/Potato/Plants-4.png" id="8_6yxst"]
+[ext_resource type="Texture2D" uid="uid://dngo3urhqut78" path="res://assets/Plants/Potato/Potato-1.png" id="9_qv1fq"]
 [ext_resource type="PackedScene" uid="uid://yo44qrj3vkce" path="res://Scenes/water_splotch.tscn" id="10_5c2fc"]
+[ext_resource type="Texture2D" uid="uid://chouaw2k41ccc" path="res://assets/Plants/Potato/potato-Hole-1.png" id="10_tgn3n"]
+[ext_resource type="Texture2D" uid="uid://ddclr8n3ol0rg" path="res://assets/Plants/Potato/Potato1.png" id="13_yamhm"]
+[ext_resource type="Texture2D" uid="uid://btgfkf8ti847b" path="res://assets/Plants/Potato/PotatoHole.png" id="14_3qdpb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5c2fc"]
 resource_local_to_scene = true
 shader = ExtResource("1_5su27")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -96,10 +107,11 @@ _data = {
 [node name="Potato" type="Node2D" node_paths=PackedStringArray("animations") groups=["Crop", "Save"]]
 material = SubResource("ShaderMaterial_5c2fc")
 script = ExtResource("2_rx63k")
-animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Hole")]
+animations = [NodePath("Sprites/Stage-1"), NodePath("Sprites/Stage-2"), NodePath("Sprites/Stage-3"), NodePath("Sprites/Stage-4"), NodePath("Sprites/Stage-5"), NodePath("Sprites/Stage-6"), NodePath("Sprites/Hole")]
 type = 3
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(2, -5)
 collision_layer = 0
 collision_mask = 2
@@ -109,6 +121,7 @@ position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_rx63k")
 
 [node name="Area2D2" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
@@ -121,36 +134,70 @@ use_parent_material = true
 position = Vector2(3, -7.0000005)
 scale = Vector2(0.27, 0.27)
 
-[node name="Stage-3" type="Sprite2D" parent="Sprites"]
+[node name="Stage-6" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(-12, 12)
+position = Vector2(-11.111111, 25.925926)
 texture = ExtResource("3_5su27")
 
-[node name="Plants2" type="Sprite2D" parent="Sprites/Stage-3"]
+[node name="Plants2" type="Sprite2D" parent="Sprites/Stage-6"]
 z_index = -1
 texture = ExtResource("4_5c2fc")
 
-[node name="Stage-2" type="Sprite2D" parent="Sprites"]
+[node name="Stage-5" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(51.85185, 3.7037048)
+position = Vector2(-62.962963, 22.222223)
+texture = ExtResource("5_dvank")
+
+[node name="Plants3" type="Sprite2D" parent="Sprites/Stage-5"]
+z_index = -1
+texture = ExtResource("6_ukgqq")
+
+[node name="Stage-4" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
+position = Vector2(51.85185, 14.814816)
 texture = ExtResource("5_8ipad")
 
-[node name="Plants3" type="Sprite2D" parent="Sprites/Stage-2"]
+[node name="Plants3" type="Sprite2D" parent="Sprites/Stage-4"]
 z_index = -1
 texture = ExtResource("6_qhkbe")
 
-[node name="Stage-1" type="Sprite2D" parent="Sprites"]
+[node name="Stage-3" type="Sprite2D" parent="Sprites"]
+visible = false
 use_parent_material = true
-position = Vector2(118.518524, 9.536743e-07)
+position = Vector2(70.37037, 18.51852)
+texture = ExtResource("9_qv1fq")
+
+[node name="Plants4" type="Sprite2D" parent="Sprites/Stage-3"]
+z_index = -1
+texture = ExtResource("10_tgn3n")
+
+[node name="Stage-2" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
+position = Vector2(114.814804, 11.111112)
 texture = ExtResource("7_0jtyu")
 
-[node name="Plants4" type="Sprite2D" parent="Sprites/Stage-1"]
+[node name="Plants4" type="Sprite2D" parent="Sprites/Stage-2"]
 z_index = -1
 texture = ExtResource("8_6yxst")
 
-[node name="Hole" type="Sprite2D" parent="Sprites"]
+[node name="Stage-1" type="Sprite2D" parent="Sprites"]
+visible = false
+use_parent_material = true
+position = Vector2(185.18518, 7.407408)
+texture = ExtResource("13_yamhm")
+
+[node name="Plants4" type="Sprite2D" parent="Sprites/Stage-1"]
 z_index = -1
-position = Vector2(-74.07407, 11.111114)
+texture = ExtResource("14_3qdpb")
+
+[node name="Hole" type="Sprite2D" parent="Sprites"]
+visible = false
+z_index = -1
+position = Vector2(-74.07407, 25.925926)
 texture = ExtResource("2_gmojo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
