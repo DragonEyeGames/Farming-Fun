@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://w8rof17oksa5"]
+[gd_scene load_steps=19 format=4 uid="uid://w8rof17oksa5"]
 
 [ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/buildingInterior.gd" id="1_iqtyj"]
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_okrnj"]
@@ -13,6 +13,9 @@ size = Vector2(36.666668, 7.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xi0mm"]
 size = Vector2(35, 31.666676)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3jqw"]
+size = Vector2(29, 3)
 
 [sub_resource type="Animation" id="Animation_7ug6d"]
 length = 0.001
@@ -66,6 +69,60 @@ _data = {
 &"RESET": SubResource("Animation_7ug6d"),
 &"darken": SubResource("Animation_gau5j"),
 &"lighten": SubResource("Animation_l3jqw")
+}
+
+[sub_resource type="Animation" id="Animation_lmwq5"]
+resource_name = "appear"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x4svt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ttg8n"]
+resource_name = "dissapear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ttg8n"]
+_data = {
+&"RESET": SubResource("Animation_x4svt"),
+&"appear": SubResource("Animation_lmwq5"),
+&"dissapear": SubResource("Animation_ttg8n")
 }
 
 [node name="House" type="Node2D"]
@@ -159,6 +216,12 @@ collision_mask = 2
 position = Vector2(47, -44)
 polygon = PackedVector2Array(-10, 149, -8, 151, 7, 151, 10, 149, 10, 153, -10, 153)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
+position = Vector2(47.5, 110.5)
+shape = SubResource("RectangleShape2D_l3jqw")
+
 [node name="Sleep" type="CanvasLayer" parent="."]
 layer = 2
 
@@ -182,6 +245,23 @@ position = Vector2(102, -65)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(224, -112, 221, 67, 214, 110, 55, 110, 55, 107, 205, 107, 205, 64, 205, -98, -109, -98, -110, 64, -110, 99.25597, -110, 107, 40, 107, 40, 110, -112, 110, -112, 107, -117, 64, -113, -123)
+
+[node name="Black" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Black"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black"]
+libraries = {
+&"": SubResource("AnimationLibrary_ttg8n")
+}
+autoplay = "appear"
 
 [connection signal="body_entered" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Bed/Area2D" to="Bed" method="_on_area_2d_body_exited"]

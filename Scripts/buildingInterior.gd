@@ -1,6 +1,9 @@
 extends Node2D
 
 func _on_door_body_entered(_body: Node2D) -> void:
+	$Black/AnimationPlayer.play("dissapear")
+	await get_tree().create_timer(.25).timeout
+	await get_tree().process_frame
 	var lastSeen
 	if ResourceLoader.exists("user://player_data.tres"):
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData

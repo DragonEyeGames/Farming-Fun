@@ -1,9 +1,66 @@
-[gd_scene load_steps=5 format=4 uid="uid://dqk8jjdqhhr8t"]
+[gd_scene load_steps=10 format=4 uid="uid://dqk8jjdqhhr8t"]
 
 [ext_resource type="PackedScene" uid="uid://i07sdevhcge6" path="res://Scenes/tilemap.tscn" id="1_0jr3m"]
 [ext_resource type="Script" uid="uid://b85p0pwlulvwk" path="res://Scripts/buildingInterior.gd" id="1_rcfog"]
 [ext_resource type="Texture2D" uid="uid://eqoymnkrs6g6" path="res://assets/Farm/House_interior.png" id="2_aeunn"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="3_qiw6i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou8i4"]
+size = Vector2(36, 3)
+
+[sub_resource type="Animation" id="Animation_lmwq5"]
+resource_name = "appear"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.05, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x4svt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ttg8n"]
+resource_name = "dissapear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ttg8n"]
+_data = {
+&"RESET": SubResource("Animation_x4svt"),
+&"appear": SubResource("Animation_lmwq5"),
+&"dissapear": SubResource("Animation_ttg8n")
+}
 
 [node name="Interior" type="Node2D"]
 script = ExtResource("1_rcfog")
@@ -55,7 +112,6 @@ region_rect = Rect2(50, 12, 44, 46)
 
 [node name="Player" parent="." instance=ExtResource("3_qiw6i")]
 position = Vector2(-1, 141)
-collision_layer = 2
 
 [node name="Door" type="Area2D" parent="."]
 collision_layer = 0
@@ -63,5 +119,28 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Door"]
 polygon = PackedVector2Array(-10, 149, -8, 151, 7, 151, 10, 149, 10, 153, -10, 153)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/StaticBody2D"]
+position = Vector2(0, 154.5)
+shape = SubResource("RectangleShape2D_ou8i4")
+
+[node name="Black" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Black"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Black"]
+libraries = {
+&"": SubResource("AnimationLibrary_ttg8n")
+}
+autoplay = "appear"
 
 [connection signal="body_entered" from="Door" to="." method="_on_door_body_entered"]

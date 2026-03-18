@@ -1,4 +1,4 @@
-[gd_scene load_steps=141 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=150 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -21,32 +21,41 @@
 [ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="20_2gh4u"]
 [ext_resource type="Texture2D" uid="uid://dcbmymdn70l5x" path="res://assets/Objects.png" id="22_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://r1k5u4fnpsmj" path="res://Characters/Shopkeep.png" id="23_3tgeq"]
-[ext_resource type="Texture2D" uid="uid://csb0ncimmfwgj" path="res://assets/PipShop/Shopkeep-1.png" id="23_6ehlx"]
+[ext_resource type="Texture2D" uid="uid://sqdrcc4e26gc" path="res://assets/PipShop/Idle-1.png" id="23_j7e3e"]
 [ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scripts/shopkeep.gd" id="24_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://cerbit0xste7" path="res://assets/PipShop/Shopkeep-2.png" id="24_utia5"]
+[ext_resource type="Texture2D" uid="uid://dahi4n6405phr" path="res://assets/PipShop/Idle-2.png" id="24_y2ulj"]
 [ext_resource type="PackedScene" uid="uid://cx1ywkbf2hdqx" path="res://Scenes/shopHUD.tscn" id="25_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://jh4y2shyk0fi" path="res://assets/PipShop/Shopkeep-3.png" id="25_f7hdo"]
+[ext_resource type="Texture2D" uid="uid://dn4ecvmwkuhsv" path="res://assets/PipShop/Idle-3.png" id="25_t3x2a"]
+[ext_resource type="Texture2D" uid="uid://bc1b8ehxjgodr" path="res://assets/PipShop/Idle-4.png" id="26_1bbis"]
 [ext_resource type="Texture2D" uid="uid://d2q1bw43msqqv" path="res://assets/House/House-1.png" id="26_4yxf6"]
-[ext_resource type="Texture2D" uid="uid://berfk3vfh1hvh" path="res://assets/PipShop/Shopkeep-4.png" id="26_clvyn"]
 [ext_resource type="Script" uid="uid://cwdcluk0384b" path="res://Scripts/house.gd" id="26_qta6b"]
-[ext_resource type="Texture2D" uid="uid://dwxsrbcyceywb" path="res://assets/PipShop/Shopkeep-5.png" id="27_d8m2u"]
 [ext_resource type="Texture2D" uid="uid://cyt5rcek2nik" path="res://assets/House/House-2.png" id="27_qta6b"]
-[ext_resource type="Texture2D" uid="uid://hvjxfuprnpe4" path="res://assets/PipShop/Shopkeep-6.png" id="28_5psol"]
+[ext_resource type="Texture2D" uid="uid://ctb3ltoir7nsl" path="res://assets/PipShop/Idle-5.png" id="27_yn2g2"]
 [ext_resource type="Texture2D" uid="uid://dgtfr1nin1wsi" path="res://assets/House/House-3.png" id="28_x3rx7"]
+[ext_resource type="Texture2D" uid="uid://cr8cp8du33qpi" path="res://assets/PipShop/Idle-6.png" id="28_yic5e"]
 [ext_resource type="Texture2D" uid="uid://d2nl3qj3xec16" path="res://assets/House/House-4.png" id="29_6heos"]
+[ext_resource type="Texture2D" uid="uid://cw4665uncum46" path="res://assets/PipShop/Wave-1.png" id="29_ex7s8"]
+[ext_resource type="Texture2D" uid="uid://dctigpsgy58aa" path="res://assets/PipShop/Wave-2.png" id="30_4clwk"]
 [ext_resource type="Texture2D" uid="uid://5kolyuihyjnw" path="res://assets/PipShop/Barrel.png" id="30_off7b"]
 [ext_resource type="Texture2D" uid="uid://bpeprsnhmdq05" path="res://assets/House/House-5.png" id="30_vvnwx"]
 [ext_resource type="Texture2D" uid="uid://ee3i260vb6fr" path="res://assets/House/House-6.png" id="31_btbly"]
+[ext_resource type="Texture2D" uid="uid://b106srnkgpc2d" path="res://assets/PipShop/Wave-3.png" id="31_h2tpa"]
 [ext_resource type="Texture2D" uid="uid://cii007qbfk83h" path="res://assets/PipShop/Jug.png" id="31_lfh1j"]
 [ext_resource type="Texture2D" uid="uid://0ypqsoa67wo4" path="res://assets/PipShop/Stopper.png" id="32_7sj7i"]
+[ext_resource type="Texture2D" uid="uid://804x4m3pe5sd" path="res://assets/PipShop/Wave-4.png" id="32_nkjwg"]
 [ext_resource type="PackedScene" uid="uid://bb0ltvim723fh" path="res://Scenes/chicken_pen.tscn" id="32_u7mjy"]
 [ext_resource type="Texture2D" uid="uid://bxfti1xj22edh" path="res://assets/House/House-7.png" id="32_vs04g"]
 [ext_resource type="PackedScene" uid="uid://bfcpcfrafxs2g" path="res://Scenes/ground.tscn" id="33_4yxf6"]
 [ext_resource type="Texture2D" uid="uid://b2s52qysbbp37" path="res://assets/House/House-8.png" id="33_6ehlx"]
+[ext_resource type="Texture2D" uid="uid://cwgie7nrltkb0" path="res://assets/PipShop/Wave-5.png" id="33_8n4h5"]
 [ext_resource type="Texture2D" uid="uid://cckogv55rrfbh" path="res://assets/PipShop/Poles.png" id="33_semxg"]
+[ext_resource type="Texture2D" uid="uid://ht0k7w4a5g28" path="res://assets/PipShop/Wave-6.png" id="34_as1io"]
 [ext_resource type="Texture2D" uid="uid://cq4o5vibon8qs" path="res://assets/PipShop/Poles-2.png" id="34_ep8v8"]
 [ext_resource type="Texture2D" uid="uid://x5dkaytlk4ka" path="res://assets/PipShop/More Poles.png" id="35_3133c"]
+[ext_resource type="Texture2D" uid="uid://chpeo35w5136l" path="res://assets/PipShop/Wave-7.png" id="35_xd5mi"]
 [ext_resource type="Texture2D" uid="uid://bi1rabtlakoro" path="res://assets/PipShop/Box.png" id="36_js5gh"]
+[ext_resource type="Texture2D" uid="uid://cicx8fuqywb70" path="res://assets/PipShop/Wave-8.png" id="36_tt1x2"]
+[ext_resource type="Texture2D" uid="uid://dkciwader5gsr" path="res://assets/PipShop/Wave-9.png" id="37_2wrh7"]
 [ext_resource type="Texture2D" uid="uid://chfowu3uboru4" path="res://assets/PipShop/Holders.png" id="37_vvjo1"]
 [ext_resource type="Texture2D" uid="uid://cnjay6jr038jh" path="res://assets/PipShop/Roof.png" id="38_yisvs"]
 [ext_resource type="Texture2D" uid="uid://c3edjuy54d1u" path="res://assets/Dirt/Bag.png" id="39_3133c"]
@@ -718,26 +727,58 @@ height = 50.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("23_6ehlx")
+"texture": ExtResource("23_j7e3e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_utia5")
+"texture": ExtResource("24_y2ulj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_f7hdo")
+"texture": ExtResource("25_t3x2a")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_clvyn")
+"texture": ExtResource("26_1bbis")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_d8m2u")
+"texture": ExtResource("27_yn2g2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_5psol")
+"texture": ExtResource("28_yic5e")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ex7s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4clwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_h2tpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_nkjwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_8n4h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_as1io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_xd5mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_tt1x2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_2wrh7")
+}],
+"loop": false,
+"name": &"wave",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tgeq"]
@@ -1126,9 +1167,10 @@ shape = SubResource("CapsuleShape2D_3tgeq")
 position = Vector2(-0.0014953613, -9.820953)
 scale = Vector2(0.265, 0.265)
 sprite_frames = SubResource("SpriteFrames_m4llh")
-animation = &"idle"
+animation = &"wave"
 autoplay = "idle"
-frame_progress = 0.4908657
+frame = 8
+frame_progress = 1.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Shop"]
 
@@ -1508,8 +1550,8 @@ autoplay = "Appear"
 [connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
 [connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]
-[connection signal="animation_finished" from="Shop/Pip" to="Shop/Pip" method="_on_animation_finished"]
 [connection signal="body_entered" from="Shop/Pip/Area2D" to="Shop/Pip" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Shop/Pip/Area2D" to="Shop/Pip" method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="Shop/Pip/Sprite" to="Shop/Pip" method="_on_animation_finished"]
 [connection signal="body_entered" from="House/Area2D" to="House" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="House/Area2D" to="House" method="_on_area_2d_body_exited"]

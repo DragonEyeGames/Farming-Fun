@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 	if(playerEntered and Input.is_action_just_pressed("Interact")):
 		GameManager.hud.visible=false
 		GameManager.player.canMove=false
-		GameManager.player.sprite.play("idle-up")
+		GameManager.player.newSprite.play("idle-up")
 		hud.visible=true
 		shopVisible=true
 	if(shopVisible and Input.is_action_just_pressed("Escape")):
@@ -27,12 +27,12 @@ func _process(_delta: float) -> void:
 		GameManager.player.canMove=true
 
 func _on_animation_finished() -> void:
-	play("idle")
+	$Sprite.play("idle")
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	playerEntered=true
-	play("wave")
+	$Sprite.play("wave")
 
 
 func _on_area_2d_body_exited(_body: Node2D) -> void:
