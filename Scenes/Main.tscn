@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=115 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -12,10 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bhuhjmt48tro" path="res://Scenes/raddish.tscn" id="8_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://cuegbiplk4swv" path="res://Scenes/onion.tscn" id="9_20pc6"]
 [ext_resource type="PackedScene" uid="uid://btvy66yb0plbx" path="res://Scenes/potato.tscn" id="10_wkp8b"]
-[ext_resource type="Script" uid="uid://bsy53bcsoyo4d" path="res://Scripts/pond.gd" id="12_c6i3y"]
 [ext_resource type="PackedScene" uid="uid://cqk06gthi58ac" path="res://Scenes/farmGround.tscn" id="12_qta6b"]
-[ext_resource type="Texture2D" uid="uid://bj4dndcwxs7vo" path="res://assets/Farm/fishes.png" id="13_c2ibq"]
-[ext_resource type="Texture2D" uid="uid://l1rcl6hrb0c" path="res://assets/Farm/water_detilazation.png" id="14_c2ibq"]
+[ext_resource type="PackedScene" uid="uid://bfssat42r3rii" path="res://Scenes/pond.tscn" id="14_81ldr"]
 [ext_resource type="Script" uid="uid://dlg03ri1phcbk" path="res://Scripts/signal_bus.gd" id="16_fpfj3"]
 [ext_resource type="PackedScene" uid="uid://q73ievm14tf7" path="res://Scenes/night.tscn" id="19_qta6b"]
 [ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="20_2gh4u"]
@@ -73,6 +71,11 @@ agent_radius = 2.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m4llh"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -82,6 +85,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lac6x"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -91,6 +99,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hpjjw"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -100,6 +113,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_off7b"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -109,6 +127,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lfh1j"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -118,6 +141,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7sj7i"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -127,6 +155,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_semxg"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -136,6 +169,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ep8v8"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -145,6 +183,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3133c"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -154,6 +197,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_js5gh"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -163,6 +211,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vvjo1"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -172,6 +225,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yisvs"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -181,6 +239,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rgw24"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -190,6 +253,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5gwyn"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -199,6 +267,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r6gtk"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -208,6 +281,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_81ldr"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -217,6 +295,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eywpa"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -226,6 +309,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j7e3e"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -235,6 +323,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y2ulj"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -244,6 +337,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t3x2a"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -253,6 +351,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bbis"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -262,6 +365,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yn2g2"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -271,6 +379,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yic5e"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -280,6 +393,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ex7s8"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -289,6 +407,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4clwk"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -298,6 +421,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h2tpa"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -307,6 +435,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nkjwg"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -316,6 +449,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8n4h5"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -325,6 +463,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_as1io"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -334,6 +477,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xd5mi"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -343,6 +491,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tt1x2"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -352,6 +505,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2wrh7"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -361,6 +519,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_atu2d"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -370,6 +533,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x5wht"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -379,6 +547,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tbeql"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -388,6 +561,11 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5nnb"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
@@ -397,262 +575,16 @@ shader_parameter/shade_color = Color(1, 1, 1, 0)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fsd2l"]
 resource_local_to_scene = true
 shader = ExtResource("8_vs04g")
+shader_parameter/start_y = 0.5
+shader_parameter/strength = 0.05
+shader_parameter/curve_scale = 0.2
+shader_parameter/speed = 1.0
+shader_parameter/wind_start = 0.0
 shader_parameter/outline_color = Color(0.06, 0.74, 0.23, 1)
 shader_parameter/outline_size = 0.0
 shader_parameter/alpha_threshold = 0.35999999195328
 shader_parameter/outline_samples = 4
 shader_parameter/shade_color = Color(1, 1, 1, 0)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tfui"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a34eg"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_via5u"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac6pf"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ek63v"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oaklg"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4bst2"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uy3go"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf3a2"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gdb40"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8h1yq"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fykug"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wrbn1"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cfjnh"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mplfx"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(160, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gyych"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(192, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xncey"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(224, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_skfvt"]
-atlas = ExtResource("13_c2ibq")
-region = Rect2(256, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nn00d"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5tfui")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a34eg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_via5u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ac6pf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ek63v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oaklg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4bst2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uy3go")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yf3a2")
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": false,
-"name": &"splash-1",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": null
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gdb40")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8h1yq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fykug")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wrbn1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cfjnh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mplfx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gyych")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xncey")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_skfvt")
-}, {
-"duration": 1.0,
-"texture": null
-}],
-"loop": false,
-"name": &"splash-2",
-"speed": 10.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nn00d"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 480, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oy6xi"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 496, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a43ws"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 512, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aoymy"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 528, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ytdkf"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 544, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0a21m"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(172, 560, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wnkxs"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 480, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qby0"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 496, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lo0ny"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 512, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mitij"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 528, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmx32"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 544, 86, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d646h"]
-atlas = ExtResource("14_c2ibq")
-region = Rect2(86, 560, 86, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wnkxs"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nn00d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oy6xi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a43ws")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aoymy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ytdkf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0a21m")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wnkxs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8qby0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lo0ny")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mitij")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nmx32")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d646h")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qta6b"]
-size = Vector2(89, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
 atlas = ExtResource("23_3tgeq")
@@ -1071,54 +1003,8 @@ position = Vector2(87, 39)
 [node name="Player" parent="." instance=ExtResource("1_r0du0")]
 position = Vector2(8.361679, -19.62677)
 
-[node name="Pond" type="Node2D" parent="."]
-position = Vector2(-212.17871, -126.800415)
-script = ExtResource("12_c6i3y")
-
-[node name="Coast" parent="Pond" instance=ExtResource("8_trn2v")]
-tile_map_data = PackedByteArray("AAAAAP//AwAEAAAAAAD/////AwABAAIAAAABAP//AwABAAIAAAD+////AwADAAAAAAD+/wAAAwADAAEAAAD//wAAAwABAAMAAAAAAAAAAwABAAMAAAABAAAAAwABAAMAAAD+/wEAAwACAAEAAAADAP//AwAFAAAAAAADAAAAAwAFAAEAAAACAP//AwAEAAAAAAADAAEAAwAAAAEAAAADAAIAAwAAAAEAAAD+/wIAAwACAAEAAAD+/wMAAwADAAIAAAD//wMAAwABAAAAAAAAAAMAAwAEAAIAAAABAAMAAwABAAAAAAACAAMAAwAEAAIAAAADAAMAAwAFAAIAAAA=")
-
-[node name="Water" parent="Pond" instance=ExtResource("8_trn2v")]
-z_index = -2
-tile_map_data = PackedByteArray("AAD/////AAACABEAAAD//wAAAAACABEAAAD//wEAAAACABEAAAD//wIAAAACABEAAAAAAP//AAACABEAAAAAAAAAAAACABEAAAAAAAEAAAACABEAAAAAAAIAAAACABEAAAABAP//AAACABEAAAABAAAAAAACABEAAAABAAEAAAACABEAAAABAAIAAAACABEAAAACAP//AAACABEAAAACAAAAAAACABEAAAACAAEAAAACABEAAAACAAIAAAACABEAAAADAP//AAACABEAAAADAAAAAAACABEAAAADAAEAAAACABEAAAADAAIAAAACABEAAAD+////AAACABEAAAD+/wAAAAACABEAAAD+/wEAAAACABEAAAD+/wIAAAACABEAAAD+/wMAAAACABEAAAD//wMAAAACABEAAAAAAAMAAAACABEAAAABAAMAAAACABEAAAACAAMAAAACABEAAAADAAMAAAACABEAAAA=")
-
-[node name="FishHolder" type="Node2D" parent="Pond"]
-z_index = 1
-
-[node name="Fish" type="AnimatedSprite2D" parent="Pond/FishHolder"]
-position = Vector2(-4, 44)
-sprite_frames = SubResource("SpriteFrames_nn00d")
-animation = &"splash-1"
-frame = 10
-frame_progress = 1.0
-
-[node name="Detailazation" type="Node2D" parent="Pond"]
-
-[node name="Ripple" type="AnimatedSprite2D" parent="Pond/Detailazation"]
-position = Vector2(0, 15)
-sprite_frames = SubResource("SpriteFrames_wnkxs")
-animation = &"new_animation"
-autoplay = "new_animation"
-frame_progress = 0.65936476
-
-[node name="Ripple3" type="AnimatedSprite2D" parent="Pond/Detailazation"]
-position = Vector2(52, 35)
-sprite_frames = SubResource("SpriteFrames_wnkxs")
-autoplay = "default"
-frame_progress = 0.15717971
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Pond"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pond/StaticBody2D"]
-polygon = PackedVector2Array(-15, 0, 8, -1, 31, -1, 49, 1, 50, 19, 50, 48, 43, 51, 16, 51, -15, 49, -18, 37, -18, 14)
-
-[node name="RefillArea" type="Area2D" parent="Pond"]
-collision_layer = 8
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pond/RefillArea"]
-position = Vector2(16.5, 24)
-shape = SubResource("RectangleShape2D_qta6b")
+[node name="Pond" parent="." instance=ExtResource("14_81ldr")]
+position = Vector2(-202.7177, -136.54367)
 
 [node name="Night" parent="." node_paths=PackedStringArray("SignalBus") instance=ExtResource("19_qta6b")]
 SignalBus = NodePath("../SignalBus")
@@ -1547,8 +1433,6 @@ libraries = {
 }
 autoplay = "Appear"
 
-[connection signal="body_entered" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_entered"]
-[connection signal="body_exited" from="Pond/RefillArea" to="Pond" method="_on_refill_area_body_exited"]
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]
 [connection signal="body_entered" from="Shop/Pip/Area2D" to="Shop/Pip" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Shop/Pip/Area2D" to="Shop/Pip" method="_on_area_2d_body_exited"]
