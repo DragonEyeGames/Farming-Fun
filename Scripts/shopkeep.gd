@@ -21,10 +21,13 @@ func _process(_delta: float) -> void:
 		hud.visible=true
 		shopVisible=true
 	if(shopVisible and Input.is_action_just_pressed("Escape")):
-		shopVisible=false
-		hud.visible=false
-		GameManager.hud.visible=true
-		GameManager.player.canMove=true
+		close()
+
+func close():
+	shopVisible=false
+	hud.visible=false
+	GameManager.hud.visible=true
+	GameManager.player.canMove=true
 
 func _on_animation_finished() -> void:
 	$Sprite.play("idle")

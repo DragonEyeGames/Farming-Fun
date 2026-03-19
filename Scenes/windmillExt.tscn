@@ -1,10 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://bag6u10ct76hr"]
+[gd_scene load_steps=19 format=3 uid="uid://bag6u10ct76hr"]
 
+[ext_resource type="Texture2D" uid="uid://da8ma7f477py7" path="res://assets/Door/Door-4.png" id="2_88iq0"]
 [ext_resource type="Script" uid="uid://dbnmpxhoao62m" path="res://Scripts/windmill.gd" id="2_fgt0f"]
-[ext_resource type="Texture2D" uid="uid://d58ag617vlg1" path="res://assets/Farm/Doors_windows_fire.png" id="3_84m7a"]
+[ext_resource type="Texture2D" uid="uid://cdir3yrdh8xxs" path="res://assets/Door/Door-3.png" id="3_3c8ql"]
 [ext_resource type="Texture2D" uid="uid://dm835pqxpomkj" path="res://assets/Turbine.png" id="4_5sy5u"]
+[ext_resource type="Texture2D" uid="uid://dt4skirj2y8k2" path="res://assets/Door/Door-2.png" id="4_w7aoh"]
 [ext_resource type="Texture2D" uid="uid://3mkqdjkdr4x4" path="res://assets/Windmill/Back.png" id="5_meshx"]
 [ext_resource type="Script" uid="uid://dfkvs8ju8sow5" path="res://Scripts/turbine.gd" id="5_q45rk"]
+[ext_resource type="Texture2D" uid="uid://bwbfcd8waehbl" path="res://assets/Door/Door-1.png" id="5_vvtt5"]
 [ext_resource type="Texture2D" uid="uid://dcrtl6ljiepxt" path="res://assets/Windmill/Bars.png" id="6_i6mwg"]
 [ext_resource type="Texture2D" uid="uid://cqxe33rsvgr55" path="res://assets/Windmill/Railing.png" id="7_6nu5b"]
 [ext_resource type="Texture2D" uid="uid://b3bic8248vcad" path="res://assets/Windmill/Windmill-1.png" id="8_88iq0"]
@@ -14,36 +17,20 @@
 [ext_resource type="Texture2D" uid="uid://ckeq84twbmnvn" path="res://assets/Windmill/Windmill-5.png" id="12_rfupb"]
 [ext_resource type="Texture2D" uid="uid://cscocx6730h4d" path="res://assets/Windmill/Windmill-6.png" id="13_eioy7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_im7ls"]
-atlas = ExtResource("3_84m7a")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4yo4"]
-atlas = ExtResource("3_84m7a")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_khphd"]
-atlas = ExtResource("3_84m7a")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_38apo"]
-atlas = ExtResource("3_84m7a")
-region = Rect2(96, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_a34eg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_im7ls")
+"texture": ExtResource("2_88iq0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g4yo4")
+"texture": ExtResource("3_3c8ql")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_khphd")
+"texture": ExtResource("4_w7aoh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38apo")
+"texture": ExtResource("5_vvtt5")
 }],
 "loop": false,
 "name": &"close",
@@ -51,16 +38,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38apo")
+"texture": ExtResource("5_vvtt5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_khphd")
+"texture": ExtResource("4_w7aoh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g4yo4")
+"texture": ExtResource("3_3c8ql")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_im7ls")
+"texture": ExtResource("2_88iq0")
 }],
 "loop": false,
 "name": &"open",
@@ -79,12 +66,10 @@ script = ExtResource("2_fgt0f")
 [node name="Door" type="AnimatedSprite2D" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(-13.450406, 10.4266815)
-scale = Vector2(4.086207, 4.086207)
+position = Vector2(0.64522386, 16.886765)
+scale = Vector2(0.92126584, 1.1758019)
 sprite_frames = SubResource("SpriteFrames_a34eg")
-animation = &"close"
-frame = 3
-frame_progress = 1.0
+animation = &"open"
 
 [node name="Area2D" type="Area2D" parent="Door"]
 collision_layer = 0
@@ -143,6 +128,15 @@ texture = ExtResource("6_i6mwg")
 position = Vector2(-0.6428636, -183.85713)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("7_6nu5b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -41.697407
+offset_top = -44.013935
+offset_right = 39.999996
+offset_bottom = 66.63394
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="animation_finished" from="Door" to="." method="_on_door_animation_finished"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="_on_area_2d_body_entered"]

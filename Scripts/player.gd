@@ -56,10 +56,18 @@ func _process(_delta: float) -> void:
 	elif(velocity.x>0):
 		$Items.scale.x=1
 		
-	if(velocity!=Vector2.ZERO):
-		state="walk"
+	if(abs(velocity.x)<.5):
+		velocity.x=0
+	
+	if(abs(velocity.y)<.5):
+		velocity.y=0
+	
+	var motion = get_last_motion()
+
+	if motion.length() > 0.1:
+		state = "walk"
 	else:
-		state="idle"
+		state = "idle"
 
 	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
 		interacting[0].interact()

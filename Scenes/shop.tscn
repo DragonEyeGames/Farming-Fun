@@ -216,8 +216,9 @@ frame_progress = 1.0
 position = Vector2(-0.5, 22.520561)
 shape = SubResource("RectangleShape2D_3tgeq")
 
-[node name="HUD" parent="." instance=ExtResource("19_lv45t")]
+[node name="HUD" parent="." node_paths=PackedStringArray("pip") instance=ExtResource("19_lv45t")]
 visible = false
+pip = NodePath("../Pip")
 
 [node name="Sprites" type="Node2D" parent="."]
 position = Vector2(-2.0809631, -8.91861)

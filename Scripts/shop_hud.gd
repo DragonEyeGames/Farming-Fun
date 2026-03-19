@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+@export var pip: Node2D
+
 func _process(_delta: float) -> void:
 	$"Money Holder/RichTextLabel".text=str(GameManager.playerMoney)
 
@@ -22,3 +24,7 @@ func _on_close_mouse_entered() -> void:
 func _on_close_mouse_exited() -> void:
 	var tween=create_tween()
 	tween.tween_property($Close, "scale", Vector2(.64, .64), .1)
+
+
+func _on_close_pressed() -> void:
+	pip.close()
