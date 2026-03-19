@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bhty663arqjcy"
+path="res://.godot/imported/CloseBit.png-ba831529ac3a464f545fd3136c4784c9.res"
+
+[deps]
+
+source_file="res://assets/HUD+UI/CloseBit.png"
+dest_files=["res://.godot/imported/CloseBit.png-ba831529ac3a464f545fd3136c4784c9.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

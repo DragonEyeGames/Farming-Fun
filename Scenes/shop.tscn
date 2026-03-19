@@ -1,0 +1,511 @@
+[gd_scene load_steps=44 format=3 uid="uid://byp7nbw7435h5"]
+
+[ext_resource type="Texture2D" uid="uid://dcbmymdn70l5x" path="res://assets/Objects.png" id="1_ig322"]
+[ext_resource type="Texture2D" uid="uid://r1k5u4fnpsmj" path="res://Characters/Shopkeep.png" id="2_gugvk"]
+[ext_resource type="Script" uid="uid://bt7il3eicur1p" path="res://Scripts/shopkeep.gd" id="3_t7de3"]
+[ext_resource type="Texture2D" uid="uid://sqdrcc4e26gc" path="res://assets/PipShop/Idle-1.png" id="4_hvvn1"]
+[ext_resource type="Texture2D" uid="uid://dahi4n6405phr" path="res://assets/PipShop/Idle-2.png" id="5_1bx8h"]
+[ext_resource type="Texture2D" uid="uid://dn4ecvmwkuhsv" path="res://assets/PipShop/Idle-3.png" id="6_bd3tj"]
+[ext_resource type="Texture2D" uid="uid://bc1b8ehxjgodr" path="res://assets/PipShop/Idle-4.png" id="7_3ujtm"]
+[ext_resource type="Texture2D" uid="uid://ctb3ltoir7nsl" path="res://assets/PipShop/Idle-5.png" id="8_ecslm"]
+[ext_resource type="Texture2D" uid="uid://cr8cp8du33qpi" path="res://assets/PipShop/Idle-6.png" id="9_wdw6i"]
+[ext_resource type="Texture2D" uid="uid://cw4665uncum46" path="res://assets/PipShop/Wave-1.png" id="10_8crsr"]
+[ext_resource type="Texture2D" uid="uid://dctigpsgy58aa" path="res://assets/PipShop/Wave-2.png" id="11_rjsrv"]
+[ext_resource type="Texture2D" uid="uid://b106srnkgpc2d" path="res://assets/PipShop/Wave-3.png" id="12_2x7ys"]
+[ext_resource type="Texture2D" uid="uid://804x4m3pe5sd" path="res://assets/PipShop/Wave-4.png" id="13_5menp"]
+[ext_resource type="Texture2D" uid="uid://cwgie7nrltkb0" path="res://assets/PipShop/Wave-5.png" id="14_4lu2m"]
+[ext_resource type="Texture2D" uid="uid://ht0k7w4a5g28" path="res://assets/PipShop/Wave-6.png" id="15_54a3j"]
+[ext_resource type="Texture2D" uid="uid://chpeo35w5136l" path="res://assets/PipShop/Wave-7.png" id="16_vcmnq"]
+[ext_resource type="Texture2D" uid="uid://cicx8fuqywb70" path="res://assets/PipShop/Wave-8.png" id="17_n8j25"]
+[ext_resource type="Texture2D" uid="uid://dkciwader5gsr" path="res://assets/PipShop/Wave-9.png" id="18_oscnn"]
+[ext_resource type="PackedScene" uid="uid://cx1ywkbf2hdqx" path="res://Scenes/shopHUD.tscn" id="19_lv45t"]
+[ext_resource type="Texture2D" uid="uid://5kolyuihyjnw" path="res://assets/PipShop/Barrel.png" id="20_l0nv7"]
+[ext_resource type="Texture2D" uid="uid://cii007qbfk83h" path="res://assets/PipShop/Jug.png" id="21_0plxm"]
+[ext_resource type="Texture2D" uid="uid://0ypqsoa67wo4" path="res://assets/PipShop/Stopper.png" id="22_enlih"]
+[ext_resource type="Texture2D" uid="uid://cckogv55rrfbh" path="res://assets/PipShop/Poles.png" id="23_hwak5"]
+[ext_resource type="Texture2D" uid="uid://cq4o5vibon8qs" path="res://assets/PipShop/Poles-2.png" id="24_njmk8"]
+[ext_resource type="Texture2D" uid="uid://x5dkaytlk4ka" path="res://assets/PipShop/More Poles.png" id="25_ocemu"]
+[ext_resource type="Texture2D" uid="uid://bi1rabtlakoro" path="res://assets/PipShop/Box.png" id="26_nl1ft"]
+[ext_resource type="Texture2D" uid="uid://chfowu3uboru4" path="res://assets/PipShop/Holders.png" id="27_c7p3u"]
+[ext_resource type="Texture2D" uid="uid://c3edjuy54d1u" path="res://assets/Dirt/Bag.png" id="28_bju5g"]
+[ext_resource type="Texture2D" uid="uid://51i6uhxiy744" path="res://assets/Dirt/Carrot.png" id="29_fjia7"]
+[ext_resource type="Texture2D" uid="uid://c8wdham3jxedl" path="res://assets/Dirt/Raddish.png" id="30_us0dh"]
+[ext_resource type="Texture2D" uid="uid://cienrdledfxha" path="res://assets/Dirt/Onion.png" id="31_tdcn2"]
+[ext_resource type="Texture2D" uid="uid://c58unya1a0usk" path="res://assets/Dirt/Potato.png" id="32_itr2q"]
+[ext_resource type="Texture2D" uid="uid://cnjay6jr038jh" path="res://assets/PipShop/Roof.png" id="33_tllwv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
+atlas = ExtResource("2_gugvk")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jffn"]
+atlas = ExtResource("2_gugvk")
+region = Rect2(0, 960, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpo4j"]
+atlas = ExtResource("2_gugvk")
+region = Rect2(64, 960, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
+atlas = ExtResource("2_gugvk")
+region = Rect2(768, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5snn"]
+atlas = ExtResource("2_gugvk")
+region = Rect2(832, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xvtyr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aht7i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jffn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpo4j")
+}],
+"loop": false,
+"name": &"look",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5snn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5snn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}],
+"loop": false,
+"name": &"wave",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3tgeq"]
+radius = 25.0
+height = 50.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4llh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hvvn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1bx8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bd3tj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3ujtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ecslm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wdw6i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8crsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rjsrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2x7ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5menp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4lu2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_54a3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vcmnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_n8j25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_oscnn")
+}],
+"loop": false,
+"name": &"wave",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tgeq"]
+size = Vector2(73, 5.025833)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_off7b"]
+radius = 16.014935
+
+[node name="Shop" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = -1
+texture = ExtResource("1_ig322")
+region_enabled = true
+region_rect = Rect2(6, 262, 94, 72)
+
+[node name="Top" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.165)
+position = Vector2(-1, -22)
+texture = ExtResource("1_ig322")
+region_enabled = true
+region_rect = Rect2(264, 232, 88, 32)
+
+[node name="Pip" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("hud") groups=["Sort"]]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-1.6361694, 13.735931)
+sprite_frames = SubResource("SpriteFrames_xvtyr")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(-0.36383057, -7.7359314)
+script = ExtResource("3_t7de3")
+hud = NodePath("../HUD")
+
+[node name="Area2D" type="Area2D" parent="Pip"]
+position = Vector2(0.27026367, -8.783485)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pip/Area2D"]
+position = Vector2(1, 18)
+shape = SubResource("CapsuleShape2D_3tgeq")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="Pip"]
+position = Vector2(-0.0014953613, -9.820953)
+scale = Vector2(0.265, 0.265)
+sprite_frames = SubResource("SpriteFrames_m4llh")
+animation = &"wave"
+autoplay = "idle"
+frame = 8
+frame_progress = 1.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 22.520561)
+shape = SubResource("RectangleShape2D_3tgeq")
+
+[node name="HUD" parent="." instance=ExtResource("19_lv45t")]
+visible = false
+
+[node name="Sprites" type="Node2D" parent="."]
+position = Vector2(-2.0809631, -8.91861)
+scale = Vector2(0.37, 0.37)
+
+[node name="Barrel" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+position = Vector2(64.84674, 63.74176)
+texture = ExtResource("20_l0nv7")
+offset = Vector2(-64.84674, -63.74176)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprites/Barrel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/Barrel/StaticBody2D"]
+position = Vector2(-1.3280921, -3.6521492)
+shape = SubResource("CircleShape2D_off7b")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprites/Barrel/StaticBody2D"]
+position = Vector2(-65.204605, 3.980916)
+shape = SubResource("CircleShape2D_off7b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprites/Barrel/StaticBody2D"]
+position = Vector2(-133.8025, -8.300368)
+shape = SubResource("CircleShape2D_off7b")
+
+[node name="Jug" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+self_modulate = Color(1, 1, 1, 0.64100003)
+position = Vector2(-70.43933, 52.779205)
+texture = ExtResource("21_0plxm")
+offset = Vector2(70.43933, -52.779205)
+
+[node name="Stopper" type="Sprite2D" parent="Sprites/Jug"]
+position = Vector2(70.43933, -52.779205)
+texture = ExtResource("22_enlih")
+
+[node name="Poles" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+position = Vector2(-6.2622194, -21.233536)
+scale = Vector2(0.945, 1)
+texture = ExtResource("23_hwak5")
+offset = Vector2(9.177368, -24.966492)
+
+[node name="Poles2" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+position = Vector2(-10.013367, 98.498245)
+texture = ExtResource("24_njmk8")
+offset = Vector2(10.013367, -98.498245)
+
+[node name="MorePoles" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+position = Vector2(2.8197632, 90.47751)
+texture = ExtResource("25_ocemu")
+offset = Vector2(-2.8197632, -90.47751)
+
+[node name="Box" type="Sprite2D" parent="Sprites" groups=["Sort"]]
+position = Vector2(2.6381226, 97.78848)
+texture = ExtResource("26_nl1ft")
+offset = Vector2(-2.6381226, -97.78848)
+
+[node name="Holders" type="Sprite2D" parent="Sprites/Box"]
+position = Vector2(-3.7589393, -94.36754)
+texture = ExtResource("27_c7p3u")
+
+[node name="Carrot" type="Control" parent="Sprites/Box"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -97.269104
+offset_top = -38.05713
+offset_right = -69.45691
+offset_bottom = -4.4045563
+
+[node name="Carrot_Seeds4" type="Sprite2D" parent="Sprites/Box/Carrot"]
+position = Vector2(10.013367, 10.645493)
+rotation = -0.5270895
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Carrot/Carrot_Seeds4"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("29_fjia7")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Carrot_Seeds3" type="Sprite2D" parent="Sprites/Box/Carrot"]
+position = Vector2(19.48582, 26.518295)
+rotation = -2.6843164
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Carrot/Carrot_Seeds3"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("29_fjia7")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Carrot_Seeds" type="Sprite2D" parent="Sprites/Box/Carrot"]
+position = Vector2(17.309692, 23.19011)
+rotation = -0.31415924
+scale = Vector2(0.41000006, 0.41000006)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Carrot/Carrot_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("29_fjia7")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Carrot_Seeds2" type="Sprite2D" parent="Sprites/Box/Carrot/Carrot_Seeds"]
+position = Vector2(-17.601074, -16.552246)
+rotation = 0.715585
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Carrot/Carrot_Seeds/Carrot_Seeds2"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("29_fjia7")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish" type="Control" parent="Sprites/Box"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -58.385586
+offset_top = -37.690693
+offset_right = -30.573391
+offset_bottom = -4.0381203
+
+[node name="Raddish_Seeds3" type="Sprite2D" parent="Sprites/Box/Raddish"]
+position = Vector2(11.788124, 15.866704)
+rotation = 1.7715092
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Raddish/Raddish_Seeds3"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("30_us0dh")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish_Seeds4" type="Sprite2D" parent="Sprites/Box/Raddish"]
+position = Vector2(22.351501, 10.925766)
+rotation = 0.41713366
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Raddish/Raddish_Seeds4"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("30_us0dh")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish_Seeds2" type="Sprite2D" parent="Sprites/Box/Raddish"]
+position = Vector2(23.564697, 23.547104)
+rotation = 0.80285144
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Raddish/Raddish_Seeds2"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("30_us0dh")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Raddish_Seeds" type="Sprite2D" parent="Sprites/Box/Raddish"]
+position = Vector2(7.05188, 24.955185)
+rotation = -0.25307274
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Raddish/Raddish_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("30_us0dh")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Onion" type="Control" parent="Sprites/Box"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 23.859867
+offset_top = -38.000465
+offset_right = 51.672062
+offset_bottom = -4.3478928
+
+[node name="Onion_Seeds4" type="Sprite2D" parent="Sprites/Box/Onion"]
+position = Vector2(6.8302, 13.1874695)
+rotation = -0.6335545
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Onion/Onion_Seeds4"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("31_tdcn2")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Onion_Seeds2" type="Sprite2D" parent="Sprites/Box/Onion"]
+position = Vector2(6.055786, 25.88826)
+rotation = 0.45204026
+scale = Vector2(0.41000006, 0.41000006)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Onion/Onion_Seeds2"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("31_tdcn2")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Onion_Seeds" type="Sprite2D" parent="Sprites/Box/Onion"]
+position = Vector2(20.615295, 14.581451)
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Onion/Onion_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("31_tdcn2")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Onion_Seeds3" type="Sprite2D" parent="Sprites/Box/Onion"]
+position = Vector2(15.503967, 32.0838)
+rotation = -1.6545721
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Onion/Onion_Seeds3"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("31_tdcn2")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Potato" type="Control" parent="Sprites/Box"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 64.905106
+offset_top = -36.606472
+offset_right = 92.7173
+offset_bottom = -2.9538994
+
+[node name="Potato_Seeds3" type="Sprite2D" parent="Sprites/Box/Potato"]
+position = Vector2(22.837166, 16.855122)
+rotation = 1.9565141
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Potato/Potato_Seeds3"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("32_itr2q")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Potato_Seeds4" type="Sprite2D" parent="Sprites/Box/Potato"]
+position = Vector2(4.6068707, 9.869668)
+rotation = -0.45204028
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Potato/Potato_Seeds4"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("32_itr2q")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Potato_Seeds" type="Sprite2D" parent="Sprites/Box/Potato"]
+position = Vector2(3.7550755, 23.670181)
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Potato/Potato_Seeds"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("32_itr2q")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Potato_Seeds2" type="Sprite2D" parent="Sprites/Box/Potato"]
+position = Vector2(16.874088, 27.9296)
+rotation = -0.7522369
+scale = Vector2(0.41000003, 0.41000003)
+texture = ExtResource("28_bju5g")
+
+[node name="Carrot2" type="Sprite2D" parent="Sprites/Box/Potato/Potato_Seeds2"]
+position = Vector2(-0.5454545, -0.5454545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("32_itr2q")
+region_rect = Rect2(160, 304, 16, 16)
+
+[node name="Roof" type="Sprite2D" parent="Sprites"]
+z_index = 2
+texture = ExtResource("33_tllwv")
+
+[connection signal="body_entered" from="Pip/Area2D" to="Pip" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Pip/Area2D" to="Pip" method="_on_area_2d_body_exited"]
+[connection signal="animation_finished" from="Pip/Sprite" to="Pip" method="_on_animation_finished"]

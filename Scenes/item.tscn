@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dduwraqaxa3w" path="res://Scripts/shopItem.gd" id="1_ys0gr"]
 [ext_resource type="Texture2D" uid="uid://c8hn5ro5wtkmo" path="res://assets/HUD+UI/ShopSlot.png" id="2_u06aw"]
-[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="3_btogu"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmer.otf" id="3_btogu"]
 
 [node name="Item" type="Button"]
 custom_minimum_size = Vector2(800.34, 162.245)
-offset_right = 873.0
+offset_right = 876.0
 offset_bottom = 162.245
 pivot_offset = Vector2(384, 50)
 focus_mode = 0
@@ -16,7 +16,7 @@ item = 4
 cost = 25
 
 [node name="ShopSlot" type="Sprite2D" parent="."]
-position = Vector2(459, 79)
+position = Vector2(435, 81)
 texture = ExtResource("2_u06aw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -43,10 +43,10 @@ mouse_filter = 2
 
 [node name="Item" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 210.0
-offset_top = 2.0
-offset_right = 590.0
-offset_bottom = 155.0
+offset_left = 186.0
+offset_top = 4.0
+offset_right = 566.0
+offset_bottom = 157.0
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_btogu")
 theme_override_font_sizes/normal_font_size = 85
@@ -55,10 +55,10 @@ vertical_alignment = 1
 
 [node name="Cost" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 605.0
-offset_top = 18.0
-offset_right = 725.0
-offset_bottom = 145.0
+offset_left = 581.0
+offset_top = 20.0
+offset_right = 701.0
+offset_bottom = 147.0
 mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_btogu")
 theme_override_font_sizes/normal_font_size = 85

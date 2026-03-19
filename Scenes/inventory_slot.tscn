@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dq70mbcajtim3"]
+[gd_scene load_steps=8 format=3 uid="uid://dq70mbcajtim3"]
 
 [ext_resource type="Script" uid="uid://ddvujhxbwqcdw" path="res://Scripts/inventory_slot.gd" id="1_6h8ck"]
 [ext_resource type="Texture2D" uid="uid://clj3gx2smjlx8" path="res://assets/inventory/Inventory-outline.png" id="2_ewbek"]
 [ext_resource type="Texture2D" uid="uid://ck4sicl5umf0n" path="res://assets/inventory/Inventory.png" id="3_yqceb"]
 [ext_resource type="PackedScene" uid="uid://c3j5f17jte8l7" path="res://Scenes/inventoryItems.tscn" id="4_6h8ck"]
 [ext_resource type="Texture2D" uid="uid://cw2saipj1goye" path="res://assets/HUD+UI/Slot.png" id="5_ewbek"]
-[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="5_yqceb"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmer.otf" id="5_yqceb"]
+[ext_resource type="Texture2D" uid="uid://buar2kuvoqmq6" path="res://assets/InvPopout.png" id="7_x3kwo"]
 
 [node name="InventorySlot" type="Control"]
 modulate = Color(0.8175213, 0.8175213, 0.81752115, 1)
@@ -31,7 +32,6 @@ position = Vector2(49, 49)
 texture = ExtResource("3_yqceb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 z_index = -1
 layout_mode = 0
 offset_left = 5.0
@@ -72,16 +72,18 @@ scale = Vector2(5.125, 5.125)
 
 [node name="Popup" type="ColorRect" parent="."]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
 z_index = 2
 layout_mode = 0
-offset_left = 87.0
-offset_top = -53.0
-offset_right = 224.0
-offset_bottom = 75.0
+offset_left = 75.0
+offset_top = -70.0
+offset_right = 212.0
+offset_bottom = 58.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Popup"]
+visible = false
 layout_mode = 0
 offset_left = 2.0
 offset_top = 1.0
@@ -97,7 +99,8 @@ offset_top = 35.0
 offset_right = 135.0
 offset_bottom = 104.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 10
+theme_override_fonts/normal_font = ExtResource("5_yqceb")
+theme_override_font_sizes/normal_font_size = 18
 text = "Yummy"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -109,7 +112,8 @@ offset_top = 2.0
 offset_right = 134.0
 offset_bottom = 43.0
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 16
+theme_override_fonts/normal_font = ExtResource("5_yqceb")
+theme_override_font_sizes/normal_font_size = 30
 text = "Carrot"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -119,11 +123,18 @@ layout_mode = 0
 offset_left = 2.0
 offset_top = 99.0
 offset_right = 135.0
-offset_bottom = 126.0
-theme_override_font_sizes/normal_font_size = 16
+offset_bottom = 137.0
+theme_override_fonts/normal_font = ExtResource("5_yqceb")
+theme_override_font_sizes/normal_font_size = 27
 text = "$10"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="InvPopout" type="Sprite2D" parent="Popup"]
+z_index = -1
+position = Vector2(-17.999996, -80.99999)
+scale = Vector2(0.615, 0.615)
+texture = ExtResource("7_x3kwo")
 
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]

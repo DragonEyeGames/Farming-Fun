@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4xpjxlcj1qlc" path="res://Scripts/hud.gd" id="1_37p78"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="2_64ctp"]
-[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="2_bjfho"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmer.otf" id="2_bjfho"]
 [ext_resource type="Texture2D" uid="uid://dnmnapjvgwh3v" path="res://assets/HUD+UI/Time.png" id="3_i2avg"]
 [ext_resource type="Texture2D" uid="uid://cy54s6gxyjtk8" path="res://assets/HUD+UI/Money.png" id="4_1a2va"]
 [ext_resource type="Texture2D" uid="uid://dspx1ess1ydap" path="res://assets/HUD+UI/Untitled_Artwork-1.png" id="4_7gr8i"]

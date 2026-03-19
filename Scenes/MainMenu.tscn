@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dqpdpwquwu1xc" path="res://assets/MainMenu/Settings.png" id="10_loo7a"]
 [ext_resource type="Texture2D" uid="uid://cf6adful438ph" path="res://assets/MainMenu/Quit.png" id="11_if7li"]
 [ext_resource type="AudioStream" uid="uid://ckotidye75id7" path="res://Music/Intro.mp3" id="12_rrcx7"]
-[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="13_8e205"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmer.otf" id="13_8e205"]
 
 [sub_resource type="Animation" id="Animation_koqhg"]
 resource_name = "set"

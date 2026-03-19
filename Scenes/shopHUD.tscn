@@ -1,20 +1,30 @@
-[gd_scene load_steps=12 format=3 uid="uid://cx1ywkbf2hdqx"]
+[gd_scene load_steps=16 format=3 uid="uid://cx1ywkbf2hdqx"]
 
 [ext_resource type="Script" uid="uid://bpos8g004ccg7" path="res://Scripts/shop_hud.gd" id="1_7b6gg"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="1_ai82c"]
 [ext_resource type="PackedScene" uid="uid://hubi2ixxr7k2" path="res://Scenes/item.tscn" id="2_7b6gg"]
-[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmerRegular-8MrdD.otf" id="3_bhwte"]
+[ext_resource type="Texture2D" uid="uid://bogdmptksd4ty" path="res://assets/ShopShell.png" id="2_rhqdt"]
+[ext_resource type="FontFile" uid="uid://duk0ffcwc2hao" path="res://Fonts/HelloFarmer.otf" id="3_bhwte"]
 [ext_resource type="Texture2D" uid="uid://c3edjuy54d1u" path="res://assets/Dirt/Bag.png" id="5_y74ng"]
 [ext_resource type="Texture2D" uid="uid://51i6uhxiy744" path="res://assets/Dirt/Carrot.png" id="6_rhqdt"]
 [ext_resource type="Texture2D" uid="uid://cienrdledfxha" path="res://assets/Dirt/Onion.png" id="7_x1b3y"]
 [ext_resource type="Texture2D" uid="uid://c8wdham3jxedl" path="res://assets/Dirt/Raddish.png" id="8_qg473"]
 [ext_resource type="Texture2D" uid="uid://c58unya1a0usk" path="res://assets/Dirt/Potato.png" id="9_axnt5"]
-[ext_resource type="Texture2D" uid="uid://vpmjrn334o2j" path="res://assets/HUD+UI/Backer.png" id="10_uxk47"]
+[ext_resource type="Texture2D" uid="uid://bsc5msu6k5p36" path="res://assets/HUD+UI/ImprovedBacker.png" id="11_qg473"]
 [ext_resource type="Texture2D" uid="uid://c8ovdckrjgfk1" path="res://assets/HUD+UI/Pip-Profile.png" id="11_y74ng"]
+[ext_resource type="Texture2D" uid="uid://by43o8klannt5" path="res://assets/HUD+UI/Improved Details.png" id="12_axnt5"]
+[ext_resource type="Texture2D" uid="uid://ct6j0eggyfju0" path="res://assets/HUD+UI/Close.png" id="14_uxk47"]
+[ext_resource type="BitMap" uid="uid://bhty663arqjcy" path="res://assets/HUD+UI/CloseBit.png" id="15_axnt5"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_7b6gg")
+
+[node name="ShopShell" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(968.49994, 549.995)
+scale = Vector2(0.9562182, 0.9752984)
+texture = ExtResource("2_rhqdt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -124,9 +134,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -495.99997
+offset_left = -548.0
 offset_top = 111.0
-offset_right = -198.0
+offset_right = -250.0
 offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -140,11 +150,11 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -43.902466
-offset_bottom = 9.585388
+offset_bottom = 31.53656
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("3_bhwte")
-theme_override_font_sizes/normal_font_size = 92
+theme_override_font_sizes/normal_font_size = 70
 text = "Pip"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -187,18 +197,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 748.0
-offset_top = 236.0
-offset_right = 1689.3043
-offset_bottom = 776.2174
+offset_left = 789.49994
+offset_top = 253.99521
+offset_right = 1680.8042
+offset_bottom = 777.9083
 scale = Vector2(0.92, 0.92)
 horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
 custom_minimum_size = Vector2(765, 0)
 layout_mode = 2
 
 [node name="Item" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_7b6gg")]
+custom_minimum_size = Vector2(882.785, 162.245)
 layout_mode = 2
 cost = 5
 
@@ -267,6 +279,7 @@ offset_left = 1291.0
 offset_top = 247.0
 offset_right = 1510.0
 offset_bottom = 308.0
+mouse_filter = 2
 color = Color(0.72156864, 0.5764706, 0.42745098, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Money Holder"]
@@ -280,6 +293,7 @@ offset_right = 28.0
 offset_bottom = -52.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_bhwte")
 theme_override_font_sizes/normal_font_size = 82
 text = "100"
@@ -293,14 +307,22 @@ offset_left = 163.0
 offset_top = 13.0
 offset_right = 203.0
 offset_bottom = 53.0
+mouse_filter = 2
 
 [node name="Backer" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(975, 540)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("10_uxk47")
+texture = ExtResource("11_qg473")
+
+[node name="Backer2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(975, 540)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("12_axnt5")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
@@ -314,7 +336,19 @@ position = Vector2(599, 350)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("11_y74ng")
 
+[node name="Close" type="TextureButton" parent="."]
+offset_left = 266.0
+offset_top = 102.0
+offset_right = 1842.0
+offset_bottom = 1074.0
+scale = Vector2(0.64, 0.64)
+pivot_offset = Vector2(70.3125, 68.75)
+texture_normal = ExtResource("14_uxk47")
+texture_click_mask = ExtResource("15_axnt5")
+
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item" to="." method="_on_item_pressed" binds= [0]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item2" to="." method="_on_item_pressed" binds= [1]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item3" to="." method="_on_item_pressed" binds= [2]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item4" to="." method="_on_item_pressed" binds= [3]]
+[connection signal="mouse_entered" from="Close" to="." method="_on_close_mouse_entered"]
+[connection signal="mouse_exited" from="Close" to="." method="_on_close_mouse_exited"]
