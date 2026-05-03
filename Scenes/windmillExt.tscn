@@ -52,6 +52,14 @@ animations = [{
 "loop": false,
 "name": &"open",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vvtt5")
+}],
+"loop": false,
+"name": &"shut",
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kjvhd"]
@@ -66,10 +74,11 @@ script = ExtResource("2_fgt0f")
 [node name="Door" type="AnimatedSprite2D" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(0.64522386, 16.886765)
-scale = Vector2(0.92126584, 1.1758019)
+position = Vector2(1.7000425, 17.941578)
+scale = Vector2(0.881, 1.125)
 sprite_frames = SubResource("SpriteFrames_a34eg")
-animation = &"open"
+animation = &"shut"
+autoplay = "shut"
 
 [node name="Area2D" type="Area2D" parent="Door"]
 collision_layer = 0
@@ -79,9 +88,18 @@ collision_mask = 2
 position = Vector2(3.1561182, 1.6329093)
 shape = SubResource("CapsuleShape2D_kjvhd")
 
+[node name="ColorRect" type="ColorRect" parent="Door"]
+show_behind_parent = true
+offset_left = -44.97701
+offset_top = -50.2714
+offset_right = 39.18223
+offset_bottom = -10.2714
+color = Color(0.43137255, 0.24313726, 0.20784314, 1)
+
 [node name="Turbine" type="Sprite2D" parent="."]
 z_index = 2
 position = Vector2(-0.7575417, -267.43515)
+rotation = 0.4834562
 texture = ExtResource("4_5sy5u")
 script = ExtResource("5_q45rk")
 

@@ -1,6 +1,23 @@
 extends Node2D
 
+var doorEntered=false
+
+func _ready():
+	for object in get_tree().get_nodes_in_group("Sort"):
+		object.reparent($YSort)
+		print(object.name)
+
 func _on_door_body_entered(_body: Node2D) -> void:
+	doorEntered=true
+
+func _on_door_body_exited(_body: Node2D) -> void:
+	doorEntered=false
+
+func _process(_delta: float) -> void:
+	if(doorEntered and Input.is_action_just_pressed("Interact")):
+		leave()
+
+func leave():
 	$Black/AnimationPlayer.play("dissapear")
 	await get_tree().create_timer(.25).timeout
 	await get_tree().process_frame
