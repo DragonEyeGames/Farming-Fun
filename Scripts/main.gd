@@ -19,7 +19,8 @@ func _ready() -> void:
 	if ResourceLoader.exists("user://farm_data.tres"):
 		var data = ResourceLoader.load("user://farm_data.tres") as FarmData
 		for saveable in get_tree().get_nodes_in_group("Save"):
-			saveable.queue_free()
+			if saveable.get_tree() == get_tree() and is_instance_valid(saveable):
+				saveable.queue_free()
 		for animal in data.animals:
 			var newAnimal=animal.instantiate()
 			add_child(newAnimal)
