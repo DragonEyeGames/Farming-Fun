@@ -14,13 +14,15 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	$CanvasLayer6/MouseBlocker.visible=playing
 	$Camera2D.global_position=get_global_mouse_position()/12
 	#print(get_global_mouse_position())
 	if(Input.is_action_just_pressed("Click") or Input.is_action_just_pressed("Escape") and playing):
 		playing=false
 		$AudioStreamPlayer.stop()
 		$AnimationPlayer.play("afterAnimation")
+		
 
 
 func _on_start_mouse_entered() -> void:

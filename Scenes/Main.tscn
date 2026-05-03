@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://dwqqnq4uwpwq4"]
+[gd_scene load_steps=62 format=4 uid="uid://dwqqnq4uwpwq4"]
 
 [ext_resource type="Script" uid="uid://0twkxs7vpva1" path="res://Scripts/main.gd" id="1_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://dxfle2k15hmmm" path="res://Scenes/player.tscn" id="1_r0du0"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://byp7nbw7435h5" path="res://Scenes/shop.tscn" id="17_4n42c"]
 [ext_resource type="PackedScene" uid="uid://q73ievm14tf7" path="res://Scenes/night.tscn" id="19_qta6b"]
 [ext_resource type="PackedScene" uid="uid://cx2eln1oswqgk" path="res://Scenes/hud.tscn" id="20_2gh4u"]
+[ext_resource type="PackedScene" uid="uid://cfeqcl6xtjrqv" path="res://Scenes/mainFence.tscn" id="20_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://bb0ltvim723fh" path="res://Scenes/chicken_pen.tscn" id="32_u7mjy"]
 [ext_resource type="PackedScene" uid="uid://bfcpcfrafxs2g" path="res://Scenes/ground.tscn" id="33_4yxf6"]
 
@@ -633,151 +634,151 @@ z_index = -1
 
 [node name="Carrot" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_m4llh")
-position = Vector2(81, -14)
+position = Vector2(-154.13452, 825.07587)
 
 [node name="Carrot2" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_lac6x")
-position = Vector2(62, -15)
+position = Vector2(-173.13452, 824.07587)
 
 [node name="Carrot3" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_hpjjw")
-position = Vector2(42, -15)
+position = Vector2(-193.13452, 824.07587)
 
 [node name="Carrot4" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_off7b")
-position = Vector2(22, -16)
+position = Vector2(-213.13452, 823.07587)
 
 [node name="Carrot5" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_lfh1j")
-position = Vector2(5, -16)
+position = Vector2(-230.13452, 823.07587)
 
 [node name="Carrot6" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_7sj7i")
-position = Vector2(-13, -17)
+position = Vector2(-248.13452, 822.07587)
 
 [node name="Carrot7" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_semxg")
-position = Vector2(-30, -18)
+position = Vector2(-265.13452, 821.07587)
 
 [node name="Carrot8" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_ep8v8")
-position = Vector2(-49, -17)
+position = Vector2(-284.13452, 822.07587)
 
 [node name="Carrot9" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_3133c")
-position = Vector2(-65, -19)
+position = Vector2(-300.13452, 820.07587)
 
 [node name="Carrot10" parent="Farm/Plants" instance=ExtResource("7_trn2v")]
 material = SubResource("ShaderMaterial_js5gh")
-position = Vector2(-82, -19)
+position = Vector2(-317.13452, 820.07587)
 
 [node name="Raddish" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_vvjo1")
-position = Vector2(-86, 3)
+position = Vector2(-321.13452, 842.07587)
 
 [node name="Raddish2" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_yisvs")
-position = Vector2(-65, 3)
+position = Vector2(-300.13452, 842.07587)
 
 [node name="Raddish3" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_rgw24")
-position = Vector2(-44, 3)
+position = Vector2(-279.13452, 842.07587)
 
 [node name="Raddish4" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_5gwyn")
-position = Vector2(-23, 3)
+position = Vector2(-258.13452, 842.07587)
 
 [node name="Raddish5" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_r6gtk")
-position = Vector2(-1, 4)
+position = Vector2(-236.13452, 843.07587)
 
 [node name="Raddish6" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_81ldr")
-position = Vector2(22, 4)
+position = Vector2(-213.13452, 843.07587)
 
 [node name="Raddish7" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_eywpa")
-position = Vector2(47, 4)
+position = Vector2(-188.13452, 843.07587)
 
 [node name="Raddish8" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_j7e3e")
-position = Vector2(69, 4)
+position = Vector2(-166.13452, 843.07587)
 
 [node name="Raddish9" parent="Farm/Plants" instance=ExtResource("8_wkp8b")]
 material = SubResource("ShaderMaterial_y2ulj")
-position = Vector2(87, 3)
+position = Vector2(-148.13452, 842.07587)
 
 [node name="Onion" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_t3x2a")
-position = Vector2(-86, 21)
+position = Vector2(-321.13452, 860.07587)
 
 [node name="Onion2" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_1bbis")
-position = Vector2(-63, 21)
+position = Vector2(-298.13452, 860.07587)
 
 [node name="Onion3" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_yn2g2")
-position = Vector2(-41, 21)
+position = Vector2(-276.13452, 860.07587)
 
 [node name="Onion4" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_yic5e")
-position = Vector2(-21, 20)
+position = Vector2(-256.13452, 859.07587)
 
 [node name="Onion5" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_ex7s8")
-position = Vector2(0, 20)
+position = Vector2(-235.13452, 859.07587)
 
 [node name="Onion6" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_4clwk")
-position = Vector2(22, 21)
+position = Vector2(-213.13452, 860.07587)
 
 [node name="Onion7" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_h2tpa")
-position = Vector2(46, 22)
+position = Vector2(-189.13452, 861.07587)
 
 [node name="Onion8" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_nkjwg")
-position = Vector2(72, 23)
+position = Vector2(-163.13452, 862.07587)
 
 [node name="Onion9" parent="Farm/Plants" instance=ExtResource("9_20pc6")]
 material = SubResource("ShaderMaterial_8n4h5")
-position = Vector2(87, 23)
+position = Vector2(-148.13452, 862.07587)
 
 [node name="Potato" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_as1io")
-position = Vector2(-85, 40)
+position = Vector2(-320.13452, 879.07587)
 
 [node name="Potato2" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_xd5mi")
-position = Vector2(-62, 40)
+position = Vector2(-297.13452, 879.07587)
 
 [node name="Potato3" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_tt1x2")
-position = Vector2(-42, 40)
+position = Vector2(-277.13452, 879.07587)
 
 [node name="Potato4" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_2wrh7")
-position = Vector2(-20, 41)
+position = Vector2(-255.13452, 880.07587)
 
 [node name="Potato5" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_atu2d")
-position = Vector2(1, 41)
+position = Vector2(-234.13452, 880.07587)
 
 [node name="Potato6" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_x5wht")
-position = Vector2(23, 40)
+position = Vector2(-212.13452, 879.07587)
 
 [node name="Potato7" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_tbeql")
-position = Vector2(46, 39)
+position = Vector2(-189.13452, 878.07587)
 
 [node name="Potato8" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_c5nnb")
-position = Vector2(69, 40)
+position = Vector2(-166.13452, 879.07587)
 
 [node name="Potato9" parent="Farm/Plants" instance=ExtResource("10_wkp8b")]
 material = SubResource("ShaderMaterial_fsd2l")
-position = Vector2(87, 39)
+position = Vector2(-148.13452, 878.07587)
 
 [node name="Ground2" parent="Farm" instance=ExtResource("12_qta6b")]
 
@@ -822,5 +823,8 @@ libraries = {
 &"": SubResource("AnimationLibrary_vvjo1")
 }
 autoplay = "Appear"
+
+[node name="Fence" parent="." instance=ExtResource("20_sxkr1")]
+position = Vector2(-34.606018, 15.972015)
 
 [connection signal="tick" from="SignalBus" to="Farm" method="_on_signal_bus_tick"]

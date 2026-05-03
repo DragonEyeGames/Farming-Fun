@@ -1,0 +1,2086 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfeqcl6xtjrqv"]
+
+[ext_resource type="Texture2D" uid="uid://blabxalja68rj" path="res://assets/Fence/Untitled_Artwork-1.png" id="1_yorgk"]
+[ext_resource type="Texture2D" uid="uid://6pvf0d7g6p3d" path="res://assets/Fence/Untitled_Artwork-2.png" id="2_bel8h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yorgk"]
+size = Vector2(101.27237, 628.5741)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bel8h"]
+size = Vector2(1025.0256, 50.408142)
+
+[node name="Fence" type="Node2D"]
+
+[node name="HorizontalSegment11" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.64703, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment11"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment11"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment12" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(545.8425, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment12"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment12"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment13" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(531.0775, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment13"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment13"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment14" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(516.2725, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment14"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment14"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment15" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(501.5675, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment15"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment15"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment16" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(486.2925, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment16"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment16"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment17" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(471.1525, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment17"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment17"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment18" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(456.0625, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment18"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment18"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment19" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(440.9675, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment19"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment19"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment20" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(425.71252, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment20"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment20"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment21" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(412.13165, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment21"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment21"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment22" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(397.32715, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment22"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment22"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment23" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(382.56213, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment23"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment23"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment24" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(367.75714, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment24"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment24"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment25" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(353.05212, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment25"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment25"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment26" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(337.77716, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment26"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment26"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment27" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(322.63715, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment27"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment27"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment28" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(307.54712, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment28"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment28"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment29" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(292.45215, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment29"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment29"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment30" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(277.19714, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment30"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment30"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment31" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(263.28455, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment31"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment31"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment32" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(248.48006, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment32"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment32"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment33" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(233.71504, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment33"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment33"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment34" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(218.91005, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment34"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment34"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment35" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(204.20503, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment35"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment35"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment36" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(188.93007, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment36"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment36"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment37" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(173.79005, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment37"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment37"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment38" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(158.70003, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment38"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment38"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment39" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(143.60506, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment39"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment39"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment40" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(128.35005, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment40"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment40"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment41" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(114.4294, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment41"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment41"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment42" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(99.62491, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment42"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment42"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment43" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(84.85989, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment43"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment43"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment44" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(70.0549, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment44"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment44"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment45" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(55.349884, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment45"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment45"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment46" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(40.07492, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment46"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment46"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment47" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(24.934906, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment47"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment47"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment48" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(9.844879, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment48"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment48"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment49" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-5.2500916, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment49"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment49"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment50" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-20.505096, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment50"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment50"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment51" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-34.34636, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment51"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment51"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment52" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-49.15085, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment52"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment52"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment53" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-63.915863, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment53"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment53"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment54" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-78.720856, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment54"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment54"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment55" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-93.42587, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment55"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment55"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment56" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-108.700836, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment56"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment56"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment57" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-123.84085, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment57"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment57"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment58" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-138.93088, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment58"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment58"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment59" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-154.02585, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment59"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment59"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment60" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-169.28085, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment60"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment60"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment61" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-182.07513, -321.905)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment61"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment61"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment62" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-196.87962, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment62"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment62"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment63" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-211.64464, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment63"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment63"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment64" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-226.44963, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment64"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment64"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment65" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-241.15465, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment65"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment65"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment66" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-256.42963, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment66"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment66"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment67" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-271.56964, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment67"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment67"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment68" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-286.65967, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment68"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment68"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment69" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-301.75464, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment69"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment69"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment70" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-317.00964, -321.9051)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment70"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment70"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment71" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.64703, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment71"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment71"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment72" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(545.8425, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment72"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment72"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment73" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(531.0775, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment73"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment73"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment74" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(516.2725, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment74"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment74"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment75" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(501.5675, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment75"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment75"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment76" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(486.2925, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment76"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment76"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment77" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(471.1525, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment77"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment77"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment78" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(456.0625, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment78"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment78"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment79" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(440.9675, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment79"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment79"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment80" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(425.71252, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment80"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment80"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment81" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(412.13165, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment81"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment81"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment82" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(397.32715, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment82"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment82"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment83" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(382.56213, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment83"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment83"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment84" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(367.75714, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment84"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment84"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment85" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(353.05212, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment85"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment85"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment86" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(337.77716, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment86"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment86"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment87" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(322.63715, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment87"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment87"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment88" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(307.54712, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment88"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment88"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment89" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(292.45215, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment89"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment89"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment90" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(277.19714, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment90"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment90"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment91" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(263.28455, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment91"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment91"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment92" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(248.48006, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment92"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment92"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment93" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(233.71504, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment93"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment93"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment94" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(218.91005, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment94"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment94"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment95" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(204.20503, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment95"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment95"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment96" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(188.93007, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment96"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment96"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment97" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(173.79005, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment97"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment97"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment98" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(158.70003, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment98"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment98"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment99" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(143.60506, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment99"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment99"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment100" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(128.35005, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment100"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment100"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment101" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(114.4294, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment101"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment101"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment102" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(99.62491, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment102"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment102"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment103" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(84.85989, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment103"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment103"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment104" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(70.0549, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment104"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment104"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment105" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(55.349884, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment105"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment105"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment106" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(40.07492, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment106"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment106"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment107" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(24.934906, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment107"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment107"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment108" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(9.844879, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment108"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment108"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment109" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-5.2500916, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment109"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment109"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment110" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-20.505096, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment110"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment110"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment111" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-34.34636, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment111"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment111"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment112" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-49.15085, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment112"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment112"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment113" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-63.915863, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment113"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment113"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment114" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-78.720856, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment114"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment114"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment115" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-93.42587, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment115"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment115"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment116" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-108.700836, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment116"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment116"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment117" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-123.84085, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment117"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment117"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment118" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-138.93088, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment118"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment118"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment119" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-154.02585, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment119"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment119"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment120" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-169.28085, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment120"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment120"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment121" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-182.07513, 236.92868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment121"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment121"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment122" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-196.87962, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment122"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment122"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment123" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-211.64464, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment123"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment123"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment124" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-226.44963, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment124"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment124"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment125" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-241.15465, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment125"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment125"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment126" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-256.42963, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment126"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment126"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment127" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-271.56964, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment127"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment127"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment128" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-286.65967, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment128"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment128"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment129" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-301.75464, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment129"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment129"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="HorizontalSegment130" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-317.00964, 236.92859)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork1" type="Sprite2D" parent="HorizontalSegment130"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("1_yorgk")
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="HorizontalSegment130"]
+position = Vector2(0.10765075, -4.3056674)
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -323.26938)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment2" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -312.45895)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment2"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment3" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -300.16205)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment3"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment4" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -288.13544)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment4"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment5" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.09055, -275.29803)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment5"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment6" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.44223, -262.4457)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment6"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment7" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.73953, -247.51575)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment7"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment8" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.79398, -232.66934)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment8"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment10" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.5909, -218.76035)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment10"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment9" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -207.22333)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment9"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment11" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -196.4129)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment11"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment12" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -184.116)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment12"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment13" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -172.08939)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment13"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment14" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.09055, -159.25198)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment14"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment15" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.44223, -146.39966)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment15"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment16" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.73953, -131.4697)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment16"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment17" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.79398, -116.6233)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment17"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment18" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.5909, -102.7143)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment18"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment19" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -89.81277)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment19"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment20" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -79.00234)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment20"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment21" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, -66.70544)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment21"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment22" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, -54.678825)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment22"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment23" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.09055, -41.841423)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment23"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment24" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.44223, -28.989098)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment24"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment25" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.73953, -14.059135)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment25"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment26" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.79398, 0.78726196)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment26"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment27" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.5909, 14.696259)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment27"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment28" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, 26.674088)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment28"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment29" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, 37.484512)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment29"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment30" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, 49.781418)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment30"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment31" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, 61.80803)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment31"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment32" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.09055, 74.64543)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment32"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment33" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.44223, 87.49776)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment33"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment34" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.73953, 102.42772)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment34"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment35" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.79398, 117.27412)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment35"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment36" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.5909, 131.1831)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment36"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment37" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, 144.45966)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment37"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment38" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, 155.27008)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment38"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment39" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.3608, 167.56699)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment39"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment40" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.22568, 179.5936)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment40"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment41" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.09055, 192.431)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment41"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment42" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.44223, 205.28333)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment42"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment43" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.73953, 220.21329)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment43"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment44" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(-331.79398, 235.05968)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment44"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment45" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -323.5784)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment45"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment46" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -312.76797)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment46"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment47" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -300.47107)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment47"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment48" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -288.44446)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment48"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment49" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.93915, -275.60706)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment49"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment50" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.58746, -262.75473)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment50"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment51" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.29016, -247.82477)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment51"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment52" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.2357, -232.97836)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment52"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment53" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.4388, -219.06937)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment53"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment54" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -207.53235)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment54"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment55" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -196.72192)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment55"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment56" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -184.42502)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment56"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment57" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -172.3984)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment57"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment58" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.93915, -159.561)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment58"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment59" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.58746, -146.70868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment59"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment60" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.29016, -131.77872)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment60"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment61" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.2357, -116.93232)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment61"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment62" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.4388, -103.02332)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment62"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment63" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -90.12179)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment63"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment64" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -79.31136)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment64"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment65" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, -67.01446)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment65"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment66" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, -54.987846)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment66"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment67" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.93915, -42.150444)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment67"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment68" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.58746, -29.298119)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment68"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment69" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.29016, -14.368156)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment69"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment70" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.2357, 0.47824144)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment70"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment71" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.4388, 14.387239)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment71"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment72" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, 26.365067)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment72"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment73" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, 37.175476)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment73"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment74" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, 49.47238)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment74"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment75" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, 61.498993)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment75"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment76" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.93915, 74.336395)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment76"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment77" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.58746, 87.18872)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment77"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment78" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.29016, 102.11868)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment78"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment79" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.2357, 116.96509)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment79"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment80" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.4388, 130.87408)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment80"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment81" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, 144.15063)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment81"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment82" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, 154.96106)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment82"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment83" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.6689, 167.25797)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment83"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment84" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.804, 179.28458)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment84"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment85" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.93915, 192.12198)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment85"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment86" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.58746, 204.9743)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment86"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment87" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.29016, 219.90427)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment87"]
+texture = ExtResource("2_bel8h")
+
+[node name="VerticalSegment88" type="Node2D" parent="." groups=["Sort"]]
+position = Vector2(560.2357, 234.75064)
+scale = Vector2(0.4, 0.4)
+
+[node name="UntitledArtwork2" type="Sprite2D" parent="VerticalSegment88"]
+texture = ExtResource("2_bel8h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(610.7832, -51.93167)
+shape = SubResource("RectangleShape2D_yorgk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-370.2611, -27.420952)
+shape = SubResource("RectangleShape2D_yorgk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(118.84909, 258.14636)
+shape = SubResource("RectangleShape2D_bel8h")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(104.05313, -348.95413)
+shape = SubResource("RectangleShape2D_bel8h")

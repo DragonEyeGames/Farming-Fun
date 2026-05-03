@@ -7,6 +7,15 @@ extends Node2D
 func _ready() -> void:
 	GameManager.main=self
 	var lastRenderedDay
+	if ResourceLoader.exists("user://world_data.tres"):
+		var data = ResourceLoader.load("user://world_data.tres") as WorldData
+		sky.time = data.time
+		GameManager.time=data.time
+		GameManager.day=data.day
+	else:
+		sky.time=.4
+		GameManager.time=.4
+		GameManager.day=1
 	if ResourceLoader.exists("user://farm_data.tres"):
 		var data = ResourceLoader.load("user://farm_data.tres") as FarmData
 		for saveable in get_tree().get_nodes_in_group("Save"):
@@ -27,14 +36,6 @@ func _ready() -> void:
 			for i in GameManager.lastRenderedDay-lastRenderedDay:
 				SignalBus.emit_signal("tick")
 				print("ForgottenTick")
-	if ResourceLoader.exists("user://world_data.tres"):
-		var data = ResourceLoader.load("user://world_data.tres") as WorldData
-		sky.time = data.time
-		GameManager.time=data.time
-		print(data.time)
-	else:
-		sky.time=.4
-		GameManager.time=.4
 	if ResourceLoader.exists("user://player_data.tres"):
 		var data = ResourceLoader.load("user://player_data.tres") as PlayerData
 		GameManager.playerInventory = data.inventory
@@ -107,6 +108,7 @@ func saveGame():
 		save.lastRendered=GameManager.lastRenderedDay
 	var world = WorldData.new()
 	world.time = sky.time
+	world.day=GameManager.day
 	var player = PlayerData.new()
 	player.inventory=GameManager.playerInventory
 	player.money=GameManager.playerMoney

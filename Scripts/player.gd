@@ -69,16 +69,16 @@ func _process(_delta: float) -> void:
 	else:
 		state = "idle"
 
-	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
-		interacting[0].interact()
-		interacting.remove_at(0)
-		canMove=false
-		newSprite.play("pickup-down")
-	elif(Input.is_action_just_pressed("Interact") and direction=="up" and len(interacting)>=1):
-		interacting[0].interact()
-		interacting.remove_at(0)
-		canMove=false
-		newSprite.play("pickup-up")
+	#if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
+		#interacting[0].interact()
+		#interacting.remove_at(0)
+		#canMove=false
+		#newSprite.play("pickup-down")
+	#elif(Input.is_action_just_pressed("Interact") and direction=="up" and len(interacting)>=1):
+		#interacting[0].interact()
+		#interacting.remove_at(0)
+		#canMove=false
+		#newSprite.play("pickup-up")
 	if(canMove):
 		animate()
 	
@@ -144,18 +144,36 @@ func _process(_delta: float) -> void:
 	#	canMove=false
 	#	sprite.play("pickup-" + direction)
 	if(Input.is_action_just_pressed("Interact") and direction=="down" and len(interacting)>=1):
+		if("plant" in interacting[0].get_script().resource_path):
+			var soundNode=$Harvest
+			if(randf()>=.5):
+				soundNode=$Harvest2
+			soundNode.pitch_scale=randf_range(.9, 1.1)
+			soundNode.play()
 		interacting[0].interact()
 		interacting.remove_at(0)
 		canMove=false
 		newSprite.play("pickup-down")
 		return
 	elif(Input.is_action_just_pressed("Interact") and direction=="up" and len(interacting)>=1):
+		if("plant" in interacting[0].get_script().resource_path):
+			var soundNode=$Harvest
+			if(randf()>=.5):
+				soundNode=$Harvest2
+			soundNode.pitch_scale=randf_range(.9, 1.1)
+			soundNode.play()
 		interacting[0].interact()
 		interacting.remove_at(0)
 		canMove=false
 		newSprite.play("pickup-up")
 		return
 	elif(Input.is_action_just_pressed("Interact") and direction=="side" and len(interacting)>=1):
+		if("plant" in interacting[0].get_script().resource_path):
+			var soundNode=$Harvest
+			if(randf()>=.5):
+				soundNode=$Harvest2
+			soundNode.pitch_scale=randf_range(.9, 1.1)
+			soundNode.play()
 		interacting[0].interact()
 		interacting.remove_at(0)
 		canMove=false
@@ -185,6 +203,9 @@ func _process(_delta: float) -> void:
 					effects.scale.x=-1
 				else:
 					effects.scale.x=1
+			var soundNode=$Plant
+			soundNode.pitch_scale=randf_range(.9, 1.1)
+			soundNode.play()
 		if(GameManager.itemSelected("watering") and GameManager.plantable!=null and not busy and canMove and GameManager.selectedItem.amount>0 and not $ActionAnimator.is_playing() and GameManager.energy>0):
 			busy=true
 			GameManager.energy-=1
@@ -196,6 +217,11 @@ func _process(_delta: float) -> void:
 					backupDirection="Right"
 			canMove=false
 			$ActionAnimator.play("water" + backupDirection)
+			var soundNode = $Watering
+			if(randf()>=.5):
+				soundNode=$Watering2
+			soundNode.pitch_scale=randf_range(.9, 1.1)
+			soundNode.play()
 			# Find if any plants are colliding
 			#Add to backup list
 			#Make it so can't move
