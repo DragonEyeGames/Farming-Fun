@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d1v6iiusw6hi2" path="res://assets/Dirt/Untitled_Artwork-1.png" id="8_0dhjh"]
 [ext_resource type="Texture2D" uid="uid://bjfwa5sovhnqn" path="res://assets/Dirt/Untitled_Artwork-2.png" id="9_q4ter"]
 [ext_resource type="Texture2D" uid="uid://go7q5t3peak7" path="res://assets/Dirt/Untitled_Artwork-3.png" id="10_fc66y"]
-[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/Untitled_Artwork-4.png" id="11_7tg3i"]
+[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/funDirt.png" id="11_7tg3i"]
 [ext_resource type="Texture2D" uid="uid://bpdyg4rqfov8x" path="res://assets/Dirt/Untitled_Artwork-5.png" id="12_07wfi"]
 [ext_resource type="Texture2D" uid="uid://df4usw8alkxfb" path="res://assets/Dirt/Untitled_Artwork-6.png" id="13_5baxj"]
 [ext_resource type="Texture2D" uid="uid://rc7vxnewscav" path="res://assets/Dirt/Untitled_Artwork-7.png" id="14_nw2di"]

@@ -180,7 +180,7 @@ libraries = {
 }
 
 [node name="WaterSplotch" parent="." instance=ExtResource("12_3kscm")]
-position = Vector2(0, -3)
+position = Vector2(0, 5)
 
 [connection signal="body_entered" from="Area2D" to="." method="_player_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_player_exited"]

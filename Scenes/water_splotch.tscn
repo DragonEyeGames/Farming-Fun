@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://yo44qrj3vkce"]
 
-[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/Untitled_Artwork-4.png" id="1_i0jte"]
+[ext_resource type="Texture2D" uid="uid://dlmjg5nohoxpw" path="res://assets/Dirt/wateredDirt.png" id="1_i0jte"]
 
 [node name="WaterSplotch" type="Sprite2D"]
 visible = false

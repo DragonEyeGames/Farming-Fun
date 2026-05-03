@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cx1ywkbf2hdqx"]
+[gd_scene load_steps=17 format=3 uid="uid://cx1ywkbf2hdqx"]
 
 [ext_resource type="Script" uid="uid://bpos8g004ccg7" path="res://Scripts/shop_hud.gd" id="1_7b6gg"]
 [ext_resource type="PackedScene" uid="uid://dq70mbcajtim3" path="res://Scenes/inventory_slot.tscn" id="1_ai82c"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://by43o8klannt5" path="res://assets/HUD+UI/Improved Details.png" id="12_axnt5"]
 [ext_resource type="Texture2D" uid="uid://ct6j0eggyfju0" path="res://assets/HUD+UI/Close.png" id="14_uxk47"]
 [ext_resource type="BitMap" uid="uid://bhty663arqjcy" path="res://assets/HUD+UI/CloseBit.png" id="15_axnt5"]
+[ext_resource type="Texture2D" uid="uid://cy54s6gxyjtk8" path="res://assets/HUD+UI/Money.png" id="16_uxk47"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -345,6 +346,15 @@ scale = Vector2(0.64, 0.64)
 pivot_offset = Vector2(70.3125, 68.75)
 texture_normal = ExtResource("14_uxk47")
 texture_click_mask = ExtResource("15_axnt5")
+
+[node name="Money" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+position = Vector2(1595, 185.00002)
+scale = Vector2(1.285, 1.285)
+texture = ExtResource("16_uxk47")
+region_enabled = true
+region_rect = Rect2(234.48576, 58.756226, 59.18718, 56.322945)
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item" to="." method="_on_item_pressed" binds= [0]]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Item2" to="." method="_on_item_pressed" binds= [1]]

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bpdyg4rqfov8x" path="res://assets/Dirt/Untitled_Artwork-5.png" id="1_swppt"]
 [ext_resource type="Texture2D" uid="uid://d1v6iiusw6hi2" path="res://assets/Dirt/Untitled_Artwork-1.png" id="2_xn3ui"]
 [ext_resource type="Texture2D" uid="uid://rc7vxnewscav" path="res://assets/Dirt/Untitled_Artwork-7.png" id="3_gul11"]
-[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/Untitled_Artwork-4.png" id="4_7t1or"]
+[ext_resource type="Texture2D" uid="uid://cosidut70pnch" path="res://assets/Dirt/funDirt.png" id="4_7t1or"]
 [ext_resource type="Texture2D" uid="uid://go7q5t3peak7" path="res://assets/Dirt/Untitled_Artwork-3.png" id="5_5lbsh"]
 [ext_resource type="Texture2D" uid="uid://bjfwa5sovhnqn" path="res://assets/Dirt/Untitled_Artwork-2.png" id="6_lyt4k"]
 [ext_resource type="Texture2D" uid="uid://df4usw8alkxfb" path="res://assets/Dirt/Untitled_Artwork-6.png" id="7_3rpho"]
